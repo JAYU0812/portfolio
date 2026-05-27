@@ -1,6 +1,7 @@
 import React from "react";
 
 export default function Resume() {
+
   const handlePrint = () => {
     window.print();
   };
@@ -8,15 +9,16 @@ export default function Resume() {
   return (
     <>
       <style>{`
+
         @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
 
         * {
           box-sizing: border-box;
+          margin: 0;
+          padding: 0;
         }
 
         body {
-          margin: 0;
-          padding: 0;
           background: #e5e7eb;
           font-family: 'IBM Plex Sans', sans-serif;
         }
@@ -28,7 +30,7 @@ export default function Resume() {
           min-height: 297mm;
           background: #fff;
           margin: 20px auto;
-          padding: 14mm 16mm;
+          padding: 12mm 15mm;
           box-shadow: 0 4px 40px rgba(0,0,0,0.18);
         }
 
@@ -82,6 +84,35 @@ export default function Resume() {
 
         /* ---------------- TYPOGRAPHY ---------------- */
 
+        .name {
+          font-family: 'IBM Plex Mono', monospace;
+          font-size: 27px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          color: #111;
+        }
+
+        .title-line {
+          font-size: 13px;
+          color: #444;
+          margin-top: 4px;
+          font-weight: 500;
+        }
+
+        .contact-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px 20px;
+          margin-top: 8px;
+          font-size: 11px;
+          color: #222;
+        }
+
+        .header-bar {
+          border-bottom: 2px solid #111;
+          padding-bottom: 11px;
+        }
+
         .section-title {
           font-size: 10px;
           font-weight: 700;
@@ -90,135 +121,87 @@ export default function Resume() {
           color: #111;
           border-bottom: 1.5px solid #111;
           padding-bottom: 4px;
-          margin-bottom: 8px;
-          margin-top: 14px;
-        }
-
-        .name {
-          font-family: 'IBM Plex Mono', monospace;
-          font-size: 28px;
-          font-weight: 600;
-          letter-spacing: 1px;
-          color: #111;
-          margin: 0 0 4px 0;
-        }
-
-        .title-line {
-          font-size: 13px;
-          color: #444;
-          margin: 0 0 2px 0;
-        }
-
-        .contact-line {
-          font-size: 11px;
-          color: #333;
-          margin: 0;
-          line-height: 1.6;
-        }
-
-        .contact-line a {
-          color: #333;
-          text-decoration: none;
+          margin: 14px 0 8px 0;
         }
 
         .body-text {
           font-size: 12px;
-          color: #333;
-          line-height: 1.5;
-          margin: 0 0 6px 0;
+          color: #222;
+          line-height: 1.6;
         }
 
         .job-title {
           font-size: 13px;
           font-weight: 700;
           color: #111;
-          margin: 0 0 2px 0;
         }
 
         .job-meta {
           font-size: 11px;
-          color: #666;
-          margin: 0 0 6px 0;
+          color: #555;
+          margin: 2px 0 5px 0;
         }
 
         .bullet-list {
-          margin: 4px 0 0 0;
           padding-left: 16px;
-          list-style-type: disc;
+          margin-top: 4px;
         }
 
         .bullet-list li {
           font-size: 12px;
-          color: #333;
-          line-height: 1.5;
+          line-height: 1.55;
+          color: #222;
           margin-bottom: 3px;
+        }
+
+        .project-block {
+          margin-bottom: 10px;
         }
 
         .project-name {
           font-size: 13px;
           font-weight: 700;
           color: #111;
-          margin: 0 0 2px 0;
         }
 
         .project-url {
-          font-size: 11px;
+          font-size: 10.5px;
           color: #555;
           font-family: 'IBM Plex Mono', monospace;
-          margin: 0 0 4px 0;
+          margin: 2px 0 4px 0;
         }
-
-        .edu-degree {
-          font-size: 13px;
-          font-weight: 700;
-          color: #111;
-          margin: 0 0 1px 0;
-        }
-
-        .edu-meta {
-          font-size: 11.5px;
-          color: #444;
-          margin: 0 0 8px 0;
-          line-height: 1.4;
-        }
-
-        /* ---------------- SKILLS ---------------- */
 
         .skills-grid {
           display: flex;
           flex-wrap: wrap;
           gap: 6px;
-          margin-top: 4px;
+          margin-top: 5px;
         }
 
         .skill-tag {
           font-size: 11px;
           background: #f0f0f0;
-          color: #111;
           padding: 3px 10px;
           border-radius: 2px;
           font-weight: 500;
         }
 
-        /* ---------------- LAYOUT ---------------- */
+        .edu-degree {
+          font-size: 13px;
+          font-weight: 700;
+        }
+
+        .edu-meta {
+          font-size: 11.5px;
+          color: #444;
+          line-height: 1.4;
+          margin-bottom: 8px;
+        }
 
         .two-col {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 0 24px;
-        }
-
-        .header-bar {
-          border-bottom: 2px solid #111;
-          padding-bottom: 12px;
-          margin-bottom: 2px;
-        }
-
-        .header-contact-row {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0 24px;
-          margin-top: 8px;
         }
 
         /* ---------------- MOBILE ---------------- */
@@ -237,20 +220,23 @@ export default function Resume() {
             grid-template-columns: 1fr;
           }
 
-          .header-contact-row {
+          .contact-row {
             flex-direction: column;
-            gap: 6px;
+            gap: 5px;
           }
         }
+
       `}</style>
 
       {/* PRINT BUTTON */}
+
       <div
         className="print-hidden"
         style={{
           display: "flex",
           justifyContent: "center",
           paddingTop: "24px",
+          marginBottom: "20px"
         }}
       >
         <button
@@ -263,9 +249,7 @@ export default function Resume() {
             borderRadius: "4px",
             fontSize: "14px",
             cursor: "pointer",
-            fontFamily: "IBM Plex Sans, sans-serif",
-            fontWeight: 600,
-            letterSpacing: "0.5px",
+            fontWeight: 600
           }}
         >
           🖨 Print / Save as PDF
@@ -273,190 +257,225 @@ export default function Resume() {
       </div>
 
       {/* RESUME */}
+
       <div className="resume-page">
 
         {/* HEADER */}
+
         <div className="header-bar">
+
           <h1 className="name">JAY SONI</h1>
 
           <p className="title-line">
-            Full Stack Developer | Web & App Development
+            Full Stack Developer | Web & Mobile App Developer
           </p>
 
-          <div className="header-contact-row">
-            <p className="contact-line">jay0812soni@gmail.com</p>
-            <p className="contact-line">+91 79903 61109</p>
-            <p className="contact-line">github.com/JAYU0812</p>
-            <p className="contact-line">jaysoniexe.wuaze.com</p>
+          <div className="contact-row">
+            <span>jay0812soni@gmail.com</span>
+            <span>+91 79903 61109</span>
+            <span>Gandhinagar, Gujarat, India</span>
+            <span>https://github.com/JAYU0812</span>
+            <span>https://jaysoniexe.wuaze.com</span>
           </div>
+
         </div>
 
-        {/* CAREER OBJECTIVE */}
-        <h2 className="section-title">Career Objective</h2>
+        {/* SUMMARY */}
+
+        <h2 className="section-title">Professional Summary</h2>
 
         <p className="body-text">
-          Aspiring Full Stack Developer seeking opportunities to build scalable
-          web and mobile applications and contribute to impactful real-world
-          solutions using modern technologies.
-        </p>
-
-        {/* PROFILE SUMMARY */}
-        <h2 className="section-title">Profile Summary</h2>
-
-        <p className="body-text">
-          Final-year B.Tech IT student with strong hands-on experience in
-          full-stack development, including building and deploying web
-          applications and Play Store apps. Freelanced for local businesses
-          such as kirana stores, medical shops, and salons, helping them
-          transition from offline to online platforms through custom websites.
+          Results-driven Full Stack Developer and final-year B.Tech IT student
+          with 2+ years of hands-on experience developing and deploying scalable
+          web applications and Android apps. Skilled in HTML5, CSS3,
+          JavaScript, PHP, MySQL, Supabase, REST APIs, Git/GitHub, and
+          responsive web development. Delivered digital solutions for 5+
+          businesses, enabling offline-to-online transformation. Experienced in
+          complete project lifecycle management including UI design, backend
+          development, authentication systems, database management, deployment,
+          and maintenance.
         </p>
 
         {/* SKILLS */}
+
         <h2 className="section-title">Technical Skills</h2>
 
         <div className="skills-grid">
           {[
-            "HTML",
-            "CSS",
+            "HTML5",
+            "CSS3",
             "JavaScript",
+            "React.js",
             "PHP",
             "MySQL",
             "Supabase",
+            "REST APIs",
+            "Git & GitHub",
+            "Responsive Web Design",
+            "Authentication",
             "Session Management",
-            "Password Hashing",
-            "C++",
-            "Android / Play Store",
-          ].map((s) => (
-            <span className="skill-tag" key={s}>
-              {s}
+            "Password Hashing (bcrypt)",
+            "Android Development",
+            "Firebase",
+            "Vercel Deployment",
+            "Tailwind CSS",
+            "Database Design",
+            "C++"
+          ].map(skill => (
+            <span className="skill-tag" key={skill}>
+              {skill}
             </span>
           ))}
         </div>
 
         {/* EXPERIENCE */}
+
         <h2 className="section-title">Experience</h2>
 
-        <p className="job-title">Freelance Web Developer</p>
+        <p className="job-title">
+          Freelance Full Stack Web Developer
+        </p>
 
-        <p className="job-meta">Self-employed | 2023 – Present</p>
+        <p className="job-meta">
+        
+        </p>
 
         <ul className="bullet-list">
+
           <li>
-            Designed, developed, and deployed custom websites for local
-            businesses including kirana stores, medical shops, and salons.
+            Designed, developed, and deployed websites and web applications for
+            5+ businesses including salons, medical stores, and kirana stores.
           </li>
 
           <li>
-            Enabled businesses to establish an online presence and reach a
-            wider customer base.
+            Built responsive and mobile-friendly user interfaces improving user
+            engagement and accessibility.
           </li>
 
           <li>
-            Handled full project lifecycle independently — from requirements
-            gathering to deployment.
+            Managed frontend, backend, database integration, deployment, and
+            maintenance independently.
           </li>
+
+          <li>
+            Reduced development time by building reusable templates and
+            components.
+          </li>
+
+          <li>
+            Delivered all projects successfully with zero major post-launch
+            issues reported.
+          </li>
+
         </ul>
 
         {/* PROJECTS */}
+
         <h2 className="section-title">Projects</h2>
 
-        <div style={{ marginBottom: "12px" }}>
+        <div className="project-block">
           <p className="project-name">
-            ParichaySammelan — Android App (Play Store)
+            ParichaySammelan — Android App (Google Play Store)
           </p>
 
           <ul className="bullet-list">
             <li>
-              Developed a community app for the Soni community to register and
-              participate in Parichay Sammelan events.
+              Developed and published a community event registration app on
+              Google Play Store.
             </li>
 
             <li>
-              Published on the Google Play Store with active users.
+              Implemented user registration, profile management, and event
+              participation features.
             </li>
           </ul>
         </div>
 
-        <div style={{ marginBottom: "12px" }}>
-          <p className="project-name">KITAAB — Jeweller Ledger System</p>
+        <div className="project-block">
+          <p className="project-name">
+            KITAAB — Jeweller Ledger Management System
+          </p>
 
           <ul className="bullet-list">
             <li>
-              Built a ledger management system for jewellers to track
-              transactions.
+              Built a ledger system for jewellery businesses to track daily
+              transactions digitally.
             </li>
 
             <li>
-              Designed for non-technical shopkeepers to simplify day-to-day
-              accounting.
+              Designed a simple and efficient UI for non-technical users.
             </li>
           </ul>
         </div>
 
-        <div style={{ marginBottom: "12px" }}>
-          <p className="project-name">SoniSamaj Community Platform</p>
+        <div className="project-block">
+          <p className="project-name">
+            SoniSamaj — Community Web Platform
+          </p>
 
           <ul className="bullet-list">
             <li>
-              Created a web platform to connect community members and improve
-              social interaction within the Soni community.
+              Developed a community networking platform connecting members and improving social interaction.
+            </li>
+
+            <li>
+              Implemented profile management, member discovery, and responsive user interface features.
             </li>
           </ul>
         </div>
 
-        <div style={{ marginBottom: "12px" }}>
+        <div className="project-block">
           <p className="project-name">
             Chandrakala Jewellers — Business Website
           </p>
 
           <p className="project-url">
-            chandrakalajewellers.wuaze.com
+          
           </p>
 
           <ul className="bullet-list">
             <li>
-              Developed a website to help the business establish an online
-              presence and attract more customers.
+              Developed and deployed a responsive business website helping the jewellery business establish an online presence.
+            </li>
+
+            <li>
+              Improved customer reach and visibility through digital transformation.
             </li>
           </ul>
         </div>
 
-        <div style={{ marginBottom: "12px" }}>
+        <div className="project-block">
           <p className="project-name">
-            INFLIX — Streaming Platform (In Progress)
+            INFLIX — Streaming Platform
           </p>
 
           <ul className="bullet-list">
             <li>
-              Building a Netflix-style streaming platform tailored for the
-              Indian market.
-            </li>
-
-            <li>
-              Includes subscription system, admin panel, and video streaming
-              functionality.
+              Building a Netflix-style streaming platform with authentication,
+              subscriptions, admin dashboard, and video streaming.
             </li>
           </ul>
         </div>
 
-        <div style={{ marginBottom: "12px" }}>
+        <div className="project-block">
           <p className="project-name">
             Hackathon Attendance System
           </p>
 
           <ul className="bullet-list">
             <li>
-              Developed a QR code and geolocation-based attendance system during
-              a college hackathon.
+              Developed a QR and geolocation-based attendance system during a
+              hackathon competition.
             </li>
 
             <li>
-              Secured 5th rank in the hackathon.
+              Secured 5th rank among competing teams.
             </li>
           </ul>
         </div>
 
         {/* EDUCATION */}
+
         <h2 className="section-title">Education</h2>
 
         <div className="two-col">
@@ -467,48 +486,56 @@ export default function Resume() {
             </p>
 
             <p className="edu-meta">
-              Gandhinagar University | Final Year (2025)
+              Gandhinagar University | Expected 2025
             </p>
           </div>
 
           <div>
             <p className="edu-degree">
-              HSC (12th Grade)
+              HSC — 12th Grade
             </p>
 
             <p className="edu-meta">
-              BAPS Raysan, Gandhinagar | 80% | May 2023
+              BAPS Raysan, Gandhinagar | 80%
             </p>
           </div>
 
           <div>
             <p className="edu-degree">
-              SSC (10th Grade)
+              SSC — 10th Grade
             </p>
 
             <p className="edu-meta">
-              St. John's School, Khedbrahma | 84% | May 2021
+              St. John's School, Khedbrahma | 84%
             </p>
           </div>
 
         </div>
 
         {/* CERTIFICATIONS */}
+
         <h2 className="section-title">Certifications</h2>
 
         <p className="body-text">
-          C++ Programming — A Grade | 2023
+          C++ Programming Certification — A Grade
         </p>
 
         {/* LEADERSHIP */}
-        <h2 className="section-title">Leadership</h2>
+
+        <h2 className="section-title">Leadership & Activities</h2>
 
         <ul className="bullet-list">
-          <li>Class Representative — Gandhinagar University</li>
-          <li>Group Leader — 11th and 12th Grade</li>
+          <li>
+            Class Representative — Gandhinagar University
+          </li>
+
+          <li>
+            Group Leader during Higher Secondary Education
+          </li>
         </ul>
 
         {/* LANGUAGES */}
+
         <h2 className="section-title">Languages</h2>
 
         <p className="body-text">
@@ -516,6 +543,7 @@ export default function Resume() {
         </p>
 
       </div>
+
     </>
   );
 }
