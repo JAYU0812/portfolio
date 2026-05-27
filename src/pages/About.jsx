@@ -2,185 +2,423 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="bg-white text-gray-800 min-h-screen">
+    <div className="bg-[#f8fafc] text-gray-800 min-h-screen">
 
-      {/* Header */}
-      <header className="flex items-center justify-between p-5 shadow-md">
-        <h1 className="text-xl font-bold">Jay Soni</h1>
+      {/* HEADER */}
 
-        <nav>
-          <a href="/" className="mx-2 hover:underline">Home</a>
+      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
 
-          <a
-            href="/about"
-            className="mx-2 font-semibold underline text-blue-600"
-          >
-            About
-          </a>
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-          <a href="/projects" className="mx-2 hover:underline">
-            Projects
-          </a>
+          <h1 className="text-2xl font-bold tracking-tight">
+            Jay Soni
+          </h1>
 
-          <a href="/resume" className="mx-2 hover:underline">
-            Resume
-          </a>
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
 
-          <a href="/contact" className="mx-2 hover:underline">
-            Contact
-          </a>
-        </nav>
+            <a href="/" className="hover:text-blue-600 transition">
+              Home
+            </a>
+
+            <a
+              href="/about"
+              className="text-blue-600 font-semibold"
+            >
+              About
+            </a>
+
+            <a href="/projects" className="hover:text-blue-600 transition">
+              Projects
+            </a>
+
+            <a href="/resume" className="hover:text-blue-600 transition">
+              Resume
+            </a>
+
+            <a href="/contact" className="hover:text-blue-600 transition">
+              Contact
+            </a>
+
+          </nav>
+
+        </div>
+
       </header>
 
-      {/* Main */}
-<main className="max-w-4xl mx-auto p-6">
+      {/* HERO SECTION */}
 
-  <h2 className="text-4xl font-bold mb-6 text-center">
-    About Me
-  </h2>
+      <section className="max-w-7xl mx-auto px-6 py-20">
 
-  <p className="text-lg text-gray-700 leading-relaxed mb-8">
+        <div className="grid lg:grid-cols-2 gap-14 items-center">
 
-    I help small businesses and local shops build a strong online
-    presence through modern, fast, and affordable websites and mobile
-    applications.
+          {/* LEFT */}
 
-    <br /><br />
+          <div>
 
-    Over time, I have designed and developed multiple real-world web
-    and mobile applications that are actively used by businesses and
-    communities. My focus is always on creating solutions that are
-    easy to use, mobile-friendly, scalable, and useful for everyday
-    customers.
+            <p className="text-blue-600 font-semibold tracking-wide uppercase mb-4">
+              Full Stack Developer
+            </p>
 
-    <br /><br />
+            <h2 className="text-5xl font-bold leading-tight text-gray-900 mb-6">
 
-    I now also build modern React-based websites using the latest
-    frontend technologies and UI practices. My development approach
-    focuses on responsive design, clean user experience, fast
-    performance, reusable components, and scalable architecture.
+              Building Modern Web Experiences &
+              Digital Solutions
 
-    <br /><br />
+            </h2>
 
-    I work with technologies like React, Vite, Tailwind CSS,
-    JavaScript, Supabase, APIs, and modern deployment platforms to
-    create professional websites and web applications for businesses,
-    startups, and communities.
+            <p className="text-lg text-gray-600 leading-relaxed mb-6">
 
-    <br /><br />
+              I’m Jay Soni — a Full Stack Developer focused on building
+              scalable, modern, and user-friendly web applications.
 
-    Whether it’s a kirana store, medical shop, salon, jewellery
-    business, or a service-based platform, my goal is to help owners
-    get more visibility, customer trust, WhatsApp inquiries, and a
-    strong digital presence.
+              <br /><br />
 
-  </p>
+              I specialize in React, JavaScript, PHP, Supabase, and
+              modern frontend development, helping businesses and
+              communities transition into the digital world through
+              high-performance applications and clean UI/UX.
 
-  {/* What I Do */}
-  <h3 className="text-2xl font-semibold mb-4">
-    What I Do
-  </h3>
+            </p>
 
-  <ul className="list-disc ml-6 text-gray-700 space-y-2 mb-8">
+            <div className="flex flex-wrap gap-4">
 
-    <li>Create modern business websites using React & latest technologies</li>
+              <a
+                href="/projects"
+                className="bg-black text-white px-6 py-3 rounded-lg hover:scale-105 transition"
+              >
+                View Projects
+              </a>
 
-    <li>Develop Android apps for small businesses</li>
+              <a
+                href="/contact"
+                className="border border-gray-300 px-6 py-3 rounded-lg hover:bg-gray-100 transition"
+              >
+                Contact Me
+              </a>
 
-    <li>Build responsive and mobile-friendly user interfaces</li>
+            </div>
 
-    <li>Integrate WhatsApp ordering, payments & contact systems</li>
+          </div>
 
-    <li>Create scalable frontend applications with React</li>
+          {/* RIGHT */}
 
-    <li>Provide simple, reliable and affordable digital solutions</li>
+          <div className="grid grid-cols-2 gap-5">
 
-  </ul>
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h3 className="text-4xl font-bold text-blue-600 mb-2">
+                5+
+              </h3>
+              <p className="text-gray-600">
+                Businesses Digitized
+              </p>
+            </div>
 
-  {/* Skills */}
-  <h3 className="text-2xl font-semibold mb-4">
-    Tools & Technologies
-  </h3>
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h3 className="text-4xl font-bold text-blue-600 mb-2">
+                2+
+              </h3>
+              <p className="text-gray-600">
+                Years Experience
+              </p>
+            </div>
 
-  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-gray-700">
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h3 className="text-4xl font-bold text-blue-600 mb-2">
+                6+
+              </h3>
+              <p className="text-gray-600">
+                Real-World Projects
+              </p>
+            </div>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      React JS
-    </div>
+            <div className="bg-white rounded-2xl shadow-lg p-6">
+              <h3 className="text-4xl font-bold text-blue-600 mb-2">
+                1
+              </h3>
+              <p className="text-gray-600">
+                Play Store App
+              </p>
+            </div>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      Tailwind CSS
-    </div>
+          </div>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      Vite
-    </div>
+        </div>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      HTML
-    </div>
+      </section>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      CSS
-    </div>
+      {/* ABOUT */}
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      JavaScript
-    </div>
+      <section className="max-w-7xl mx-auto px-6 pb-20">
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      PHP
-    </div>
+        <div className="bg-white rounded-3xl shadow-lg p-10">
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      MySQL
-    </div>
+          <h3 className="text-3xl font-bold mb-8">
+            About Me
+          </h3>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      Supabase
-    </div>
+          <div className="space-y-6 text-gray-700 leading-relaxed text-lg">
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      REST APIs
-    </div>
+            <p>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      Flutter / Cordova
-    </div>
+              I help businesses, startups, and local communities build
+              strong digital platforms through modern websites,
+              scalable web applications, and Android apps.
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      Git & GitHub
-    </div>
+            </p>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      Vercel Deployment
-    </div>
+            <p>
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      Payment Integration
-    </div>
+              Over time, I have developed multiple production-ready
+              projects including community platforms, business
+              websites, streaming systems, ledger management software,
+              and Android applications that solve real-world problems.
 
-    <div className="bg-gray-100 p-3 rounded shadow">
-      WebView Apps
-    </div>
+            </p>
 
-  </div>
+            <p>
 
-  {/* Trust Line */}
-  <div className="mt-10 p-5 bg-blue-50 border-l-4 border-blue-500 rounded">
+              My development approach focuses on responsive design,
+              clean architecture, reusable components, API
+              integrations, authentication systems, database
+              management, and fast user experiences.
 
-    <p className="text-gray-800 font-medium">
-      I believe technology should be modern, fast, affordable, and
-      useful — especially for local businesses and growing startups.
-    </p>
+            </p>
 
-  </div>
+            <p>
 
-</main>
-      {/* Footer */}
-      <footer className="text-center p-4 text-sm text-gray-500 mt-10">
+              I work with modern technologies like React, Tailwind CSS,
+              JavaScript, Supabase, PHP, MySQL, REST APIs, GitHub,
+              Vercel, and deployment platforms to build reliable and
+              scalable digital products.
+
+            </p>
+
+            <p>
+
+              Whether it’s a jewellery business, medical shop, salon,
+              kirana store, startup, or community platform — my goal is
+              to help businesses improve visibility, customer trust,
+              automation, and online growth.
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* WHAT I DO */}
+
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+
+        <h3 className="text-3xl font-bold mb-10">
+          What I Do
+        </h3>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <div className="bg-white rounded-2xl shadow-lg p-7 hover:-translate-y-1 transition">
+
+            <h4 className="text-xl font-semibold mb-4">
+              Modern Web Development
+            </h4>
+
+            <p className="text-gray-600 leading-relaxed">
+              Building fast, scalable, and responsive web applications
+              using React, Tailwind CSS, and modern frontend
+              technologies.
+            </p>
+
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-7 hover:-translate-y-1 transition">
+
+            <h4 className="text-xl font-semibold mb-4">
+              Business Websites
+            </h4>
+
+            <p className="text-gray-600 leading-relaxed">
+              Creating professional websites for businesses to improve
+              online visibility, customer engagement, and digital
+              presence.
+            </p>
+
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-7 hover:-translate-y-1 transition">
+
+            <h4 className="text-xl font-semibold mb-4">
+              Android Applications
+            </h4>
+
+            <p className="text-gray-600 leading-relaxed">
+              Developing Android apps and WebView applications for
+              communities, startups, and businesses.
+            </p>
+
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-7 hover:-translate-y-1 transition">
+
+            <h4 className="text-xl font-semibold mb-4">
+              Backend & APIs
+            </h4>
+
+            <p className="text-gray-600 leading-relaxed">
+              Building backend systems, authentication flows, REST APIs,
+              and database integrations for scalable applications.
+            </p>
+
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-7 hover:-translate-y-1 transition">
+
+            <h4 className="text-xl font-semibold mb-4">
+              UI/UX & Responsive Design
+            </h4>
+
+            <p className="text-gray-600 leading-relaxed">
+              Designing clean, mobile-friendly, and intuitive user
+              interfaces focused on user experience and performance.
+            </p>
+
+          </div>
+
+          <div className="bg-white rounded-2xl shadow-lg p-7 hover:-translate-y-1 transition">
+
+            <h4 className="text-xl font-semibold mb-4">
+              Deployment & Optimization
+            </h4>
+
+            <p className="text-gray-600 leading-relaxed">
+              Deploying and optimizing applications using Vercel,
+              hosting platforms, GitHub workflows, and performance best
+              practices.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* TECH STACK */}
+
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+
+        <h3 className="text-3xl font-bold mb-10">
+          Tools & Technologies
+        </h3>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
+
+          {[
+            "React JS",
+            "Tailwind CSS",
+            "JavaScript",
+            "HTML5",
+            "CSS3",
+            "PHP",
+            "MySQL",
+            "Supabase",
+            "REST APIs",
+            "Git & GitHub",
+            "Firebase",
+            "Vite",
+            "Vercel",
+            "Responsive Design",
+            "Authentication",
+            "Session Management",
+            "Android Development",
+            "WebView Apps",
+            "Deployment",
+            "C++"
+          ].map((tech) => (
+
+            <div
+              key={tech}
+              className="bg-white rounded-xl shadow-md p-4 text-center font-medium hover:shadow-xl transition"
+            >
+              {tech}
+            </div>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* WHY WORK WITH ME */}
+
+      <section className="max-w-7xl mx-auto px-6 pb-20">
+
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-10 text-white shadow-2xl">
+
+          <h3 className="text-3xl font-bold mb-6">
+            Why Work With Me
+          </h3>
+
+          <div className="grid md:grid-cols-2 gap-8">
+
+            <div>
+              <ul className="space-y-4 text-lg">
+
+                <li>
+                  ✅ Real-world project development experience
+                </li>
+
+                <li>
+                  ✅ Modern React & full-stack development
+                </li>
+
+                <li>
+                  ✅ Strong focus on responsive UI/UX
+                </li>
+
+                <li>
+                  ✅ Clean and scalable architecture
+                </li>
+
+              </ul>
+            </div>
+
+            <div>
+              <ul className="space-y-4 text-lg">
+
+                <li>
+                  ✅ Fast performance & optimization
+                </li>
+
+                <li>
+                  ✅ Business-focused digital solutions
+                </li>
+
+                <li>
+                  ✅ Reliable deployment & maintenance
+                </li>
+
+                <li>
+                  ✅ Passion for building impactful products
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FOOTER */}
+
+      <footer className="border-t border-gray-200 py-6 text-center text-gray-500 text-sm">
+
         © 2025 Jay Soni. All rights reserved.
+
       </footer>
+
     </div>
   );
 }

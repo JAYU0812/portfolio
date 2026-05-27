@@ -1,32 +1,96 @@
 import React from "react";
-import "@lottiefiles/lottie-player";
 import { Link } from "react-router-dom";
+import "@lottiefiles/lottie-player";
 
 export default function Home() {
+
+  const stats = [
+    { number: "6+", label: "Production Projects" },
+    { number: "5+", label: "Businesses Digitized" },
+    { number: "2+", label: "Years Experience" },
+    { number: "1", label: "Play Store App" },
+  ];
+
+  const services = [
+    {
+      icon: "🌐",
+      title: "Modern Websites",
+      description:
+        "Professional, fast, and responsive business websites built with modern technologies.",
+    },
+
+    {
+      icon: "📱",
+      title: "Android Apps",
+      description:
+        "Custom Android apps and WebView applications for businesses and communities.",
+    },
+
+    {
+      icon: "⚡",
+      title: "Full Stack Development",
+      description:
+        "Frontend, backend, APIs, authentication systems, databases, and deployment.",
+    },
+
+    {
+      icon: "🎨",
+      title: "Modern UI/UX",
+      description:
+        "Clean interfaces focused on performance, responsiveness, and user experience.",
+    },
+  ];
+
+  const projects = [
+    {
+      title: "Parichay Sammelan Platform",
+      description:
+        "Community platform with registration, payments, QR verification, and Android support.",
+      gradient: "from-blue-500 to-indigo-600",
+    },
+
+    {
+      title: "KITAAB Ledger System",
+      description:
+        "Jeweller ledger management system with authentication and transaction tracking.",
+      gradient: "from-purple-500 to-pink-600",
+    },
+
+    {
+      title: "INFLIX Streaming Platform",
+      description:
+        "Netflix-inspired streaming platform with subscriptions and admin dashboard.",
+      gradient: "from-red-500 to-rose-600",
+    },
+  ];
+
   return (
-    <div className="bg-white text-gray-800 overflow-x-hidden relative">
 
-      {/* Animated Background */}
-      <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+    <div className="bg-[#f8fafc] overflow-x-hidden text-gray-800">
 
-        <div className="absolute top-10 left-10 w-96 h-96 bg-purple-300 opacity-30 rounded-full blur-3xl animate-pulse"></div>
+      {/* BACKGROUND BLURS */}
 
-        <div className="absolute top-40 right-10 w-96 h-96 bg-blue-300 opacity-30 rounded-full blur-3xl animate-ping"></div>
+      <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
+
+        <div className="absolute top-10 left-10 w-[500px] h-[500px] bg-blue-300/30 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-purple-300/30 rounded-full blur-3xl animate-pulse"></div>
 
       </div>
 
       {/* HEADER */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-md">
 
-        <div className="max-w-7xl mx-auto px-5 py-4 flex flex-col md:flex-row items-center justify-between">
+      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur border-b border-gray-200">
 
-          <h1 className="text-2xl font-bold text-gray-900">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+          <h1 className="text-2xl font-bold tracking-tight">
             Jay Soni
           </h1>
 
-          <nav className="flex flex-wrap justify-center gap-5 mt-4 md:mt-0 text-sm md:text-base">
+          <nav className="hidden md:flex items-center gap-7 text-sm font-medium">
 
-            <Link to="/" className="hover:text-blue-600 transition">
+            <Link to="/" className="text-blue-600 font-semibold">
               Home
             </Link>
 
@@ -49,278 +113,334 @@ export default function Home() {
           </nav>
 
         </div>
+
       </header>
 
       {/* HERO */}
-      <section className="min-h-screen flex items-center justify-center px-4 py-20">
 
-        <div className="max-w-5xl mx-auto text-center">
+      <section className="min-h-screen flex items-center justify-center px-6 py-20">
 
-          <lottie-player
-            src="https://assets9.lottiefiles.com/packages/lf20_qp1q7mct.json"
-            background="transparent"
-            speed="1"
-            style={{ width: "300px", height: "300px", margin: "0 auto" }}
-            loop
-            autoplay
-          ></lottie-player>
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
 
-          <h2 className="text-5xl md:text-6xl font-extrabold leading-tight mt-6">
+          {/* LEFT */}
 
-            Websites & Apps
-            <span className="block text-blue-600">
-              For Local Businesses
-            </span>
+          <div>
 
-          </h2>
+            <p className="text-blue-600 font-semibold uppercase tracking-widest mb-5">
+              Full Stack Developer
+            </p>
 
-          <p className="mt-6 text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <h2 className="text-5xl md:text-7xl font-bold leading-tight text-gray-900 mb-8">
 
-            I build modern websites & Android apps for Kirana stores,
-            medical shops, salons and local businesses with WhatsApp
-            ordering, Google Maps and mobile-friendly design.
+              Building
+              <span className="text-blue-600"> Modern </span>
+              Digital Products
+              For Businesses & Communities
 
-          </p>
+            </h2>
 
-          {/* Buttons */}
-          <div className="mt-10 flex flex-col sm:flex-row gap-5 justify-center">
+            <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-10 max-w-2xl">
 
-            <a
-              href="#demos"
-              className="px-8 py-4 bg-blue-600 text-white rounded-xl shadow-lg hover:bg-blue-700 hover:scale-105 transition duration-300"
-            >
-              View Business Demos
-            </a>
+              I design and develop scalable websites, Android apps,
+              and modern web applications using React, JavaScript,
+              Supabase, PHP, and modern frontend technologies.
 
-            <Link
-              to="/projects"
-              className="px-8 py-4 bg-gray-900 text-white rounded-xl shadow-lg hover:bg-black hover:scale-105 transition duration-300"
-            >
-              View My Projects
-            </Link>
+              <br /><br />
 
-            <a
-              href="https://wa.me/917990361109"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-green-500 text-white rounded-xl shadow-lg hover:bg-green-600 hover:scale-105 transition duration-300"
-            >
-              WhatsApp Me
-            </a>
+              From local businesses to community platforms —
+              I help brands build strong digital experiences with
+              clean UI/UX, fast performance, and real-world impact.
+
+            </p>
+
+            {/* BUTTONS */}
+
+            <div className="flex flex-wrap gap-5">
+
+              <Link
+                to="/projects"
+                className="bg-black text-white px-8 py-4 rounded-2xl font-medium hover:scale-105 transition shadow-xl"
+              >
+                View Projects
+              </Link>
+
+              <Link
+                to="/resume"
+                className="bg-blue-600 text-white px-8 py-4 rounded-2xl font-medium hover:scale-105 transition shadow-xl"
+              >
+                View Resume
+              </Link>
+
+              <a
+                href="https://wa.me/917990361109"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-green-500 text-white px-8 py-4 rounded-2xl font-medium hover:scale-105 transition shadow-xl"
+              >
+                WhatsApp Me
+              </a>
+
+            </div>
+
+            {/* TECH STACK */}
+
+            <div className="mt-12 flex flex-wrap gap-3">
+
+              {[
+                "React",
+                "Tailwind CSS",
+                "JavaScript",
+                "PHP",
+                "Supabase",
+                "REST APIs",
+                "MySQL",
+                "Vercel",
+              ].map((tech) => (
+
+                <span
+                  key={tech}
+                  className="bg-white border border-gray-200 shadow-sm px-4 py-2 rounded-full text-sm font-medium"
+                >
+                  {tech}
+                </span>
+
+              ))}
+
+            </div>
 
           </div>
 
-          <p className="mt-6 text-sm text-gray-500">
-            Business websites starting from ₹3,000 • Fast delivery
-          </p>
+          {/* RIGHT */}
+
+          <div className="relative">
+
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-[40px] blur-3xl opacity-20"></div>
+
+            <div className="relative bg-white rounded-[40px] shadow-2xl p-10 border border-gray-100">
+
+              <lottie-player
+                src="https://assets9.lottiefiles.com/packages/lf20_qp1q7mct.json"
+                background="transparent"
+                speed="1"
+                style={{
+                  width: "100%",
+                  height: "400px",
+                }}
+                loop
+                autoplay
+              ></lottie-player>
+
+            </div>
+
+          </div>
 
         </div>
 
       </section>
 
-      {/* BUSINESS DEMOS */}
-      <section
-        id="demos"
-        className="py-20 bg-gray-50 px-4"
-      >
+      {/* STATS */}
 
-        <div className="max-w-7xl mx-auto">
+      <section className="max-w-7xl mx-auto px-6 pb-24">
 
-          <h3 className="text-4xl font-bold text-center mb-14">
-            Business Website Demos
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+          {stats.map((stat, index) => (
+
+            <div
+              key={index}
+              className="bg-white rounded-3xl p-8 shadow-lg text-center hover:-translate-y-1 transition"
+            >
+
+              <h3 className="text-5xl font-bold text-blue-600 mb-3">
+                {stat.number}
+              </h3>
+
+              <p className="text-gray-600 font-medium">
+                {stat.label}
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* SERVICES */}
+
+      <section className="max-w-7xl mx-auto px-6 pb-24">
+
+        <div className="text-center mb-16">
+
+          <p className="text-blue-600 font-semibold uppercase tracking-widest mb-4">
+            Services
+          </p>
+
+          <h3 className="text-5xl font-bold mb-6">
+            What I Build
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
 
-            {/* Kirana */}
-            <Link
-              to="/kirana-demo"
-              className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2 overflow-hidden"
-            >
+            Scalable digital products designed with performance,
+            usability, and modern user experience in mind.
 
-              <div className="p-8 text-center">
-
-                <div className="text-6xl mb-4">
-                  🛒
-                </div>
-
-                <h4 className="text-2xl font-bold mb-3">
-                  Kirana Store Demo
-                </h4>
-
-                <p className="text-gray-600">
-                  Grocery & daily essentials store website
-                </p>
-
-              </div>
-
-            </Link>
-
-            {/* Medical */}
-            <Link
-              to="/medical-demo"
-              className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2 overflow-hidden"
-            >
-
-              <div className="p-8 text-center">
-
-                <div className="text-6xl mb-4">
-                  💊
-                </div>
-
-                <h4 className="text-2xl font-bold mb-3">
-                  Medical Store Demo
-                </h4>
-
-                <p className="text-gray-600">
-                  Pharmacy & healthcare business website
-                </p>
-
-              </div>
-
-            </Link>
-
-            {/* Salon */}
-            <Link
-              to="/salon-demo"
-              className="bg-white rounded-2xl shadow-md hover:shadow-2xl transition duration-300 hover:-translate-y-2 overflow-hidden"
-            >
-
-              <div className="p-8 text-center">
-
-                <div className="text-6xl mb-4">
-                  💇
-                </div>
-
-                <h4 className="text-2xl font-bold mb-3">
-                  Salon & Beauty Demo
-                </h4>
-
-                <p className="text-gray-600">
-                  Beauty salon & grooming website
-                </p>
-
-              </div>
-
-            </Link>
-
-          </div>
-
-        </div>
-
-      </section>
-
-      {/* PRICING */}
-      <section className="py-20 px-4 bg-white">
-
-        <div className="max-w-7xl mx-auto">
-
-          <h3 className="text-4xl font-bold text-center mb-4">
-            Simple Pricing
-          </h3>
-
-          <p className="text-center text-gray-600 mb-14">
-            Affordable pricing specially for local businesses
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        </div>
 
-            {/* Starter */}
-            <div className="border rounded-2xl p-8 shadow hover:shadow-xl transition">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
 
-              <h4 className="text-2xl font-bold mb-4">
-                Starter Website
-              </h4>
+          {services.map((service, index) => (
 
-              <p className="text-5xl font-bold text-blue-600 mb-6">
-                ₹3,000
-              </p>
+            <div
+              key={index}
+              className="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 hover:shadow-2xl transition"
+            >
 
-              <ul className="space-y-3 text-gray-700 mb-8">
-
-                <li>✔ 1 Page Website</li>
-                <li>✔ Mobile Friendly</li>
-                <li>✔ WhatsApp Button</li>
-                <li>✔ Google Maps</li>
-                <li>✔ Fast Delivery</li>
-
-              </ul>
-
-              <a
-                href="https://wa.me/917990361109"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-blue-600 text-white py-3 rounded-xl hover:bg-blue-700 transition"
-              >
-                Get Started
-              </a>
-
-            </div>
-
-            {/* Popular */}
-            <div className="border-2 border-green-500 rounded-2xl p-8 shadow-2xl scale-105 bg-green-50">
-
-              <div className="mb-3 text-sm font-semibold text-green-700">
-                MOST POPULAR
+              <div className="text-5xl mb-6">
+                {service.icon}
               </div>
 
               <h4 className="text-2xl font-bold mb-4">
-                Website + Android App
+                {service.title}
               </h4>
 
-              <p className="text-5xl font-bold text-green-600 mb-6">
-                ₹8,000+
+              <p className="text-gray-600 leading-relaxed">
+                {service.description}
               </p>
-
-              <ul className="space-y-3 text-gray-700 mb-8">
-
-                <li>✔ Website Included</li>
-                <li>✔ Android App</li>
-                <li>✔ WhatsApp Orders</li>
-                <li>✔ App Setup</li>
-                <li>✔ Fast Delivery</li>
-
-              </ul>
-
-              <a
-                href="https://wa.me/917990361109"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-green-500 text-white py-3 rounded-xl hover:bg-green-600 transition"
-              >
-                Contact Now
-              </a>
 
             </div>
 
-            {/* Support */}
-            <div className="border rounded-2xl p-8 shadow hover:shadow-xl transition">
+          ))}
 
-              <h4 className="text-2xl font-bold mb-4">
-                Monthly Support
-              </h4>
+        </div>
 
-              <p className="text-5xl font-bold text-purple-600 mb-6">
-                ₹300
+      </section>
+
+      {/* FEATURED PROJECTS */}
+
+      <section className="max-w-7xl mx-auto px-6 pb-24">
+
+        <div className="flex items-center justify-between flex-wrap gap-5 mb-14">
+
+          <div>
+
+            <p className="text-blue-600 font-semibold uppercase tracking-widest mb-3">
+              Portfolio
+            </p>
+
+            <h3 className="text-5xl font-bold">
+              Featured Projects
+            </h3>
+
+          </div>
+
+          <Link
+            to="/projects"
+            className="bg-black text-white px-6 py-3 rounded-2xl hover:scale-105 transition"
+          >
+            View All Projects
+          </Link>
+
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {projects.map((project, index) => (
+
+            <div
+              key={index}
+              className="group bg-white rounded-3xl shadow-lg overflow-hidden hover:-translate-y-2 hover:shadow-2xl transition"
+            >
+
+              <div className={`bg-gradient-to-r ${project.gradient} p-8 text-white`}>
+
+                <h4 className="text-3xl font-bold leading-tight">
+                  {project.title}
+                </h4>
+
+              </div>
+
+              <div className="p-8">
+
+                <p className="text-gray-600 leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                <Link
+                  to="/projects"
+                  className="inline-flex items-center gap-2 text-blue-600 font-semibold"
+                >
+                  Explore Project →
+                </Link>
+
+              </div>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* WHY ME */}
+
+      <section className="max-w-7xl mx-auto px-6 pb-24">
+
+        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-[40px] p-12 text-white shadow-2xl">
+
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+            <div>
+
+              <p className="uppercase tracking-widest text-blue-100 font-semibold mb-4">
+                Why Work With Me
               </p>
 
-              <ul className="space-y-3 text-gray-700 mb-8">
+              <h3 className="text-5xl font-bold leading-tight mb-8">
 
-                <li>✔ Hosting Support</li>
-                <li>✔ Small Updates</li>
-                <li>✔ WhatsApp Support</li>
-                <li>✔ Peace of Mind</li>
+                Building Real Solutions
+                That Create Real Impact
 
-              </ul>
+              </h3>
 
-              <a
-                href="https://wa.me/917990361109"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block text-center bg-purple-500 text-white py-3 rounded-xl hover:bg-purple-600 transition"
-              >
-                Contact Me
-              </a>
+              <p className="text-lg text-blue-100 leading-relaxed">
+
+                My focus is not just creating websites —
+                but building scalable digital products that improve
+                business growth, user engagement, automation,
+                and customer experience.
+
+              </p>
+
+            </div>
+
+            <div className="grid sm:grid-cols-2 gap-6">
+
+              {[
+                "Modern React Development",
+                "Responsive UI/UX",
+                "Real Business Experience",
+                "Scalable Architecture",
+                "Fast Performance",
+                "Reliable Deployment",
+              ].map((item, index) => (
+
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur rounded-2xl p-6 border border-white/10"
+                >
+
+                  <p className="text-lg font-medium">
+                    ✅ {item}
+                  </p>
+
+                </div>
+
+              ))}
 
             </div>
 
@@ -330,31 +450,48 @@ export default function Home() {
 
       </section>
 
-      {/* CONTACT CTA */}
-      <section className="py-20 bg-gradient-to-r from-green-500 to-green-600 text-white text-center px-4">
+      {/* CTA */}
 
-        <h3 className="text-4xl font-bold mb-6">
-          Want a Website for Your Shop?
+      <section className="max-w-5xl mx-auto px-6 pb-24 text-center">
+
+        <h3 className="text-5xl font-bold mb-6">
+
+          Let’s Build Something Amazing
+
         </h3>
 
-        <p className="max-w-2xl mx-auto text-lg mb-8">
-          Message me on WhatsApp and I’ll show you a demo specially designed
-          for your business.
+        <p className="text-xl text-gray-600 leading-relaxed mb-10">
+
+          Looking for a modern website, Android app,
+          or scalable web platform for your business or startup?
+
         </p>
 
-        <a
-          href="https://wa.me/917990361109"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-10 py-4 bg-white text-green-600 rounded-2xl text-lg font-semibold hover:scale-105 transition"
-        >
-          Contact on WhatsApp
-        </a>
+        <div className="flex flex-wrap justify-center gap-5">
+
+          <a
+            href="https://wa.me/917990361109"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 text-white px-10 py-5 rounded-2xl text-lg font-semibold hover:scale-105 transition shadow-xl"
+          >
+            Contact on WhatsApp
+          </a>
+
+          <Link
+            to="/contact"
+            className="bg-black text-white px-10 py-5 rounded-2xl text-lg font-semibold hover:scale-105 transition shadow-xl"
+          >
+            Contact Page
+          </Link>
+
+        </div>
 
       </section>
 
       {/* FOOTER */}
-      <footer className="text-center py-6 text-gray-500 text-sm bg-white">
+
+      <footer className="border-t border-gray-200 bg-white py-8 text-center text-gray-500 text-sm">
 
         © 2025 Jay Soni. All rights reserved.
 
