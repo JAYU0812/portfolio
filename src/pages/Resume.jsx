@@ -298,35 +298,44 @@ export default function Resume() {
 
         {/* SKILLS */}
 
-        <h2 className="section-title">Technical Skills</h2>
+<h2 className="section-title">Technical Skills</h2>
 
-        <div className="skills-grid">
-          {[
-            "HTML5",
-            "CSS3",
-            "JavaScript",
-            "React.js",
-            "PHP",
-            "MySQL",
-            "Supabase",
-            "REST APIs",
-            "Git & GitHub",
-            "Responsive Web Design",
-            "Authentication",
-            "Session Management",
-            "Password Hashing (bcrypt)",
-            "Android Development",
-            "Firebase",
-            "Vercel Deployment",
-            "Tailwind CSS",
-            "Database Design",
-            "C++"
-          ].map(skill => (
-            <span className="skill-tag" key={skill}>
-              {skill}
-            </span>
-          ))}
-        </div>
+<div className="skills-grid">
+  {[
+    "HTML5",
+    "CSS3",
+    "JavaScript (ES6+)",
+    "PHP",
+    "C++",
+    "React.js",
+    "React Native",
+    "Tailwind CSS",
+    "Responsive Web Design",
+    "MySQL",
+    "Supabase",
+    "Database Design",
+    "CRUD Operations",
+    "REST APIs",
+    "Authentication & Authorization",
+    "Session Management",
+    "Password Hashing (bcrypt)",
+    "Firebase",
+    "Android App Development",
+    "Google Play Store Publishing",
+    "Git",
+    "GitHub",
+    "XAMPP",
+    "Vercel Deployment",
+    "InfinityFree Hosting",
+    "Project Management",
+    "Client Communication",
+    "Problem Solving"
+  ].map((skill) => (
+    <span className="skill-tag" key={skill}>
+      {skill}
+    </span>
+  ))}
+</div>
 
         {/* EXPERIENCE */}
 
