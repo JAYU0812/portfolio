@@ -11,7 +11,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
           <h1 className="text-2xl font-bold tracking-tight">
-            Jay Soni
+            Soni Jaykumar Hasmukh
           </h1>
 
           <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
