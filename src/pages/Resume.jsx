@@ -378,76 +378,7 @@ export default function Resume() {
 
         </ul>
 
-        {/* EDUCATION */}
-
-        <h2 className="section-title">Education</h2>
-
-        <div className="two-col">
-
-          <div>
-            <p className="edu-degree">
-              B.Tech — Information Technology
-            </p>
-
-            <p className="edu-meta">
-              Gandhinagar University | Expected 2025
-            </p>
-          </div>
-
-          <div>
-            <p className="edu-degree">
-              HSC — 12th Grade
-            </p>
-
-            <p className="edu-meta">
-              BAPS Raysan, Gandhinagar | 80%
-            </p>
-          </div>
-
-          <div>
-            <p className="edu-degree">
-              SSC — 10th Grade
-            </p>
-
-            <p className="edu-meta">
-              St. John's School, Khedbrahma | 84%
-            </p>
-          </div>
-
-        </div>
-
-        {/* CERTIFICATIONS */}
-
-        <h2 className="section-title">Certifications</h2>
-
-        <p className="body-text">
-          C++ Programming Certification — A Grade
-        </p>
-        <p className="body-text">Flutter developement internship certificate of 3 months.</p>
-
-        {/* LEADERSHIP */}
-
-        <h2 className="section-title">Leadership & Activities</h2>
-
-        <ul className="bullet-list">
-          <li>
-            Class Representative — Gandhinagar University
-          </li>
-
-          <li>
-            Group Leader during Higher Secondary Education
-          </li>
-        </ul>
-
-        {/* LANGUAGES */}
-
-        <h2 className="section-title">Languages</h2>
-
-        <p className="body-text">
-          English | Hindi | Gujarati
-        </p>
-
-      </div>
+        
 
         {/* PROJECTS */}
 
@@ -554,6 +485,76 @@ export default function Resume() {
           </ul>
         </div>
 
+        {/* EDUCATION */}
+
+        <h2 className="section-title">Education</h2>
+
+        <div className="two-col">
+
+          <div>
+            <p className="edu-degree">
+              B.Tech — Information Technology
+            </p>
+
+            <p className="edu-meta">
+              Gandhinagar University | Expected 2025
+            </p>
+          </div>
+
+          <div>
+            <p className="edu-degree">
+              HSC — 12th Grade
+            </p>
+
+            <p className="edu-meta">
+              BAPS Raysan, Gandhinagar | 80%
+            </p>
+          </div>
+
+          <div>
+            <p className="edu-degree">
+              SSC — 10th Grade
+            </p>
+
+            <p className="edu-meta">
+              St. John's School, Khedbrahma | 84%
+            </p>
+          </div>
+
+        </div>
+
+        {/* CERTIFICATIONS */}
+
+        <h2 className="section-title">Certifications</h2>
+
+        <p className="body-text">
+          C++ Programming Certification — A Grade
+        </p>
+        <p className="body-text">Flutter developement internship certificate of 3 months.</p>
+
+        {/* LEADERSHIP */}
+
+        <h2 className="section-title">Leadership & Activities</h2>
+
+        <ul className="bullet-list">
+          <li>
+            Class Representative — Gandhinagar University
+          </li>
+
+          <li>
+            Group Leader during Higher Secondary Education
+          </li>
+        </ul>
+
+        {/* LANGUAGES */}
+
+        <h2 className="section-title">Languages</h2>
+
+        <p className="body-text">
+          English | Hindi | Gujarati
+        </p>
+
+      </div>
         
 
     </>
