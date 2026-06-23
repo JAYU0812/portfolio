@@ -528,7 +528,7 @@ export default function Resume() {
         <p className="body-text">
           C++ Programming Certification — A Grade
         </p>
-        <p>Flutter developement internship certificate of 3 months.</p>
+        <p className="body-text">Flutter developement internship certificate of 3 months.</p>
 
         {/* LEADERSHIP */}
 
