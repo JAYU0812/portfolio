@@ -486,7 +486,7 @@ export default function Resume() {
             </p>
 
             <p className="edu-meta">
-              Gandhinagar University | Expected 2025
+              Gandhinagar University | Expected 2027
             </p>
           </div>
 
