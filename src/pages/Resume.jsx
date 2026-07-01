@@ -454,20 +454,6 @@ export default function Resume() {
             </li>
           </ul>
         </div>
-
-        <div className="project-block">
-          <p className="project-name">
-            INFLIX — Streaming Platform
-          </p>
-
-          <ul className="bullet-list">
-            <li>
-              Building a Netflix-style streaming platform with authentication,
-              subscriptions, admin dashboard, and video streaming.
-            </li>
-          </ul>
-        </div>
-
         <div className="project-block">
           <p className="project-name">
             Hackathon Attendance System
