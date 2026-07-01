@@ -437,7 +437,7 @@ export default function Resume() {
 
         <div className="project-block">
           <p className="project-name">
-            Chandrakala Jewellers — Business Website
+            Chandrakala Jewellers — Business Website + CRM dashboard for GST billing
           </p>
 
           <p className="project-url">
@@ -451,6 +451,9 @@ export default function Resume() {
 
             <li>
               Improved customer reach and visibility through digital transformation.
+            </li>
+            <li>
+              GST billing CRM software for Chandrakala Jewellers
             </li>
           </ul>
         </div>
