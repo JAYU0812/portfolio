@@ -289,8 +289,7 @@ export default function Resume() {
           with 2+ years of hands-on experience developing and deploying scalable
           web applications and Android apps. Skilled in HTML5, CSS3,
           JavaScript, PHP, MySQL, Supabase, REST APIs, Git/GitHub, and
-          responsive web development. Delivered digital solutions for 5+
-          businesses, enabling offline-to-online transformation. Experienced in
+          responsive web development. Experienced in
           complete project lifecycle management including UI design, backend
           development, authentication systems, database management, deployment,
           and maintenance.
