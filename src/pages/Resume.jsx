@@ -264,7 +264,7 @@ export default function Resume() {
 
         <div className="header-bar">
 
-          <h1 className="name">JAY SONI</h1>
+          <h1 className="name">SONI JAYKUMAR HASMUKH</h1>
 
           <p className="title-line">
             Full Stack Developer | Web & Mobile App Developer
