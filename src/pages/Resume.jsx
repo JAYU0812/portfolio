@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Resume() {
 
@@ -19,7 +20,7 @@ export default function Resume() {
         }
 
         body {
-          background: #e5e7eb;
+          background: #f8fafc;
           font-family: 'IBM Plex Sans', sans-serif;
         }
 
@@ -28,17 +29,20 @@ export default function Resume() {
         .resume-page {
           width: 210mm;
           min-height: 297mm;
-          background: #fff;
+          background: rgba(255, 255, 255, 0.75);
+          backdrop-filter: blur(10px);
+          border: 1px solid rgba(255, 255, 255, 0.45);
           margin: 20px auto;
           padding: 12mm 15mm;
-          box-shadow: 0 4px 40px rgba(0,0,0,0.18);
+          box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+          border-radius: 24px;
         }
 
         /* ---------------- PRINT ---------------- */
 
         @page {
           size: A4;
-          margin: 10mm;
+          margin: 8mm;
         }
 
         @media print {
@@ -46,7 +50,7 @@ export default function Resume() {
           html,
           body {
             width: 210mm;
-            background: white;
+            background: white !important;
             margin: 0;
             padding: 0;
             -webkit-print-color-adjust: exact;
@@ -58,13 +62,61 @@ export default function Resume() {
           }
 
           .resume-page {
-            width: 190mm !important;
+            width: 194mm !important;
             min-height: auto !important;
             margin: 0 auto !important;
-            padding: 0 !important;
+            padding: 4mm 8mm !important;
             box-shadow: none !important;
             background: white !important;
-            page-break-after: auto;
+            border: none !important;
+            border-radius: 0 !important;
+            backdrop-filter: none !important;
+          }
+
+          .section-title {
+            margin: 8px 0 4px 0 !important;
+            font-size: 9px !important;
+            padding-bottom: 2px !important;
+          }
+
+          .body-text {
+            font-size: 10.5px !important;
+            line-height: 1.35 !important;
+          }
+
+          .job-title,
+          .project-name,
+          .edu-degree {
+            font-size: 11px !important;
+          }
+
+          .job-meta,
+          .project-url,
+          .edu-meta {
+            font-size: 9.5px !important;
+            margin: 1px 0 2px 0 !important;
+          }
+
+          .bullet-list {
+            padding-left: 12px !important;
+            margin-top: 2px !important;
+          }
+
+          .bullet-list li {
+            font-size: 9.5px !important;
+            line-height: 1.3 !important;
+            margin-bottom: 1px !important;
+          }
+
+          .skills-grid {
+            gap: 4px !important;
+            margin-top: 3px !important;
+          }
+
+          .skill-tag {
+            font-size: 9px !important;
+            padding: 1px 6px !important;
+            background: #f1f5f9 !important;
           }
 
           .section-title,
@@ -77,7 +129,8 @@ export default function Resume() {
           ul,
           li,
           p,
-          div {
+          .project-block,
+          .skills-grid {
             page-break-inside: avoid;
           }
         }
@@ -228,28 +281,49 @@ export default function Resume() {
 
       `}</style>
 
-      {/* PRINT BUTTON */}
+      {/* CONTROL BAR */}
 
       <div
         className="print-hidden"
         style={{
           display: "flex",
           justifyContent: "center",
+          gap: "16px",
           paddingTop: "24px",
           marginBottom: "20px"
         }}
       >
+        <Link
+          to="/"
+          style={{
+            background: "rgba(255, 255, 255, 0.8)",
+            color: "#1e293b",
+            padding: "10px 24px",
+            border: "1px solid rgba(226, 232, 240, 0.8)",
+            borderRadius: "8px",
+            fontSize: "14px",
+            cursor: "pointer",
+            fontWeight: 600,
+            textDecoration: "none",
+            display: "inline-flex",
+            alignItems: "center",
+            boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.05)"
+          }}
+        >
+          ← Back to Portfolio
+        </Link>
         <button
           onClick={handlePrint}
           style={{
-            background: "#111",
+            background: "#2563eb",
             color: "#fff",
             padding: "10px 28px",
             border: "none",
-            borderRadius: "4px",
+            borderRadius: "8px",
             fontSize: "14px",
             cursor: "pointer",
-            fontWeight: 600
+            fontWeight: 600,
+            boxShadow: "0 4px 6px -1px rgba(37, 99, 235, 0.2)"
           }}
         >
           🖨 Print / Save as PDF
@@ -273,7 +347,7 @@ export default function Resume() {
           <div className="contact-row">
             <span>jay0812soni@gmail.com</span>
             <span>+91 79903 61109</span>
-            <span>Gandhinagar, Gujarat, India</span>
+            <span>Ahmedabad, Gujarat, India</span>
             <span>https://github.com/JAYU0812</span>
             <span>https://jaysoniexe.wuaze.com</span>
           </div>
@@ -285,96 +359,137 @@ export default function Resume() {
         <h2 className="section-title">Professional Summary</h2>
 
         <p className="body-text">
-          Results-driven Full Stack Developer and final-year B.Tech IT student
-          with 2+ years of hands-on experience developing and deploying scalable
-          web applications and Android apps. Skilled in HTML5, CSS3,
-          JavaScript, PHP, MySQL, Supabase, REST APIs, Git/GitHub, and
-          responsive web development. Experienced in
-          complete project lifecycle management including UI design, backend
-          development, authentication systems, database management, deployment,
-          and maintenance.
+          Full Stack Developer specializing in Flutter, React, Node.js,
+          Supabase, PostgreSQL, and modern web technologies. Experienced in
+          building scalable business applications with strong focus on
+          Flutter development, React development, Node.js backend APIs,
+          Supabase integration, REST APIs, Offline-First architecture,
+          Realtime systems, database design, and PropTech solutions.
         </p>
 
         {/* SKILLS */}
 
-<h2 className="section-title">Technical Skills</h2>
+        <h2 className="section-title">Technical Skills</h2>
 
-<div className="skills-grid">
-  {[
-    "HTML5",
-    "CSS3",
-    "JavaScript (ES6+)",
-    "PHP",
-    "C++",
-    "React.js",
-    "React Native",
-    "Tailwind CSS",
-    "Responsive Web Design",
-    "MySQL",
-    "Supabase",
-    "Database Design",
-    "CRUD Operations",
-    "REST APIs",
-    "Authentication & Authorization",
-    "Session Management",
-    "Password Hashing (bcrypt)",
-    "Firebase",
-    "Android App Development",
-    "Google Play Store Publishing",
-    "Git",
-    "GitHub",
-    "XAMPP",
-    "Vercel Deployment",
-    "InfinityFree Hosting",
-    "Project Management",
-    "Client Communication",
-    "Problem Solving"
-  ].map((skill) => (
-    <span className="skill-tag" key={skill}>
-      {skill}
-    </span>
-  ))}
-</div>
+        <div className="skills-grid">
+          {[
+            "Flutter",
+            "Dart",
+            "React.js",
+            "JavaScript (ES6+)",
+            "HTML5",
+            "CSS3",
+            "Tailwind CSS",
+            "Node.js",
+            "Express.js",
+            "PHP",
+            "REST APIs",
+            "Supabase",
+            "PostgreSQL",
+            "MySQL",
+            "Isar Database",
+            "BLoC",
+            "Riverpod",
+            "Git",
+            "GitHub",
+            "VS Code",
+            "Android Studio",
+            "Postman",
+            "Vercel",
+            "XAMPP",
+            "Offline-First",
+            "Realtime Synchronization",
+            "Database Design",
+            "Authentication",
+            "Business Operations",
+            "PropTech Solutions"
+          ].map((skill) => (
+            <span className="skill-tag" key={skill}>
+              {skill}
+            </span>
+          ))}
+        </div>
 
         {/* EXPERIENCE */}
 
         <h2 className="section-title">Experience</h2>
 
         <p className="job-title">
+          NB Property Tech
+        </p>
+
+        <p className="job-meta">
+          Full Stack Developer Intern • July 2026 – Present • Science City, Ahmedabad
+        </p>
+
+        <p className="body-text" style={{ marginTop: "4px" }}>
+          PropTech & Business Operations
+        </p>
+
+        <ul className="bullet-list">
+          <li>Developing production-ready Flutter applications for real estate business workflows.</li>
+          <li>Building scalable Node.js backend APIs to support property management systems.</li>
+          <li>Working with Supabase PostgreSQL for persistent cloud database management.</li>
+          <li>Designing realtime synchronization systems for instant data propagation.</li>
+          <li>Implementing Offline-First architecture ensuring uninterrupted local app usage.</li>
+          <li>Building business automation tools to streamline property team operations.</li>
+          <li>Contributing to product architecture design and system scalability planning.</li>
+          <li>Collaborating with the development team to review code and meet sprint goals.</li>
+          <li>Developing and maintaining the live PropKart CRM software platform.</li>
+          <li style={{ listStyleType: "none", marginTop: "4px", fontSize: "11px", color: "#555" }}>
+            <strong>Technologies:</strong> Flutter, Dart, Node.js, Express.js, Supabase, PostgreSQL, Isar Database, Git
+          </li>
+        </ul>
+
+        <p className="job-title" style={{ marginTop: "10px" }}>
+          Tech-Craft
+        </p>
+
+        <p className="job-meta">
+          React Developer Intern • 15 Days • <a href="https://tech-craft.org" target="_blank" rel="noreferrer" style={{ color: "#2563eb" }}>tech-craft.org</a>
+        </p>
+
+        <ul className="bullet-list">
+          <li>Developed the complete static dashboard UI using React.js.</li>
+          <li>Built reusable React components to ensure modular frontend architecture.</li>
+          <li>Created Doctor Cards to present healthcare provider information dynamically.</li>
+          <li>Implemented Patient List display to manage and view patient details.</li>
+          <li>Developed an Appointment Form to capture scheduling details.</li>
+          <li>Added Search Patient functionality for fast patient profile retrieval.</li>
+          <li>Implemented Department Filtering to categorize clinical data.</li>
+          <li>Added Appointment Creation functionality to schedule sessions.</li>
+          <li>Added Appointment Deletion functionality to cancel bookings.</li>
+          <li>Displayed Statistics Cards to visualize key performance metrics.</li>
+          <li>Project Link: <a href="https://hospital-dashboard-woad-gamma.vercel.app/" target="_blank" rel="noreferrer" style={{ color: "#2563eb" }}>hospital-dashboard-woad-gamma.vercel.app</a></li>
+          <li style={{ listStyleType: "none", marginTop: "4px", fontSize: "11px", color: "#555" }}>
+            <strong>Concepts:</strong> Props, useState, map(), filter()
+          </li>
+        </ul>
+
+        <p className="job-title" style={{ marginTop: "10px" }}>
           Freelance Full Stack Web Developer
         </p>
 
         <p className="job-meta">
-        
+          Freelance • 2023 – Present
         </p>
 
         <ul className="bullet-list">
-
           <li>
-            Designed, developed, and deployed websites and web applications for
-            5+ businesses including salons, medical stores, and kirana stores.
+            Designed, developed, and deployed websites and web applications for 5+ businesses including salons, medical stores, and kirana stores.
           </li>
-
           <li>
-            Built responsive and mobile-friendly user interfaces improving user
-            engagement and accessibility.
+            Built responsive and mobile-friendly user interfaces improving user engagement and accessibility.
           </li>
-
           <li>
-            Managed frontend, backend, database integration, deployment, and
-            maintenance independently.
+            Managed frontend, backend, database integration, deployment, and maintenance independently.
           </li>
-
           <li>
-            Reduced development time by building reusable templates and
-            components.
+            Reduced development time by building reusable templates and components.
           </li>
-
           <li>
-            Delivered all projects successfully with zero major post-launch
-            issues reported.
+            Delivered projects successfully with zero major post-launch issues reported.
           </li>
-
         </ul>
 
         
@@ -382,6 +497,44 @@ export default function Resume() {
         {/* PROJECTS */}
 
         <h2 className="section-title">Projects</h2>
+
+        <div className="project-block">
+          <p className="project-name">
+            PropKart — Production Live Property CRM
+          </p>
+
+          <p className="project-url">
+            <a href="https://propkart.vercel.app" target="_blank" rel="noreferrer" style={{ color: "#2563eb" }}>https://propkart.vercel.app</a>
+          </p>
+
+          <ul className="bullet-list">
+            <li>Developed a production-ready Property CRM platform featuring Offline-First Architecture and Realtime Synchronization.</li>
+            <li>Built comprehensive Property & Requirement Management modules, a Telecaller CRM, and a Smart Matching engine.</li>
+            <li>Implemented dashboard analytics, secure authentication, PostgreSQL database, and API integrations.</li>
+            <li style={{ listStyleType: "none", marginTop: "4px", fontSize: "11px", color: "#555" }}>
+              <strong>Technology Stack:</strong> Flutter, Node.js, Supabase, PostgreSQL, Isar Database
+            </li>
+          </ul>
+        </div>
+
+        <div className="project-block">
+          <p className="project-name">
+            Hospital Management Dashboard — React Web App
+          </p>
+
+          <p className="project-url">
+            <a href="https://hospital-dashboard-woad-gamma.vercel.app/" target="_blank" rel="noreferrer" style={{ color: "#2563eb" }}>https://hospital-dashboard-woad-gamma.vercel.app/</a>
+          </p>
+
+          <ul className="bullet-list">
+            <li>Built a responsive Hospital Management Dashboard using React.js.</li>
+            <li>Features include Doctor Cards, Patient List, Appointment Form, Search Patient, Department Filtering, and Statistics Cards.</li>
+            <li>Added functionality for creating and deleting appointments seamlessly.</li>
+            <li style={{ listStyleType: "none", marginTop: "4px", fontSize: "11px", color: "#555" }}>
+              <strong>Concepts & Tech:</strong> React, Props, useState, map(), filter()
+            </li>
+          </ul>
+        </div>
 
         <div className="project-block">
           <p className="project-name">
@@ -515,10 +668,39 @@ export default function Resume() {
 
         <h2 className="section-title">Certifications</h2>
 
-        <p className="body-text">
-          C++ Programming Certification — A Grade
-        </p>
-        <p className="body-text">Flutter developement internship certificate of 3 months.</p>
+        <ul className="bullet-list">
+          <li>
+            Flutter Development Internship (3 Months)
+          </li>
+          <li>
+            React Development Internship — Tech-Craft
+          </li>
+          <li>
+            C++ Programming Certification — A Grade
+          </li>
+        </ul>
+
+        {/* ACHIEVEMENTS */}
+
+        <h2 className="section-title">Achievements</h2>
+
+        <ul className="bullet-list">
+          <li>
+            Developed the live PropKart Property CRM.
+          </li>
+          <li>
+            Built production-ready Flutter applications.
+          </li>
+          <li>
+            Designed Offline-First and Realtime architecture.
+          </li>
+          <li>
+            Developed scalable backend APIs using Node.js and Supabase.
+          </li>
+          <li>
+            Built full-stack applications across Real Estate, Healthcare, Jewellery, and Community platforms.
+          </li>
+        </ul>
 
         {/* LEADERSHIP */}
 
