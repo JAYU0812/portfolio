@@ -167,15 +167,27 @@ cd portfolio
 # 3. Install dependencies
 npm install
 
-# 4. Start local development server
+# 4. Configure environment variables (copy template)
+cp .env.example .env
+# Set your GMAIL_USER and GMAIL_APP_PASSWORD
+
+# 5. Start local development server (includes local /api/contact email middleware)
 npm run dev
 
-# 5. Run linting verification
+# 6. Run linting verification
 npm run lint
 
-# 6. Compile production build
+# 7. Compile production build
 npm run build
 ```
+
+---
+
+## ⚡ Automated Email & Lead Dispatch Engine
+
+* **Nodemailer SMTP Gateway**: Built into `api/contact.js` for zero-maintenance Vercel Serverless execution and Vite dev middleware.
+* **Lead Alert Pipeline**: Instantly delivers full lead information to `jay0812soni@gmail.com` on form submission or WhatsApp click.
+* **High-Craft Auto-Reply**: Dispatches an HTML auto-reply matching the portfolio's Obsidian Graphite (`#121316`) and Electric Saffron (`#C27803`) theme, highlighting Jay's production projects while confirming rapid follow-up.
 
 ---
 
