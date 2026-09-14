@@ -14,8 +14,7 @@ import {
   X,
   Sparkles,
   UserCheck,
-  ShieldCheck,
-  HelpCircle
+  ShieldCheck
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon, GoogleIcon } from "../components/Icons";
 
@@ -36,7 +35,6 @@ export default function Contact() {
   
   // Google One Tap / Identity States
   const [googleUser, setGoogleUser] = useState(null); // { name, email, picture }
-  const [googleConfigModalOpen, setGoogleConfigModalOpen] = useState(false);
   const googleBtnContainerRef = useRef(null);
 
   const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || "";
@@ -172,12 +170,10 @@ export default function Contact() {
     }
   }, [googleClientId, handleGoogleCredentialResponse]);
 
-  // Click on Custom Google Button (Triggers prompt or config modal)
+  // Click on Custom Google Button (Triggers live Google One Tap prompt)
   const handleGoogleButtonClick = () => {
-    if (googleClientId && window.google?.accounts?.id) {
+    if (window.google?.accounts?.id) {
       window.google.accounts.id.prompt();
-    } else {
-      setGoogleConfigModalOpen(true);
     }
   };
 
@@ -742,105 +738,6 @@ export default function Contact() {
                 </button>
               </div>
             </form>
-          </div>
-        </div>
-      )}
-
-      {/* Google One Tap Setup Guidance Modal (Shown when Client ID is needed) */}
-      {googleConfigModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 animate-in fade-in duration-200">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-[#E8E5DF] shadow-2xl relative">
-            <button
-              onClick={() => setGoogleConfigModalOpen(false)}
-              className="absolute top-5 right-5 p-2 rounded-xl text-[#7A7E89] hover:bg-[#F2EDE4] hover:text-[#121316] transition cursor-pointer"
-            >
-              <X className="w-4 h-4" />
-            </button>
-
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-200">
-                <GoogleIcon className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-bold text-[#121316]">Google One Tap Integration</h3>
-                <p className="text-xs text-[#7A7E89]">1-Click Browser Account Connection</p>
-              </div>
-            </div>
-
-            <p className="text-xs text-[#4A4E57] mb-4 leading-relaxed">
-              Google One Tap displays the visitor&apos;s logged-in Google accounts directly from Chrome/Edge/Firefox. To activate it in production or local development, configure your Google Cloud OAuth Client ID:
-            </p>
-
-            <div className="p-3.5 rounded-xl bg-[#FBF9F5] border border-[#E8E5DF] text-xs space-y-2 mb-5">
-              <p className="font-bold text-[#121316] flex items-center gap-1.5">
-                <HelpCircle className="w-3.5 h-3.5 text-[#C27803]" />
-                <span>2-Minute Google Cloud Setup:</span>
-              </p>
-              <ol className="list-decimal pl-5 space-y-1 text-[#4A4E57] text-[11px]">
-                <li>Go to <strong>Google Cloud Console &rarr; APIs &amp; Services &rarr; Credentials</strong>.</li>
-                <li>Click <strong>Create Credentials &rarr; OAuth client ID &rarr; Web application</strong>.</li>
-                <li>Add your domains to <strong>Authorized JavaScript origins</strong>:
-                  <code className="block mt-1 font-mono text-[10px] bg-white p-1 rounded border border-[#E8E5DF]">
-                    https://portfolio-iota-nine-7b2v5ah7u8.vercel.app<br />
-                    http://localhost:5173
-                  </code>
-                </li>
-                <li>Copy the generated <strong>Client ID</strong> and add it to your <code className="font-mono bg-white px-1 border border-[#E8E5DF] rounded">.env</code>:
-                  <code className="block mt-1 font-mono text-[10px] bg-white p-1 rounded border border-[#E8E5DF]">
-                    VITE_GOOGLE_CLIENT_ID=xxxxxxxx.apps.googleusercontent.com
-                  </code>
-                </li>
-              </ol>
-            </div>
-
-            {/* Simulated 1-Click Test Button for Demonstration */}
-            <div className="pt-2 flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={async () => {
-                  setGoogleConfigModalOpen(false);
-                  const demoUser = {
-                    name: "Portfolio Visitor",
-                    email: "jay0812soni@gmail.com"
-                  };
-                  setGoogleUser(demoUser);
-                  setFormData((prev) => ({ ...prev, name: demoUser.name, email: demoUser.email }));
-                  setSubmittingChannel("google");
-                  try {
-                    await fetch("/api/contact", {
-                      method: "POST",
-                      headers: { "Content-Type": "application/json" },
-                      body: JSON.stringify({
-                        name: demoUser.name,
-                        email: demoUser.email,
-                        subject: "1-Tap Google Connect (Verified Test)",
-                        message: "Tested 1-Tap Google Connect pipeline directly from portfolio contact interface.",
-                        channel: "google-one-tap"
-                      })
-                    });
-                    setSubmissionStatus("success");
-                    setFeedbackMessage(
-                      `Welcome, ${demoUser.name}! Verified with Google (${demoUser.email}). An automated portfolio confirmation has been sent to your inbox, and Jay has been alerted.`
-                    );
-                  } catch (e) {
-                    console.error(e);
-                  } finally {
-                    setSubmittingChannel(null);
-                  }
-                }}
-                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#121316] hover:bg-[#C27803] text-white font-semibold text-xs transition cursor-pointer shadow-xs"
-              >
-                <Sparkles className="w-4 h-4 text-[#C27803]" />
-                <span>Run Instant 1-Tap Test Dispatch</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => setGoogleConfigModalOpen(false)}
-                className="w-full py-2 text-center text-xs text-[#7A7E89] hover:text-[#121316] transition cursor-pointer font-mono"
-              >
-                Close Window
-              </button>
-            </div>
           </div>
         </div>
       )}
