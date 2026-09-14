@@ -299,7 +299,7 @@ export const resumeData = {
 
   languages: [
     { name: "English", level: "Professional Working Proficiency" },
-    { name: "Hindi", level: "Full Professional / Fluent" },
-    { name: "Gujarati", level: "Native Language" }
+    { name: "Hindi", level: "Native Language" },
+    { name: "Gujarati", level: "Full Professional / Fluent" }
   ]
 };

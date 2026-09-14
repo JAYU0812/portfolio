@@ -238,7 +238,7 @@ export default function Resume() {
               Languages
             </h2>
             <p className="text-xs text-[#333740] font-mono">
-              English (Professional) • Hindi (Fluent) • Gujarati (Native)
+              English (Professional) • Hindi (Native) • Gujarati (Fluent)
             </p>
           </div>
         </section>
