@@ -103,6 +103,28 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="https://techdrive.nbpropertytech.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C27803] inline-flex items-center gap-1 transition"
+                >
+                  <span>TechDrive Cloud (techdrive.nbpropertytech.com)</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://nblegacy.nbdeveloper.co.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C27803] inline-flex items-center gap-1 transition"
+                >
+                  <span>NB Legacy Tower (nblegacy.nbdeveloper.co.in)</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://chandrakalajewellers.in"
                   target="_blank"
                   rel="noopener noreferrer"

@@ -14,7 +14,8 @@ export const timelineEvents = [
     details: [
       "Engineered Offline-First Flutter client with Isar local database for PropKart Real-Estate CRM (live: propkart.nbpropertytech.com), evolved from NB Listings.",
       "Architected NB-HRMS / ERP (live: crm.nbdeveloper.co.in) with Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, AES-256 field encryption, and Whisper AI.",
-      "Built TechDrive enterprise cloud document management with FL Chart storage analytics, and Legacy Tower high-ticket investor campaign platform."
+      "Built TechDrive enterprise cloud document management (live: techdrive.nbpropertytech.com) with FL Chart storage analytics.",
+      "Engineered NB Legacy Tower high-ticket investor discovery campaign platform (live: nblegacy.nbdeveloper.co.in)."
     ]
   },
   {
@@ -56,19 +57,6 @@ export const timelineEvents = [
       "Acquired and deployed custom production domain: chandrakalajewellers.in.",
       "Built proprietary GST calculation engine computing metal weight, making charges, and tax breakdown.",
       "Designed high-converting luxury UI with automated WhatsApp customer inquiry dispatch."
-    ]
-  },
-  {
-    date: "2025",
-    title: "Hostel & PG Accommodation Management ERP",
-    category: "Hospitality ERP",
-    type: "erp",
-    badge: "Cloud Accommodation ERP",
-    summary: "Built comprehensive residency and bed allocation ERP platform with automated invoicing.",
-    details: [
-      "Engineered resident KYC onboarding, room/bed inventory allocation, and floor vacancy analytics.",
-      "Designed dynamic billing engine generating automated PDF receipts via jsPDF & AutoTable.",
-      "Integrated XLSX spreadsheet reporting for revenue auditing and occupancy projections."
     ]
   },
   {

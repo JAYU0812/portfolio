@@ -199,14 +199,25 @@ export const resumeData = {
       ]
     },
     {
-      name: "Hostel & PG Accommodation Management ERP",
-      url: null,
-      displayUrl: "Hospitality ERP Platform",
-      badge: "Completed ERP",
-      technologies: "React, Supabase, PostgreSQL, jsPDF, AutoTable, XLSX, Tailwind CSS",
+      name: "TechDrive — Enterprise Cloud Storage & Document Vault",
+      url: "https://techdrive.nbpropertytech.com/",
+      displayUrl: "techdrive.nbpropertytech.com",
+      badge: "Production Live",
+      technologies: "Flutter, Dart, BLoC, Firebase Auth, Cloud Firestore, FL Chart, Dio",
       bullets: [
-        "Full-scale accommodation ERP managing resident KYC onboarding, bed allocations across floors, and vacancy analytics.",
-        "Engineered automated billing engine generating professional digital PDF fee receipts and financial Excel spreadsheet exports."
+        "Enterprise cloud document repository deployed live at techdrive.nbpropertytech.com for blueprints, legal deeds, and property files.",
+        "Interactive storage usage charts built with FL Chart, department permission isolation, and 2-stage recycle recovery bin."
+      ]
+    },
+    {
+      name: "NB Legacy Tower — Luxury Infrastructure Campaign Portal",
+      url: "https://nblegacy.nbdeveloper.co.in/",
+      displayUrl: "nblegacy.nbdeveloper.co.in",
+      badge: "Production Live",
+      technologies: "Flutter Web, Cloud Firestore, Firebase Analytics, Google Sheets Webhook, GoRouter",
+      bullets: [
+        "Commercial campaign platform deployed live at nblegacy.nbdeveloper.co.in for NB Infra Projects' flagship development.",
+        "Dynamic unit selector and sub-2-second Google Sheets webhook routing delivering instant high-ticket investor inquiries to sales telecallers."
       ]
     },
     {

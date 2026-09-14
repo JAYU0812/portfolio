@@ -92,11 +92,11 @@ export const projects = [
     category: "Cloud Storage & Security",
     filterCategory: "tools",
     date: "Late 2025 – Present",
-    status: "Internal Production",
-    badge: "Enterprise Cloud Vault",
+    status: "Production Live",
+    badge: "Live: techdrive.nbpropertytech.com",
     tagline: "Centralized cloud document repository and visual storage visualizer for property blueprints, deeds, and legal contracts.",
     description:
-      "An internal enterprise cloud storage and digital asset management platform engineered for NB PropertyTech. Eliminates fragmented file sharing across real estate desks by providing a unified, secure repository for CAD blueprints, property deed PDFs, client agreements, and high-resolution renders. Features interactive storage breakdown analytics with FL Chart, department folder isolation, multi-tier collaborator permissions, and a 2-stage recycle recovery bin.",
+      "An internal enterprise cloud storage and digital asset management platform engineered for NB PropertyTech, deployed live at techdrive.nbpropertytech.com. Eliminates fragmented file sharing across real estate desks by providing a unified, secure repository for CAD blueprints, property deed PDFs, client agreements, and high-resolution renders. Features interactive storage breakdown analytics with FL Chart, department folder isolation, multi-tier collaborator permissions, and a 2-stage recycle recovery bin.",
     tech: [
       "Flutter",
       "Dart",
@@ -108,10 +108,11 @@ export const projects = [
       "File Handling",
       "Role-Based Access"
     ],
-    liveUrl: null,
+    liveUrl: "https://techdrive.nbpropertytech.com/",
     playStoreUrl: null,
-    featured: false,
+    featured: true,
     highlights: [
+      "Live Production Deployment: Deployed and accessible at techdrive.nbpropertytech.com",
       "Interactive Storage Visualizer: Real-time dynamic donut and progress charts built with FL Chart categorizing Documents, Blueprints, Media, and System files",
       "Departmental Access Control: Multi-tier permission matrix (Viewer / Editor / Admin) isolating confidential legal deeds from general sales collateral",
       "Multi-Format Ingestion: High-speed uploads for architectural CAD layouts, multi-page PDFs, and high-resolution marketing media",
@@ -120,15 +121,15 @@ export const projects = [
   },
   {
     id: "legacy-tower",
-    title: "Legacy Tower Campaign — Luxury Infrastructure Discovery Portal",
+    title: "NB Legacy Tower — Luxury Infrastructure Campaign Portal",
     category: "High-Ticket Campaign Portal",
     filterCategory: "web",
     date: "2025",
-    status: "Live Marketing Platform",
-    badge: "Commercial Campaign Portal",
+    status: "Production Live",
+    badge: "Live: nblegacy.nbdeveloper.co.in",
     tagline: "High-conversion luxury commercial presentation portal with dynamic unit configuration and sub-2s Google Sheets webhook routing.",
     description:
-      "A specialized digital campaign and high-ticket investor ingestion platform engineered for NB Infra Projects' flagship commercial development, Legacy Tower. Features cinematic floor plan visualizers, dynamic unit configuration (Commercial Offices, Showrooms, Luxury Residences), Firestore database synchronization, Firebase Analytics visitor tracking, and an automated Google Sheets webhook engine notifying telecallers in under 2 seconds.",
+      "A specialized digital campaign and high-ticket investor ingestion platform engineered for NB Infra Projects' flagship commercial development, Legacy Tower, deployed live at nblegacy.nbdeveloper.co.in. Features cinematic floor plan visualizers, dynamic unit configuration (Commercial Offices, Showrooms, Luxury Residences), Firestore database synchronization, Firebase Analytics visitor tracking, and an automated Google Sheets webhook engine notifying telecallers in under 2 seconds.",
     tech: [
       "Flutter Web",
       "Dart",
@@ -138,10 +139,11 @@ export const projects = [
       "GoRouter",
       "Luxury Design Tokens"
     ],
-    liveUrl: null,
+    liveUrl: "https://nblegacy.nbdeveloper.co.in/",
     playStoreUrl: null,
-    featured: false,
+    featured: true,
     highlights: [
+      "Live Commercial Deployment: Live in production at nblegacy.nbdeveloper.co.in",
       "Sub-2s Telecaller Ingestion: Automated webhook pipeline posting high-intent investor inquiries synchronously into Google Sheets for instant sales follow-up",
       "Dynamic Unit Configurator: Interactive investment tier and floor selector computing indicative layouts and specifications",
       "Real-time Investor Analytics: Firebase Analytics tracking visitor engagement across brochure downloads, floor plans, and walk-throughs",
@@ -273,35 +275,6 @@ export const projects = [
       "Simplifies complex retail debit/credit accounting for traditional non-tech merchants",
       "Automated daily balance aggregation and transaction ledger PDF export",
       "Adopted by local retail jewellers to eliminate paper register discrepancies"
-    ]
-  },
-  {
-    id: "pg-management",
-    title: "Hostel & PG Accommodation Management ERP",
-    category: "Real Estate & Hospitality ERP",
-    filterCategory: "crm",
-    date: "2025",
-    status: "Completed Platform",
-    badge: "Cloud Accommodation ERP",
-    tagline: "Resident onboarding, bed allocation, floor occupancy analytics, and automated PDF fee receipts.",
-    description:
-      "A full-scale hostel and PG accommodation ERP engineered with React and Supabase PostgreSQL. Automates resident KYC onboarding, room/bed inventory allocation across floors, automated fee structure computation with jsPDF invoice/receipt generation, and spreadsheet reporting with XLSX.",
-    tech: [
-      "React",
-      "Supabase",
-      "PostgreSQL",
-      "jsPDF & AutoTable",
-      "XLSX Engine",
-      "Tailwind CSS"
-    ],
-    liveUrl: null,
-    playStoreUrl: null,
-    featured: false,
-    highlights: [
-      "Room & Bed Allocation: Real-time tracking of single, double, and triple sharing vacancies across floors",
-      "Automated Fee Invoicing: Custom jsPDF billing engine generating professional digital receipts and fee vouchers",
-      "Resident KYC Vault: Digital management of identity documentation, parent contacts, and payment history",
-      "Financial Export: Excel XLSX report compilation for monthly revenue auditing and occupancy projections"
     ]
   },
   {
