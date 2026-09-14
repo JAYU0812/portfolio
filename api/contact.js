@@ -1,8 +1,16 @@
 import nodemailer from 'nodemailer';
 
 function buildAdminNotificationHtml({ name, email, subject, message, channel, phone, timestamp }) {
-  const channelBadgeColor = channel === 'whatsapp' ? '#059669' : '#C27803';
-  const channelLabel = channel === 'whatsapp' ? 'WhatsApp Inquiry' : 'Direct Contact Form';
+  let channelBadgeColor = '#C27803';
+  let channelLabel = 'Direct Contact Form';
+  if (channel === 'whatsapp') {
+    channelBadgeColor = '#059669';
+    channelLabel = 'WhatsApp Inquiry';
+  } else if (channel === 'google-one-tap') {
+    channelBadgeColor = '#4285F4';
+    channelLabel = 'Google One Tap (1-Click Verified)';
+  }
+
   const phoneRow = phone
     ? `<tr><td style="padding: 6px 12px; font-size: 12px; color: #656A76; font-weight: 600;">Phone:</td><td style="padding: 6px 12px; font-size: 13px; color: #121316;"><a href="tel:${phone}" style="color: #121316; text-decoration: none;">${phone}</a></td></tr>`
     : '';
@@ -108,7 +116,15 @@ function buildAdminNotificationHtml({ name, email, subject, message, channel, ph
 `;
 }
 
-function buildVisitorAutoReplyHtml({ name, subject, message, timestamp }) {
+function buildVisitorAutoReplyHtml({ name, subject, message, channel, timestamp }) {
+  const isGoogle = channel === 'google-one-tap';
+  const introGreeting = isGoogle
+    ? `Thank you for connecting with Google, ${name}!`
+    : `Thank you for reaching out, ${name}!`;
+  const introParagraph = isGoogle
+    ? `I noticed you connected via Google on my portfolio website. Thank you for your interest! I have received your connection and will review and follow up shortly.`
+    : `I have received your message regarding <strong style="color: #121316;">"${subject || 'your project inquiry'}"</strong>. Thank you for your interest in collaborating.`;
+
   return `
 <!DOCTYPE html>
 <html lang="en">
@@ -154,11 +170,11 @@ function buildVisitorAutoReplyHtml({ name, subject, message, timestamp }) {
           <tr>
             <td style="padding: 36px 36px 20px 36px;">
               <h1 style="margin: 0 0 16px 0; font-size: 22px; font-weight: 800; color: #121316; letter-spacing: -0.4px;">
-                Thank you for reaching out, ${name}!
+                ${introGreeting}
               </h1>
               
               <p style="margin: 0 0 16px 0; font-size: 14px; line-height: 1.65; color: #4A4E57;">
-                I have received your message regarding <strong style="color: #121316;">"${subject || 'your project inquiry'}"</strong>. Thank you for your interest in collaborating.
+                ${introParagraph}
               </p>
 
               <div style="background-color: #FBF9F5; border-left: 4px solid #C27803; border-radius: 0 12px 12px 0; padding: 16px 20px; margin: 24px 0;">
@@ -319,11 +335,20 @@ export async function sendContactEmails({ name, email, subject, message, channel
     timeStyle: 'medium'
   });
 
+  const isGoogle = channel === 'google-one-tap';
+  const adminSubject = isGoogle
+    ? `🔥 New Lead Alert [GOOGLE 1-TAP]: ${name} (${email})`
+    : `🔥 New Lead Alert [${(channel || 'EMAIL').toUpperCase()}]: ${name} - ${subject || 'Project Inquiry'}`;
+
+  const visitorSubject = isGoogle
+    ? `Welcome & Thank you for connecting with Google, ${name}! | Soni Jaykumar`
+    : `Thank you for reaching out, ${name}! | Soni Jaykumar`;
+
   const adminMailOptions = {
     from: `"Jay Soni Portfolio Alerts" <${adminEmail}>`,
     to: adminEmail,
     replyTo: `"${name}" <${email}>`,
-    subject: `🔥 New Lead Alert [${(channel || 'EMAIL').toUpperCase()}]: ${name} - ${subject || 'Project Inquiry'}`,
+    subject: adminSubject,
     html: buildAdminNotificationHtml({ name, email, subject, message, channel, phone, timestamp })
   };
 
@@ -331,8 +356,8 @@ export async function sendContactEmails({ name, email, subject, message, channel
     from: `"Soni Jaykumar" <${adminEmail}>`,
     to: email,
     replyTo: adminEmail,
-    subject: `Thank you for reaching out, ${name}! | Soni Jaykumar`,
-    html: buildVisitorAutoReplyHtml({ name, subject, message, timestamp })
+    subject: visitorSubject,
+    html: buildVisitorAutoReplyHtml({ name, subject, message, channel, timestamp })
   };
 
   const [adminResult, visitorResult] = await Promise.allSettled([

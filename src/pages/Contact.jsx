@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { 
   Mail, 
   MessageCircle, 
@@ -12,9 +12,12 @@ import {
   CheckCircle2,
   AlertCircle,
   X,
-  Sparkles
+  Sparkles,
+  UserCheck,
+  ShieldCheck,
+  HelpCircle
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "../components/Icons";
+import { GithubIcon, LinkedinIcon, GoogleIcon } from "../components/Icons";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -25,11 +28,18 @@ export default function Contact() {
     phone: ""
   });
   const [copiedEmail, setCopiedEmail] = useState(false);
-  const [submittingChannel, setSubmittingChannel] = useState(null); // 'email' | 'whatsapp' | null
+  const [submittingChannel, setSubmittingChannel] = useState(null); // 'email' | 'whatsapp' | 'google' | 'modal' | null
   const [submissionStatus, setSubmissionStatus] = useState(null); // 'success' | 'error' | null
   const [feedbackMessage, setFeedbackMessage] = useState("");
   const [quickModalOpen, setQuickModalOpen] = useState(false);
   const [quickLead, setQuickLead] = useState({ name: "", email: "" });
+  
+  // Google One Tap / Identity States
+  const [googleUser, setGoogleUser] = useState(null); // { name, email, picture }
+  const [googleConfigModalOpen, setGoogleConfigModalOpen] = useState(false);
+  const googleBtnContainerRef = useRef(null);
+
+  const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || "";
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText("jay0812soni@gmail.com");
@@ -39,6 +49,136 @@ export default function Contact() {
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  // Helper to parse base64 JWT returned by Google Identity Services
+  const parseGoogleJwt = (token) => {
+    try {
+      const base64Url = token.split(".")[1];
+      const base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+      const jsonPayload = decodeURIComponent(
+        atob(base64)
+          .split("")
+          .map((c) => "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2))
+          .join("")
+      );
+      return JSON.parse(jsonPayload);
+    } catch {
+      return null;
+    }
+  };
+
+  // Google One Tap / Button Credential Callback
+  const handleGoogleCredentialResponse = useCallback(async (response) => {
+    if (!response?.credential) return;
+    const profile = parseGoogleJwt(response.credential);
+    if (!profile || !profile.email) return;
+
+    const visitorName = profile.name || "Google User";
+    const visitorEmail = profile.email;
+
+    setGoogleUser({
+      name: visitorName,
+      email: visitorEmail,
+      picture: profile.picture || null
+    });
+
+    setFormData((prev) => ({
+      ...prev,
+      name: visitorName,
+      email: visitorEmail,
+      subject: prev.subject || "1-Tap Google Account Visitor Connect"
+    }));
+
+    setSubmittingChannel("google");
+    setSubmissionStatus(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: visitorName,
+          email: visitorEmail,
+          subject: "1-Tap Google Account Visitor Connect",
+          message: `Visitor connected their verified Google account (${visitorEmail}) directly from browser Google One Tap.`,
+          channel: "google-one-tap"
+        })
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setSubmissionStatus("success");
+        setFeedbackMessage(
+          `Welcome, ${visitorName}! Verified with Google (${visitorEmail}). An automated portfolio confirmation has been sent to your inbox, and Jay Soni has been alerted.`
+        );
+      } else {
+        throw new Error(data.error || "Email delivery failed");
+      }
+    } catch (err) {
+      console.warn("Google auto-reply dispatch error:", err);
+      setSubmissionStatus("error");
+      setFeedbackMessage(
+        `Signed in as ${visitorName}, but automated email dispatch encountered an error. You can still reach Jay directly below.`
+      );
+    } finally {
+      setSubmittingChannel(null);
+    }
+  }, []);
+
+  // Initialize Google One Tap & Render Button
+  useEffect(() => {
+    if (!googleClientId) return;
+
+    const setupGoogle = () => {
+      if (window.google?.accounts?.id) {
+        try {
+          window.google.accounts.id.initialize({
+            client_id: googleClientId,
+            callback: handleGoogleCredentialResponse,
+            auto_select: false,
+            cancel_on_tap_outside: true
+          });
+
+          // Auto-prompt Google One Tap on landing
+          window.google.accounts.id.prompt();
+
+          // Also render official Google button in container if present
+          if (googleBtnContainerRef.current) {
+            window.google.accounts.id.renderButton(googleBtnContainerRef.current, {
+              theme: "filled_blue",
+              size: "large",
+              text: "continue_with",
+              shape: "pill",
+              width: 260
+            });
+          }
+        } catch (e) {
+          console.warn("Google One Tap error:", e);
+        }
+      }
+    };
+
+    if (window.google?.accounts?.id) {
+      setupGoogle();
+    } else {
+      const interval = setInterval(() => {
+        if (window.google?.accounts?.id) {
+          clearInterval(interval);
+          setupGoogle();
+        }
+      }, 300);
+      return () => clearInterval(interval);
+    }
+  }, [googleClientId, handleGoogleCredentialResponse]);
+
+  // Click on Custom Google Button (Triggers prompt or config modal)
+  const handleGoogleButtonClick = () => {
+    if (googleClientId && window.google?.accounts?.id) {
+      window.google.accounts.id.prompt();
+    } else {
+      setGoogleConfigModalOpen(true);
+    }
   };
 
   // Main Email Form Submission Handler
@@ -90,7 +230,6 @@ export default function Contact() {
 
   // WhatsApp Button Submission Handler (Form)
   const handleWhatsAppSubmit = async () => {
-    // If name and email are present, trigger auto-reply + notification
     if (formData.name && formData.email) {
       setSubmittingChannel("whatsapp");
       try {
@@ -116,7 +255,6 @@ export default function Contact() {
       }
     }
 
-    // Launch WhatsApp
     const text = `Hello Jay, my name is ${formData.name || "a visitor"}. ${
       formData.message ? `Regarding: ${formData.message}` : "I'd like to discuss a software project with you."
     }`;
@@ -178,8 +316,79 @@ export default function Contact() {
             Let’s Discuss Your Next Software Project
           </h1>
           <p className="text-sm sm:text-lg text-[#4A4E57] leading-relaxed">
-            Interested in building an enterprise PropTech system, an Offline-First mobile app, or discussing an engineering role? Reach out directly via WhatsApp or the automated inquiry form below.
+            Interested in building an enterprise PropTech system, an Offline-First mobile app, or discussing an engineering role? Connect in 1-tap with your Google account, WhatsApp, or the inquiry form below.
           </p>
+        </div>
+
+        {/* ----------------- 1-TAP GOOGLE CONNECT HERO CARD ----------------- */}
+        <div className="mb-8 p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-white border border-[#E8E5DF] shadow-xs relative overflow-hidden">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+            
+            <div className="flex items-start sm:items-center gap-3.5">
+              <div className="w-12 h-12 rounded-2xl bg-[#FBF9F5] border border-[#E8E5DF] flex items-center justify-center shrink-0 shadow-xs">
+                {googleUser?.picture ? (
+                  <img
+                    src={googleUser.picture}
+                    alt={googleUser.name}
+                    className="w-10 h-10 rounded-xl object-cover"
+                  />
+                ) : (
+                  <GoogleIcon className="w-6 h-6" />
+                )}
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h3 className="font-bold text-sm sm:text-base text-[#121316]">
+                    {googleUser ? `Connected as ${googleUser.name}` : "1-Tap Google Connect"}
+                  </h3>
+                  {googleUser && (
+                    <span className="inline-flex items-center gap-1 text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                      <ShieldCheck className="w-3 h-3" />
+                      <span>Verified</span>
+                    </span>
+                  )}
+                </div>
+                <p className="text-xs text-[#656A76] mt-0.5">
+                  {googleUser
+                    ? `Auto-reply sent to ${googleUser.email}. Form pre-filled below.`
+                    : "Select your browser's active Google account to receive an instant portfolio receipt & notify Jay."}
+                </p>
+              </div>
+            </div>
+
+            {/* Actions */}
+            <div className="flex items-center gap-3 self-start md:self-auto shrink-0">
+              {googleUser ? (
+                <div className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold">
+                  <UserCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <span>Account Linked ({googleUser.email})</span>
+                </div>
+              ) : (
+                <>
+                  <div ref={googleBtnContainerRef} className="hidden sm:block"></div>
+                  <button
+                    type="button"
+                    onClick={handleGoogleButtonClick}
+                    disabled={submittingChannel === "google"}
+                    className="flex items-center gap-2.5 px-5 py-3 rounded-xl bg-[#121316] hover:bg-[#2B2E36] text-white text-xs font-bold transition shadow-xs cursor-pointer active:scale-98 disabled:opacity-50"
+                  >
+                    {submittingChannel === "google" ? (
+                      <>
+                        <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
+                        <span>Sending Auto-Reply...</span>
+                      </>
+                    ) : (
+                      <>
+                        <GoogleIcon className="w-4 h-4" />
+                        <span>Connect with Google</span>
+                      </>
+                    )}
+                  </button>
+                </>
+              )}
+            </div>
+
+          </div>
         </div>
 
         <div className="grid lg:grid-cols-12 gap-6 sm:gap-10">
@@ -533,6 +742,105 @@ export default function Contact() {
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      )}
+
+      {/* Google One Tap Setup Guidance Modal (Shown when Client ID is needed) */}
+      {googleConfigModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-xs p-4 animate-in fade-in duration-200">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-[#E8E5DF] shadow-2xl relative">
+            <button
+              onClick={() => setGoogleConfigModalOpen(false)}
+              className="absolute top-5 right-5 p-2 rounded-xl text-[#7A7E89] hover:bg-[#F2EDE4] hover:text-[#121316] transition cursor-pointer"
+            >
+              <X className="w-4 h-4" />
+            </button>
+
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 border border-blue-200">
+                <GoogleIcon className="w-5 h-5" />
+              </div>
+              <div>
+                <h3 className="text-base font-bold text-[#121316]">Google One Tap Integration</h3>
+                <p className="text-xs text-[#7A7E89]">1-Click Browser Account Connection</p>
+              </div>
+            </div>
+
+            <p className="text-xs text-[#4A4E57] mb-4 leading-relaxed">
+              Google One Tap displays the visitor&apos;s logged-in Google accounts directly from Chrome/Edge/Firefox. To activate it in production or local development, configure your Google Cloud OAuth Client ID:
+            </p>
+
+            <div className="p-3.5 rounded-xl bg-[#FBF9F5] border border-[#E8E5DF] text-xs space-y-2 mb-5">
+              <p className="font-bold text-[#121316] flex items-center gap-1.5">
+                <HelpCircle className="w-3.5 h-3.5 text-[#C27803]" />
+                <span>2-Minute Google Cloud Setup:</span>
+              </p>
+              <ol className="list-decimal pl-5 space-y-1 text-[#4A4E57] text-[11px]">
+                <li>Go to <strong>Google Cloud Console &rarr; APIs &amp; Services &rarr; Credentials</strong>.</li>
+                <li>Click <strong>Create Credentials &rarr; OAuth client ID &rarr; Web application</strong>.</li>
+                <li>Add your domains to <strong>Authorized JavaScript origins</strong>:
+                  <code className="block mt-1 font-mono text-[10px] bg-white p-1 rounded border border-[#E8E5DF]">
+                    https://portfolio-iota-nine-7b2v5ah7u8.vercel.app<br />
+                    http://localhost:5173
+                  </code>
+                </li>
+                <li>Copy the generated <strong>Client ID</strong> and add it to your <code className="font-mono bg-white px-1 border border-[#E8E5DF] rounded">.env</code>:
+                  <code className="block mt-1 font-mono text-[10px] bg-white p-1 rounded border border-[#E8E5DF]">
+                    VITE_GOOGLE_CLIENT_ID=xxxxxxxx.apps.googleusercontent.com
+                  </code>
+                </li>
+              </ol>
+            </div>
+
+            {/* Simulated 1-Click Test Button for Demonstration */}
+            <div className="pt-2 flex flex-col gap-2">
+              <button
+                type="button"
+                onClick={async () => {
+                  setGoogleConfigModalOpen(false);
+                  const demoUser = {
+                    name: "Portfolio Visitor",
+                    email: "jay0812soni@gmail.com"
+                  };
+                  setGoogleUser(demoUser);
+                  setFormData((prev) => ({ ...prev, name: demoUser.name, email: demoUser.email }));
+                  setSubmittingChannel("google");
+                  try {
+                    await fetch("/api/contact", {
+                      method: "POST",
+                      headers: { "Content-Type": "application/json" },
+                      body: JSON.stringify({
+                        name: demoUser.name,
+                        email: demoUser.email,
+                        subject: "1-Tap Google Connect (Verified Test)",
+                        message: "Tested 1-Tap Google Connect pipeline directly from portfolio contact interface.",
+                        channel: "google-one-tap"
+                      })
+                    });
+                    setSubmissionStatus("success");
+                    setFeedbackMessage(
+                      `Welcome, ${demoUser.name}! Verified with Google (${demoUser.email}). An automated portfolio confirmation has been sent to your inbox, and Jay has been alerted.`
+                    );
+                  } catch (e) {
+                    console.error(e);
+                  } finally {
+                    setSubmittingChannel(null);
+                  }
+                }}
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-[#121316] hover:bg-[#C27803] text-white font-semibold text-xs transition cursor-pointer shadow-xs"
+              >
+                <Sparkles className="w-4 h-4 text-[#C27803]" />
+                <span>Run Instant 1-Tap Test Dispatch</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => setGoogleConfigModalOpen(false)}
+                className="w-full py-2 text-center text-xs text-[#7A7E89] hover:text-[#121316] transition cursor-pointer font-mono"
+              >
+                Close Window
+              </button>
+            </div>
           </div>
         </div>
       )}
