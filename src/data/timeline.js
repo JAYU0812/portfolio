@@ -5,7 +5,7 @@
 
 export const timelineEvents = [
   {
-    date: "Current / Ongoing",
+    date: "June 2026 – Present",
     title: "Software Engineer at NB Developers (NB Property Tech)",
     category: "Full-Time Engineering",
     type: "work",

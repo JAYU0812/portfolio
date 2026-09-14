@@ -150,7 +150,7 @@ timeline
               : Tech-Craft Internship : Hospital Management Dashboard (Live on Vercel)
               : Flutter Internship : 3-Month Mobile Architecture & State Management
               : GitSphere : Windows Desktop Visual Git Control Center (v1.0.0)
-    Present : NB Developers : Lead Mobile & Full-Stack Architect (PropKart, NB-HRMS, TechDrive, NB Legacy Tower)
+    June 2026 – Present : NB Developers : Lead Mobile & Full-Stack Architect (PropKart, NB-HRMS, TechDrive, NB Legacy Tower)
 ```
 
 ---

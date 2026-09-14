@@ -74,7 +74,7 @@ export const resumeData = {
     {
       company: "NB Developers (NB Property Tech)",
       role: "Lead Mobile & Full-Stack Architect",
-      period: "July 2025 – Present",
+      period: "June 2026 – Present",
       location: "Science City, Ahmedabad",
       description: "PropTech Enterprise Operating System (PropKart v2.1.1, Build 11)",
       technologies: ["Flutter", "Dart", "BLoC", "Riverpod", "Isar NoSQL", "Supabase", "PostgreSQL", "Node.js", "Meta Graph API", "Phoenix WebSockets"],
