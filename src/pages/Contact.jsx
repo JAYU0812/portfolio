@@ -364,13 +364,13 @@ export default function Contact() {
                   <span>Account Linked ({googleUser.email})</span>
                 </div>
               ) : (
-                <>
-                  <div ref={googleBtnContainerRef} className="hidden sm:block"></div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <div ref={googleBtnContainerRef} className="empty:hidden"></div>
                   <button
                     type="button"
                     onClick={handleGoogleButtonClick}
                     disabled={submittingChannel === "google"}
-                    className="flex items-center gap-2.5 px-5 py-3 rounded-xl bg-[#121316] hover:bg-[#2B2E36] text-white text-xs font-bold transition shadow-xs cursor-pointer active:scale-98 disabled:opacity-50"
+                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[#121316] hover:bg-[#2B2E36] text-white text-xs font-bold transition shadow-xs cursor-pointer active:scale-98 disabled:opacity-50"
                   >
                     {submittingChannel === "google" ? (
                       <>
@@ -384,7 +384,7 @@ export default function Contact() {
                       </>
                     )}
                   </button>
-                </>
+                </div>
               )}
             </div>
 
