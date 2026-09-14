@@ -34,30 +34,30 @@ export default function Projects() {
   };
 
   return (
-    <div className="py-10 sm:py-16 text-[#121316]">
+    <div className="py-8 sm:py-16 text-[#121316]">
       {/* ----------------- 1. PAGE HEADER ----------------- */}
-      <section className="max-w-7xl mx-auto px-6 mb-12">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
         <div className="max-w-3xl">
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
             Engineering Portfolio
           </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-[#121316] tracking-tight mt-1 mb-4">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#121316] tracking-tight mt-1 mb-3 sm:mb-4">
             Production Software & Live Applications
           </h1>
-          <p className="text-base sm:text-lg text-[#4A4E57] leading-relaxed">
+          <p className="text-sm sm:text-lg text-[#4A4E57] leading-relaxed">
             Every project listed here is a deployed, real-world application engineered to solve operational challenges — featuring enterprise PropTech platforms, Google Play Store releases, proprietary GST billing software, and geofenced attendance algorithms.
           </p>
         </div>
       </section>
 
-      {/* ----------------- 2. FILTER TABS ----------------- */}
-      <section className="max-w-7xl mx-auto px-6 mb-10">
-        <div className="flex flex-wrap gap-2 p-1.5 bg-white border border-[#E8E5DF] rounded-2xl shadow-xs w-fit">
+      {/* ----------------- 2. FILTER TABS (SWIPEABLE ON MOBILE) ----------------- */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
+        <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 sm:gap-2 p-1.5 bg-white border border-[#E8E5DF] rounded-2xl shadow-xs w-full sm:w-fit -mx-1 px-1.5 sm:mx-0">
           {filterTabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveFilter(tab.id)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
+              className={`shrink-0 flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap ${
                 activeFilter === tab.id
                   ? "bg-[#121316] text-white shadow-xs"
                   : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
@@ -76,8 +76,8 @@ export default function Projects() {
       </section>
 
       {/* ----------------- 3. PROJECTS GRID ----------------- */}
-      <section className="max-w-7xl mx-auto px-6 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
           {filteredProjects.map((project) => (
             <ProjectCard
               key={project.id}
@@ -89,7 +89,7 @@ export default function Projects() {
       </section>
 
       {/* ----------------- 4. CLIENT DIGITIZATION DEMOS SECTION ----------------- */}
-      <section className="max-w-7xl mx-auto px-6 py-12 border-t border-[#E8E5DF]">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 border-t border-[#E8E5DF]">
         <div className="max-w-2xl mb-8">
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
             Retail Digitization Demos
@@ -97,12 +97,12 @@ export default function Projects() {
           <h2 className="text-2xl sm:text-3xl font-bold text-[#121316] mt-1 mb-2">
             Local Business Transformation Solutions
           </h2>
-          <p className="text-sm text-[#4A4E57] leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#4A4E57] leading-relaxed">
             In addition to major production systems, I have helped 5+ traditional retail business owners build online storefronts, catalog ordering, and WhatsApp booking tools.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
           {[
             {
               title: "Kirana & Grocery Store",
@@ -128,7 +128,7 @@ export default function Projects() {
           ].map((demo, idx) => (
             <div
               key={idx}
-              className="bg-white p-6 rounded-3xl border border-[#E8E5DF] shadow-xs hover:border-[#C27803]/40 transition flex flex-col justify-between"
+              className="bg-white p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#E8E5DF] shadow-xs hover:border-[#C27803]/40 transition flex flex-col justify-between"
             >
               <div>
                 <div className="flex justify-between items-center mb-3">
@@ -137,19 +137,19 @@ export default function Projects() {
                   </span>
                   <Store className="w-4 h-4 text-[#7A7E89]" />
                 </div>
-                <h3 className="text-lg font-bold text-[#121316] mb-1">
+                <h3 className="text-base sm:text-lg font-bold text-[#121316] mb-1">
                   {demo.title}
                 </h3>
-                <p className="text-xs font-mono text-[#7A7E89] mb-3">
+                <p className="text-xs font-mono text-[#7A7E89] mb-2 sm:mb-3">
                   {demo.category}
                 </p>
-                <p className="text-xs text-[#4A4E57] leading-relaxed mb-6">
+                <p className="text-xs text-[#4A4E57] leading-relaxed mb-5 sm:mb-6">
                   {demo.desc}
                 </p>
               </div>
               <Link
                 to={demo.link}
-                className="inline-flex items-center gap-2 text-xs font-semibold text-[#121316] hover:text-[#C27803] transition"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#121316] hover:text-[#C27803] transition pt-2 border-t border-[#F2EDE4]"
               >
                 <span>View Interactive Demo</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

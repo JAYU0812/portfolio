@@ -15,35 +15,37 @@ import {
 export default function ArchitectureConsole() {
   const [activeTab, setActiveTab] = useState("telemetry");
 
+  const tabs = [
+    { id: "telemetry", label: "PropKart Latencies", icon: <Activity className="w-3.5 h-3.5" /> },
+    { id: "gitsphere", label: "GitSphere Desktop", icon: <GitBranch className="w-3.5 h-3.5" /> },
+    { id: "playstore", label: "Play Store Apps", icon: <Smartphone className="w-3.5 h-3.5" /> },
+    { id: "jewellery", label: "Jeweller ERP Suite", icon: <Zap className="w-3.5 h-3.5" /> },
+    { id: "haversine", label: "Haversine Math", icon: <Cpu className="w-3.5 h-3.5" /> }
+  ];
+
   return (
-    <div className="bg-[#121316] text-[#FBF9F5] rounded-3xl p-6 sm:p-10 border border-[#2B2E36] shadow-xl relative overflow-hidden">
+    <div className="bg-[#121316] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-[#2B2E36] shadow-xl relative overflow-hidden w-full">
       {/* Console Top Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-[#2B2E36] mb-8">
+      <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 sm:pb-6 border-b border-[#2B2E36] mb-6 sm:mb-8">
         <div>
           <div className="flex items-center gap-2 mb-1">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#E8C37D]">
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+            <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-widest text-[#E8C37D]">
               System Telemetry & Architecture Console
             </span>
           </div>
-          <h3 className="text-xl sm:text-2xl font-bold tracking-tight text-white">
+          <h3 className="text-lg sm:text-2xl font-bold tracking-tight text-white">
             Production Engineering Depth
           </h3>
         </div>
 
-        {/* Tab Buttons */}
-        <div className="flex flex-wrap gap-1.5 p-1 bg-[#1C1F26] border border-[#2E333D] rounded-xl text-xs font-mono">
-          {[
-            { id: "telemetry", label: "PropKart Latencies", icon: <Activity className="w-3.5 h-3.5" /> },
-            { id: "gitsphere", label: "GitSphere Desktop", icon: <GitBranch className="w-3.5 h-3.5" /> },
-            { id: "playstore", label: "Play Store Apps", icon: <Smartphone className="w-3.5 h-3.5" /> },
-            { id: "jewellery", label: "Jeweller ERP Suite", icon: <Zap className="w-3.5 h-3.5" /> },
-            { id: "haversine", label: "Haversine Math", icon: <Cpu className="w-3.5 h-3.5" /> }
-          ].map((tab) => (
+        {/* Tab Buttons: Horizontal swipe on mobile, clean flex on desktop */}
+        <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 p-1 bg-[#1C1F26] border border-[#2E333D] rounded-xl text-xs font-mono w-full lg:w-auto -mx-1 px-1 sm:mx-0">
+          {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg transition cursor-pointer ${
+              className={`flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-lg transition cursor-pointer shrink-0 whitespace-nowrap active:scale-95 ${
                 activeTab === tab.id
                   ? "bg-[#C27803] text-white font-bold shadow-xs"
                   : "text-[#A4ACB9] hover:text-white hover:bg-[#252932]"
@@ -58,33 +60,33 @@ export default function ArchitectureConsole() {
 
       {/* Tab 1: PropKart Telemetry & Latencies */}
       {activeTab === "telemetry" && (
-        <div className="space-y-6 animate-in fade-in duration-200">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
-              <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">Isar Read Latency</div>
-              <div className="text-2xl font-mono font-extrabold text-[#E8C37D]">2ms – 8ms</div>
-              <p className="text-[11px] text-[#A4ACB9] mt-1">Perceived zero-wait memory hydration</p>
+        <div className="space-y-4 sm:space-y-6 animate-in fade-in duration-200">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4">
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Isar Read Latency</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-[#E8C37D] truncate">2ms – 8ms</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Perceived zero-wait memory hydration</p>
             </div>
-            <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
-              <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">Batch Write Speed</div>
-              <div className="text-2xl font-mono font-extrabold text-emerald-400">10ms – 25ms</div>
-              <p className="text-[11px] text-[#A4ACB9] mt-1">100+ entities/transaction batch</p>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Batch Write Speed</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-emerald-400 truncate">10ms – 25ms</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">100+ entities/transaction batch</p>
             </div>
-            <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
-              <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">Lead Ad Ingestion</div>
-              <div className="text-2xl font-mono font-extrabold text-[#E8C37D]">&lt; 1 Second</div>
-              <p className="text-[11px] text-[#A4ACB9] mt-1">Meta Graph API webhook push</p>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Lead Ad Ingestion</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-[#E8C37D] truncate">&lt; 1 Second</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Meta Graph API webhook push</p>
             </div>
-            <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
-              <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">Socket Batching</div>
-              <div className="text-2xl font-mono font-extrabold text-sky-400">100ms Debounce</div>
-              <p className="text-[11px] text-[#A4ACB9] mt-1">Phoenix channel transactional grouping</p>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Socket Batching</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-sky-400 truncate">100ms Debounce</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Phoenix channel batch grouping</p>
             </div>
           </div>
 
-          <div className="bg-[#171A21] p-5 sm:p-6 rounded-2xl border border-[#262B35] font-mono text-xs space-y-3">
-            <div className="text-[#8A909E] flex items-center justify-between pb-2 border-b border-[#262B35]">
-              <span>// PropKart Conflict Resolution & Ingestion Architecture</span>
+          <div className="bg-[#171A21] p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-[#262B35] font-mono text-xs space-y-3">
+            <div className="text-[#8A909E] flex flex-col sm:flex-row sm:items-center justify-between pb-2.5 border-b border-[#262B35] gap-1">
+              <span className="text-[11px] sm:text-xs font-semibold text-white">// Conflict Resolution & Ingestion Pipeline</span>
               <a 
                 href="https://propkart.nbpropertytech.com" 
                 target="_blank" 
@@ -94,10 +96,10 @@ export default function ArchitectureConsole() {
                 propkart.nbpropertytech.com <ArrowUpRight className="w-3.5 h-3.5" />
               </a>
             </div>
-            <p className="text-[#A4ACB9] leading-relaxed">
+            <p className="text-[#A4ACB9] leading-relaxed text-[11px] sm:text-xs">
               • <strong className="text-white">Deterministic Server-Wins Outbox Replay:</strong> Field agents log follow-ups and update stages in offline basements. Mutations persist in local outbox queues and replay sequentially with strict timestamp verification against cloud PostgreSQL.
             </p>
-            <p className="text-[#A4ACB9] leading-relaxed">
+            <p className="text-[#A4ACB9] leading-relaxed text-[11px] sm:text-xs">
               • <strong className="text-white">Lead Understanding Engine:</strong> Analyzes raw Meta Ads payload, cleanses Indian mobile formats (+91) via regex, scores completeness (0–100%), and generates one-tap WhatsApp deep-links for telecallers.
             </p>
           </div>
@@ -106,39 +108,39 @@ export default function ArchitectureConsole() {
 
       {/* Tab: GitSphere Desktop Visual Engine */}
       {activeTab === "gitsphere" && (
-        <div className="space-y-6 animate-in fade-in duration-200">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
-              <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">Visual Git Pipeline</div>
-              <div className="text-2xl font-mono font-extrabold text-[#E8C37D]">4 Stages</div>
-              <p className="text-[11px] text-[#A4ACB9] mt-1">Working &rarr; Stage &rarr; Branch &rarr; Remote</p>
+        <div className="space-y-4 sm:space-y-6 animate-in fade-in duration-200">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4">
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Visual Pipeline</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-[#E8C37D] truncate">4 Stages</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Working &rarr; Stage &rarr; Branch &rarr; Remote</p>
             </div>
-            <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
-              <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">GitHub Account Switch</div>
-              <div className="text-2xl font-mono font-extrabold text-emerald-400">1-Click SQLite</div>
-              <p className="text-[11px] text-[#A4ACB9] mt-1">Zero terminal re-auth collisions</p>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">GitHub Switch</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-emerald-400 truncate">1-Click SQLite</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Zero terminal re-auth collisions</p>
             </div>
-            <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
-              <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">Inno Setup Size</div>
-              <div className="text-2xl font-mono font-extrabold text-[#E8C37D]">12.07 MB</div>
-              <p className="text-[11px] text-[#A4ACB9] mt-1">Windows setup wizard + ZIP</p>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Inno Setup Size</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-[#E8C37D] truncate">12.07 MB</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Windows setup wizard + ZIP</p>
             </div>
-            <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
-              <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">README Script Runner</div>
-              <div className="text-2xl font-mono font-extrabold text-sky-400">1-Click Run</div>
-              <p className="text-[11px] text-[#A4ACB9] mt-1">Categorized Setup / Dev / Test</p>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">README Runner</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-sky-400 truncate">1-Click Run</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Categorized Setup / Dev / Test</p>
             </div>
           </div>
 
           {/* Interactive 4-Stage Visualizer */}
-          <div className="bg-[#171A21] p-5 sm:p-6 rounded-2xl border border-[#262B35]">
-            <div className="text-[#8A909E] font-mono text-xs flex items-center justify-between pb-3 border-b border-[#262B35] mb-4">
-              <span>// GitSphere Interactive 4-Stage Visual Pipeline</span>
+          <div className="bg-[#171A21] p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-[#262B35]">
+            <div className="text-[#8A909E] font-mono text-xs flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-[#262B35] mb-4 gap-1">
+              <span className="text-[11px] sm:text-xs font-semibold text-white">// GitSphere 4-Stage Visual Pipeline</span>
               <span className="text-[#E8C37D] text-[11px]">Flutter Desktop + Win32/DWM</span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-4 gap-3 font-mono text-xs">
-              <div className="bg-[#1C1F26] p-3.5 rounded-xl border border-[#2E333D] relative">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 sm:gap-3 font-mono text-xs">
+              <div className="bg-[#1C1F26] p-3.5 rounded-xl border border-[#2E333D]">
                 <div className="flex items-center justify-between text-[#E8C37D] text-[11px] font-bold mb-1">
                   <span>1. Working Tree</span>
                   <Terminal className="w-3.5 h-3.5 text-[#C27803]" />
@@ -148,7 +150,7 @@ export default function ArchitectureConsole() {
                 </p>
               </div>
 
-              <div className="bg-[#1C1F26] p-3.5 rounded-xl border border-[#2E333D] relative">
+              <div className="bg-[#1C1F26] p-3.5 rounded-xl border border-[#2E333D]">
                 <div className="flex items-center justify-between text-emerald-400 text-[11px] font-bold mb-1">
                   <span>2. Staging Area</span>
                   <Layers className="w-3.5 h-3.5 text-emerald-500" />
@@ -158,7 +160,7 @@ export default function ArchitectureConsole() {
                 </p>
               </div>
 
-              <div className="bg-[#1C1F26] p-3.5 rounded-xl border border-[#2E333D] relative">
+              <div className="bg-[#1C1F26] p-3.5 rounded-xl border border-[#2E333D]">
                 <div className="flex items-center justify-between text-sky-400 text-[11px] font-bold mb-1">
                   <span>3. Commit Branch</span>
                   <GitBranch className="w-3.5 h-3.5 text-sky-400" />
@@ -168,7 +170,7 @@ export default function ArchitectureConsole() {
                 </p>
               </div>
 
-              <div className="bg-[#1C1F26] p-3.5 rounded-xl border border-[#2E333D] relative">
+              <div className="bg-[#1C1F26] p-3.5 rounded-xl border border-[#2E333D]">
                 <div className="flex items-center justify-between text-amber-400 text-[11px] font-bold mb-1">
                   <span>4. GitHub Cloud</span>
                   <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
@@ -189,8 +191,8 @@ export default function ArchitectureConsole() {
 
       {/* Tab 2: Play Store Deployments */}
       {activeTab === "playstore" && (
-        <div className="grid sm:grid-cols-2 gap-6 animate-in fade-in duration-200">
-          <div className="bg-[#1C1F26] p-6 rounded-2xl border border-[#2E333D] flex flex-col justify-between">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 animate-in fade-in duration-200">
+          <div className="bg-[#1C1F26] p-5 sm:p-6 rounded-2xl border border-[#2E333D] flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300 border border-emerald-700/50">
@@ -198,8 +200,8 @@ export default function ArchitectureConsole() {
                 </span>
                 <span className="text-xs font-mono text-[#8A909E]">Released June 2025</span>
               </div>
-              <h4 className="text-lg font-bold text-white mb-1">Parichay Sammelan</h4>
-              <p className="text-xs font-mono text-[#E8C37D] mb-3">com.hssolutiontech.ParichaySammelan</p>
+              <h4 className="text-base sm:text-lg font-bold text-white mb-1">Parichay Sammelan</h4>
+              <p className="text-xs font-mono text-[#E8C37D] mb-3 truncate">com.hssolutiontech.ParichaySammelan</p>
               <p className="text-xs text-[#A4ACB9] leading-relaxed mb-4">
                 Community registration and event check-in app with Razorpay ticketing and high-speed QR code venue verification.
               </p>
@@ -208,7 +210,7 @@ export default function ArchitectureConsole() {
               href="https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan&pcampaignid=web_share"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#0F766E] hover:bg-[#0D655E] text-white text-xs font-semibold transition"
+              className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#0F766E] hover:bg-[#0D655E] active:scale-98 text-white text-xs font-semibold transition shadow-xs"
             >
               <Smartphone className="w-3.5 h-3.5" />
               <span>View on Google Play Store</span>
@@ -216,7 +218,7 @@ export default function ArchitectureConsole() {
             </a>
           </div>
 
-          <div className="bg-[#1C1F26] p-6 rounded-2xl border border-[#2E333D] flex flex-col justify-between">
+          <div className="bg-[#1C1F26] p-5 sm:p-6 rounded-2xl border border-[#2E333D] flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between mb-3">
                 <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-900/60 text-emerald-300 border border-emerald-700/50">
@@ -224,8 +226,8 @@ export default function ArchitectureConsole() {
                 </span>
                 <span className="text-xs font-mono text-[#8A909E]">Released August 2025</span>
               </div>
-              <h4 className="text-lg font-bold text-white mb-1">KITAAB — Jeweller Ledger</h4>
-              <p className="text-xs font-mono text-[#E8C37D] mb-3">com.jeweller.ledger</p>
+              <h4 className="text-base sm:text-lg font-bold text-white mb-1">KITAAB — Jeweller Ledger</h4>
+              <p className="text-xs font-mono text-[#E8C37D] mb-3 truncate">com.jeweller.ledger</p>
               <p className="text-xs text-[#A4ACB9] leading-relaxed mb-4">
                 Digital transaction ledger replacing physical bahi-khata registers for retail jewellers with credit/debit calculations and PDF statements.
               </p>
@@ -234,7 +236,7 @@ export default function ArchitectureConsole() {
               href="https://play.google.com/store/apps/details?id=com.jeweller.ledger&pcampaignid=web_share"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-[#0F766E] hover:bg-[#0D655E] text-white text-xs font-semibold transition"
+              className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-[#0F766E] hover:bg-[#0D655E] active:scale-98 text-white text-xs font-semibold transition shadow-xs"
             >
               <Smartphone className="w-3.5 h-3.5" />
               <span>View on Google Play Store</span>
@@ -247,7 +249,7 @@ export default function ArchitectureConsole() {
       {/* Tab 3: Chandrakala Jewellers ERP Suite */}
       {activeTab === "jewellery" && (
         <div className="space-y-4 animate-in fade-in duration-200">
-          <div className="grid sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
             <div className="bg-[#1C1F26] p-4 rounded-2xl border border-[#2E333D]">
               <div className="text-[10px] font-mono text-[#8A909E] uppercase mb-1">Commercial Storefront</div>
               <div className="text-sm font-bold text-white mb-1">chandrakalajewellers.in</div>
@@ -280,20 +282,20 @@ export default function ArchitectureConsole() {
 
       {/* Tab 4: Haversine Math */}
       {activeTab === "haversine" && (
-        <div className="bg-[#1C1F26] p-6 rounded-2xl border border-[#2E333D] font-mono text-xs space-y-4 animate-in fade-in duration-200">
-          <div className="flex items-center justify-between pb-3 border-b border-[#2E333D]">
-            <span className="text-[#E8C37D] font-bold">Hackathon 5th Place Winner: Anti-Proxy Geofencing Formula</span>
-            <span className="text-[10px] px-2 py-0.5 rounded bg-[#C27803]/20 text-[#E8C37D] border border-[#C27803]/40">Awarded</span>
+        <div className="bg-[#1C1F26] p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-[#2E333D] font-mono text-xs space-y-4 animate-in fade-in duration-200">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-3 border-b border-[#2E333D] gap-1">
+            <span className="text-[#E8C37D] font-bold text-xs sm:text-sm">Hackathon 5th Place: Anti-Proxy Geofencing Formula</span>
+            <span className="text-[10px] px-2 py-0.5 rounded bg-[#C27803]/20 text-[#E8C37D] border border-[#C27803]/40 w-fit">Awarded</span>
           </div>
-          <p className="text-[#A4ACB9] leading-relaxed">
+          <p className="text-[#A4ACB9] leading-relaxed text-[11px] sm:text-xs">
             To prevent proxy attendance across large auditoriums and field sites, attendees scan a cryptographic time-based rolling QR code while their GPS coordinates are mathematically validated using the spherical Haversine formula:
           </p>
-          <div className="bg-[#121316] p-4 rounded-xl border border-[#2E333D] text-[#E8C37D] overflow-x-auto text-[11px] leading-relaxed">
+          <div className="bg-[#121316] p-3 sm:p-4 rounded-xl border border-[#2E333D] text-[#E8C37D] overflow-x-auto text-[10px] sm:text-[11px] leading-relaxed no-scrollbar">
             a = sin²(Δlat/2) + cos(lat1) ⋅ cos(lat2) ⋅ sin²(Δlon/2)<br />
             c = 2 ⋅ atan2( √a, √(1−a) )<br />
             d = R ⋅ c  (where R = 6,371 km)
           </div>
-          <p className="text-[#8A909E] text-[11px]">
+          <p className="text-[#8A909E] text-[10px] sm:text-[11px]">
             If distance &le; authorized venue radius (e.g. 50m) and QR token hash is unexpired, attendance is permanently verified.
           </p>
         </div>

@@ -4,21 +4,21 @@ import { GithubIcon, LinkedinIcon } from "./Icons";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F2EDE4] border-t border-[#E8E5DF] py-14 text-sm text-[#4A4E57] print:hidden mt-20">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+    <footer className="bg-[#F2EDE4] border-t border-[#E8E5DF] py-10 sm:py-14 text-sm text-[#4A4E57] print:hidden mt-12 sm:mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-8 sm:mb-12">
           
           {/* Col 1: Bio */}
-          <div className="md:col-span-2 space-y-4">
+          <div className="sm:col-span-2 md:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-[#121316] text-[#FBF9F5] flex items-center justify-center font-mono font-bold text-xs">
+              <div className="w-9 h-9 rounded-xl bg-[#121316] text-[#FBF9F5] flex items-center justify-center font-mono font-bold text-xs shrink-0">
                 SJ
               </div>
               <span className="font-bold text-base text-[#121316]">
                 Soni Jaykumar Hasmukh
               </span>
             </div>
-            <p className="text-[#656A76] max-w-md text-sm leading-relaxed">
+            <p className="text-[#656A76] max-w-md text-xs sm:text-sm leading-relaxed">
               Full Stack Software Engineer building enterprise PropTech systems at NB Developers.
               Passionate about Offline-First mobile architectures, realtime synchronization, and scalable full-stack products.
             </p>
@@ -30,10 +30,10 @@ export default function Footer() {
 
           {/* Col 2: Navigation */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] mb-4">
+            <h4 className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] mb-3 sm:mb-4">
               Navigation
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link to="/" className="hover:text-[#C27803] transition">
                   Home
@@ -64,10 +64,10 @@ export default function Footer() {
 
           {/* Col 3: Connect & Live Links */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] mb-4">
+            <h4 className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] mb-3 sm:mb-4">
               Connect & Live
             </h4>
-            <ul className="space-y-2.5 text-sm">
+            <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <a
                   href="https://propkart.nbpropertytech.com"
@@ -129,7 +129,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-[#E8E5DF] flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#7A7E89]">
+        <div className="pt-6 sm:pt-8 border-t border-[#E8E5DF] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-[#7A7E89] text-center sm:text-left">
           <p>© {new Date().getFullYear()} Soni Jaykumar Hasmukh. All rights reserved.</p>
           <p className="font-mono text-center sm:text-right">
             Crafted with React, Tailwind CSS & Vite • Zero AI Template Bloat
