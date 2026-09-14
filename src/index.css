@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -7,5 +12,21 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+  background-color: #FBF9F5;
+  color: #121316;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Subtle architectural dot grid pattern for depth without AI blur blobs */
+.architectural-grid {
+  background-image: radial-gradient(#D5D1C8 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+/* Print styles */
+@media print {
+  .print-hidden {
+    display: none !important;
+  }
 }

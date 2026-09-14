@@ -1,181 +1,231 @@
-import React from "react";
+import { Link } from "react-router-dom";
+import { timelineEvents } from "../data/timeline";
+import { 
+  Smartphone, 
+  CheckCircle2, 
+  ArrowUpRight, 
+  Award, 
+  GraduationCap,
+  Sparkles,
+  Zap,
+  Building2
+} from "lucide-react";
 
 export default function About() {
   const handleMascotSpeak = (text) => {
     window.dispatchEvent(new CustomEvent("mascot-speak", { detail: { text } }));
   };
 
-  const techDescriptions = {
-    "Flutter": "I write cross-platform mobile apps using Flutter and Dart.",
-    "React JS": "I construct fast, component-driven web interfaces using React.js.",
-    "Node.js": "I build asynchronous backends and server architectures with Node.js.",
-    "Express.js": "I design secure REST API routing tables using Express.js.",
-    "Supabase": "I use Supabase for realtime databases, cloud storage, and secure authentication.",
-    "PostgreSQL": "I design normalized, efficient relational databases with PostgreSQL.",
-    "MySQL": "I manage database storage and write optimized SQL queries in MySQL.",
-    "Isar Database": "I use Isar for high-performance, local offline-first database synchronization.",
-    "Tailwind CSS": "I style modern web interfaces rapidly using Tailwind CSS classes.",
-    "JavaScript": "I develop complex client-side applications with ES6+ JavaScript.",
-    "Dart": "I write OOP-focused, typed code for Flutter apps using Dart.",
-    "PHP": "I construct server-side scripts and handle legacy deployments using PHP.",
-    "REST APIs": "I design standard REST API endpoints for frontend-backend communication.",
-    "Git & GitHub": "I use Git and GitHub for version control and collaborating in agile teams.",
-    "Firebase": "I integrate Firebase for cloud notifications and analytics.",
-    "Vite": "I use Vite as a modern, blazing-fast bundler for React projects.",
-    "Vercel": "I deploy frontend web applications instantly using Vercel hosting.",
-    "Android Studio": "I compile and test Android applications using Android Studio.",
-    "VS Code": "VS Code is my primary IDE for coding JavaScript, Flutter, and Node.",
-    "Postman": "I test backend API responses and payload contracts with Postman.",
-    "XAMPP": "I manage local Apache and MySQL testing servers with XAMPP.",
-    "C++": "I learned core OOP, data structures, and algorithms through C++."
-  };
-
-  const services = [
+  const techSkills = [
     {
-      title: "Modern Web Development",
-      description: "Building fast, scalable, and responsive web applications using React and Tailwind CSS.",
-      hoverText: "I focus on clean component architectures, state management, and performance optimization."
+      category: "Mobile & Offline-First",
+      skills: ["Flutter", "Dart", "Isar Database", "BLoC & Riverpod", "Android Studio", "Play Store Deployment"]
     },
     {
-      title: "Business Websites",
-      description: "Creating professional websites for businesses to improve online visibility, customer engagement, and digital presence.",
-      hoverText: "I help retail stores and services move online to grow their organic audience."
+      category: "Frontend & Web",
+      skills: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5 / CSS3", "Vite", "Component Architecture"]
     },
     {
-      title: "Android Applications",
-      description: "Developing Android apps and WebView applications for communities, startups, and businesses.",
-      hoverText: "I build responsive, offline-ready Android applications and publish them on Google Play."
+      category: "Backend & Systems",
+      skills: ["Node.js", "Express.js", "PHP", "RESTful APIs", "Realtime WebSockets", "Authentication"]
     },
     {
-      title: "Backend & APIs",
-      description: "Building backend systems, authentication flows, REST APIs, and database integrations.",
-      hoverText: "I design secure Node.js backend routers, Supabase integrations, and relational database schemas."
+      category: "Databases & Cloud",
+      skills: ["Supabase", "PostgreSQL", "MySQL", "Relational Modeling", "Database Indexing", "Vercel"]
     },
     {
-      title: "UI/UX & Responsive Design",
-      description: "Designing clean, mobile-friendly, and intuitive user interfaces focused on user experience and performance.",
-      hoverText: "I design with a focus on modern aesthetics, glassmorphism, readability, and ergonomics."
-    },
-    {
-      title: "Deployment & Optimization",
-      description: "Deploying and optimizing applications using Vercel, hosting platforms, GitHub workflows, and performance best practices.",
-      hoverText: "I configure static site generation, clean hosting paths, and CI/CD pipelines."
+      category: "Engineering Specialties",
+      skills: ["Offline-First Architecture", "Realtime Sync", "Haversine Geofencing", "GST Billing Engines", "Git & GitHub"]
     }
   ];
 
   return (
-    <div className="bg-transparent text-slate-800 py-10">
-      {/* HERO SECTION */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid lg:grid-cols-2 gap-14 items-center">
-          {/* LEFT */}
-          <div>
-            <p className="text-blue-600 font-semibold tracking-wide uppercase mb-4">
-              Full Stack Developer
+    <div className="py-10 sm:py-16 text-[#121316]">
+      {/* ----------------- 1. HERO BIO ----------------- */}
+      <section className="max-w-7xl mx-auto px-6 mb-16">
+        <div className="grid lg:grid-cols-12 gap-12 items-center">
+          
+          <div className="lg:col-span-7 space-y-6">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+              About Soni Jaykumar
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-[#121316] tracking-tight leading-tight">
+              Engineering Practical Software That Solves Real Workflow Problems.
+            </h1>
+            <p className="text-base sm:text-lg text-[#4A4E57] leading-relaxed">
+              I am a Full-Stack Software Engineer currently building enterprise PropTech applications at <strong className="text-[#121316] font-semibold">NB Developers</strong>. My core expertise spans <strong className="text-[#121316] font-semibold">Flutter</strong>, <strong className="text-[#121316] font-semibold">React</strong>, <strong className="text-[#121316] font-semibold">Node.js</strong>, and <strong className="text-[#121316] font-semibold">Offline-First Architectures</strong>.
+            </p>
+            <p className="text-sm sm:text-base text-[#4A4E57] leading-relaxed">
+              My engineering philosophy is rooted in pragmatism: writing clean, modular, and resilient code that works flawlessly even without an internet connection. From digitizing traditional family businesses to releasing apps on the Google Play Store and scaling enterprise PropTech platforms, I take pride in delivering end-to-end software that drives genuine business value.
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-6 tracking-tight">
-              Building Modern Web Experiences & Digital Solutions
-            </h2>
-
-            <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              I’m Soni Jaykumar Hasmukh — a Full Stack Developer focused on building scalable, modern, and user-friendly web and mobile applications.
-              <br /><br />
-              I specialize in Flutter, React, Node.js, Supabase, and Offline-First systems. I love helping businesses and communities digitize through beautiful, high-performance software.
-            </p>
-
-            <div className="flex flex-wrap gap-4">
-              <a
-                href="/projects"
-                onMouseEnter={() => handleMascotSpeak("Let's browse my portfolio projects together! Hover over any card for details.")}
-                onMouseLeave={() => handleMascotSpeak(null)}
-                className="bg-slate-900 text-white px-6 py-3 rounded-xl hover:bg-slate-800 transition shadow-sm text-sm font-medium"
+            <div className="flex flex-wrap gap-4 pt-2">
+              <Link
+                to="/projects"
+                className="px-6 py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] transition-colors text-xs font-semibold shadow-xs flex items-center gap-2"
               >
-                View Projects
-              </a>
-
-              <a
-                href="/contact"
-                onMouseEnter={() => handleMascotSpeak("Ready to discuss a project? Drop me a message on the contact page!")}
-                onMouseLeave={() => handleMascotSpeak(null)}
-                className="border border-slate-300 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-xl hover:bg-slate-50 transition shadow-sm text-sm font-medium"
+                <span>View My Work</span>
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/contact"
+                className="px-6 py-3 rounded-xl bg-white border border-[#E8E5DF] text-[#121316] hover:bg-[#F2EDE4] transition-colors text-xs font-semibold shadow-xs"
               >
-                Contact Me
-              </a>
+                Let’s Connect
+              </Link>
             </div>
           </div>
 
-          {/* RIGHT STATS GRID */}
-          <div className="grid grid-cols-2 gap-5">
-            {[
-              { num: "5+", label: "Businesses Digitized", desc: "Helped salons, medical stores, and retail stores build digital products." },
-              { num: "2+", label: "Years Experience", desc: "Years of building interactive codebases and software." },
-              { num: "8+", label: "Real-World Projects", desc: "Including Property CRM, community platform, and digital ledgers." },
-              { num: "1", label: "Play Store App", desc: "Live event registration app published on the Google Play Store." }
-            ].map((stat, idx) => (
-              <div 
-                key={idx} 
-                onMouseEnter={() => handleMascotSpeak(stat.desc)}
-                onMouseLeave={() => handleMascotSpeak(null)}
-                className="bg-white/60 backdrop-blur-md rounded-2xl border border-white/40 shadow-sm p-6 hover:-translate-y-1 transition duration-300"
-              >
-                <h3 className="text-3xl font-bold text-blue-600 mb-1">{stat.num}</h3>
-                <p className="text-slate-600 text-sm font-medium">{stat.label}</p>
+          {/* Right Highlights Card */}
+          <div className="lg:col-span-5">
+            <div className="bg-white rounded-3xl p-8 border border-[#E8E5DF] shadow-sm space-y-6">
+              <h3 className="text-base font-bold text-[#121316] pb-3 border-b border-[#F2EDE4] flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-[#C27803]" />
+                <span>Executive Summary</span>
+              </h3>
+
+              <div className="space-y-4 text-xs">
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-xl bg-[#F2EDE4] flex items-center justify-center shrink-0 text-[#C27803]">
+                    <Building2 className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#121316]">Software Engineer @ NB Developers</h4>
+                    <p className="text-[#656A76]">Architect of PropKart Property CRM (live: propkart.nbpropertytech.com).</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-xl bg-[#F2EDE4] flex items-center justify-center shrink-0 text-[#C27803]">
+                    <Smartphone className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#121316]">2 Google Play Store Releases</h4>
+                    <p className="text-[#656A76]">Published Parichay Sammelan and KITAAB Jeweller Ledger apps.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-xl bg-[#F2EDE4] flex items-center justify-center shrink-0 text-[#C27803]">
+                    <Zap className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#121316]">Live Commercial Launch</h4>
+                    <p className="text-[#656A76]">Deployed chandrakalajewellers.in with custom GST billing calculation engine.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-xl bg-[#F2EDE4] flex items-center justify-center shrink-0 text-[#C27803]">
+                    <Award className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#121316]">Top 5 Hackathon Winner</h4>
+                    <p className="text-[#656A76]">Awarded 5th position for mathematical Haversine geofenced QR attendance system.</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="w-8 h-8 rounded-xl bg-[#F2EDE4] flex items-center justify-center shrink-0 text-[#C27803]">
+                    <GraduationCap className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#121316]">B.Tech in Information Technology</h4>
+                    <p className="text-[#656A76]">Gandhinagar University (Expected 2027) • Class Representative.</p>
+                  </div>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
+
         </div>
       </section>
 
-      {/* ABOUT ME BRIEF */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <div 
-          onMouseEnter={() => handleMascotSpeak("I always ensure my architectures are responsive, local-first (offline-friendly), and secure.")}
-          onMouseLeave={() => handleMascotSpeak(null)}
-          className="bg-white/60 backdrop-blur-md rounded-3xl border border-white/40 shadow-sm p-10"
-        >
-          <h3 className="text-3xl font-bold text-slate-950 mb-6">About Me</h3>
-          <div className="space-y-6 text-slate-600 leading-relaxed text-base">
-            <p>
-              I help retail businesses, startups, and local communities build strong digital presences through responsive websites, scalable web applications, and feature-rich Android apps.
-            </p>
-            <p>
-              My development philosophy revolves around clean architecture, component modularity, offline compatibility (Offline-First), realtime sync database design, and high-performance user experiences.
-            </p>
-          </div>
+      {/* ----------------- 2. TECHNICAL COMPETENCY MATRIX ----------------- */}
+      <section className="max-w-7xl mx-auto px-6 py-12 border-t border-[#E8E5DF]">
+        <div className="max-w-2xl mb-12">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+            Skills Matrix
+          </span>
+          <h2 className="text-3xl font-extrabold text-[#121316] tracking-tight mt-1 mb-3">
+            Tools & Technical Specializations
+          </h2>
+          <p className="text-sm text-[#4A4E57]">
+            Core languages, frameworks, databases, and architectural methodologies applied in production.
+          </p>
         </div>
-      </section>
 
-      {/* WHAT I DO */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <h3 className="text-3xl font-bold text-slate-900 mb-8">What I Do</h3>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {techSkills.map((category, idx) => (
             <div
-              key={index}
-              onMouseEnter={() => handleMascotSpeak(service.hoverText)}
-              onMouseLeave={() => handleMascotSpeak(null)}
-              className="bg-white/60 backdrop-blur-md rounded-2xl border border-white/40 shadow-sm p-7 hover:-translate-y-1 hover:border-blue-200 transition duration-300"
+              key={idx}
+              className="bg-white p-6 rounded-3xl border border-[#E8E5DF] shadow-xs"
             >
-              <h4 className="text-lg font-bold mb-3 text-slate-950">{service.title}</h4>
-              <p className="text-slate-600 text-sm leading-relaxed">{service.description}</p>
+              <h3 className="text-sm font-bold text-[#121316] mb-4 pb-2 border-b border-[#F2EDE4] flex items-center justify-between">
+                <span>{category.category}</span>
+                <span className="text-xs font-mono text-[#C27803]">0{idx + 1}</span>
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {category.skills.map((skill, sIdx) => (
+                  <span
+                    key={sIdx}
+                    onMouseEnter={() => handleMascotSpeak(`I actively write and deploy systems using ${skill}.`)}
+                    onMouseLeave={() => handleMascotSpeak(null)}
+                    className="px-3 py-1.5 rounded-xl bg-[#FBF9F5] border border-[#E8E5DF] text-xs font-mono text-[#333740] hover:border-[#C27803]/50 transition cursor-help"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* TECH STACK */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <h3 className="text-3xl font-bold text-slate-900 mb-8">Tools & Technologies</h3>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-5">
-          {Object.keys(techDescriptions).map((tech) => (
+      {/* ----------------- 3. CAREER EVOLUTION TIMELINE ----------------- */}
+      <section className="max-w-7xl mx-auto px-6 py-16 border-t border-[#E8E5DF]">
+        <div className="max-w-2xl mb-12">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+            Chronology
+          </span>
+          <h2 className="text-3xl font-extrabold text-[#121316] tracking-tight mt-1 mb-3">
+            Career Evolution: Feb 2025 to Present
+          </h2>
+          <p className="text-sm text-[#4A4E57]">
+            A transparent record of hands-on software development milestones and professional roles.
+          </p>
+        </div>
+
+        <div className="space-y-6">
+          {timelineEvents.map((event, idx) => (
             <div
-              key={tech}
-              onMouseEnter={() => handleMascotSpeak(techDescriptions[tech])}
-              onMouseLeave={() => handleMascotSpeak(null)}
-              className="bg-white/60 backdrop-blur-md border border-white/40 rounded-xl shadow-sm p-4 text-center font-semibold text-slate-700 hover:shadow-md hover:border-blue-300 hover:text-blue-600 transition cursor-help text-sm"
+              key={idx}
+              className="p-6 rounded-3xl bg-white border border-[#E8E5DF] shadow-xs hover:border-[#C27803]/40 transition"
             >
-              {tech}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+                <div className="flex items-center gap-3">
+                  <span className="px-3 py-1 rounded-md bg-[#F2EDE4] text-[#C27803] font-mono text-xs font-bold border border-[#E8E5DF]">
+                    {event.date}
+                  </span>
+                  <h3 className="text-base font-bold text-[#121316]">
+                    {event.title}
+                  </h3>
+                </div>
+                <span className="text-xs font-mono text-[#7A7E89] self-start sm:self-auto">
+                  {event.badge}
+                </span>
+              </div>
+              <p className="text-sm text-[#4A4E57] mb-3 leading-relaxed">
+                {event.summary}
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs text-[#656A76]">
+                {event.details.map((detail, dIdx) => (
+                  <li key={dIdx} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0 mt-0.5" />
+                    <span>{detail}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>

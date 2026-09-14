@@ -1,190 +1,159 @@
-import React from "react";
+import { useState } from "react";
+import { projects } from "../data/projects";
+import ProjectCard from "../components/ProjectCard";
+import { Link } from "react-router-dom";
+import { 
+  Layers, 
+  Smartphone, 
+  Globe, 
+  Building2, 
+  Cpu, 
+  ArrowUpRight,
+  Store,
+  Terminal
+} from "lucide-react";
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "PropKart — Property CRM",
-      category: "PropTech Platform",
-      description:
-        "Production-ready Property CRM platform featuring offline-first architecture, realtime synchronization, property and requirement management, telecaller CRM, smart matching, and analytics dashboard.",
-      tech: ["Flutter", "Dart", "Node.js", "Express.js", "Supabase", "PostgreSQL", "Isar Database", "Git"],
-      link: "https://propkart.vercel.app",
-      gradient: "from-violet-500 to-purple-600",
-      hoverText: "For PropKart, I engineered the Flutter client, designed the PostgreSQL schema on Supabase, and wrote the Node.js APIs for realtime synching."
-    },
-    {
-      title: "Hospital Management Dashboard",
-      category: "Healthcare Platform",
-      description:
-        "Interactive hospital management dashboard built using React with Doctor Cards, Patient List, Appointment Form, Search Patient, Department Filtering, and Statistics Cards.",
-      tech: ["React", "JavaScript", "Props", "useState", "map()", "filter()", "Tailwind CSS"],
-      link: "https://hospital-dashboard-woad-gamma.vercel.app/",
-      gradient: "from-cyan-500 to-teal-600",
-      hoverText: "I built this dashboard during a 15-day React internship at Tech-Craft, utilizing key hooks and components for medical scheduling."
-    },
-    {
-      title: "Parichay Sammelan Platform",
-      category: "Community Platform",
-      description:
-        "Full-stack web & Android application for community registration, event participation, QR verification, and secure payment workflows.",
-      tech: ["React", "JavaScript", "PHP", "MySQL", "Cordova", "Responsive UI"],
-      link: "https://parichay-sammelan.wuaze.com",
-      gradient: "from-blue-500 to-indigo-600",
-      hoverText: "I developed this community portal using PHP/MySQL, implemented Razorpay payment checkout, and published its Android web wrapper."
-    },
-    {
-      title: "KITAAB — Jeweller Ledger System",
-      category: "Business Management",
-      description:
-        "Smart ledger management system for jewellers with transaction tracking, authentication, and mobile-friendly interface.",
-      tech: ["PHP", "MySQL", "JavaScript", "Authentication", "Responsive Design"],
-      link: "https://jeweller-ledger.wuaze.com",
-      gradient: "from-purple-500 to-pink-600",
-      hoverText: "I designed and deployed this ledger database for retail jewellers, providing non-technical shop owners a simple digitizing ledger tool."
-    },
-    {
-      title: "Soni Samaj Community Directory",
-      category: "Community Platform",
-      description:
-        "Advanced community directory with member profiles, family management, search filtering, and location-based discovery.",
-      tech: ["PHP", "MySQL", "JavaScript", "Search System", "Database Design"],
-      link: "https://sonisamaj.wuaze.com",
-      gradient: "from-emerald-500 to-green-600",
-      hoverText: "I built this community search directory, incorporating complex SQL querying to enable fast location-based profile filtering."
-    },
-    {
-      title: "Chandrakala Jewellers Website",
-      category: "Business Website",
-      description:
-        "Modern jewellery business website with premium UI, customer engagement flow, and Razorpay payment integration.",
-      tech: ["React", "Tailwind CSS", "Payment Gateway", "Responsive UI"],
-      link: "https://chandrakalajewellers.wuaze.com",
-      gradient: "from-yellow-500 to-orange-600",
-      hoverText: "I coded this premium landing page for a jewellery storefront, integrating custom booking alerts and invoice layouts."
-    },
-    {
-      title: "Hackathon Attendance System",
-      category: "Smart System",
-      description:
-        "QR + GPS-based attendance monitoring system using Haversine algorithm for accurate location validation.",
-      tech: ["JavaScript", "Geolocation API", "QR System", "PHP"],
-      link: "https://attend-system.wuaze.com",
-      gradient: "from-cyan-500 to-blue-600",
-      hoverText: "For this hackathon project, I programmed the GPS distance validation algorithm and QR scanning. We won 5th place!"
-    },
-    {
-      title: "INFLIX Streaming Platform",
-      category: "Streaming Platform",
-      description:
-        "Netflix-inspired streaming platform featuring subscriptions, authentication, admin dashboard, and scalable video delivery.",
-      tech: ["React", "Supabase", "Authentication", "Streaming UI"],
-      link: "#",
-      gradient: "from-red-500 to-rose-600",
-      hoverText: "I developed the subscription panels, admin video manager, and integrated Auth0/Supabase security checks in this streaming app."
-    }
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filterTabs = [
+    { id: "all", label: "All Projects", count: projects.length, icon: <Layers className="w-3.5 h-3.5" /> },
+    { id: "crm", label: "Enterprise & CRMs", count: projects.filter(p => p.filterCategory === "crm").length, icon: <Building2 className="w-3.5 h-3.5" /> },
+    { id: "tools", label: "Developer Tools & Desktop", count: projects.filter(p => p.filterCategory === "tools").length, icon: <Terminal className="w-3.5 h-3.5" /> },
+    { id: "mobile", label: "Mobile & Play Store", count: projects.filter(p => p.filterCategory === "mobile").length, icon: <Smartphone className="w-3.5 h-3.5" /> },
+    { id: "web", label: "Web Platforms", count: projects.filter(p => p.filterCategory === "web").length, icon: <Globe className="w-3.5 h-3.5" /> },
+    { id: "systems", label: "Smart Systems & IoT", count: projects.filter(p => p.filterCategory === "systems").length, icon: <Cpu className="w-3.5 h-3.5" /> }
   ];
+
+  const filteredProjects = activeFilter === "all" 
+    ? projects 
+    : projects.filter(p => p.filterCategory === activeFilter);
 
   const handleMascotSpeak = (text) => {
     window.dispatchEvent(new CustomEvent("mascot-speak", { detail: { text } }));
   };
 
   return (
-    <div className="bg-transparent text-slate-800 py-10">
-      {/* HERO */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="text-center max-w-4xl mx-auto">
-          <p className="text-blue-600 font-semibold uppercase tracking-wider mb-4">
-            Portfolio
-          </p>
-          <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-slate-900 mb-6 tracking-tight">
-            Building Real-World <span className="text-blue-600">Digital Products</span>
-          </h2>
-          <p className="text-lg text-slate-600 leading-relaxed">
-            A showcase of web applications, mobile platforms, and business tools I've built to solve practical workflow problems.
+    <div className="py-10 sm:py-16 text-[#121316]">
+      {/* ----------------- 1. PAGE HEADER ----------------- */}
+      <section className="max-w-7xl mx-auto px-6 mb-12">
+        <div className="max-w-3xl">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+            Engineering Portfolio
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-[#121316] tracking-tight mt-1 mb-4">
+            Production Software & Live Applications
+          </h1>
+          <p className="text-base sm:text-lg text-[#4A4E57] leading-relaxed">
+            Every project listed here is a deployed, real-world application engineered to solve operational challenges — featuring enterprise PropTech platforms, Google Play Store releases, proprietary GST billing software, and geofenced attendance algorithms.
           </p>
         </div>
       </section>
 
-      {/* STATS */}
-      <section className="max-w-7xl mx-auto px-6 py-8">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {[
-            { count: "8+", label: "Production Projects", desc: "Real-world production-ready web and mobile apps." },
-            { count: "5+", label: "Businesses Digitized", desc: "Local stores and companies with successful digital transitions." },
-            { count: "2+", label: "Years Experience", desc: "Total time spent writing and refactoring software architectures." },
-            { count: "1", label: "Play Store App", desc: "Android package developed, compiled, and published live." }
-          ].map((stat, idx) => (
-            <div
-              key={idx}
-              onMouseEnter={() => handleMascotSpeak(stat.desc)}
-              onMouseLeave={() => handleMascotSpeak(null)}
-              className="bg-white/60 backdrop-blur-md rounded-2xl p-6 border border-white/40 shadow-sm text-center hover:-translate-y-1 transition duration-300 cursor-help"
+      {/* ----------------- 2. FILTER TABS ----------------- */}
+      <section className="max-w-7xl mx-auto px-6 mb-10">
+        <div className="flex flex-wrap gap-2 p-1.5 bg-white border border-[#E8E5DF] rounded-2xl shadow-xs w-fit">
+          {filterTabs.map((tab) => (
+            <button
+              key={tab.id}
+              onClick={() => setActiveFilter(tab.id)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
+                activeFilter === tab.id
+                  ? "bg-[#121316] text-white shadow-xs"
+                  : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
+              }`}
             >
-              <h3 className="text-3xl font-bold text-blue-600 mb-1">{stat.count}</h3>
-              <p className="text-slate-600 text-sm font-medium">{stat.label}</p>
-            </div>
+              {tab.icon}
+              <span>{tab.label}</span>
+              <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-md ${
+                activeFilter === tab.id ? "bg-[#333740] text-[#E8C37D]" : "bg-[#F2EDE4] text-[#7A7E89]"
+              }`}>
+                {tab.count}
+              </span>
+            </button>
           ))}
         </div>
       </section>
 
-      {/* PROJECTS GRID */}
-      <section className="max-w-7xl mx-auto px-6 py-12">
-        <div className="mb-12">
-          <h3 className="text-3xl font-bold mb-3 text-slate-950">Featured Projects</h3>
-          <p className="text-slate-600 text-base">
-            Hover over any project card to let me explain my exact role and tech stack.
+      {/* ----------------- 3. PROJECTS GRID ----------------- */}
+      <section className="max-w-7xl mx-auto px-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onHoverSpeak={handleMascotSpeak}
+            />
+          ))}
+        </div>
+      </section>
+
+      {/* ----------------- 4. CLIENT DIGITIZATION DEMOS SECTION ----------------- */}
+      <section className="max-w-7xl mx-auto px-6 py-12 border-t border-[#E8E5DF]">
+        <div className="max-w-2xl mb-8">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+            Retail Digitization Demos
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#121316] mt-1 mb-2">
+            Local Business Transformation Solutions
+          </h2>
+          <p className="text-sm text-[#4A4E57] leading-relaxed">
+            In addition to major production systems, I have helped 5+ traditional retail business owners build online storefronts, catalog ordering, and WhatsApp booking tools.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Kirana & Grocery Store",
+              category: "Retail Inventory Demo",
+              desc: "Quick neighborhood grocery ordering system with category filtering and automated WhatsApp cart dispatch.",
+              link: "/kirana-demo",
+              badge: "Client Template"
+            },
+            {
+              title: "Pharmacy & Medical Store",
+              category: "Healthcare Store Demo",
+              desc: "Local pharmacy medicine inquiry and diagnostic essentials portal with prescription photo upload flow.",
+              link: "/medical-demo",
+              badge: "Client Template"
+            },
+            {
+              title: "Glow Beauty & Salon Studio",
+              category: "Service Booking Demo",
+              desc: "Aesthetic beauty salon service menu and WhatsApp appointment booking integration.",
+              link: "/salon-demo",
+              badge: "Client Template"
+            }
+          ].map((demo, idx) => (
             <div
-              key={index}
-              onMouseEnter={() => handleMascotSpeak(project.hoverText)}
-              onMouseLeave={() => handleMascotSpeak(null)}
-              className="group bg-white/60 backdrop-blur-md rounded-3xl shadow-sm border border-white/40 overflow-hidden hover:-translate-y-2 hover:shadow-md transition duration-300 flex flex-col h-full"
+              key={idx}
+              className="bg-white p-6 rounded-3xl border border-[#E8E5DF] shadow-xs hover:border-[#C27803]/40 transition flex flex-col justify-between"
             >
-              {/* TOP HEADER */}
-              <div className={`bg-gradient-to-r ${project.gradient} p-6 text-white`}>
-                <p className="text-xs uppercase tracking-wider opacity-90 mb-2 font-medium">
-                  {project.category}
-                </p>
-                <h4 className="text-xl font-bold leading-tight">
-                  {project.title}
-                </h4>
-              </div>
-
-              {/* CONTENT BODY */}
-              <div className="p-7 flex flex-col flex-grow">
-                <p className="text-slate-600 text-sm leading-relaxed mb-6 flex-grow">
-                  {project.description}
-                </p>
-
-                {/* TECH STACK */}
-                <div className="flex flex-wrap gap-1.5 mb-7">
-                  {project.tech.map((item, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-slate-100 text-slate-600 text-xs px-2.5 py-1 rounded-full font-medium"
-                    >
-                      {item}
-                    </span>
-                  ))}
+              <div>
+                <div className="flex justify-between items-center mb-3">
+                  <span className="text-[10px] font-mono uppercase font-bold text-[#C27803] px-2 py-0.5 rounded bg-[#F2EDE4]">
+                    {demo.badge}
+                  </span>
+                  <Store className="w-4 h-4 text-[#7A7E89]" />
                 </div>
-
-                {/* BUTTON */}
-                <div className="mt-auto">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 bg-slate-900 text-white px-5 py-3 rounded-xl hover:bg-slate-800 transition text-sm font-medium shadow-sm hover:scale-105 duration-200"
-                  >
-                    View Project
-                    <span className="text-sm">↗</span>
-                  </a>
-                </div>
+                <h3 className="text-lg font-bold text-[#121316] mb-1">
+                  {demo.title}
+                </h3>
+                <p className="text-xs font-mono text-[#7A7E89] mb-3">
+                  {demo.category}
+                </p>
+                <p className="text-xs text-[#4A4E57] leading-relaxed mb-6">
+                  {demo.desc}
+                </p>
               </div>
+              <Link
+                to={demo.link}
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#121316] hover:text-[#C27803] transition"
+              >
+                <span>View Interactive Demo</span>
+                <ArrowUpRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           ))}
         </div>
