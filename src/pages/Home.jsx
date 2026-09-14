@@ -100,7 +100,8 @@ export default function Home() {
             {/* Key Accomplishments Chips */}
             <div className="pt-2 sm:pt-4 flex flex-wrap gap-2 sm:gap-2.5">
               {[
-                { label: "Live: propkart.nbpropertytech.com", link: "https://propkart.nbpropertytech.com" },
+                { label: "PropKart CRM (Live App)", link: "https://propkart.nbpropertytech.com" },
+                { label: "NB Enterprise ERP / HRMS", link: "/projects" },
                 { label: "GitSphere Desktop (v1.0.0)", link: "/projects" },
                 { label: "Live: chandrakalajewellers.in", link: "https://chandrakalajewellers.in" },
                 { label: "2 Google Play Store Apps", link: "/projects" },

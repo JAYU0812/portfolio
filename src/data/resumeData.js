@@ -12,11 +12,11 @@ export const resumeData = {
     location: "Ahmedabad, Gujarat, India",
     github: "https://github.com/JAYU0812",
     linkedin: "https://linkedin.com/in/sonijay1908",
-    portfolio: "https://propkart.nbpropertytech.com"
+    portfolio: "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"
   },
 
   summary:
-    "Lead Mobile & Full Stack Software Engineer specializing in Flutter, React, Node.js, and Supabase. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), realtime distributed synchronization, publishing native apps on Google Play Store, and building end-to-end enterprise CRM operating systems with multi-channel webhook pipelines and custom GST calculation engines. Currently serving as Lead Mobile & Full-Stack Architect for PropKart (v2.1.1) at NB Property Tech.",
+    "Lead Mobile & Full Stack Software Engineer specializing in Flutter, React, Node.js, and Supabase. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), realtime distributed synchronization, publishing native apps on Google Play Store, and building end-to-end enterprise CRM operating systems with multi-channel webhook pipelines and custom GST calculation engines. Currently serving as Lead Mobile & Full-Stack Architect at NB Developers.",
 
   skills: {
     mobile: [
@@ -79,12 +79,12 @@ export const resumeData = {
       description: "PropTech Enterprise Operating System (PropKart v2.1.1, Build 11)",
       technologies: ["Flutter", "Dart", "BLoC", "Riverpod", "Isar NoSQL", "Supabase", "PostgreSQL", "Node.js", "Meta Graph API", "Phoenix WebSockets"],
       bullets: [
-        "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.1, live on propkart.nbpropertytech.com) serving brokerage desks and field agent teams.",
-        "Engineered an Offline-First local database layer with embedded Isar NoSQL, achieving 2ms–8ms read latency and perceived zero-latency (0ms wait) with zero blocking UI spinners.",
-        "Implemented deterministic conflict resolution using an outbox mutation queue with a strict timestamp Server-Wins policy, guaranteeing zero data loss or stale overwrites across low-connectivity field environments.",
-        "Engineered a 100ms debounced stream batching pipeline for incoming Phoenix WebSocket events from Supabase Realtime, grouping socket bursts into single atomic transactions (isar.writeTxn) to eliminate UI thread lockup.",
-        "Architected a multi-channel lead ingestion triad: sub-second (<1s) webhook push for Meta Lead Ads (Graph API) + automated Google Sheets poller, stress-tested for bursts of 50+ concurrent submissions with automated +91 phone formatting and deduplication.",
-        "Built the Lead Understanding Engine (0–100% completeness score, buyer/tenant persona classification, one-tap WhatsApp deep-link generation) and 2-way conversion feedback loop reporting real-time CPQL."
+        "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.1, live on propkart.nbpropertytech.com) serving brokerage desks and field agent teams with 2ms–8ms read latency via embedded Isar NoSQL.",
+        "Engineered the NB-HRMS Enterprise ERP platform (Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, Redis) featuring AES-256 field encryption for identity documents, append-only audit logging, and OpenAI Whisper voice note transcription.",
+        "Developed the NB Listings cross-platform ecosystem (Flutter Web/Mobile + Express 5 API with 17 domain modules, Redis query caching, and ExcelJS bulk property catalog ingestion pipelines).",
+        "Built TechDrive: an enterprise cloud document vault and visual storage analytics portal (Flutter, BLoC, Firebase Firestore, FL Chart storage distribution engine).",
+        "Created the Legacy Tower Campaign presentation platform with automated sub-2s Google Sheets webhook routing for instant high-ticket investor lead follow-ups.",
+        "Implemented deterministic conflict resolution using an outbox mutation queue with timestamp Server-Wins policy, and a 100ms debounced stream batching pipeline for Phoenix WebSockets."
       ]
     },
     {
@@ -139,6 +139,28 @@ export const resumeData = {
       bullets: [
         "Production-ready PropTech platform engineered with an Offline-First architecture (2–8ms reads) and realtime cloud synchronization.",
         "Features Property & Client Requirement Management, Meta Lead Ads campaign inbox, Telecaller CRM workflow, smart property-matching algorithms, and analytics."
+      ]
+    },
+    {
+      name: "NB-HRMS — Enterprise CRM, HRMS & ERP Suite",
+      url: null,
+      displayUrl: "Enterprise Production System",
+      badge: "Enterprise ERP / HRMS",
+      technologies: "Next.js 14, TypeScript, Express 5, Prisma v6, PostgreSQL 15, Hasura GraphQL, Redis, AES-256, Cloudinary, LiveKit, Whisper AI",
+      bullets: [
+        "Comprehensive Human Resource & Enterprise ERP system with AES-256 field encryption for Aadhaar and PAN documents at rest.",
+        "Hasura GraphQL layer with unified PostgreSQL relationship stitching, append-only audit logs, and LiveKit WebRTC video rooms."
+      ]
+    },
+    {
+      name: "NB Listings — Property Discovery & Bulk Ingestion Engine",
+      url: null,
+      displayUrl: "Production Ecosystem",
+      badge: "Full-Stack Ecosystem",
+      technologies: "Flutter Web & Mobile, Express 5, Supabase, PostgreSQL, Redis, Isar DB, ExcelJS/XLSX, GPU ShaderMask",
+      bullets: [
+        "Full-stack property discovery portal with Express 5 REST API across 17 modular domain boundaries and Redis query acceleration.",
+        "ExcelJS/XLSX bulk property catalog parser and cinematic 7-second timeline brand migration sequence rendered via native GPU ShaderMasks."
       ]
     },
     {

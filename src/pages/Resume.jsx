@@ -69,7 +69,7 @@ export default function Resume() {
             </a>
             <a href={resumeData.personal.portfolio} target="_blank" rel="noreferrer" className="flex items-center gap-1.5 hover:text-[#C27803] transition break-all">
               <Globe className="w-3.5 h-3.5 text-[#C27803] shrink-0" />
-              <span>propkart.nbpropertytech.com</span>
+              <span>portfolio-iota-nine-7b2v5ah7u8.vercel.app</span>
             </a>
           </div>
         </header>

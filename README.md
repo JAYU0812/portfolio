@@ -3,7 +3,8 @@
 
 <div align="left">
 
-[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-propkart.nbpropertytech.com-C27803?style=for-the-badge&logo=googlechrome&logoColor=white)](https://propkart.nbpropertytech.com)
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-portfolio--iota--nine--7b2v5ah7u8.vercel.app-C27803?style=for-the-badge&logo=vercel&logoColor=white)](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/)
+[![PropKart CRM](https://img.shields.io/badge/PropKart_CRM-propkart.nbpropertytech.com-159B73?style=for-the-badge&logo=googlechrome&logoColor=white)](https://propkart.nbpropertytech.com)
 [![Google Play](https://img.shields.io/badge/Google_Play_Store-2_Apps_Published-0F766E?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan)
 [![WhatsApp](https://img.shields.io/badge/Direct_Chat-+91_79903_61109-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/917990361109)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sonijay1908-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sonijay1908)
@@ -17,7 +18,8 @@
 
 I am **Soni Jaykumar**, a Lead Mobile & Full-Stack Software Engineer based in Ahmedabad, India, specializing in **Flutter**, **React**, **Node.js**, **Supabase / PostgreSQL**, and **high-performance Offline-First architectures**.
 
-Currently serving as **Lead Mobile & Full-Stack Architect** for **PropKart CRM & OS (v2.1.1, Build 11)** at **NB Developers (NB Property Tech)**. I engineer resilient, zero-data-loss production systems operating across low-connectivity field environments, native Windows desktop developer engines, and commercial enterprise platforms.
+* **Live Personal Portfolio**: [https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/)
+* Currently serving as **Lead Mobile & Full-Stack Architect** at **NB Developers (NB Property Tech)**, engineering enterprise platforms including **PropKart Real-Estate CRM & OS (v2.1.1)**, **NB-HRMS & ERP**, **NB Listings**, **TechDrive**, and high-converting marketing campaign engines.
 
 ---
 
@@ -36,15 +38,45 @@ Currently serving as **Lead Mobile & Full-Stack Architect** for **PropKart CRM &
 ## 🚀 Featured Production Software
 
 ### 1. [PropKart — Enterprise Property CRM & OS (v2.1.1, Build 11)](https://propkart.nbpropertytech.com)
-* **Role**: Lead Mobile & Full-Stack Architect
+* **Role**: Lead Mobile & Full-Stack Architect @ NB Developers
 * **Tech Stack**: Flutter, Dart, BLoC & Riverpod, Node.js, Express.js, Supabase, PostgreSQL, Isar NoSQL, Meta Ads Graph API, Phoenix WebSockets
-* **Live Production**: [https://propkart.nbpropertytech.com](https://propkart.nbpropertytech.com)
+* **Live App URL**: [https://propkart.nbpropertytech.com](https://propkart.nbpropertytech.com)
 * **Highlights**:
   - Offline-First client with embedded Isar NoSQL achieving 2–8ms reads across thousands of property records.
   - Multi-channel ingestion triad routing Meta Lead Ads (<1s push) and Google Sheets into telecaller CRM queues with automated +91 normalization and deduplication.
   - Lead Understanding Engine computing 0–100% completeness score and 1-tap WhatsApp deep-links.
 
-### 2. GitSphere — Visual Git Control Center & Repository Intelligence
+### 2. NB-HRMS — Enterprise CRM, HRMS & ERP Platform
+* **Platform**: Full-Stack Enterprise System (Next.js 14, Hasura, PostgreSQL, Express 5, Flutter)
+* **Tech Stack**: Next.js 14 App Router, TypeScript, Tailwind CSS, Express 5, Prisma v6, PostgreSQL 15, Hasura GraphQL Engine, Redis, AES-256-CBC, Cloudinary, LiveKit WebRTC, Whisper AI
+* **Highlights**:
+  - Field-level AES-256-CBC encryption for government identity documents (Aadhaar and PAN) at rest.
+  - Append-only audit logging engine calculating field-level diffs on every sensitive write for compliance.
+  - Hasura GraphQL layer with unified PostgreSQL relationship stitching and LiveKit WebRTC video calling.
+
+### 3. NB Listings — Property Discovery & Bulk Ingestion Engine
+* **Platform**: Cross-Platform Discovery Engine (Flutter Web/Mobile + Express 5 Backend API)
+* **Tech Stack**: Flutter Web & Mobile, Express 5, Supabase, PostgreSQL, Redis, Isar DB, ExcelJS/XLSX, GPU ShaderMask
+* **Highlights**:
+  - Express 5 REST API across 17 modular domain boundaries with Redis query caching for sub-10ms lookups.
+  - ExcelJS/XLSX bulk property catalog batch parser importing hundreds of broker property rows automatically.
+  - Cinematic 7-second timeline brand migration sequence rendered via native GPU ShaderMasks.
+
+### 4. TechDrive — Enterprise Document & Cloud Storage Management
+* **Platform**: Internal Cloud Vault (Flutter, Firebase, FL Chart)
+* **Tech Stack**: Flutter 3.x, BLoC, Firebase Authentication, Cloud Firestore, FL Chart, Dio
+* **Highlights**:
+  - Interactive storage distribution charts (FL Chart) categorizing Documents, Blueprints, Media, and Archives.
+  - Departmental access control with multi-tier permissions (Viewer / Editor / Admin) and 2-stage recycle recovery bin.
+
+### 5. Legacy Tower Campaign — Luxury Infrastructure Discovery Portal
+* **Platform**: Commercial Campaign Portal (Flutter Web, Firestore, Webhooks)
+* **Tech Stack**: Flutter Web, Cloud Firestore, Firebase Analytics, Google Sheets Webhook Engine, GoRouter
+* **Highlights**:
+  - Interactive luxury unit configurator with sub-2s Google Sheets webhook routing directly into telecaller queues.
+  - Integrated Firebase Analytics tracking investor brochure downloads and walkthrough engagement.
+
+### 6. GitSphere — Visual Git Control Center & Repository Intelligence
 * **Platform**: Windows Desktop Application (v1.0.0 Release)
 * **Tech Stack**: Flutter Desktop, Dart, Riverpod 2.6+, GoRouter 14.8+, SQLite (`sqflite_common_ffi`), GitHub REST API v3, Native Process Runner, Inno Setup 6, Win32 / DWM
 * **Distribution**: Inno Setup 6 Installer (`GitSphere-v1.0.0-Setup.exe`, 12.07 MB) + Portable ZIP (SHA-256)
@@ -121,7 +153,7 @@ timeline
               : Flutter Internship : 3-Month Mobile Architecture & State Management
               : GitSphere : Windows Desktop Visual Git Control Center (v1.0.0)
               : PG Management ERP : Cloud Accommodation & Invoicing ERP
-    Present : NB Developers : Lead Mobile & Full-Stack Architect on PropKart CRM (propkart.nbpropertytech.com)
+    Present : NB Developers : Lead Mobile & Full-Stack Architect (PropKart, NB-HRMS, NB Listings, TechDrive, Legacy Tower)
 ```
 
 ---

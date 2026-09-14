@@ -10,12 +10,12 @@ export const timelineEvents = [
     category: "Full-Time Engineering",
     type: "work",
     badge: "Current Role",
-    summary: "Architecting and maintaining PropKart, an enterprise PropTech CRM platform.",
+    summary: "Architecting and maintaining enterprise PropTech, ERP, and cloud storage systems at NB Developers.",
     details: [
-      "Engineered Offline-First Flutter client with Isar local database for seamless offline operation.",
-      "Designed Supabase PostgreSQL schemas and realtime synchronization APIs in Node.js / Express.",
-      "Built telecaller management modules, property requirement matching engine, and analytics dashboards.",
-      "Live production platform: https://propkart.nbpropertytech.com"
+      "Engineered Offline-First Flutter client with Isar local database for PropKart Real-Estate CRM (live: propkart.nbpropertytech.com).",
+      "Architected NB-HRMS / ERP with Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, AES-256 field encryption, and Whisper AI.",
+      "Developed NB Listings cross-platform portal with Express 5 REST API across 17 domain modules, Redis caching, and Excel batch parser.",
+      "Built TechDrive enterprise cloud document management with FL Chart storage analytics, and Legacy Tower investor campaign platform."
     ]
   },
   {

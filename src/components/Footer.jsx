@@ -70,12 +70,23 @@ export default function Footer() {
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <a
+                  href="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C27803] inline-flex items-center gap-1 transition"
+                >
+                  <span className="font-semibold text-[#121316]">Portfolio (Live Site)</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#C27803]" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://propkart.nbpropertytech.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#C27803] inline-flex items-center gap-1 transition"
                 >
-                  <span>PropKart CRM</span>
+                  <span>PropKart CRM (Software Project)</span>
                   <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
                 </a>
               </li>
