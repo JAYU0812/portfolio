@@ -101,7 +101,7 @@ export default function Home() {
             <div className="pt-2 sm:pt-4 flex flex-wrap gap-2 sm:gap-2.5">
               {[
                 { label: "PropKart CRM (Live App)", link: "https://propkart.nbpropertytech.com" },
-                { label: "NB Enterprise ERP / HRMS", link: "/projects" },
+                { label: "Live: crm.nbdeveloper.co.in", link: "https://crm.nbdeveloper.co.in" },
                 { label: "GitSphere Desktop (v1.0.0)", link: "/projects" },
                 { label: "Live: chandrakalajewellers.in", link: "https://chandrakalajewellers.in" },
                 { label: "2 Google Play Store Apps", link: "/projects" },

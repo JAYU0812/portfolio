@@ -15,7 +15,7 @@ export const projects = [
     version: "v2.1.1 (Build 11)",
     tagline: "Apple-inspired operating system for real estate desks with 2ms Offline-First local latency and sub-second lead ingestion.",
     description:
-      "Architected as Lead Mobile & Full-Stack Architect at NB Property Tech / NB Developers. An enterprise-scale real-estate operating system managing high-volume rental and re-sale portfolios across metropolitan hubs. Features an embedded Isar NoSQL local database (2–8ms read latency), bi-directional realtime synchronization with Supabase PostgreSQL via Node.js micro-APIs, and an automated multi-channel lead ingestion triad.",
+      "Architected as Lead Mobile & Full-Stack Architect at NB Property Tech / NB Developers. Evolved from the original NB Listings foundation into a comprehensive enterprise-scale real-estate operating system managing high-volume rental and re-sale portfolios across metropolitan hubs. Features an embedded Isar NoSQL local database (2–8ms read latency), bi-directional realtime synchronization with Supabase PostgreSQL via Node.js micro-APIs, and an automated multi-channel lead ingestion triad.",
     tech: [
       "Flutter",
       "Dart",
@@ -41,6 +41,7 @@ export const projects = [
     },
     highlights: [
       "Offline-First Architecture: Embedded Isar NoSQL database yielding 2–8ms read latency for hundreds of listings, delivering perceived zero-latency (0ms wait) with zero blocking UI spinners",
+      "Evolution from NB Listings: Re-engineered legacy NB Listings into the unified PropKart operating system with cinematic GPU ShaderMask brand migrations",
       "Deterministic Conflict Resolution: Outbox mutation queue with strict timestamp-based Server-Wins policy to prevent stale overwrites across low-connectivity field environments",
       "Supabase Realtime Stream Batching: 100ms debounce batch timer grouping high-frequency Phoenix Channel socket events into atomic transactional writes (isar.writeTxn), eliminating UI stutter",
       "Multi-Channel Lead Ingestion Triad: Sub-second (<1s) webhook push for Meta Lead Ads (Facebook & Instagram Graph API) + 10-minute automated Google Sheets reconciliation poller, stress-tested for 50+ burst submissions",
@@ -54,11 +55,11 @@ export const projects = [
     category: "Enterprise ERP & Workflow Engine",
     filterCategory: "crm",
     date: "Late 2025 – Present",
-    status: "Enterprise Production",
-    badge: "Enterprise ERP / HRMS",
+    status: "Production Live",
+    badge: "Live: crm.nbdeveloper.co.in",
     tagline: "High-security ERP & Human Resource system with AES-256 field encryption, Hasura GraphQL, and Whisper AI voice note transcription.",
     description:
-      "A comprehensive Human Resource & Enterprise Resource Management System engineered for NB Developers. Features employee profile workflows, sensitive identity documentation with AES-256-CBC field encryption (Aadhaar & PAN encrypted at rest), document uploads via Cloudinary, Hasura GraphQL Engine, Redis session cache, append-only audit logging for sensitive writes, LiveKit realtime video calling, OpenAI Whisper voice transcription, and a cross-platform Flutter companion client.",
+      "A comprehensive Human Resource & Enterprise Resource Management System engineered for NB Developers, deployed live on crm.nbdeveloper.co.in. Features employee profile workflows, sensitive identity documentation with AES-256-CBC field encryption (Aadhaar & PAN encrypted at rest), document uploads via Cloudinary, Hasura GraphQL Engine, Redis session cache, append-only audit logging for sensitive writes, LiveKit realtime video calling, OpenAI Whisper voice transcription, and a cross-platform Flutter companion client.",
     tech: [
       "Next.js 14",
       "TypeScript",
@@ -73,50 +74,16 @@ export const projects = [
       "Whisper AI",
       "Flutter"
     ],
-    liveUrl: null,
+    liveUrl: "https://crm.nbdeveloper.co.in",
     playStoreUrl: null,
     featured: true,
     highlights: [
+      "Live Commercial Deployment: Accessible in production at crm.nbdeveloper.co.in for enterprise internal operations",
       "Field-Level AES-256-CBC Encryption: Encrypts government identities (Aadhaar and PAN) at rest using Node.js crypto and deterministic initialization vectors",
       "Hasura GraphQL Engine & Prisma v6: Unified data layer querying PostgreSQL with granular permission rules and automated relationship stitching",
       "Append-Only Audit Log: Computes field-level diffs on every sensitive write and stores an immutable trail of actions for regulatory compliance",
       "Real-time Collaboration: LiveKit WebRTC video rooms and OpenAI Whisper speech-to-text pipeline for audio memo transcription",
       "Cross-Platform Flutter Client: Native mobile companion application (nb_crm_flutter) for field employee check-ins and document viewing"
-    ]
-  },
-  {
-    id: "nblistings",
-    title: "NB Listings — Real Estate Discovery & Ingestion Engine",
-    category: "Property Discovery & Bulk Engine",
-    filterCategory: "crm",
-    date: "Late 2025 – Present",
-    status: "Production Ecosystem",
-    badge: "Full-Stack Ecosystem",
-    tagline: "Cross-platform property showcase and bulk inventory management system with custom GPU ShaderMask brand evolution animations.",
-    description:
-      "A full-stack property discovery and brokerage management ecosystem built for NB Developers. Combines a Flutter mobile & web catalog application with an Express 5 REST API across 17 domain modules. Features local NoSQL caching with Isar Database, Redis accelerated searches, bulk spreadsheet import/export via ExcelJS/XLSX, and a cinematic 7-second timeline brand migration sequence rendered with native GPU ShaderMasks.",
-    tech: [
-      "Flutter Web & Mobile",
-      "Dart",
-      "BLoC",
-      "Isar NoSQL",
-      "Express 5",
-      "Supabase",
-      "PostgreSQL",
-      "Redis",
-      "ExcelJS / XLSX",
-      "Zod",
-      "GPU ShaderMask"
-    ],
-    liveUrl: null,
-    playStoreUrl: null,
-    featured: true,
-    highlights: [
-      "17 Domain Modules: Specialized services covering properties, spatial search, public share sessions, telecaller followups, site visits, and builder allocations",
-      "Bulk Catalog Pipeline: ExcelJS/XLSX batch parser importing hundreds of broker property rows with automated schema mapping and validation",
-      "Cinematic Brand Evolution Experience: 7-second timeline animation utilizing Flutter ShaderMask and BlendMode.srcATop for metallic light reflections",
-      "Sub-10ms Cached Queries: Redis query caching layer accelerating frequent city and locality lookup queries by 90%",
-      "Seamless WhatsApp Catalog Dispatch: Generates formatted property cards and temporary public client share sessions in one tap"
     ]
   },
   {

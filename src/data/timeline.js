@@ -12,10 +12,9 @@ export const timelineEvents = [
     badge: "Current Role",
     summary: "Architecting and maintaining enterprise PropTech, ERP, and cloud storage systems at NB Developers.",
     details: [
-      "Engineered Offline-First Flutter client with Isar local database for PropKart Real-Estate CRM (live: propkart.nbpropertytech.com).",
-      "Architected NB-HRMS / ERP with Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, AES-256 field encryption, and Whisper AI.",
-      "Developed NB Listings cross-platform portal with Express 5 REST API across 17 domain modules, Redis caching, and Excel batch parser.",
-      "Built TechDrive enterprise cloud document management with FL Chart storage analytics, and Legacy Tower investor campaign platform."
+      "Engineered Offline-First Flutter client with Isar local database for PropKart Real-Estate CRM (live: propkart.nbpropertytech.com), evolved from NB Listings.",
+      "Architected NB-HRMS / ERP (live: crm.nbdeveloper.co.in) with Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, AES-256 field encryption, and Whisper AI.",
+      "Built TechDrive enterprise cloud document management with FL Chart storage analytics, and Legacy Tower high-ticket investor campaign platform."
     ]
   },
   {
