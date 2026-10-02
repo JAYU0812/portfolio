@@ -5,6 +5,20 @@
 
 export const timelineEvents = [
   {
+    date: "September 2026",
+    title: "DevSync — Sovereign Cryptographic P2P & Serverless Relay Suite",
+    category: "Cryptographic Architecture",
+    type: "desktop",
+    badge: "Sovereign P2P Suite",
+    summary: "Architected account-per-device communication and high-speed LAN file transfer system.",
+    details: [
+      "Engineered sovereign cryptographic identity with on-device Ed25519 payload signing and X25519/AES-256-GCM encryption.",
+      "Built hybrid networking: direct LAN transfers via embedded Shelf HTTP server + UDP discovery, with Vercel Serverless SSE relay fallback.",
+      "Implemented zero-retention serverless message queueing with Upstash Redis, pruning payloads immediately upon delivery acknowledgment.",
+      "Designed developer-first UX with syntax-highlighted code sharing, one-tap copy, dark mode, and local categorized file organization."
+    ]
+  },
+  {
     date: "June 2026 – Present",
     title: "Software Engineer at NB Developers (NB Property Tech)",
     category: "Full-Time Engineering",
@@ -12,10 +26,25 @@ export const timelineEvents = [
     badge: "Current Role",
     summary: "Architecting and maintaining enterprise PropTech, ERP, and cloud storage systems at NB Developers.",
     details: [
-      "Engineered Offline-First Flutter client with Isar local database for PropKart Real-Estate CRM (live: propkart.nbpropertytech.com), evolved from NB Listings.",
+      "Engineered Offline-First Flutter client with Isar local database for PropKart CRM & OS (live: propkart.nbpropertytech.com), achieving 100/100 security audit score and Target SDK 36 Google Play readiness.",
+      "Architected 95-file Mobile Foundation & Design System (20,000+ LOC) with native app shells, reactive BLoC state, contextual telecaller outcome sheets, and WebGL CanvasKit stabilization.",
+      "Engineered Site Visit Historical Tracking Engine (PostgreSQL Migrations 38 & 39) with outcome synchronization and automated Round-Robin lead allocation.",
+      "Launched the public PropKart Listing directory (live: listing.nbpropertytech.com) and PropKart Connect dynamic intake engine (live: propconnect.nbpropertytech.com).",
       "Architected NB-HRMS / ERP (live: crm.nbdeveloper.co.in) with Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, AES-256 field encryption, and Whisper AI.",
-      "Built TechDrive enterprise cloud document management (live: techdrive.nbpropertytech.com) with FL Chart storage analytics.",
-      "Engineered NB Legacy Tower high-ticket investor discovery campaign platform (live: nblegacy.nbdeveloper.co.in)."
+      "Built TechDrive enterprise cloud document management (live: techdrive.nbpropertytech.com) and NB Legacy Tower campaign portal (live: nblegacy.nbdeveloper.co.in)."
+    ]
+  },
+  {
+    date: "September 2026",
+    title: "Academic Attendance Management System — Institutional Portal",
+    category: "Academic Web Architecture",
+    type: "web",
+    badge: "Faculty & Student Dual Gateway",
+    summary: "Built institutional course register and academic compliance dashboard.",
+    details: [
+      "Engineered dual role-based portals for Faculty course coordinators and Student self-service presence tracking.",
+      "Implemented real-time session presence logging, official register exports, and automatic 75% attendance threshold alerts.",
+      "Designed clean academic UI with breadcrumb navigation, student roster tables, and parent notification triggers."
     ]
   },
   {

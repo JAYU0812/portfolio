@@ -17,6 +17,7 @@ export default function ArchitectureConsole() {
 
   const tabs = [
     { id: "telemetry", label: "PropKart Latencies", icon: <Activity className="w-3.5 h-3.5" /> },
+    { id: "devsync", label: "DevSync Crypto P2P", icon: <ShieldCheck className="w-3.5 h-3.5" /> },
     { id: "gitsphere", label: "GitSphere Desktop", icon: <GitBranch className="w-3.5 h-3.5" /> },
     { id: "playstore", label: "Play Store Apps", icon: <Smartphone className="w-3.5 h-3.5" /> },
     { id: "jewellery", label: "Jeweller ERP Suite", icon: <Zap className="w-3.5 h-3.5" /> },
@@ -101,6 +102,54 @@ export default function ArchitectureConsole() {
             </p>
             <p className="text-[#A4ACB9] leading-relaxed text-[11px] sm:text-xs">
               • <strong className="text-white">Lead Understanding Engine:</strong> Analyzes raw Meta Ads payload, cleanses Indian mobile formats (+91) via regex, scores completeness (0–100%), and generates one-tap WhatsApp deep-links for telecallers.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Tab: DevSync Sovereign P2P & Cryptography */}
+      {activeTab === "devsync" && (
+        <div className="space-y-4 sm:space-y-6 animate-in fade-in duration-200">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4">
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Identity Model</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-[#E8C37D] truncate">Account/Device</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">0 Phone / 0 Email login required</p>
+            </div>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Payload Encryption</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-emerald-400 truncate">AES-256-GCM</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Ed25519 signatures & X25519 ECDH</p>
+            </div>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">LAN P2P Speed</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-[#E8C37D] truncate">Multi-MB/s</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Shelf HTTP + UDP multicast discovery</p>
+            </div>
+            <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+              <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Relay Retention</div>
+              <div className="text-lg sm:text-2xl font-mono font-extrabold text-sky-400 truncate">Zero Retention</div>
+              <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Vercel SSE + Upstash Redis prune on ACK</p>
+            </div>
+          </div>
+
+          <div className="bg-[#171A21] p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-[#262B35] font-mono text-xs space-y-3">
+            <div className="text-[#8A909E] flex flex-col sm:flex-row sm:items-center justify-between pb-2.5 border-b border-[#262B35] gap-1">
+              <span className="text-[11px] sm:text-xs font-semibold text-white">// Sovereign Cryptographic Architecture</span>
+              <a 
+                href="https://github.com/jay0812soni-developer/devsync" 
+                target="_blank" 
+                rel="noreferrer"
+                className="text-[#E8C37D] hover:underline flex items-center gap-1 text-[11px]"
+              >
+                github.com/jay0812soni-developer/devsync <ArrowUpRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+            <p className="text-[#A4ACB9] leading-relaxed text-[11px] sm:text-xs">
+              • <strong className="text-white">Hybrid Networking Engine:</strong> Discovers local devices on Wi-Fi/Ethernet via UDP multicast and streams files peer-to-peer over an embedded Shelf HTTP server. If devices reside on distinct subnets, the system seamlessly falls back to a zero-retention Vercel Serverless SSE relay.
+            </p>
+            <p className="text-[#A4ACB9] leading-relaxed text-[11px] sm:text-xs">
+              • <strong className="text-white">Developer Ergonomics:</strong> Syntax-highlighted code snippets, one-tap clipboard copy, and automatic categorization of incoming files into dedicated <code className="text-[#E8C37D]">DevSync/Code</code>, <code className="text-[#E8C37D]">Documents</code>, and <code className="text-[#E8C37D]">Media</code> directories.
             </p>
           </div>
         </div>

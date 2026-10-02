@@ -100,7 +100,9 @@ export default function Home() {
             {/* Key Accomplishments Chips */}
             <div className="pt-2 sm:pt-4 flex flex-wrap gap-2 sm:gap-2.5">
               {[
-                { label: "PropKart CRM (Live App)", link: "https://propkart.nbpropertytech.com" },
+                { label: "PropKart CRM (v2.1.3+13)", link: "https://propkart.nbpropertytech.com" },
+                { label: "Live: listing.nbpropertytech.com", link: "https://listing.nbpropertytech.com" },
+                { label: "DevSync (P2P Crypto Engine)", link: "/projects" },
                 { label: "Live: crm.nbdeveloper.co.in", link: "https://crm.nbdeveloper.co.in" },
                 { label: "GitSphere Desktop (v1.0.0)", link: "/projects" },
                 { label: "Live: chandrakalajewellers.in", link: "https://chandrakalajewellers.in" },
@@ -145,23 +147,34 @@ export default function Home() {
                   <div className="flex items-center justify-between text-[#E8C37D] font-bold mb-1.5">
                     <span className="flex items-center gap-1.5 text-xs sm:text-sm">
                       <Building2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C27803] shrink-0" />
-                      PropKart CRM & OS (v2.1.1)
+                      PropKart CRM & OS (v2.1.3+13)
                     </span>
-                    <span className="text-[10px] text-emerald-400 font-mono">ONLINE</span>
+                    <span className="text-[10px] text-emerald-400 font-mono">SDK 36 READY</span>
                   </div>
                   <p className="text-[#A4ACB9] text-[11px] leading-relaxed mb-2">
-                    Offline-First Flutter client (Isar DB) + Supabase PostgreSQL realtime sync + Meta Lead Ads webhook campaign routing.
+                    Offline-First Flutter client (2ms reads) + SDK 36 Google Play readiness (com.nbpropertytech.propkart) + 100/100 security score + Public Listing showcase.
                   </p>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[10px] text-[#7A8291] pt-2 border-t border-[#2E333D] gap-1 sm:gap-0">
-                    <span>Real Estate Enterprise CRM</span>
-                    <a 
-                      href="https://propkart.nbpropertytech.com" 
-                      target="_blank" 
-                      rel="noreferrer"
-                      className="text-[#C27803] hover:underline flex items-center gap-1"
-                    >
-                      propkart.nbpropertytech.com ↗
-                    </a>
+                    <span>PropTech Operating System</span>
+                    <div className="flex items-center gap-2">
+                      <a 
+                        href="https://propkart.nbpropertytech.com" 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className="text-[#C27803] hover:underline"
+                      >
+                        propkart ↗
+                      </a>
+                      <span>•</span>
+                      <a 
+                        href="https://listing.nbpropertytech.com" 
+                        target="_blank" 
+                        rel="noreferrer"
+                        className="text-[#E8C37D] hover:underline"
+                      >
+                        listing ↗
+                      </a>
+                    </div>
                   </div>
                 </div>
 

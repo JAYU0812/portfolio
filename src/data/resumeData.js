@@ -16,16 +16,18 @@ export const resumeData = {
   },
 
   summary:
-    "Lead Mobile & Full Stack Software Engineer specializing in Flutter, React, Node.js, and Supabase. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), realtime distributed synchronization, publishing native apps on Google Play Store, and building end-to-end enterprise CRM operating systems with multi-channel webhook pipelines and custom GST calculation engines. Currently serving as Lead Mobile & Full-Stack Architect at NB Developers.",
+    "Lead Mobile & Full Stack Software Engineer specializing in Flutter, React, Node.js, and PostgreSQL. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), unified mobile design systems and app shells, Google Play Store publications (Target SDK 36 ready), cryptographic P2P engines, and end-to-end enterprise CRM suites with multi-channel webhook ingestion (Meta & Housing.com) and proprietary GST billing engines. Currently serving as Lead Mobile & Full-Stack Architect at NB Developers.",
 
   skills: {
     mobile: [
       "Flutter & Flutter Desktop",
       "Dart",
+      "Mobile Design Systems & App Shells",
+      "Android Target SDK 36 (Android 15)",
+      "Java 17 Desugaring & ProGuard",
       "Isar NoSQL (Offline-First)",
-      "BLoC & Riverpod",
-      "Android Studio",
-      "Google Play Console Publishing",
+      "BLoC & Riverpod State Management",
+      "Android Studio & Play Console Publishing",
       "Win32 / DWM Desktop Integration"
     ],
     frontend: [
@@ -39,26 +41,31 @@ export const resumeData = {
       "Responsive UI/UX"
     ],
     backend: [
-      "Node.js",
-      "Express.js",
+      "Node.js & Express.js",
       "RESTful APIs",
-      "PHP",
-      "Phoenix WebSockets",
-      "Meta Ads Webhooks & Graph API",
-      "Google Sheets API v4",
-      "Authentication (Supabase Auth / JWT)"
+      "PostgreSQL",
+      "Supabase Realtime & RLS",
+      "RFC 6238 TOTP 2FA",
+      "Algorithmic CAPTCHA Defense",
+      "Meta & Housing.com Webhooks",
+      "Round-Robin Lead Allocation",
+      "PHP & MySQL",
+      "Phoenix WebSockets"
     ],
     database: [
       "Isar NoSQL (Embedded Local DB)",
-      "SQLite (FFI)",
-      "Supabase",
       "PostgreSQL",
+      "Supabase",
+      "SQLite (FFI)",
       "MySQL",
-      "Database Schema Design",
+      "Database Schema Design & Migrations",
       "Relational Modeling"
     ],
     tools: [
       "Git & GitHub",
+      "Client-side Vector PDF (jsPDF)",
+      "BroadcastChannel Cross-Tab Sync",
+      "WebGL / CanvasKit Optimization",
       "Inno Setup 6 (Windows Installer)",
       "Thermal Barcode Label Printing",
       "PerformanceLogger & Telemetry",
@@ -76,10 +83,13 @@ export const resumeData = {
       role: "Lead Mobile & Full-Stack Architect",
       period: "June 2026 – Present",
       location: "Science City, Ahmedabad",
-      description: "PropTech Enterprise Operating System (PropKart v2.1.1, Build 11)",
-      technologies: ["Flutter", "Dart", "BLoC", "Riverpod", "Isar NoSQL", "Supabase", "PostgreSQL", "Node.js", "Meta Graph API", "Phoenix WebSockets"],
+      description: "PropTech Enterprise Operating System (PropKart v2.1.3+13, Target SDK 36)",
+      technologies: ["Flutter", "Dart", "Target SDK 36", "BLoC", "Riverpod", "Isar NoSQL", "PostgreSQL", "Node.js", "Meta & Housing.com Webhooks", "TOTP 2FA"],
       bullets: [
-        "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.1, live on propkart.nbpropertytech.com) — evolved from the initial NB Listings platform — serving brokerage desks and field agent teams with 2ms–8ms read latency via embedded Isar NoSQL.",
+        "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.3+13, Target SDK 36, Package: com.nbpropertytech.propkart, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 passed), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
+        "Architected 95-file Mobile Foundation & Design System (Steps 3.0–3.7 migration, 20,000+ LOC) with native app shells, responsive bottom navigation, contextual telecaller outcome disposition sheets, and WebGL CanvasKit GPU shader stabilization.",
+        "Engineered Site Visit Historical Tracking Engine (PostgreSQL Migrations 38 & 39) establishing immutable site visit audit logs, telecaller shift-gate availability, and automated Round-Robin lead allocation.",
+        "Engineered the public PropKart Listing showcase directory (live: listing.nbpropertytech.com) and PropKart Connect dynamic form intake engine & operations panel (live: propconnect.nbpropertytech.com & panel.nbpropertytech.com) with 3-way lead sharing and vector PDF dossiers.",
         "Engineered the NB-HRMS Enterprise ERP platform (Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, Redis, live on crm.nbdeveloper.co.in) featuring AES-256 field encryption for identity documents, append-only audit logging, and OpenAI Whisper voice note transcription.",
         "Built TechDrive: an enterprise cloud document vault and visual storage analytics portal (Flutter, BLoC, Firebase Firestore, FL Chart storage distribution engine).",
         "Created the Legacy Tower Campaign presentation platform with automated sub-2s Google Sheets webhook routing for instant high-ticket investor lead follow-ups.",
@@ -130,14 +140,36 @@ export const resumeData = {
 
   projects: [
     {
-      name: "PropKart — Enterprise Property CRM & OS (v2.1.1)",
+      name: "PropKart — Enterprise Property CRM & OS (v2.1.3+13)",
       url: "https://propkart.nbpropertytech.com",
       displayUrl: "propkart.nbpropertytech.com",
-      badge: "Production Live v2.1.1",
-      technologies: "Flutter, Dart, BLoC/Riverpod, Node.js, Supabase, PostgreSQL, Isar DB, Meta Webhooks",
+      badge: "Production Live v2.1.3+13",
+      technologies: "Flutter, Dart, Target SDK 36, BLoC/Riverpod, Node.js, PostgreSQL, Isar DB, Meta & Housing.com Webhooks, TOTP 2FA",
       bullets: [
-        "Production-ready PropTech platform (evolved from NB Listings) engineered with an Offline-First architecture (2–8ms reads) and realtime cloud synchronization.",
-        "Features Property & Client Requirement Management, Meta Lead Ads campaign inbox, Telecaller CRM workflow, smart property-matching algorithms, and analytics."
+        "Production-ready PropTech platform (evolved from NB Listings) engineered with an Offline-First architecture (2–8ms reads), SDK 36, and 100/100 security score (37/37 checks).",
+        "Features automated Round-Robin lead distribution, RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and Housing.com & Meta Lead Ads webhooks with 24h deduplication."
+      ]
+    },
+    {
+      name: "PropKart Listing — Public Real Estate Directory & Showcase",
+      url: "https://listing.nbpropertytech.com",
+      displayUrl: "listing.nbpropertytech.com",
+      badge: "Production Live",
+      technologies: "React 18, TypeScript, Vite 6, Tailwind CSS 3, BroadcastChannel API, PostgreSQL, Nginx",
+      bullets: [
+        "Public showcase directory for verified Ahmedabad real estate listings with 3D dual-tone typography and responsive clamp() scaling.",
+        "Full-width universal search engine with zero-lag filtering and instant cross-tab sync via the browser's BroadcastChannel API."
+      ]
+    },
+    {
+      name: "DevSync — Sovereign Cryptographic P2P & Relay Suite",
+      url: "https://github.com/jay0812soni-developer/devsync",
+      displayUrl: "github.com/jay0812soni-developer/devsync",
+      badge: "Sovereign P2P Suite",
+      technologies: "Flutter, Dart, Riverpod, AES-256-GCM, Ed25519/X25519, Shelf HTTP, UDP Multicast, Vercel Serverless SSE, Upstash Redis",
+      bullets: [
+        "Sovereign account-per-device communication and high-speed LAN file transfer system with on-device Ed25519 signatures and AES-256-GCM encryption.",
+        "Hybrid networking architecture featuring direct LAN transfers via an embedded Shelf HTTP server with seamless fallback to a zero-retention Vercel Serverless SSE relay."
       ]
     },
     {
@@ -169,10 +201,11 @@ export const resumeData = {
       url: "https://chandrakalajewellers.in",
       displayUrl: "chandrakalajewellers.in",
       badge: "Live Commercial Platform",
-      technologies: "React, Flutter Desktop, Tailwind CSS, Custom GST Engine, Thermal Barcode Tag Printing, HUID",
+      technologies: "React, Flutter Desktop, Tailwind CSS, Supabase PostgreSQL & RLS, Custom GST Engine, Thermal Barcode Printing",
       bullets: [
         "Commercial storefront on custom production domain showcasing handcrafted jewellery with click-to-inquire automated ordering.",
         "Engineered proprietary GST billing CRM computing metal purity, hallmark charges, making expenses, and tax invoices.",
+        "Configured comprehensive Supabase Row-Level Security (RLS) policies for collections, wishlists, and product comparison matrices.",
         "Built specialized Flutter desktop application for printing physical barcode jewellery tags (22 staggered slots with central tail strips) with HUID tracking."
       ]
     },
@@ -243,6 +276,17 @@ export const resumeData = {
       ]
     },
     {
+      name: "Academic Attendance Management System",
+      url: null,
+      displayUrl: "Academic Portal Suite",
+      badge: "Institutional Portal",
+      technologies: "JavaScript (ES6+), HTML5, CSS3 Design System, Role-Based Auth, Roster Analytics",
+      bullets: [
+        "Dual role-based academic portal suite for Faculty course coordinators and Student self-service presence tracking.",
+        "Features real-time session presence logging, official register exports, and automated threshold alerts for students below mandatory 75% attendance criteria."
+      ]
+    },
+    {
       name: "Soni Samaj Community Directory",
       url: "https://sonisamaj.wuaze.com",
       displayUrl: "First Production Project (Feb 2025)",
@@ -283,13 +327,15 @@ export const resumeData = {
   ],
 
   achievements: [
-    "Lead Architect of PropKart Property CRM on propkart.nbpropertytech.com (v2.1.1, Build 11).",
-    "Pioneered Offline-First local database sync architecture using embedded Isar NoSQL (2–8ms reads) and Supabase PostgreSQL.",
-    "Engineered sub-second multi-channel lead ingestion triad routing Meta Lead Ads & Google Sheets into real estate telecaller desks.",
+    "Lead Architect of PropKart Property CRM on propkart.nbpropertytech.com (v2.1.3+13, Target SDK 36, 100/100 Security Audit Score).",
+    "Architected 95-file Mobile Foundation & Design System (20,000+ LOC) with native app shells, reactive BLoC state, and WebGL CanvasKit stabilization.",
+    "Engineered Site Visit Historical Tracking Engine with PostgreSQL Migrations 38 & 39 and automated Round-Robin lead allocation.",
+    "Pioneered Offline-First local database sync architecture using embedded Isar NoSQL (2–8ms reads) and PostgreSQL cloud sync.",
+    "Architected DevSync sovereign cryptographic P2P suite with Ed25519/X25519 encryption and zero-retention Vercel SSE relay.",
     "Architected GitSphere (v1.0.0), a Windows desktop visual Git control center with SQLite multi-account switching and 4-stage visual pipeline.",
     "Successfully developed and published 2 applications to the Google Play Store (Parichay Sammelan & KITAAB).",
     "Won 5th Rank in Hackathon for Geofenced QR Haversine Attendance System.",
-    "Engineered complete Chandrakala Jewellers ERP: live commercial domain, custom GST billing CRM, and Flutter 22-slot barcode tag printer."
+    "Engineered complete Chandrakala Jewellers ERP: live commercial domain, custom GST billing CRM, Supabase RLS, and Flutter barcode tag printer."
   ],
 
   leadership: [

@@ -211,14 +211,38 @@ function buildVisitorAutoReplyHtml({ name, subject, message, channel, timestamp 
                         PRODUCTION LIVE • 2MS READS
                       </span>
                       <h4 style="margin: 6px 0 4px 0; font-size: 14px; font-weight: 800; color: #121316;">
-                        PropKart Real-Estate CRM &amp; OS
+                        PropKart Real-Estate CRM &amp; OS (v2.1.3+13)
                       </h4>
                       <p style="margin: 0; font-size: 12px; color: #656A76; line-height: 1.4;">
-                        Apple-inspired Offline-First real estate operating system with embedded Isar NoSQL &amp; sub-second Meta Lead Ad ingestion.
+                        Apple-inspired Offline-First real estate operating system with embedded Isar NoSQL, Target SDK 36, and 100/100 security score.
                       </p>
                     </td>
                     <td align="right" style="vertical-align: middle; padding-left: 12px;">
                       <a href="https://propkart.nbpropertytech.com" target="_blank" style="display: inline-block; padding: 8px 14px; font-size: 11px; font-weight: 700; color: #FFFFFF; background-color: #C27803; text-decoration: none; border-radius: 8px;">
+                        View &rarr;
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+
+              <!-- Project 1B: PropKart Listing -->
+              <div style="background-color: #FBF9F5; border: 1px solid #E8E5DF; border-radius: 12px; padding: 16px; margin-bottom: 12px;">
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
+                  <tr>
+                    <td>
+                      <span style="display: inline-block; padding: 2px 8px; background-color: #059669; color: #FFFFFF; font-size: 10px; font-weight: 700; border-radius: 4px; font-family: monospace;">
+                        PUBLIC SHOWCASE DIRECTORY
+                      </span>
+                      <h4 style="margin: 6px 0 4px 0; font-size: 14px; font-weight: 800; color: #121316;">
+                        PropKart Listing &amp; Connect Portals
+                      </h4>
+                      <p style="margin: 0; font-size: 12px; color: #656A76; line-height: 1.4;">
+                        Official public real estate directory for verified Ahmedabad properties with universal search, 3D typography, and dynamic owner intake.
+                      </p>
+                    </td>
+                    <td align="right" style="vertical-align: middle; padding-left: 12px;">
+                      <a href="https://listing.nbpropertytech.com" target="_blank" style="display: inline-block; padding: 8px 14px; font-size: 11px; font-weight: 700; color: #FFFFFF; background-color: #121316; text-decoration: none; border-radius: 8px;">
                         View &rarr;
                       </a>
                     </td>

@@ -1,4 +1,5 @@
 import { ExternalLink, Smartphone, Award, Sparkles, CheckCircle2 } from "lucide-react";
+import { GithubIcon } from "./Icons";
 
 export default function ProjectCard({ project, onHoverSpeak }) {
   const getBadgeIcon = (badge) => {
@@ -94,6 +95,19 @@ export default function ProjectCard({ project, onHoverSpeak }) {
             >
               <Smartphone className="w-3.5 h-3.5" />
               <span>Google Play</span>
+              <ExternalLink className="w-3 h-3 opacity-70" />
+            </a>
+          )}
+
+          {project.githubUrl && (
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 px-4 py-3 sm:py-2.5 rounded-xl bg-[#24292E] text-white hover:bg-[#121316] active:scale-98 transition-colors text-xs font-semibold shadow-xs w-full sm:w-auto min-h-[42px] sm:min-h-0"
+            >
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>GitHub</span>
               <ExternalLink className="w-3 h-3 opacity-70" />
             </a>
           )}
