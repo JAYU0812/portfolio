@@ -5,6 +5,33 @@
 
 export const timelineEvents = [
   {
+    date: "October 2026",
+    title: "Reward & Recognition Award — Certificate of Appreciation",
+    category: "Professional Honor & Award",
+    type: "work",
+    badge: "Company-Wide Award",
+    summary: "Awarded Certificate of Appreciation by NB Infra Projects Limited (Since 1946) for exceptional engineering performance and valuable quarterly contributions.",
+    details: [
+      "Formally recognized by Founder & Chairman Rahul D. Prajapati for outstanding performance, technical leadership, and unwavering commitment across NB PropertyTech softwares.",
+      "Engineered and delivered core flagship platforms: PropKart Natural Language AI Search Engine, PropKart Broker Portal, and official nbpropertytech.com production platform.",
+      "Honored for sustained dedication to high-availability architecture, 0-downtime database migrations (1 to 93), and engineering excellence."
+    ]
+  },
+  {
+    date: "October 2026",
+    title: "PropKart Broker Portal & Ecosystem Expansion",
+    category: "Enterprise Systems Architecture",
+    type: "work",
+    badge: "Multi-Platform Launch",
+    summary: "Architected standalone PropKart Broker Portal, AI Search Engine, and official nbpropertytech.com platform.",
+    details: [
+      "Architected PropKart Broker Portal (Flutter Web/Mobile/Desktop + NestJS 10 + PostgreSQL 16) with dual-tier RERA approval queues, dynamic RBAC, and Hostinger SSL SMTP.",
+      "Engineered Natural Language AI Search Engine in PropKart OS AppShell with PostgreSQL intent extraction and safe query telemetry across Migrations 84–93.",
+      "Launched official marketing platform nbpropertytech.com with Next.js 15, Docker containerization, and automated VPS CI/CD via GitHub Actions.",
+      "Upgraded NB-HRMS ERP with live GPS field trip tracking, geofence exit detection, double encryption (TRANSPORT_SECRET), data masking, and bulk lead transfers."
+    ]
+  },
+  {
     date: "September 2026",
     title: "DevSync — Sovereign Cryptographic P2P & Serverless Relay Suite",
     category: "Cryptographic Architecture",
@@ -20,7 +47,7 @@ export const timelineEvents = [
   },
   {
     date: "June 2026 – Present",
-    title: "Software Engineer at NB Developers (NB Property Tech)",
+    title: "Lead Mobile & Full-Stack Architect at NB Developers (NB Property Tech)",
     category: "Full-Time Engineering",
     type: "work",
     badge: "Current Role",

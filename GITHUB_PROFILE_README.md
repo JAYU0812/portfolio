@@ -5,6 +5,7 @@
 
 <p align="center">
   <a href="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"><img src="https://img.shields.io/badge/🌐_Live_Portfolio-0D1117?style=for-the-badge&logo=vercel&logoColor=F59E0B&labelColor=0D1117" alt="Portfolio" /></a>
+  <a href="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/#recognition"><img src="https://img.shields.io/badge/🏆_Award-Certificate_of_Appreciation-FEF3C7?style=for-the-badge&logoColor=92400E&labelColor=121316&color=C27803" alt="Award" /></a>
   <a href="https://linkedin.com/in/sonijay1908"><img src="https://img.shields.io/badge/LinkedIn-sonijay1908-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
   <a href="https://play.google.com/store/apps/developer?id=HS+Tech+Solutions"><img src="https://img.shields.io/badge/Google_Play-2_Apps_Published-414141?style=for-the-badge&logo=google-play&logoColor=34A853" alt="Google Play" /></a>
   <a href="mailto:jay0812soni@gmail.com"><img src="https://img.shields.io/badge/Email-jay0812soni%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" /></a>
@@ -13,7 +14,7 @@
 
 <!-- Dynamic Typing SVG Banner -->
 <a href="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&multiline=true&width=780&height=80&lines=Lead+Mobile+%26+Full-Stack+Architect+at+NB+Developers;Creator+of+PropKart+OS+(Target+SDK+36+%7C+100%2F100+Security+Audit);Architect+of+DevSync+P2P+Cryptographic+Suite+%26+Offline-First+Engines" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&duration=3000&pause=1000&color=F59E0B&center=true&vCenter=true&multiline=true&width=780&height=80&lines=Lead+Mobile+%26+Full-Stack+Architect+at+NB+Developers;Reward+%26+Recognition+Award+Winner+(NB+Infra+Projects);Creator+of+PropKart+OS+(SDK+36+%7C+AI+Search+%7C+100%2F100+Security);Architect+of+PropKart+Broker+Portal+%26+DevSync+P2P+Mesh" alt="Typing SVG" />
 </a>
 
 </div>
@@ -24,22 +25,32 @@
 
 > *"Engineering high-performance software systems at the intersection of native mobile craftsmanship, deterministic offline-first storage, and distributed cloud backends. Passionate about solving real-world operational bottlenecks through bulletproof software architecture."*
 
+- 🏆 **Honors:** **Certificate of Appreciation (Reward & Recognition)** from **NB Infra Projects Limited (Since 1946)**, signed by Founder & Chairman Rahul D. Prajapati
 - 📍 **Based in:** Ahmedabad, Gujarat, India
-- 💼 **Current Role:** Lead Mobile & Full-Stack Architect at **NB Developers**
-- 🎯 **Primary Focus:** Enterprise PropTech OS (PropKart v2.1.3+13, Target SDK 36), Offline-First Isar NoSQL, DevSync Cryptographic P2P
-- 🌟 **Proven Delivery:** 2 Published Google Play Store Apps · 100/100 Security Audit CRM · Custom GST Billing Engine
+- 💼 **Current Role:** Lead Mobile & Full-Stack Architect at **NB Developers / NB PropertyTech**
+- 🎯 **Primary Focus:** Enterprise PropTech OS (PropKart v2.1.3+13, Target SDK 36, Natural Language AI Search), PropKart Broker Portal (NestJS 10), nbpropertytech.com, DevSync Cryptographic P2P
+- 🌟 **Proven Delivery:** 2 Published Google Play Store Apps · 100/100 Security Audit CRM · Custom GST Billing Engine · 93 PostgreSQL Migrations
 - 🗣️ **Spoken Languages:** Hindi (Native) · Gujarati (Fluent) · English (Professional)
 - ⚡ **Engineering Rule:** Perceived zero latency, zero data loss, zero UI freeze, and clean architecture.
 
 ---
 
+### 🏆 Industry Honors & Recognition
+
+| Award / Recognition | Issuing Organization | Signatory | Scope of Impact |
+| :--- | :--- | :--- | :--- |
+| **Certificate of Appreciation**<br>*(Reward & Recognition)* | **NB Infra Projects Limited**<br>*(Established 1946)* | **Rahul D. Prajapati**<br>*(Founder & Chairman)* | Recognized for exceptional engineering performance, valuable quarterly contributions, and leadership across PropKart OS, Broker Portal, and enterprise cloud systems. |
+
+---
+
 ### 👨‍💻 Executive Summary
 
-I am a **Lead Mobile & Full-Stack Architect** with deep expertise in designing high-throughput, **Offline-First mobile applications**, resilient cloud backends, and cryptographic peer-to-peer protocols. 
+I am an **Award-Winning Lead Mobile & Full-Stack Architect** with deep expertise in designing high-throughput, **Offline-First mobile applications**, resilient cloud backends, and cryptographic peer-to-peer protocols. 
 
-Currently leading mobile and full-stack engineering at **NB Developers**, architecting enterprise PropTech platforms handling thousands of live property inventories, real-time multi-channel lead ingestion (Meta Lead Ads & Housing.com webhooks), and sub-second local state synchronization with embedded Isar NoSQL.
+Currently leading mobile and full-stack engineering at **NB Developers / NB PropertyTech**, architecting enterprise PropTech platforms handling thousands of live property inventories, real-time multi-channel lead ingestion (Meta Lead Ads & Housing.com webhooks), and sub-second local state synchronization with embedded Isar NoSQL.
 
 - 📱 **Mobile Mastery**: Published **2 commercial applications on Google Play Store**; author of enterprise Flutter mobile design systems targeting **Android 15 (Target SDK 36)** with Java 17 desugaring and 100/100 automated security compliance.
+- 🔍 **Natural Language AI Search**: Engineered in-app debounced intent parser and server-side NLP query interpreter mapping natural phrases to tenant-isolated PostgreSQL results with zero query leakage.
 - ⚡ **Offline-First Innovation**: Pioneer of zero-latency (2ms–8ms read) embedded local data stores with deterministic timestamp-based outbox synchronization.
 - 🔐 **Cryptographic & Distributed Systems**: Architect of **DevSync**, a sovereign P2P mesh featuring Ed25519 payload signing, X25519 ECDH key exchange, and zero-retention serverless relays.
 - 🏢 **End-to-End Enterprise Solutions**: Built proprietary GST billing engines, thermal jewellery barcode printers, and academic attendance platforms.
@@ -50,9 +61,19 @@ Currently leading mobile and full-stack engineering at **NB Developers**, archit
 
 | Platform / Product | Category & Focus | Architecture & Tech Stack | Live Links |
 | :--- | :--- | :--- | :--- |
-| **PropKart Real-Estate OS** | Enterprise PropTech CRM | Flutter, Target SDK 36, Embedded Isar NoSQL, BLoC, PostgreSQL, TOTP 2FA, Algorithmic CAPTCHA | [Live Platform](https://propkart.nbpropertytech.com) · `Build 13` |
+| **PropKart Real-Estate OS** | Enterprise PropTech CRM | Flutter, Target SDK 36, Natural Language AI Search, Embedded Isar NoSQL, BLoC, PostgreSQL (M1-93), TOTP 2FA | [Live Platform](https://propkart.nbpropertytech.com) · `Build 13` |
+| **PropKart Broker Portal** | Enterprise Broker Governance | Flutter (Web/Mobile/Desktop), NestJS 10, PostgreSQL 16, Two-Tier Approval Queues, Hostinger SSL SMTP | [GitHub Repository](https://github.com/JAYU0812/brokerportal) · `v1.0.0` |
+| **NB PropertyTech Portal** | Production Marketing & Onboarding | Next.js 15, TypeScript 5, Tailwind CSS, Framer Motion, PostgreSQL, Docker, Traefik SSL | [nbpropertytech.com](https://nbpropertytech.com) |
 | **PropKart Listing Directory** | Public Property Showcase | React, Tailwind CSS, 3D Dual-Tone Typography, BroadcastChannel Cross-Tab Sync | [Live Directory](https://listing.nbpropertytech.com) |
 | **PropKart Connect & Panel** | Property Intake & Ops Panel | Dynamic Multi-Step Intake, Vector PDF Generation (jsPDF), 3-Way Instant Lead Sharing | [Live Intake](https://propconnect.nbpropertytech.com) · [Panel](https://panel.nbpropertytech.com) |
+| **NB-HRMS Enterprise ERP** | HRMS, CRM & Field Tracking | Next.js 14, Express 5, Prisma 6, PostgreSQL 15, Redis, GPS Field Geofencing, Flutter Client | [crm.nbdeveloper.co.in](https://crm.nbdeveloper.co.in) |
+| **Chandrakala Jewellers ERP** | Live Storefront & Billing CRM | React, Tailwind CSS, Supabase PostgreSQL & RLS, Flutter Desktop Barcode Printer | [chandrakalajewellers.in](https://chandrakalajewellers.in) |
+| **DevSync P2P Mesh** | Sovereign Cryptographic Transfer | Flutter, Shelf HTTP, UDP Multicast, Ed25519 / X25519 ECDH, AES-256-GCM, Vercel SSE Relay | [GitHub Repository](https://github.com/JAYU0812/devsync) |
+| **Parichay Sammelan** | Matrimonial Community App | Flutter, Android, PHP, MySQL, Cloud Storage, Play Console Production Pipeline | [Google Play Store](https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan&pcampaignid=web_share) |
+| **KITAAB (Jeweller Ledger)** | B2B Jewellery Ledger Accounting | Flutter, SQLite, Android, Automated Balance Reconciliation & Financial Records | [Google Play Store](https://play.google.com/store/apps/details?id=com.jeweller.ledger&pcampaignid=web_share) |
+| **Academic AMS** | Institutional Course Portal | JavaScript ES6+, Role-Based Gateways (Faculty & Student), Real-time 75% Threshold Alerts | Institutional Portal |
+| **GitSphere** | Windows Desktop Git Control | Flutter Desktop, Win32 / DWM Integration, SQLite Multi-Profile Pipeline | Desktop v1.0.0 |
+| **Soni Samaj Directory** | Community Social Directory | PHP, MySQL, Responsive Web, Member Search & Family Trees | [sonisamaj.wuaze.com](https://sonisamaj.wuaze.com) |
 | **Chandrakala Jewellers ERP** | Live Storefront & Billing CRM | React, Tailwind CSS, Supabase PostgreSQL & RLS, Flutter Desktop Barcode Printer | [chandrakalajewellers.in](https://chandrakalajewellers.in) |
 | **DevSync P2P Mesh** | Sovereign Cryptographic Transfer | Flutter, Shelf HTTP, UDP Multicast, Ed25519 / X25519 ECDH, AES-256-GCM, Vercel SSE Relay | [GitHub Repository](https://github.com/JAYU0812/devsync) |
 | **Parichay Sammelan** | Matrimonial Community App | Flutter, Android, PHP, MySQL, Cloud Storage, Play Console Production Pipeline | [Google Play Store](https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan&pcampaignid=web_share) |

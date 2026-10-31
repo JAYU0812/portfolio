@@ -10,20 +10,21 @@ export const projects = [
     category: "PropTech Operating System",
     filterCategory: "crm",
     date: "June 2026 – Present",
-    status: "Production Live v2.1.3+13",
+    status: "Production Live v2.1.3+13 (AI Search)",
     badge: "Live: propkart.nbpropertytech.com",
-    version: "v2.1.3+13 (Flutter) / v3.0.0 (API)",
-    tagline: "Apple-inspired operating system for real estate desks with 2ms Offline-First local latency, SDK 36, and 100/100 security score.",
+    version: "v2.1.3+13 (Flutter) / v3.2.0 (API)",
+    tagline: "Apple-inspired operating system for real estate desks with 2ms Offline-First local latency, Natural Language AI Search Engine, SDK 36, and 100/100 security score.",
     description:
-      "Architected as Lead Mobile & Full-Stack Architect at NB Property Tech / NB Developers. Evolved from the original NB Listings foundation into a comprehensive enterprise-scale real-estate operating system managing high-volume rental and re-sale portfolios across metropolitan hubs. Features an embedded Isar NoSQL local database (2–8ms read latency), bi-directional realtime synchronization with Supabase PostgreSQL via Node.js micro-APIs, Target SDK 36 (Android 15), Google Play Store readiness (com.nbpropertytech.propkart), universal algorithmic CAPTCHA bot defense, RFC 6238 TOTP 2FA, and automated Round-Robin lead allocation.",
+      "Architected as Lead Mobile & Full-Stack Architect at NB Property Tech / NB Developers. Evolved from the original NB Listings foundation into a comprehensive enterprise-scale real-estate operating system managing high-volume rental and re-sale portfolios across metropolitan hubs. Features a Natural Language AI Search Engine integrated directly into the AppShell and PostgreSQL backend (spanning Migrations 84–93, persistent builder indexes, and safe query telemetry), embedded Isar NoSQL local database (2–8ms read latency), bi-directional realtime synchronization with PostgreSQL, Target SDK 36 (Android 15), Google Play Store readiness (com.nbpropertytech.propkart), universal algorithmic CAPTCHA bot defense, RFC 6238 TOTP 2FA, and automated Round-Robin lead allocation.",
     tech: [
       "Flutter",
       "Dart",
       "Target SDK 36",
+      "Natural Language AI Search",
       "Isar NoSQL (v3.1.0)",
       "BLoC & Riverpod",
       "Node.js & Express 5",
-      "PostgreSQL",
+      "PostgreSQL (Migrations 1–93)",
       "Supabase Realtime",
       "Meta & Housing.com Webhooks",
       "RFC 6238 TOTP 2FA",
@@ -41,14 +42,84 @@ export const projects = [
       targetSdk: "Target SDK 36 (Android 15 Ready)"
     },
     highlights: [
+      "Natural Language AI Search Engine: Debounced in-app intent parser and server-side NLP query interpreter mapping natural language queries (e.g., 'available property in gota') into tenant-isolated PostgreSQL results with zero raw query leakage",
       "Production Google Play Store Ready: Package ID com.nbpropertytech.propkart targeting SDK 36 with Java 17 desugaring, ProGuard obfuscation, and automated account deletion compliance",
       "Comprehensive Mobile Design System & App Shell: Architected 95-file mobile foundation (Steps 3.0–3.7 migration, 20,000+ LOC) with responsive bottom navigation, contextual outcome sheets, and full BLoC reactive state",
+      "Enterprise PostgreSQL Migrations (84 to 93): Scaled database schema with persistent builder indexing, search document vectors, campaign lead manual sales reassignment, and foreign key integrity",
       "Site Visit Historical Tracking Engine: Engineered PostgreSQL Migrations 38 & 39 establishing immutable site visit audit logs, telecaller outcome sync, and CNR re-dial workflows",
       "100/100 Security Audit: Passed all 37 automated security dimensions including RFC 6238 TOTP two-factor authentication and mathematical algorithmic CAPTCHA bot defense",
       "WebGL & CanvasKit Shader Stabilization: Authored GPU shader prevention architecture eliminating web runtime crashes across low-end mobile devices and browser viewports",
       "Offline-First Architecture: Embedded Isar NoSQL database yielding 2–8ms read latency for hundreds of listings, delivering perceived zero-latency (0ms wait) with zero blocking UI spinners",
       "Deterministic Conflict Resolution: Outbox mutation queue with strict timestamp-based Server-Wins policy to prevent stale overwrites across low-connectivity field environments",
       "Multi-Channel Ingestion & Deduplication: Sub-second (<1s) webhooks for Meta Lead Ads and Housing.com with 24-hour cryptographic lead deduplication and automated Round-Robin agent routing"
+    ]
+  },
+  {
+    id: "propkart-broker",
+    title: "PropKart Broker Portal — Enterprise Broker Onboarding & Governance Platform",
+    category: "Enterprise Governance & Operations",
+    filterCategory: "crm",
+    date: "October 2026 – Present",
+    status: "Production v1.0.0",
+    badge: "github.com/JAYU0812/brokerportal",
+    version: "v1.0.0",
+    tagline: "Cross-platform broker onboarding engine with dual-tier RERA approval governance, dynamic RBAC, and Hostinger SSL SMTP mailer.",
+    description:
+      "Enterprise real estate broker onboarding, dual-tier approval governance, and cross-platform operations system engineered for NB PropertyTech. Built with Flutter (Web, Mobile, Desktop), NestJS 10, and an isolated PostgreSQL 16 database. Features two-tier approval queues (Queue A for state RERA verified applicants, Queue B for RERA assistance with direct auto-drafted WhatsApp integration), zero-hardcoding dynamic platform settings and RBAC with granular user permission overrides, tamper-evident audit logging, and automated credential activation via Hostinger SSL SMTP with cryptographic tokens.",
+    tech: [
+      "Flutter 3.x",
+      "Dart",
+      "NestJS 10",
+      "TypeScript",
+      "PostgreSQL 16",
+      "Docker",
+      "TypeORM",
+      "Hostinger SSL SMTP",
+      "JWT Auth",
+      "Dynamic RBAC",
+      "BLoC & Cubit"
+    ],
+    githubUrl: "https://github.com/JAYU0812/brokerportal",
+    liveUrl: null,
+    playStoreUrl: null,
+    featured: true,
+    highlights: [
+      "Two-Tier Approval Queues: Queue A (Fast-track RERA verified brokers) vs Queue B (RERA assistance with auto-drafted WhatsApp integration)",
+      "Automated Activation Dispatch: One-click approval sending official credentials via Hostinger SSL SMTP with cryptographic auto-fill activation links",
+      "Zero Hardcoding Architecture: Dynamic platform settings and RBAC stored in PostgreSQL allowing admins to update support hotlines, prefill templates, and RERA prefixes without redeploying",
+      "Tamper-Evident Audit Trail: Structured audit logs recording actor, role, action, target entity, IP address, and JSON payloads with instant search and one-click JSON exporter"
+    ]
+  },
+  {
+    id: "nbpropertytech-portal",
+    title: "NB PropertyTech — Official Marketing & Broker Onboarding Platform",
+    category: "Production Marketing Portal",
+    filterCategory: "web",
+    date: "October 2026 – Present",
+    status: "Production Live",
+    badge: "Live: nbpropertytech.com",
+    tagline: "Next.js 15 marketing portal and broker intake studio with Docker containerization and automated VPS CI/CD.",
+    description:
+      "The official production marketing portal and broker onboarding showcase for PropKart CRM and NB PropertyTech, live at nbpropertytech.com. Features interactive CRM/ERP product tours, multi-tenant security architecture breakdown, dynamic tier subscription studio (Silver, Gold, Platinum Enterprise), real-time client validation with database persistence, and automated GitHub Actions CI/CD to a VPS with Traefik ACME SSL reverse proxy.",
+    tech: [
+      "Next.js 15",
+      "TypeScript 5",
+      "Tailwind CSS",
+      "Framer Motion",
+      "PostgreSQL",
+      "Docker",
+      "Traefik SSL",
+      "GitHub Actions CI/CD",
+      "Nodemailer"
+    ],
+    liveUrl: "https://nbpropertytech.com",
+    playStoreUrl: null,
+    featured: true,
+    highlights: [
+      "Live Production Platform: Deployed on official primary domain nbpropertytech.com with automated Let's Encrypt SSL via Traefik",
+      "Next.js 15 Standalone Architecture: High-performance App Router with server-side rendering, Framer Motion animations, and zero hydration latency",
+      "Automated VPS CI/CD Pipeline: GitHub Actions workflow building Docker containers and deploying directly to VPS with automated healthcheck verification",
+      "Interactive Broker Onboarding Studio: Form intake pipeline with client-side validation, database persistence, and automated confirmation dispatch"
     ]
   },
   {
@@ -145,7 +216,9 @@ export const projects = [
     featured: true,
     highlights: [
       "Live Commercial Deployment: Accessible in production at crm.nbdeveloper.co.in for enterprise internal operations",
-      "Field-Level AES-256-CBC Encryption: Encrypts government identities (Aadhaar and PAN) at rest using Node.js crypto and deterministic initialization vectors",
+      "Real-Time GPS Field Trip Tracking: Tracks employee movements outside work geofences with 30m detection buffer, 12-hour session caching, and 120s expiring live map pins",
+      "Double Encryption Architecture: Configured TRANSPORT_SECRET double encryption layer and AES-256-CBC field encryption for sensitive identity records",
+      "Data Masking & Bulk Lead Management: Secure identity data masking and high-volume lead transfer pipelines for organizational privacy",
       "Hasura GraphQL Engine & Prisma v6: Unified data layer querying PostgreSQL with granular permission rules and automated relationship stitching",
       "Append-Only Audit Log: Computes field-level diffs on every sensitive write and stores an immutable trail of actions for regulatory compliance",
       "Real-time Collaboration: LiveKit WebRTC video rooms and OpenAI Whisper speech-to-text pipeline for audio memo transcription",
@@ -531,6 +604,36 @@ export const projects = [
       "Session Course Register: Real-time attendance logging with one-tap status toggles (Present, Absent, Late), automatic percentage computation, and attendance alerts",
       "Academic Compliance Warnings: Automatic threshold flags for students below mandatory 75% course presence criteria with parent notification triggers",
       "Clean Institutional Design System: Tailored typography, breadcrumb navigation, and responsive tables designed for academic administrators"
+    ]
+  },
+  {
+    id: "j-connect",
+    title: "J-Connect — Developer Tooling & Collaboration Platform",
+    category: "Developer Collaboration & Ecosystem",
+    filterCategory: "tools",
+    date: "October 2026",
+    status: "Active Architecture",
+    badge: "Developer Tooling",
+    version: "v1.0.0",
+    tagline: "Developer ecosystem platform engineered for high-performance team collaboration, APIs, and tooling.",
+    description:
+      "A high-performance developer collaboration ecosystem engineered with a clean modular architecture. Comprises a Flutter client application, a NestJS TypeScript backend, migration-controlled PostgreSQL database, and a strict rulebook for security, documentation, and API standards.",
+    tech: [
+      "Flutter",
+      "Dart",
+      "NestJS 10",
+      "TypeScript",
+      "PostgreSQL",
+      "RESTful APIs",
+      "Clean Architecture"
+    ],
+    liveUrl: null,
+    playStoreUrl: null,
+    featured: false,
+    highlights: [
+      "Clean Modular Architecture: Strict layer separation between Flutter frontend, NestJS backend, and migration-controlled PostgreSQL schema",
+      "Authoritative Backend Logic: Fully validated RESTful /api/v1/ endpoints with single-source-of-truth documentation governance",
+      "Migration-Controlled Persistence: Safe database schema evolution isolating development from live environments"
     ]
   },
   {

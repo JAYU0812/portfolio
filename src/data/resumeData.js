@@ -6,7 +6,7 @@
 export const resumeData = {
   personal: {
     name: "SONI JAYKUMAR HASMUKH",
-    title: "Lead Mobile & Full Stack Software Engineer | Flutter & React Specialist",
+    title: "Lead Mobile & Full Stack Architect | Flutter, React & Enterprise Systems Specialist",
     email: "jay0812soni@gmail.com",
     phone: "+91 79903 61109",
     location: "Ahmedabad, Gujarat, India",
@@ -16,7 +16,7 @@ export const resumeData = {
   },
 
   summary:
-    "Lead Mobile & Full Stack Software Engineer specializing in Flutter, React, Node.js, and PostgreSQL. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), unified mobile design systems and app shells, Google Play Store publications (Target SDK 36 ready), cryptographic P2P engines, and end-to-end enterprise CRM suites with multi-channel webhook ingestion (Meta & Housing.com) and proprietary GST billing engines. Currently serving as Lead Mobile & Full-Stack Architect at NB Developers.",
+    "Award-winning Lead Mobile & Full Stack Architect (Certificate of Appreciation from NB Infra Projects Limited, Since 1946) specializing in Flutter, React, Node.js/NestJS, and PostgreSQL. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), unified mobile design systems and app shells, Google Play Store publications (Target SDK 36 ready), Natural Language AI search engines, cryptographic P2P engines, and end-to-end enterprise CRM suites with multi-channel webhook ingestion (Meta & Housing.com) and proprietary GST billing engines. Currently leading mobile and full-stack architecture at NB Developers / NB PropertyTech.",
 
   skills: {
     mobile: [
@@ -28,10 +28,12 @@ export const resumeData = {
       "Isar NoSQL (Offline-First)",
       "BLoC & Riverpod State Management",
       "Android Studio & Play Console Publishing",
-      "Win32 / DWM Desktop Integration"
+      "Win32 / DWM Desktop Integration",
+      "AI Search in AppShell"
     ],
     frontend: [
       "React.js",
+      "Next.js 14 & 15",
       "JavaScript (ES6+)",
       "TypeScript",
       "Tailwind CSS",
@@ -42,19 +44,22 @@ export const resumeData = {
     ],
     backend: [
       "Node.js & Express.js",
+      "NestJS 10 (TypeScript)",
       "RESTful APIs",
-      "PostgreSQL",
+      "PostgreSQL (Migrations 1–93)",
+      "Natural Language AI Search Engines",
       "Supabase Realtime & RLS",
       "RFC 6238 TOTP 2FA",
       "Algorithmic CAPTCHA Defense",
       "Meta & Housing.com Webhooks",
       "Round-Robin Lead Allocation",
+      "Hostinger SSL SMTP",
       "PHP & MySQL",
       "Phoenix WebSockets"
     ],
     database: [
       "Isar NoSQL (Embedded Local DB)",
-      "PostgreSQL",
+      "PostgreSQL (Enterprise Migrations 1–93)",
       "Supabase",
       "SQLite (FFI)",
       "MySQL",
@@ -63,6 +68,8 @@ export const resumeData = {
     ],
     tools: [
       "Git & GitHub",
+      "Docker & Traefik SSL",
+      "GitHub Actions CI/CD to VPS",
       "Client-side Vector PDF (jsPDF)",
       "BroadcastChannel Cross-Tab Sync",
       "WebGL / CanvasKit Optimization",
@@ -84,13 +91,17 @@ export const resumeData = {
       period: "June 2026 – Present",
       location: "Science City, Ahmedabad",
       description: "PropTech Enterprise Operating System (PropKart v2.1.3+13, Target SDK 36)",
-      technologies: ["Flutter", "Dart", "Target SDK 36", "BLoC", "Riverpod", "Isar NoSQL", "PostgreSQL", "Node.js", "Meta & Housing.com Webhooks", "TOTP 2FA"],
+      technologies: ["Flutter", "Dart", "Target SDK 36", "NestJS 10", "BLoC", "Riverpod", "Isar NoSQL", "PostgreSQL", "Node.js", "Next.js 15", "Docker", "Meta & Housing.com Webhooks", "TOTP 2FA"],
       bullets: [
+        "Honored with Certificate of Appreciation (Reward and Recognition) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional engineering performance, valuable quarterly contributions, and dedication to excellence.",
         "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.3+13, Target SDK 36, Package: com.nbpropertytech.propkart, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 passed), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
+        "Engineered Natural Language AI Search Engine in PropKart OS and backend with debounced intent extraction, PostgreSQL multi-tenant isolation, safe query telemetry, and persistent builder schemas spanning Migrations 84 to 93.",
+        "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues (Queue A RERA Verified vs Queue B RERA Assistance), dynamic RBAC, tamper-evident audit logging, and Hostinger SSL SMTP.",
+        "Launched official production marketing and broker onboarding platform (live: nbpropertytech.com) using Next.js 15, TypeScript 5, Docker, and GitHub Actions automated VPS CI/CD with Traefik SSL.",
         "Architected 95-file Mobile Foundation & Design System (Steps 3.0–3.7 migration, 20,000+ LOC) with native app shells, responsive bottom navigation, contextual telecaller outcome disposition sheets, and WebGL CanvasKit GPU shader stabilization.",
         "Engineered Site Visit Historical Tracking Engine (PostgreSQL Migrations 38 & 39) establishing immutable site visit audit logs, telecaller shift-gate availability, and automated Round-Robin lead allocation.",
         "Engineered the public PropKart Listing showcase directory (live: listing.nbpropertytech.com) and PropKart Connect dynamic form intake engine & operations panel (live: propconnect.nbpropertytech.com & panel.nbpropertytech.com) with 3-way lead sharing and vector PDF dossiers.",
-        "Engineered the NB-HRMS Enterprise ERP platform (Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, Redis, live on crm.nbdeveloper.co.in) featuring AES-256 field encryption for identity documents, append-only audit logging, and OpenAI Whisper voice note transcription.",
+        "Expanded NB-HRMS Enterprise ERP & CRM platform (Flutter client nb_crm_flutter, Next.js 14, Express 5, Prisma 6, PostgreSQL, Redis, live on crm.nbdeveloper.co.in) featuring real-time GPS field trip tracking with geofence exit detection, double encryption (TRANSPORT_SECRET), sensitive data masking, bulk lead reassignment, and Whisper AI audio transcription.",
         "Built TechDrive: an enterprise cloud document vault and visual storage analytics portal (Flutter, BLoC, Firebase Firestore, FL Chart storage distribution engine).",
         "Created the Legacy Tower Campaign presentation platform with automated sub-2s Google Sheets webhook routing for instant high-ticket investor lead follow-ups.",
         "Implemented deterministic conflict resolution using an outbox mutation queue with timestamp Server-Wins policy, and a 100ms debounced stream batching pipeline for Phoenix WebSockets."
@@ -144,10 +155,33 @@ export const resumeData = {
       url: "https://propkart.nbpropertytech.com",
       displayUrl: "propkart.nbpropertytech.com",
       badge: "Production Live v2.1.3+13",
-      technologies: "Flutter, Dart, Target SDK 36, BLoC/Riverpod, Node.js, PostgreSQL, Isar DB, Meta & Housing.com Webhooks, TOTP 2FA",
+      technologies: "Flutter, Dart, Target SDK 36, Natural Language AI Search, BLoC, Node.js, PostgreSQL Migrations (1–93), Isar DB, Meta Webhooks, TOTP 2FA",
       bullets: [
-        "Production-ready PropTech platform (evolved from NB Listings) engineered with an Offline-First architecture (2–8ms reads), SDK 36, and 100/100 security score (37/37 checks).",
+        "Production-ready PropTech platform engineered with an Offline-First architecture (2–8ms reads), SDK 36, and 100/100 security score (37/37 checks).",
+        "Engineered Natural Language AI Search Engine in AppShell and backend mapping conversational queries to tenant-isolated PostgreSQL results with zero raw query leakage.",
         "Features automated Round-Robin lead distribution, RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and Housing.com & Meta Lead Ads webhooks with 24h deduplication."
+      ]
+    },
+    {
+      name: "PropKart Broker Portal — Enterprise Broker Governance Suite",
+      url: "https://github.com/JAYU0812/brokerportal",
+      displayUrl: "github.com/JAYU0812/brokerportal",
+      badge: "Production v1.0.0",
+      technologies: "Flutter 3.x, Dart, NestJS 10, TypeScript, PostgreSQL 16, Docker, TypeORM, Hostinger SSL SMTP, Dynamic RBAC, BLoC",
+      bullets: [
+        "Cross-platform broker operations and dual-tier approval governance suite (Queue A RERA Verified vs Queue B RERA Assistance with direct WhatsApp auto-drafting).",
+        "Zero-hardcoding architecture with dynamic platform settings, tamper-evident audit logs, and automated Hostinger SSL SMTP credential activation."
+      ]
+    },
+    {
+      name: "NB PropertyTech — Official Marketing & Broker Onboarding Portal",
+      url: "https://nbpropertytech.com",
+      displayUrl: "nbpropertytech.com",
+      badge: "Production Live",
+      technologies: "Next.js 15, TypeScript 5, Tailwind CSS, Framer Motion, PostgreSQL, Docker, Traefik SSL, GitHub Actions CI/CD to VPS",
+      bullets: [
+        "Official production showcase for PropKart CRM and NB PropertyTech with high-performance Next.js 15 App Router architecture.",
+        "Automated GitHub Actions CI/CD pipeline building isolated Docker containers and deploying directly to VPS with Traefik ACME SSL reverse proxy."
       ]
     },
     {
@@ -321,13 +355,18 @@ export const resumeData = {
   ],
 
   certifications: [
+    "Certificate of Appreciation — Reward & Recognition Award (NB Infra Projects Limited, Since 1946) presented by Founder & Chairman Rahul D. Prajapati in recognition of exceptional quarterly performance, valuable contributions, and dedication to excellence",
     "Flutter Mobile Development Internship (3 Months) — Comprehensive Mobile Engineering",
     "React & Node Development Internship — Tech-Craft (Clinical Dashboard Architecture)",
     "C++ Object-Oriented Programming Certification — Grade A"
   ],
 
   achievements: [
+    "Awarded Reward & Recognition Certificate of Appreciation from NB Infra Projects Limited (Signed by Founder & Chairman Rahul D. Prajapati).",
     "Lead Architect of PropKart Property CRM on propkart.nbpropertytech.com (v2.1.3+13, Target SDK 36, 100/100 Security Audit Score).",
+    "Architected Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with Migrations 84–93.",
+    "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) with Flutter, NestJS 10, PostgreSQL 16, and two-tier approval governance.",
+    "Launched official production marketing portal nbpropertytech.com with Next.js 15, Docker, and GitHub Actions CI/CD to VPS.",
     "Architected 95-file Mobile Foundation & Design System (20,000+ LOC) with native app shells, reactive BLoC state, and WebGL CanvasKit stabilization.",
     "Engineered Site Visit Historical Tracking Engine with PostgreSQL Migrations 38 & 39 and automated Round-Robin lead allocation.",
     "Pioneered Offline-First local database sync architecture using embedded Isar NoSQL (2–8ms reads) and PostgreSQL cloud sync.",

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import { timelineEvents } from "../data/timeline";
@@ -14,10 +15,15 @@ import {
   Zap, 
   Building2, 
   ShieldCheck,
-  Terminal
+  Terminal,
+  Award,
+  Trophy,
+  Eye,
+  X
 } from "lucide-react";
 
 export default function Home() {
+  const [showCertModal, setShowCertModal] = useState(false);
   const featuredProjects = projects.filter((p) => p.featured);
 
   const handleMascotSpeak = (text) => {
@@ -32,15 +38,26 @@ export default function Home() {
           
           {/* Left Hero Column */}
           <div className="lg:col-span-7 space-y-5 sm:space-y-7">
-            {/* Status Pill */}
-            <div 
-              onMouseEnter={() => handleMascotSpeak("I am currently architecting PropKart at NB Developers in Ahmedabad!")}
-              onMouseLeave={() => handleMascotSpeak(null)}
-              className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white border border-[#E8E5DF] shadow-xs text-[11px] sm:text-xs font-mono text-[#121316] max-w-full"
-            >
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-              <span className="font-semibold text-[#C27803] shrink-0">Current Role:</span>
-              <span className="truncate">Software Engineer @ NB Developers</span>
+            {/* Status & Award Badges */}
+            <div className="flex flex-wrap items-center gap-2">
+              <div 
+                onMouseEnter={() => handleMascotSpeak("I am Lead Mobile & Full-Stack Architect at NB Developers / NB PropertyTech in Ahmedabad!")}
+                onMouseLeave={() => handleMascotSpeak(null)}
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white border border-[#E8E5DF] shadow-xs text-[11px] sm:text-xs font-mono text-[#121316] max-w-full"
+              >
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
+                <span className="font-semibold text-[#C27803] shrink-0">Current Role:</span>
+                <span className="truncate">Lead Mobile & Full-Stack Architect @ NB Developers</span>
+              </div>
+
+              <button
+                onClick={() => setShowCertModal(true)}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FEF3C7] hover:bg-[#FDE68A] text-[#92400E] border border-[#FCD34D] text-[11px] sm:text-xs font-semibold shadow-xs transition cursor-pointer"
+                title="View Certificate of Appreciation from NB Infra Projects Limited"
+              >
+                <Award className="w-3.5 h-3.5 text-[#B45309]" />
+                <span>🏆 Reward & Recognition Winner</span>
+              </button>
             </div>
 
             {/* Main Headline */}
@@ -54,12 +71,12 @@ export default function Home() {
 
             {/* Intro Paragraph */}
             <p className="text-sm sm:text-base lg:text-lg text-[#4A4E57] leading-relaxed max-w-2xl font-normal">
-              I’m <span className="font-semibold text-[#121316]">Soni Jaykumar</span>, a Full-Stack Software Engineer specializing in{" "}
+              I’m <span className="font-semibold text-[#121316]">Soni Jaykumar</span>, an Award-Winning Lead Mobile & Full-Stack Architect specializing in{" "}
               <strong className="text-[#121316] font-semibold">Flutter</strong>,{" "}
               <strong className="text-[#121316] font-semibold">React</strong>,{" "}
-              <strong className="text-[#121316] font-semibold">Node.js</strong>, and{" "}
+              <strong className="text-[#121316] font-semibold">Node.js / NestJS</strong>, and{" "}
               <strong className="text-[#121316] font-semibold">Offline-First Architectures</strong>. 
-              Currently architecting PropKart CRM at NB Developers, with GitSphere desktop visual engine, 2 apps published on the Google Play Store, custom retail GST engines, and physical barcode label printing systems.
+              Currently architecting the enterprise PropTech ecosystem at NB Developers / NB PropertyTech (PropKart OS with Natural Language AI Search, PropKart Broker Portal, live nbpropertytech.com), with GitSphere desktop engine, 2 Google Play Store releases, and custom retail GST ERPs.
             </p>
 
             {/* Action Buttons: Full-width on mobile, flex row on desktop */}
@@ -84,6 +101,14 @@ export default function Home() {
                 <span>View Resume</span>
               </Link>
 
+              <button
+                onClick={() => setShowCertModal(true)}
+                className="w-full sm:w-auto justify-center px-5 py-3.5 rounded-xl bg-[#FEF3C7] text-[#92400E] border border-[#FCD34D] hover:bg-[#FDE68A] active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2 cursor-pointer"
+              >
+                <Award className="w-4 h-4 text-[#B45309]" />
+                <span>View Award</span>
+              </button>
+
               <a
                 href="https://wa.me/917990361109"
                 target="_blank"
@@ -100,22 +125,35 @@ export default function Home() {
             {/* Key Accomplishments Chips */}
             <div className="pt-2 sm:pt-4 flex flex-wrap gap-2 sm:gap-2.5">
               {[
-                { label: "PropKart CRM (v2.1.3+13)", link: "https://propkart.nbpropertytech.com" },
+                { label: "🏆 Reward & Recognition (NB Infra)", action: () => setShowCertModal(true) },
+                { label: "PropKart OS (AI Search + SDK 36)", link: "https://propkart.nbpropertytech.com" },
+                { label: "PropKart Broker Portal (v1.0.0)", link: "https://github.com/JAYU0812/brokerportal" },
+                { label: "Live: nbpropertytech.com", link: "https://nbpropertytech.com" },
                 { label: "Live: listing.nbpropertytech.com", link: "https://listing.nbpropertytech.com" },
                 { label: "DevSync (P2P Crypto Engine)", link: "/projects" },
                 { label: "Live: crm.nbdeveloper.co.in", link: "https://crm.nbdeveloper.co.in" },
-                { label: "GitSphere Desktop (v1.0.0)", link: "/projects" },
                 { label: "Live: chandrakalajewellers.in", link: "https://chandrakalajewellers.in" },
                 { label: "2 Google Play Store Apps", link: "/projects" },
                 { label: "5th Rank Hackathon Winner", link: "/projects" }
               ].map((item, idx) => (
-                <span
-                  key={idx}
-                  className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#F2EDE4]/80 text-[#3A3D44] border border-[#E8E5DF] text-[11px] sm:text-xs font-mono"
-                >
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                  <span className="truncate max-w-[240px] sm:max-w-none">{item.label}</span>
-                </span>
+                item.action ? (
+                  <button
+                    key={idx}
+                    onClick={item.action}
+                    className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#FEF3C7] text-[#92400E] border border-[#FCD34D] text-[11px] sm:text-xs font-mono font-semibold cursor-pointer hover:bg-[#FDE68A] transition"
+                  >
+                    <Award className="w-3.5 h-3.5 text-[#B45309] shrink-0" />
+                    <span className="truncate max-w-[240px] sm:max-w-none">{item.label}</span>
+                  </button>
+                ) : (
+                  <span
+                    key={idx}
+                    className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#F2EDE4]/80 text-[#3A3D44] border border-[#E8E5DF] text-[11px] sm:text-xs font-mono"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <span className="truncate max-w-[240px] sm:max-w-none">{item.label}</span>
+                  </span>
+                )
               ))}
             </div>
           </div>
@@ -149,10 +187,10 @@ export default function Home() {
                       <Building2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C27803] shrink-0" />
                       PropKart CRM & OS (v2.1.3+13)
                     </span>
-                    <span className="text-[10px] text-emerald-400 font-mono">SDK 36 READY</span>
+                    <span className="text-[10px] text-emerald-400 font-mono">AI SEARCH</span>
                   </div>
                   <p className="text-[#A4ACB9] text-[11px] leading-relaxed mb-2">
-                    Offline-First Flutter client (2ms reads) + SDK 36 Google Play readiness (com.nbpropertytech.propkart) + 100/100 security score + Public Listing showcase.
+                    Natural Language AI Search in AppShell + Offline Isar DB (2ms) + Target SDK 36 + PostgreSQL Migrations 1–93 + 100/100 Security Audit.
                   </p>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[10px] text-[#7A8291] pt-2 border-t border-[#2E333D] gap-1 sm:gap-0">
                     <span>PropTech Operating System</span>
@@ -167,14 +205,39 @@ export default function Home() {
                       </a>
                       <span>•</span>
                       <a 
-                        href="https://listing.nbpropertytech.com" 
+                        href="https://nbpropertytech.com" 
                         target="_blank" 
                         rel="noreferrer"
                         className="text-[#E8C37D] hover:underline"
                       >
-                        listing ↗
+                        marketing ↗
                       </a>
                     </div>
+                  </div>
+                </div>
+
+                {/* PropKart Broker Portal Highlight */}
+                <div className="bg-[#1C1F26] p-3.5 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
+                  <div className="flex items-center justify-between text-[#E8C37D] font-bold mb-1.5">
+                    <span className="flex items-center gap-1.5 text-xs sm:text-sm">
+                      <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C27803] shrink-0" />
+                      PropKart Broker Portal (v1.0.0)
+                    </span>
+                    <span className="text-[10px] text-emerald-400 font-mono">NESTJS 10</span>
+                  </div>
+                  <p className="text-[#A4ACB9] text-[11px] leading-relaxed mb-2">
+                    Two-Tier RERA Approval Queues + Dynamic RBAC + Tamper-Evident Audit Trail + Hostinger SSL SMTP Activation.
+                  </p>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[10px] text-[#7A8291] pt-2 border-t border-[#2E333D] gap-1 sm:gap-0">
+                    <span>Flutter + NestJS + Postgres 16</span>
+                    <a 
+                      href="https://github.com/JAYU0812/brokerportal" 
+                      target="_blank" 
+                      rel="noreferrer"
+                      className="text-[#E8C37D] hover:underline"
+                    >
+                      brokerportal ↗
+                    </a>
                   </div>
                 </div>
 
@@ -315,6 +378,88 @@ export default function Home() {
               </p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ----------------- 2.5 AWARD & RECOGNITION SPOTLIGHT ----------------- */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8" id="recognition">
+        <div className="bg-gradient-to-br from-[#121316] via-[#1A1D24] to-[#121316] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border-2 border-[#C27803]/40 shadow-2xl relative overflow-hidden">
+          {/* Subtle background glow */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#C27803]/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
+
+          <div className="grid lg:grid-cols-12 gap-6 lg:gap-10 items-center relative z-10">
+            {/* Left Content */}
+            <div className="lg:col-span-8 space-y-4 sm:space-y-5">
+              <div className="flex flex-wrap items-center gap-2.5">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C27803]/20 text-[#E8C37D] border border-[#C27803]/50 text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider">
+                  <Trophy className="w-3.5 h-3.5 text-[#E8C37D]" />
+                  Reward & Recognition Award
+                </span>
+                <span className="text-[11px] sm:text-xs font-mono text-[#8A909E]">
+                  NB Infra Projects Limited · Since 1946
+                </span>
+              </div>
+
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight">
+                Certificate of Appreciation for Exceptional Performance & Leadership
+              </h2>
+
+              <p className="text-xs sm:text-sm text-[#A4ACB9] leading-relaxed italic border-l-2 border-[#C27803] pl-3.5 sm:pl-4">
+                &ldquo;In recognition of your exceptional performance and valuable contributions throughout the quarter. Your dedication, commitment, and pursuit of excellence are truly appreciated.&rdquo;
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-[#C9D1D9] pt-1">
+                <div className="bg-[#1C1F26] p-3 rounded-xl border border-[#2E333D]">
+                  <span className="text-[#8A909E] block text-[10px] uppercase">Presented By</span>
+                  <span className="font-bold text-white">Rahul D. Prajapati</span>
+                  <span className="text-[11px] text-[#E8C37D] block">Founder & Chairman</span>
+                </div>
+                <div className="bg-[#1C1F26] p-3 rounded-xl border border-[#2E333D]">
+                  <span className="text-[#8A909E] block text-[10px] uppercase">Scope of Impact</span>
+                  <span className="font-bold text-white">PropKart OS & Broker Portal</span>
+                  <span className="text-[11px] text-emerald-400 block">AI Search & Database Scalability (M1-93)</span>
+                </div>
+              </div>
+
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <button
+                  onClick={() => setShowCertModal(true)}
+                  className="px-5 py-2.5 rounded-xl bg-[#C27803] hover:bg-[#9E6102] text-white text-xs font-semibold shadow-xs transition flex items-center gap-2 cursor-pointer"
+                >
+                  <Eye className="w-4 h-4" />
+                  <span>Inspect Official Certificate</span>
+                </button>
+                <Link
+                  to="/resume"
+                  className="px-4 py-2.5 rounded-xl bg-[#2B2E36] hover:bg-[#383C46] text-white text-xs font-semibold transition flex items-center gap-1.5"
+                >
+                  <FileText className="w-3.5 h-3.5 text-[#E8C37D]" />
+                  <span>View in Resume</span>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Certificate Preview Card */}
+            <div className="lg:col-span-4 flex justify-center">
+              <div 
+                onClick={() => setShowCertModal(true)}
+                className="group relative cursor-pointer rounded-xl sm:rounded-2xl overflow-hidden border-2 border-[#C27803]/50 shadow-2xl max-w-[280px] sm:max-w-[320px] bg-black/40 hover:border-[#E8C37D] transition-all duration-300"
+              >
+                <img 
+                  src="/certificates/nb-infra-certificate-of-appreciation.png" 
+                  alt="NB Infra Projects Certificate of Appreciation - Jay Soni"
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center gap-2 text-white p-4 text-center">
+                  <div className="w-10 h-10 rounded-full bg-[#C27803] flex items-center justify-center shadow-lg">
+                    <Eye className="w-5 h-5 text-white" />
+                  </div>
+                  <span className="text-xs font-bold font-mono">Click to View High-Res</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -505,6 +650,63 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ----------------- CERTIFICATE LIGHTBOX MODAL ----------------- */}
+      {showCertModal && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 animate-in fade-in duration-200"
+          onClick={() => setShowCertModal(false)}
+        >
+          <div 
+            className="bg-[#121316] border-2 border-[#C27803] rounded-2xl sm:rounded-3xl max-w-2xl w-full max-h-[92vh] overflow-y-auto p-4 sm:p-6 shadow-2xl relative text-white"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between pb-3 sm:pb-4 border-b border-[#2E333D] mb-4">
+              <div className="flex items-center gap-2">
+                <Trophy className="w-5 h-5 text-[#C27803]" />
+                <h3 className="font-extrabold text-sm sm:text-base tracking-tight font-mono">
+                  Certificate of Appreciation — NB Infra Projects
+                </h3>
+              </div>
+              <button
+                onClick={() => setShowCertModal(false)}
+                className="w-8 h-8 rounded-full bg-[#2B2E36] hover:bg-[#383C46] flex items-center justify-center text-[#A4ACB9] hover:text-white transition cursor-pointer"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+
+            {/* Certificate High-Res Image */}
+            <div className="rounded-xl overflow-hidden border border-[#2E333D] bg-black/60 mb-4 flex justify-center">
+              <img 
+                src="/certificates/nb-infra-certificate-of-appreciation.png" 
+                alt="Certificate of Appreciation - Jay Soni"
+                className="w-full max-h-[60vh] object-contain"
+              />
+            </div>
+
+            {/* Modal Citation Details */}
+            <div className="space-y-2 text-xs font-mono text-[#A4ACB9]">
+              <p className="text-white font-semibold italic border-l-2 border-[#C27803] pl-3 py-0.5">
+                &ldquo;In recognition of your exceptional performance and valuable contributions throughout the quarter. Your dedication, commitment, and pursuit of excellence are truly appreciated.&rdquo;
+              </p>
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between pt-2 border-t border-[#2E333D] text-[11px] gap-1 sm:gap-0">
+                <span>Authorized by: <strong className="text-white">Rahul D. Prajapati (Founder & Chairman)</strong></span>
+                <span className="text-[#E8C37D]">NB Infra Projects Limited (Since 1946)</span>
+              </div>
+            </div>
+
+            <div className="mt-4 pt-3 border-t border-[#2E333D] flex justify-end">
+              <button
+                onClick={() => setShowCertModal(false)}
+                className="px-4 py-2 rounded-xl bg-[#2B2E36] hover:bg-[#383C46] text-white text-xs font-semibold transition cursor-pointer"
+              >
+                Close View
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

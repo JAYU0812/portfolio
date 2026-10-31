@@ -53,10 +53,10 @@ export default function About() {
               Engineering Practical Software That Solves Real Workflow Problems.
             </h1>
             <p className="text-sm sm:text-lg text-[#4A4E57] leading-relaxed">
-              I am a Full-Stack Software Engineer currently building enterprise PropTech applications at <strong className="text-[#121316] font-semibold">NB Developers</strong>. My core expertise spans <strong className="text-[#121316] font-semibold">Flutter</strong>, <strong className="text-[#121316] font-semibold">React</strong>, <strong className="text-[#121316] font-semibold">Node.js</strong>, and <strong className="text-[#121316] font-semibold">Offline-First Architectures</strong>.
+              I am an Award-Winning Lead Mobile & Full-Stack Architect currently building enterprise PropTech applications at <strong className="text-[#121316] font-semibold">NB Developers / NB PropertyTech</strong>. Recipient of the <strong className="text-[#121316] font-semibold">Reward & Recognition Certificate of Appreciation</strong> from NB Infra Projects Limited (Since 1946). My core expertise spans <strong className="text-[#121316] font-semibold">Flutter</strong>, <strong className="text-[#121316] font-semibold">React</strong>, <strong className="text-[#121316] font-semibold">Node.js / NestJS</strong>, and <strong className="text-[#121316] font-semibold">Offline-First Architectures</strong>.
             </p>
             <p className="text-xs sm:text-base text-[#4A4E57] leading-relaxed">
-              My engineering philosophy is rooted in pragmatism: writing clean, modular, and resilient code that works flawlessly even without an internet connection. From digitizing traditional family businesses to releasing apps on the Google Play Store and scaling enterprise PropTech platforms, I take pride in delivering end-to-end software that drives genuine business value.
+              My engineering philosophy is rooted in pragmatism: writing clean, modular, and resilient code that works flawlessly even without an internet connection. From architecting PropKart OS with Natural Language AI Search and launching PropKart Broker Portal to digitizing traditional businesses with custom GST ERPs and publishing apps on the Google Play Store, I take pride in delivering end-to-end software that drives genuine business value.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
@@ -84,14 +84,27 @@ export default function About() {
                 <span>Executive Summary</span>
               </h3>
 
-              <div className="space-y-4 text-xs">
+              <div className="space-y-3.5 text-xs">
+                {/* Reward & Recognition Award Highlight */}
+                <div className="flex items-start gap-3 bg-[#FEF3C7]/50 p-2.5 rounded-xl border border-[#FCD34D]">
+                  <div className="w-8 h-8 rounded-lg bg-[#FEF3C7] flex items-center justify-center shrink-0 text-[#B45309]">
+                    <Award className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-[#92400E]">Reward & Recognition Award</h4>
+                    <p className="text-[#78350F] text-[11px] leading-tight">
+                      Certificate of Appreciation from NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati.
+                    </p>
+                  </div>
+                </div>
+
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-xl bg-[#F2EDE4] flex items-center justify-center shrink-0 text-[#C27803]">
                     <Building2 className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#121316]">Software Engineer @ NB Developers</h4>
-                    <p className="text-[#656A76]">Architect of PropKart Property CRM (live: propkart.nbpropertytech.com).</p>
+                    <h4 className="font-bold text-[#121316]">Lead Architect @ NB Developers</h4>
+                    <p className="text-[#656A76]">Architect of PropKart OS (SDK 36, AI Search), PropKart Broker Portal, and nbpropertytech.com.</p>
                   </div>
                 </div>
 
