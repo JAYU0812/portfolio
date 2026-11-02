@@ -115,10 +115,10 @@ export default function Resume() {
             PAGE 1 OF 2: HEADER, SUMMARY, SKILLS, PROFESSIONAL EXPERIENCE
            ========================================================================= */}
         <div className="print-page-1">
-          {/* HEADER */}
-          <header className="border-b-2 border-[#121316] dark:border-[#2E3342] print:border-[#121316] pb-3 sm:pb-4 mb-4 sm:mb-5 print:pb-2 print:mb-3">
+          {/* HEADER (Candidate Identity & Contact Channels) */}
+          <div className="resume-header print:block border-b-2 border-[#121316] dark:border-[#2E3342] print:border-[#121316] pb-3 sm:pb-4 mb-4 sm:mb-5 print:pb-2 print:mb-3">
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold font-mono tracking-tight text-[#121316] dark:text-white print:text-black uppercase print:text-[15pt]">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold font-mono tracking-tight text-[#121316] dark:text-white print:text-black uppercase print:text-[18pt] print:leading-tight">
                 {resumeData.personal.name}
               </h1>
               <span className="text-[10px] font-mono font-bold text-[#C27803] print:text-[#92400E] uppercase tracking-wider hidden print:inline">
@@ -126,43 +126,43 @@ export default function Resume() {
               </span>
             </div>
 
-            <p className="text-xs sm:text-sm font-semibold text-[#C27803] dark:text-[#E8C37D] print:text-[#92400E] mb-2 print:mb-1.5 print:text-[9pt]">
+            <p className="text-xs sm:text-sm font-semibold text-[#C27803] dark:text-[#E8C37D] print:text-[#92400E] mb-2 print:mb-1.5 print:text-[10pt] font-mono">
               {resumeData.personal.title}
             </p>
 
             {/* Contact Row */}
-            <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-xs print:text-[7.5pt] font-mono text-[#4A4E57] dark:text-[#A1A7B5] print:text-[#333]">
+            <div className="flex flex-wrap items-center gap-x-3.5 gap-y-1 text-xs print:text-[8pt] font-mono text-[#4A4E57] dark:text-[#A1A7B5] print:text-black">
               <a href={`mailto:${resumeData.personal.email}`} className="flex items-center gap-1 hover:text-[#C27803] dark:hover:text-[#E8C37D] transition break-all">
                 <Mail className="w-3 h-3 text-[#C27803] dark:text-[#E8C37D] shrink-0 print:hidden" />
                 <span>{resumeData.personal.email}</span>
               </a>
-              <span className="text-[#C27803] print:text-[#666]">•</span>
+              <span className="text-[#C27803] print:text-[#444]">•</span>
               <a href="tel:917990361109" className="flex items-center gap-1 hover:text-[#C27803] dark:hover:text-[#E8C37D] transition">
                 <Phone className="w-3 h-3 text-[#C27803] dark:text-[#E8C37D] shrink-0 print:hidden" />
                 <span>{resumeData.personal.phone}</span>
               </a>
-              <span className="text-[#C27803] print:text-[#666]">•</span>
+              <span className="text-[#C27803] print:text-[#444]">•</span>
               <span className="flex items-center gap-1">
                 <MapPin className="w-3 h-3 text-[#C27803] dark:text-[#E8C37D] shrink-0 print:hidden" />
                 <span>{resumeData.personal.location}</span>
               </span>
-              <span className="text-[#C27803] print:text-[#666]">•</span>
+              <span className="text-[#C27803] print:text-[#444]">•</span>
               <a href={resumeData.personal.github} target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-[#C27803] dark:hover:text-[#E8C37D] transition">
                 <GithubIcon className="w-3 h-3 text-[#C27803] dark:text-[#E8C37D] shrink-0 print:hidden" />
                 <span>github.com/JAYU0812</span>
               </a>
-              <span className="text-[#C27803] print:text-[#666]">•</span>
+              <span className="text-[#C27803] print:text-[#444]">•</span>
               <a href={resumeData.personal.linkedin} target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-[#C27803] dark:hover:text-[#E8C37D] transition">
                 <LinkedinIcon className="w-3 h-3 text-[#C27803] dark:text-[#E8C37D] shrink-0 print:hidden" />
                 <span>linkedin.com/in/sonijay1908</span>
               </a>
-              <span className="text-[#C27803] print:text-[#666]">•</span>
+              <span className="text-[#C27803] print:text-[#444]">•</span>
               <a href={resumeData.personal.portfolio} target="_blank" rel="noreferrer" className="flex items-center gap-1 hover:text-[#C27803] dark:hover:text-[#E8C37D] transition font-bold text-[#C27803] print:text-black">
                 <Globe className="w-3 h-3 shrink-0 print:hidden" />
                 <span>portfolio-iota-nine-7b2v5ah7u8.vercel.app</span>
               </a>
             </div>
-          </header>
+          </div>
 
           {/* 1. PROFESSIONAL SUMMARY */}
           <section className="mb-4 sm:mb-5 print:mb-2.5">

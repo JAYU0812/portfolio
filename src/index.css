@@ -104,9 +104,6 @@ html.dark .architectural-grid {
   }
 
   /* Suppress screen navigation, sidebars, floating widgets, and background blobs */
-  header,
-  footer,
-  nav,
   .print-hidden,
   [aria-label="Mobile Bottom Navigation"],
   [aria-label="Toggle menu"] {
