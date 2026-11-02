@@ -146,7 +146,7 @@ export default function TimelineRoadmap({ onHoverSpeak }) {
   return (
     <div className="w-full space-y-8 sm:space-y-12">
       {/* Era Filter Selector */}
-      <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-2 p-1.5 bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] rounded-2xl shadow-xs w-full sm:w-fit mx-auto -mx-1 px-1.5 sm:mx-auto">
+      <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 sm:gap-2 p-1.5 bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] rounded-2xl shadow-xs w-full sm:w-fit mx-auto max-w-full">
         {eraFilters.map((era) => (
           <button
             key={era.id}

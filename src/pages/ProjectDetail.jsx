@@ -181,16 +181,16 @@ export default function ProjectDetail() {
             </p>
 
             {/* Direct External Action CTAs */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-2">
               {project.liveUrl && (
                 <a
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] active:scale-98 transition text-xs font-semibold shadow-xs"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] active:scale-95 transition text-xs font-semibold shadow-xs"
                 >
                   <span>Launch Live Platform</span>
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               )}
 
@@ -199,11 +199,11 @@ export default function ProjectDetail() {
                   href={project.playStoreUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#0F766E] text-white hover:bg-[#0D655E] active:scale-98 transition text-xs font-semibold shadow-xs"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-[#0F766E] text-white hover:bg-[#0D655E] active:scale-95 transition text-xs font-semibold shadow-xs"
                 >
-                  <Smartphone className="w-4 h-4" />
+                  <Smartphone className="w-3.5 h-3.5" />
                   <span>Google Play Store</span>
-                  <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                  <ExternalLink className="w-3 h-3 opacity-80" />
                 </a>
               )}
 
@@ -212,11 +212,11 @@ export default function ProjectDetail() {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#24292E] text-white hover:bg-[#121316] dark:bg-[#1E222D] dark:border dark:border-[#2E3342] dark:hover:bg-[#282D3C] active:scale-98 transition text-xs font-semibold shadow-xs"
+                  className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-[#24292E] text-white hover:bg-[#121316] dark:bg-[#1E222D] dark:border dark:border-[#2E3342] dark:hover:bg-[#282D3C] active:scale-95 transition text-xs font-semibold shadow-xs"
                 >
-                  <GithubIcon className="w-4 h-4" />
-                  <span>Inspect Source on GitHub</span>
-                  <ExternalLink className="w-3.5 h-3.5 opacity-80" />
+                  <GithubIcon className="w-3.5 h-3.5" />
+                  <span>Source Code</span>
+                  <ExternalLink className="w-3 h-3 opacity-80" />
                 </a>
               )}
 
@@ -224,10 +224,10 @@ export default function ProjectDetail() {
                 href={`https://wa.me/917990361109?text=Hi%20Jay,%20I%20am%20interested%20in%20your%20project:%20${encodeURIComponent(project.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-3 rounded-xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#232733] text-[#121316] dark:text-[#F5F5F7] hover:bg-[#F2EDE4] dark:hover:bg-[#1C202B] transition text-xs font-semibold shadow-2xs"
+                className="inline-flex items-center gap-1.5 px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#232733] text-[#121316] dark:text-[#F5F5F7] hover:bg-[#F2EDE4] dark:hover:bg-[#1C202B] active:scale-95 transition text-xs font-semibold shadow-2xs"
               >
-                <MessageCircle className="w-4 h-4 text-[#059669] dark:text-[#34D399]" />
-                <span>Inquire About This Build</span>
+                <MessageCircle className="w-3.5 h-3.5 text-[#059669] dark:text-[#34D399]" />
+                <span>Inquire About Build</span>
               </a>
             </div>
           </div>

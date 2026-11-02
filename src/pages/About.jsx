@@ -59,17 +59,17 @@ export default function About() {
               My engineering philosophy is rooted in pragmatism: writing clean, modular, and resilient code that works flawlessly even without an internet connection. From architecting PropKart OS with Natural Language AI Search and launching PropKart Broker Portal to digitizing traditional businesses with custom GST ERPs and publishing apps on the Google Play Store, I take pride in delivering end-to-end software that drives genuine business value.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            <div className="grid grid-cols-2 sm:flex sm:flex-row gap-2.5 sm:gap-3 pt-2">
               <Link
                 to="/projects"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] transition-colors text-xs font-semibold shadow-xs flex items-center justify-center gap-2"
+                className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] transition-colors text-xs sm:text-sm font-semibold shadow-xs flex items-center justify-center gap-1.5 active:scale-95"
               >
                 <span>View My Work</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </Link>
               <Link
                 to="/contact"
-                className="w-full sm:w-auto px-6 py-3 rounded-xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] transition-colors text-xs font-semibold shadow-xs flex items-center justify-center"
+                className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] transition-colors text-xs sm:text-sm font-semibold shadow-xs flex items-center justify-center active:scale-95"
               >
                 Let’s Connect
               </Link>

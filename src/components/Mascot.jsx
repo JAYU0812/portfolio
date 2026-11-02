@@ -44,7 +44,7 @@ export default function Mascot() {
     return (
       <button
         onClick={() => setIsMinimized(false)}
-        className="fixed bottom-20 right-4 sm:bottom-5 sm:right-5 z-40 bg-[#121316] dark:bg-[#1E222D] hover:bg-[#C27803] dark:hover:bg-[#C27803] text-white w-12 h-12 rounded-full shadow-xl transition-all duration-300 flex items-center justify-center print:hidden cursor-pointer group border border-[#2B2E36] dark:border-[#323645] active:scale-95"
+        className="hidden sm:flex fixed bottom-5 right-5 z-40 bg-[#121316] dark:bg-[#1E222D] hover:bg-[#C27803] dark:hover:bg-[#C27803] text-white w-12 h-12 rounded-full shadow-xl transition-all duration-300 items-center justify-center print:hidden cursor-pointer group border border-[#2B2E36] dark:border-[#323645] active:scale-95"
         title="Open Portfolio Guide"
         aria-label="Open Portfolio Guide"
       >
@@ -57,7 +57,7 @@ export default function Mascot() {
   }
 
   return (
-    <div className="fixed bottom-20 right-4 sm:bottom-5 sm:right-5 z-40 flex flex-col items-end max-w-[calc(100vw-32px)] sm:max-w-xs font-sans print:hidden">
+    <div className="hidden sm:flex fixed bottom-5 right-5 z-40 flex-col items-end max-w-xs font-sans print:hidden">
       {/* Speech Bubble */}
       <div className="relative mb-2.5 bg-white/95 dark:bg-[#14161E]/95 backdrop-blur-md border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-[#F5F5F7] p-3.5 sm:p-4 rounded-2xl shadow-xl transition-all duration-300 origin-bottom-right">
         {/* Header bar of bubble */}

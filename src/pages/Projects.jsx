@@ -104,7 +104,7 @@ export default function Projects() {
         <>
           {/* Category Filter Tabs */}
           <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
-            <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 sm:gap-2 p-1.5 bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] rounded-2xl shadow-xs w-full sm:w-fit -mx-1 px-1.5 sm:mx-0">
+            <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 sm:gap-2 p-1.5 bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] rounded-2xl shadow-xs w-full sm:w-fit max-w-full">
               {filterTabs.map((tab) => (
                 <button
                   key={tab.id}

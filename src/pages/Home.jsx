@@ -33,35 +33,35 @@ export default function Home() {
   return (
     <div className="py-6 sm:py-12 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       {/* ----------------- 1. HERO SECTION ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-2 sm:pt-4 pb-12 sm:pb-24">
-        <div className="grid lg:grid-cols-12 gap-8 lg:gap-8 items-center">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-2 sm:pt-4 pb-12 sm:pb-24 overflow-hidden">
+        <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full min-w-0">
           
           {/* Left Hero Column */}
-          <div className="lg:col-span-7 space-y-5 sm:space-y-7">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-6 min-w-0 w-full">
             {/* Status & Award Badges */}
-            <div className="flex flex-wrap items-center gap-2">
+            <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
               <div 
                 onMouseEnter={() => handleMascotSpeak("I am Lead Mobile & Full-Stack Architect at NB Developers / NB PropertyTech in Ahmedabad!")}
                 onMouseLeave={() => handleMascotSpeak(null)}
-                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] shadow-xs text-[11px] sm:text-xs font-mono text-[#121316] dark:text-[#F5F5F7] max-w-full"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] shadow-xs text-[11px] sm:text-xs font-mono text-[#121316] dark:text-[#F5F5F7] max-w-full min-w-0"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-                <span className="font-semibold text-[#C27803] dark:text-[#E8C37D] shrink-0">Current Role:</span>
-                <span className="truncate">Lead Mobile & Full-Stack Architect @ NB Developers</span>
+                <span className="font-semibold text-[#C27803] dark:text-[#E8C37D] shrink-0">Role:</span>
+                <span className="truncate max-w-[190px] xs:max-w-none">Lead Architect @ NB Developers</span>
               </div>
 
               <button
                 onClick={() => setShowCertModal(true)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FEF3C7] dark:bg-[#C27803]/20 hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 text-[11px] sm:text-xs font-semibold shadow-xs transition cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#FEF3C7] dark:bg-[#C27803]/20 hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 text-[11px] sm:text-xs font-semibold shadow-xs transition cursor-pointer shrink-0"
                 title="View Certificate of Appreciation from NB Infra Projects Limited"
               >
-                <Award className="w-3.5 h-3.5 text-[#B45309] dark:text-[#FCD34D]" />
-                <span>🏆 Reward & Recognition Winner</span>
+                <Award className="w-3.5 h-3.5 text-[#B45309] dark:text-[#FCD34D] shrink-0" />
+                <span>🏆 R&R Winner</span>
               </button>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#121316] dark:text-white leading-[1.15] sm:leading-[1.12]">
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#121316] dark:text-white leading-[1.18] sm:leading-[1.12]">
               Building{" "}
               <span className="text-[#C27803] dark:text-[#E8C37D] underline decoration-[#E8C37D]/60 dark:decoration-[#C27803]/60 decoration-wavy decoration-2">
                 Production
@@ -70,7 +70,7 @@ export default function Home() {
             </h1>
 
             {/* Intro Paragraph */}
-            <p className="text-sm sm:text-base lg:text-lg text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed max-w-2xl font-normal">
+            <p className="text-xs sm:text-base lg:text-lg text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed max-w-2xl font-normal">
               I’m <span className="font-semibold text-[#121316] dark:text-white">Soni Jaykumar</span>, an Award-Winning Lead Mobile & Full-Stack Architect specializing in{" "}
               <strong className="text-[#121316] dark:text-white font-semibold">Flutter</strong>,{" "}
               <strong className="text-[#121316] dark:text-white font-semibold">React</strong>,{" "}
@@ -79,33 +79,33 @@ export default function Home() {
               Currently architecting the enterprise PropTech ecosystem at NB Developers / NB PropertyTech (PropKart OS with Natural Language AI Search, PropKart Broker Portal, live nbpropertytech.com), with GitSphere desktop engine, 2 Google Play Store releases, and custom retail GST ERPs.
             </p>
 
-            {/* Action Buttons: Full-width on mobile, flex row on desktop */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-1 sm:pt-2 w-full sm:w-auto">
+            {/* Action Buttons: Compact 2x2 grid on mobile, flex row on desktop */}
+            <div className="grid grid-cols-2 sm:flex sm:flex-row gap-2 sm:gap-3 pt-1 sm:pt-2 w-full sm:w-auto">
               <Link
                 to="/projects"
                 onMouseEnter={() => handleMascotSpeak(`View all ${projects.length} real-world projects with live links!`)}
                 onMouseLeave={() => handleMascotSpeak(null)}
-                className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2"
+                className="flex items-center justify-center gap-1.5 px-3 sm:px-5 py-2.5 sm:py-3.5 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] active:scale-95 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs text-center"
               >
                 <span>Explore Projects</span>
-                <ArrowUpRight className="w-4 h-4" />
+                <ArrowUpRight className="w-3.5 h-3.5 shrink-0" />
               </Link>
 
               <Link
                 to="/resume"
                 onMouseEnter={() => handleMascotSpeak("Read my print-ready ATS resume.")}
                 onMouseLeave={() => handleMascotSpeak(null)}
-                className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] hover:border-[#C27803]/40 active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2"
+                className="flex items-center justify-center gap-1.5 px-3 sm:px-5 py-2.5 sm:py-3.5 rounded-xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] hover:border-[#C27803]/40 active:scale-95 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs text-center"
               >
-                <FileText className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />
-                <span>View Resume</span>
+                <FileText className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D] shrink-0" />
+                <span>Resume</span>
               </Link>
 
               <button
                 onClick={() => setShowCertModal(true)}
-                className="w-full sm:w-auto justify-center px-5 py-3.5 rounded-xl bg-[#FEF3C7] dark:bg-[#C27803]/20 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2 cursor-pointer"
+                className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-xl bg-[#FEF3C7] dark:bg-[#C27803]/20 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 active:scale-95 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs cursor-pointer text-center"
               >
-                <Award className="w-4 h-4 text-[#B45309] dark:text-[#FCD34D]" />
+                <Award className="w-3.5 h-3.5 text-[#B45309] dark:text-[#FCD34D] shrink-0" />
                 <span>View Award</span>
               </button>
 
@@ -115,15 +115,15 @@ export default function Home() {
                 rel="noopener noreferrer"
                 onMouseEnter={() => handleMascotSpeak("Message me directly on WhatsApp.")}
                 onMouseLeave={() => handleMascotSpeak(null)}
-                className="w-full sm:w-auto justify-center px-5 py-3.5 rounded-xl bg-[#0F766E] text-white hover:bg-[#0D655E] active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2"
+                className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-xl bg-[#0F766E] text-white hover:bg-[#0D655E] active:scale-95 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs text-center"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp Me</span>
+                <MessageCircle className="w-3.5 h-3.5 shrink-0" />
+                <span>WhatsApp</span>
               </a>
             </div>
 
             {/* Key Accomplishments Chips */}
-            <div className="pt-2 sm:pt-4 flex flex-wrap gap-2 sm:gap-2.5">
+            <div className="pt-2 sm:pt-4 flex flex-wrap gap-1.5 sm:gap-2">
               {[
                 { label: "🏆 Reward & Recognition (NB Infra)", action: () => setShowCertModal(true) },
                 { label: "PropKart OS (AI Search + SDK 36)", link: "https://propkart.nbpropertytech.com" },
@@ -140,18 +140,18 @@ export default function Home() {
                   <button
                     key={idx}
                     onClick={item.action}
-                    className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#FEF3C7] dark:bg-[#C27803]/20 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 text-[11px] sm:text-xs font-mono font-semibold cursor-pointer hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 transition"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:py-1.5 rounded-lg bg-[#FEF3C7] dark:bg-[#C27803]/20 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 text-[10px] sm:text-xs font-mono font-semibold cursor-pointer hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 transition max-w-full"
                   >
-                    <Award className="w-3.5 h-3.5 text-[#B45309] dark:text-[#FCD34D] shrink-0" />
-                    <span className="truncate max-w-[240px] sm:max-w-none">{item.label}</span>
+                    <Award className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B45309] dark:text-[#FCD34D] shrink-0" />
+                    <span className="truncate max-w-[170px] xs:max-w-[240px] sm:max-w-none">{item.label}</span>
                   </button>
                 ) : (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#F2EDE4]/80 dark:bg-[#1C202B] text-[#3A3D44] dark:text-[#D1D5DB] border border-[#E8E5DF] dark:border-[#2B303E] text-[11px] sm:text-xs font-mono"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:py-1.5 rounded-lg bg-[#F2EDE4]/80 dark:bg-[#1C202B] text-[#3A3D44] dark:text-[#D1D5DB] border border-[#E8E5DF] dark:border-[#2B303E] text-[10px] sm:text-xs font-mono max-w-full"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                    <span className="truncate max-w-[240px] sm:max-w-none">{item.label}</span>
+                    <CheckCircle2 className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
+                    <span className="truncate max-w-[170px] xs:max-w-[240px] sm:max-w-none">{item.label}</span>
                   </span>
                 )
               ))}
@@ -159,8 +159,8 @@ export default function Home() {
           </div>
 
           {/* Right Hero Column: Interactive Architecture Card */}
-          <div className="lg:col-span-5 w-full">
-            <div className="bg-[#121316] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-xl border border-[#2B2E36] relative overflow-hidden">
+          <div className="lg:col-span-5 w-full min-w-0">
+            <div className="bg-[#121316] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-4 sm:p-7 shadow-xl border border-[#2B2E36] relative overflow-hidden min-w-0">
               
               {/* Header inside terminal card */}
               <div className="flex items-center justify-between pb-3.5 sm:pb-4 border-b border-[#2B2E36] mb-4 sm:mb-6">
@@ -421,17 +421,17 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3 pt-2">
+              <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-2">
                 <button
                   onClick={() => setShowCertModal(true)}
-                  className="px-5 py-2.5 rounded-xl bg-[#C27803] hover:bg-[#9E6102] text-white text-xs font-semibold shadow-xs transition flex items-center gap-2 cursor-pointer"
+                  className="px-4 sm:px-5 py-2 sm:py-2.5 rounded-xl bg-[#C27803] hover:bg-[#9E6102] text-white text-xs font-semibold shadow-xs transition flex items-center gap-1.5 sm:gap-2 cursor-pointer active:scale-95"
                 >
-                  <Eye className="w-4 h-4" />
-                  <span>Inspect Official Certificate</span>
+                  <Eye className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                  <span>Inspect Certificate</span>
                 </button>
                 <Link
                   to="/resume"
-                  className="px-4 py-2.5 rounded-xl bg-[#2B2E36] hover:bg-[#383C46] text-white text-xs font-semibold transition flex items-center gap-1.5"
+                  className="px-3.5 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-[#2B2E36] hover:bg-[#383C46] text-white text-xs font-semibold transition flex items-center gap-1.5 active:scale-95"
                 >
                   <FileText className="w-3.5 h-3.5 text-[#E8C37D]" />
                   <span>View in Resume</span>
@@ -640,19 +640,19 @@ export default function Home() {
             <p className="text-xs sm:text-base text-[#A4ACB9] leading-relaxed">
               Whether you need an enterprise PropTech solution, an Offline-First mobile app, a commercial web platform, or a dedicated full-stack software engineer — let's connect.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-3 pt-3 sm:pt-4 w-full sm:w-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-3 sm:pt-4 w-full sm:w-fit sm:mx-auto">
               <a
                 href="https://wa.me/917990361109"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-[#C27803] hover:bg-[#9E6102] active:scale-98 text-white font-semibold text-sm transition-colors shadow-xs flex items-center gap-2"
+                className="justify-center px-5 py-2.5 sm:py-3.5 rounded-xl bg-[#C27803] hover:bg-[#9E6102] active:scale-95 text-white font-semibold text-xs sm:text-sm transition-colors shadow-xs flex items-center gap-2"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Chat on WhatsApp</span>
               </a>
               <Link
                 to="/contact"
-                className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-[#2B2E36] hover:bg-[#383C46] active:scale-98 text-white font-semibold text-sm transition-colors shadow-xs flex items-center"
+                className="justify-center px-5 py-2.5 sm:py-3.5 rounded-xl bg-[#2B2E36] hover:bg-[#383C46] active:scale-95 text-white font-semibold text-xs sm:text-sm transition-colors shadow-xs flex items-center text-center"
               >
                 Contact Form
               </Link>

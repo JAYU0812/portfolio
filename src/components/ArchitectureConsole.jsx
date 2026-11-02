@@ -41,7 +41,7 @@ export default function ArchitectureConsole() {
         </div>
 
         {/* Tab Buttons: Horizontal swipe on mobile, clean flex on desktop */}
-        <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 p-1 bg-[#1C1F26] border border-[#2E333D] rounded-xl text-xs font-mono w-full lg:w-auto -mx-1 px-1 sm:mx-0">
+        <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 p-1 bg-[#1C1F26] border border-[#2E333D] rounded-xl text-xs font-mono w-full lg:w-auto max-w-full">
           {tabs.map((tab) => (
             <button
               key={tab.id}
