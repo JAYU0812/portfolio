@@ -31,16 +31,16 @@ export default function ProjectCard({ project, onHoverSpeak }) {
     <div
       onMouseEnter={() => onHoverSpeak && onHoverSpeak(`${project.title}: ${project.tagline}`)}
       onMouseLeave={() => onHoverSpeak && onHoverSpeak(null)}
-      className="group bg-white rounded-2xl sm:rounded-3xl border border-[#E8E5DF] p-5 sm:p-6 shadow-xs hover:shadow-lg hover:border-[#C27803]/50 transition-all duration-300 flex flex-col justify-between h-[420px] relative overflow-hidden"
+      className="group bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl border border-[#E8E5DF] dark:border-[#232733] p-5 sm:p-6 shadow-xs hover:shadow-lg hover:border-[#C27803]/50 dark:hover:border-[#C27803]/60 transition-all duration-300 flex flex-col justify-between h-auto min-h-[420px] sm:h-[420px] relative overflow-hidden"
     >
       {/* Top Header: Badge & Date */}
       <div>
         <div className="flex items-center justify-between gap-2 mb-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-[#F2EDE4] text-[#121316] border border-[#E8E5DF] truncate max-w-[200px]">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-[#F2EDE4] dark:bg-[#1C202B] text-[#121316] dark:text-[#E8C37D] border border-[#E8E5DF] dark:border-[#2B303E] truncate max-w-[200px]">
             {getBadgeIcon(project.badge)}
             <span className="truncate">{project.badge}</span>
           </span>
-          <span className="text-[11px] font-mono text-[#7A7E89] shrink-0">
+          <span className="text-[11px] font-mono text-[#7A7E89] dark:text-[#8E95A5] shrink-0">
             {project.date}
           </span>
         </div>
@@ -50,18 +50,18 @@ export default function ProjectCard({ project, onHoverSpeak }) {
           to={`/projects/${project.id}`} 
           className="block group/link"
         >
-          <h3 className="text-base sm:text-lg font-bold text-[#121316] tracking-tight group-hover/link:text-[#C27803] transition-colors leading-snug line-clamp-2 h-[48px] mb-1">
+          <h3 className="text-base sm:text-lg font-bold text-[#121316] dark:text-[#F5F5F7] tracking-tight group-hover/link:text-[#C27803] dark:group-hover/link:text-[#E8C37D] transition-colors leading-snug line-clamp-2 h-[48px] mb-1">
             {project.title}
           </h3>
         </Link>
 
         {/* Category & Version */}
-        <p className="text-[11px] font-mono text-[#C27803] font-medium truncate mb-2.5">
+        <p className="text-[11px] font-mono text-[#C27803] dark:text-[#E8C37D] font-medium truncate mb-2.5">
           {project.category} {project.version ? `• ${project.version}` : ""}
         </p>
 
         {/* Tagline / Brief Description (Clamped to exactly 3 lines) */}
-        <p className="text-xs text-[#555963] leading-relaxed line-clamp-3 h-[54px] mb-3">
+        <p className="text-xs text-[#555963] dark:text-[#9CA3AF] leading-relaxed line-clamp-3 h-[54px] mb-3">
           {project.tagline || project.description}
         </p>
       </div>
@@ -69,9 +69,9 @@ export default function ProjectCard({ project, onHoverSpeak }) {
       {/* Middle Section: Key Impact Metric & Tech Pills */}
       <div>
         {/* Key Feature Highlight Pill */}
-        <div className="mb-3 px-2.5 py-1.5 rounded-lg bg-[#FBF9F5] border border-[#E8E5DF] text-[11px] font-mono text-[#121316] truncate flex items-center gap-1.5">
-          <Activity className="w-3 h-3 text-[#C27803] shrink-0" />
-          <span className="truncate text-[#333740] font-medium">{getKeyHighlight()}</span>
+        <div className="mb-3 px-2.5 py-1.5 rounded-lg bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#232733] text-[11px] font-mono text-[#121316] dark:text-[#F5F5F7] truncate flex items-center gap-1.5">
+          <Activity className="w-3 h-3 text-[#C27803] dark:text-[#E8C37D] shrink-0" />
+          <span className="truncate text-[#333740] dark:text-[#D1D5DB] font-medium">{getKeyHighlight()}</span>
         </div>
 
         {/* Tech Stack Pills (Limited to top 3 + counter) */}
@@ -79,13 +79,13 @@ export default function ProjectCard({ project, onHoverSpeak }) {
           {project.tech.slice(0, 3).map((techItem, idx) => (
             <span
               key={idx}
-              className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-[#F2EDE4]/60 text-[#4A4E57] border border-[#E8E5DF]"
+              className="px-2 py-0.5 rounded-md text-[10px] font-mono bg-[#F2EDE4]/70 dark:bg-[#1C202B] text-[#4A4E57] dark:text-[#D1D5DB] border border-[#E8E5DF] dark:border-[#2B303E]"
             >
               {techItem}
             </span>
           ))}
           {project.tech.length > 3 && (
-            <span className="px-1.5 py-0.5 rounded-md text-[10px] font-mono text-[#7A7E89] bg-white border border-[#E8E5DF]">
+            <span className="px-1.5 py-0.5 rounded-md text-[10px] font-mono text-[#7A7E89] dark:text-[#8E95A5] bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#2B303E]">
               +{project.tech.length - 3}
             </span>
           )}
@@ -93,10 +93,10 @@ export default function ProjectCard({ project, onHoverSpeak }) {
       </div>
 
       {/* Action Footer: Primary Case Study Button + Quick External Links */}
-      <div className="pt-3 border-t border-[#F2EDE4] flex items-center justify-between gap-2">
+      <div className="pt-3 border-t border-[#F2EDE4] dark:border-[#222530] flex items-center justify-between gap-2">
         <Link
           to={`/projects/${project.id}`}
-          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] active:scale-98 transition text-xs font-semibold shadow-xs"
+          className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#1E222D] dark:border dark:border-[#2E3342] dark:hover:bg-[#C27803] dark:hover:border-[#C27803] active:scale-98 transition text-xs font-semibold shadow-xs"
         >
           <span>Case Study</span>
           <ArrowRight className="w-3.5 h-3.5" />
@@ -110,7 +110,7 @@ export default function ProjectCard({ project, onHoverSpeak }) {
               target="_blank"
               rel="noopener noreferrer"
               title="Visit Live Platform"
-              className="w-8 h-8 rounded-lg bg-[#F2EDE4] hover:bg-[#E8E5DF] text-[#121316] hover:text-[#C27803] flex items-center justify-center transition shadow-2xs"
+              className="w-8 h-8 rounded-lg bg-[#F2EDE4] dark:bg-[#1C202B] hover:bg-[#E8E5DF] dark:hover:bg-[#252936] text-[#121316] dark:text-[#D1D5DB] hover:text-[#C27803] dark:hover:text-[#E8C37D] flex items-center justify-center transition shadow-2xs border border-transparent dark:border-[#2B303E]"
             >
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
@@ -122,7 +122,7 @@ export default function ProjectCard({ project, onHoverSpeak }) {
               target="_blank"
               rel="noopener noreferrer"
               title="Google Play Store"
-              className="w-8 h-8 rounded-lg bg-[#0F766E]/10 hover:bg-[#0F766E]/20 text-[#0F766E] flex items-center justify-center transition shadow-2xs"
+              className="w-8 h-8 rounded-lg bg-[#0F766E]/10 dark:bg-[#0F766E]/20 hover:bg-[#0F766E]/20 dark:hover:bg-[#0F766E]/30 text-[#0F766E] dark:text-[#2DD4BF] flex items-center justify-center transition shadow-2xs border border-transparent dark:border-[#0F766E]/30"
             >
               <Smartphone className="w-3.5 h-3.5" />
             </a>
@@ -134,7 +134,7 @@ export default function ProjectCard({ project, onHoverSpeak }) {
               target="_blank"
               rel="noopener noreferrer"
               title="View GitHub Repository"
-              className="w-8 h-8 rounded-lg bg-[#24292E]/10 hover:bg-[#24292E]/20 text-[#24292E] flex items-center justify-center transition shadow-2xs"
+              className="w-8 h-8 rounded-lg bg-[#24292E]/10 dark:bg-[#24292E]/30 hover:bg-[#24292E]/20 dark:hover:bg-[#24292E]/50 text-[#24292E] dark:text-[#E5E7EB] flex items-center justify-center transition shadow-2xs border border-transparent dark:border-[#2E3342]"
             >
               <GithubIcon className="w-3.5 h-3.5" />
             </a>

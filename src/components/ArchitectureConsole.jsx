@@ -25,7 +25,7 @@ export default function ArchitectureConsole() {
   ];
 
   return (
-    <div className="bg-[#121316] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-[#2B2E36] shadow-xl relative overflow-hidden w-full">
+    <div className="bg-[#121316] dark:bg-[#101218] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-[#2B2E36] dark:border-[#222530] shadow-xl relative overflow-hidden w-full transition-colors duration-200">
       {/* Console Top Bar */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 sm:pb-6 border-b border-[#2B2E36] mb-6 sm:mb-8">
         <div>

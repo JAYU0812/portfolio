@@ -30,14 +30,14 @@ export default function ProjectDetail() {
 
   if (!project) {
     return (
-      <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 py-16 text-center text-[#121316]">
+      <div className="min-h-[70vh] flex flex-col items-center justify-center px-4 py-16 text-center text-[#121316] dark:text-[#F5F5F7]">
         <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Project Case Study Not Found</h2>
-        <p className="text-sm text-[#656A76] mb-6">
+        <p className="text-sm text-[#656A76] dark:text-[#8E95A5] mb-6">
           The requested project deep-dive does not exist or has been relocated.
         </p>
         <Link
           to="/projects"
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#121316] text-white text-xs font-semibold hover:bg-[#C27803] transition"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#121316] dark:bg-[#C27803] text-white text-xs font-semibold hover:bg-[#C27803] dark:hover:bg-[#E58B0B] transition"
         >
           <ArrowLeft className="w-4 h-4" />
           <span>Return to All Projects</span>
@@ -50,12 +50,12 @@ export default function ProjectDetail() {
   const nextProject = projectIndex < projects.length - 1 ? projects[projectIndex + 1] : null;
 
   const getBadgeIcon = (badge) => {
-    if (badge.includes("Play Store")) return <Smartphone className="w-3.5 h-3.5 text-[#C27803]" />;
-    if (badge.includes("Hackathon")) return <Award className="w-3.5 h-3.5 text-[#C27803]" />;
+    if (badge.includes("Play Store")) return <Smartphone className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />;
+    if (badge.includes("Hackathon")) return <Award className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />;
     if (badge.includes("Live") || badge.includes("Production")) {
       return <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />;
     }
-    return <Sparkles className="w-3.5 h-3.5 text-[#C27803]" />;
+    return <Sparkles className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />;
   };
 
   // Curated deep-dive context based on project type
@@ -119,24 +119,24 @@ export default function ProjectDetail() {
   const narrative = getArchitectureNarrative();
 
   return (
-    <div className="py-6 sm:py-12 text-[#121316]">
+    <div className="py-6 sm:py-12 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       <article className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Navigation Breadcrumbs & Back */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 sm:mb-8 pb-4 border-b border-[#E8E5DF]">
-          <div className="flex items-center gap-2 text-xs font-mono text-[#7A7E89]">
-            <Link to="/" className="hover:text-[#C27803] transition">Home</Link>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 sm:mb-8 pb-4 border-b border-[#E8E5DF] dark:border-[#22252F]">
+          <div className="flex items-center gap-2 text-xs font-mono text-[#7A7E89] dark:text-[#8E95A5]">
+            <Link to="/" className="hover:text-[#C27803] dark:hover:text-[#E8C37D] transition">Home</Link>
             <span>/</span>
-            <Link to="/projects" className="hover:text-[#C27803] transition">Projects</Link>
+            <Link to="/projects" className="hover:text-[#C27803] dark:hover:text-[#E8C37D] transition">Projects</Link>
             <span>/</span>
-            <span className="text-[#121316] font-semibold truncate max-w-[200px] sm:max-w-none">
+            <span className="text-[#121316] dark:text-white font-semibold truncate max-w-[200px] sm:max-w-none">
               {project.title.split("—")[0].trim()}
             </span>
           </div>
 
           <button
             onClick={() => navigate(-1)}
-            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-[#E8E5DF] text-[#121316] hover:bg-[#F2EDE4] transition text-xs font-semibold shadow-2xs w-fit cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] text-[#121316] dark:text-[#F5F5F7] hover:bg-[#F2EDE4] dark:hover:bg-[#1C202B] transition text-xs font-semibold shadow-2xs w-fit cursor-pointer"
           >
             <ArrowLeft className="w-3.5 h-3.5" />
             <span>Back</span>
@@ -144,39 +144,39 @@ export default function ProjectDetail() {
         </div>
 
         {/* ----------------- 1. HERO CASE STUDY HEADER ----------------- */}
-        <header className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#E8E5DF] shadow-xs mb-8 sm:mb-12 relative overflow-hidden">
+        <header className="bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#E8E5DF] dark:border-[#232733] shadow-xs mb-8 sm:mb-12 relative overflow-hidden">
           {/* Decorative subtle accent */}
-          <div className="absolute top-0 right-0 w-80 h-80 bg-[#C27803]/5 rounded-full blur-3xl pointer-events-none"></div>
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#C27803]/5 dark:bg-[#C27803]/10 rounded-full blur-3xl pointer-events-none"></div>
 
           <div className="relative z-10 space-y-4 sm:space-y-6">
             <div className="flex flex-wrap items-center gap-2.5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#F2EDE4] text-[#121316] border border-[#E8E5DF]">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-mono font-semibold bg-[#F2EDE4] dark:bg-[#1C202B] text-[#121316] dark:text-[#E8C37D] border border-[#E8E5DF] dark:border-[#2B303E]">
                 {getBadgeIcon(project.badge)}
                 <span>{project.badge}</span>
               </span>
 
               {project.version && (
-                <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-[#121316] text-[#E8C37D]">
+                <span className="px-2.5 py-0.5 rounded-md text-[11px] font-mono font-bold bg-[#121316] dark:bg-[#202430] text-[#E8C37D] border border-transparent dark:border-[#2B303E]">
                   {project.version}
                 </span>
               )}
 
-              <span className="text-xs font-mono text-[#7A7E89] flex items-center gap-1">
-                <Calendar className="w-3.5 h-3.5 text-[#C27803]" />
+              <span className="text-xs font-mono text-[#7A7E89] dark:text-[#8E95A5] flex items-center gap-1">
+                <Calendar className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />
                 <span>{project.date}</span>
               </span>
             </div>
 
             <div>
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] block mb-1">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D] block mb-1">
                 {project.category}
               </span>
-              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#121316] leading-tight">
+              <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#121316] dark:text-[#F5F5F7] leading-tight">
                 {project.title}
               </h1>
             </div>
 
-            <p className="text-sm sm:text-lg text-[#4A4E57] leading-relaxed max-w-3xl font-medium">
+            <p className="text-sm sm:text-lg text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed max-w-3xl font-medium">
               {project.tagline}
             </p>
 
@@ -187,7 +187,7 @@ export default function ProjectDetail() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] active:scale-98 transition text-xs font-semibold shadow-xs"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] active:scale-98 transition text-xs font-semibold shadow-xs"
                 >
                   <span>Launch Live Platform</span>
                   <ExternalLink className="w-4 h-4" />
@@ -212,7 +212,7 @@ export default function ProjectDetail() {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#24292E] text-white hover:bg-[#121316] active:scale-98 transition text-xs font-semibold shadow-xs"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#24292E] text-white hover:bg-[#121316] dark:bg-[#1E222D] dark:border dark:border-[#2E3342] dark:hover:bg-[#282D3C] active:scale-98 transition text-xs font-semibold shadow-xs"
                 >
                   <GithubIcon className="w-4 h-4" />
                   <span>Inspect Source on GitHub</span>
@@ -224,9 +224,9 @@ export default function ProjectDetail() {
                 href={`https://wa.me/917990361109?text=Hi%20Jay,%20I%20am%20interested%20in%20your%20project:%20${encodeURIComponent(project.title)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 px-4 py-3 rounded-xl bg-[#FBF9F5] border border-[#E8E5DF] text-[#121316] hover:bg-[#F2EDE4] transition text-xs font-semibold shadow-2xs"
+                className="inline-flex items-center gap-1.5 px-4 py-3 rounded-xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#232733] text-[#121316] dark:text-[#F5F5F7] hover:bg-[#F2EDE4] dark:hover:bg-[#1C202B] transition text-xs font-semibold shadow-2xs"
               >
-                <MessageCircle className="w-4 h-4 text-[#059669]" />
+                <MessageCircle className="w-4 h-4 text-[#059669] dark:text-[#34D399]" />
                 <span>Inquire About This Build</span>
               </a>
             </div>
@@ -236,18 +236,18 @@ export default function ProjectDetail() {
         {/* ----------------- 2. ARCHITECTURAL TELEMETRY (If available) ----------------- */}
         {project.metrics && (
           <section className="mb-8 sm:mb-12">
-            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] mb-3 sm:mb-4 flex items-center gap-2">
+            <h2 className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D] mb-3 sm:mb-4 flex items-center gap-2">
               <Activity className="w-4 h-4" />
               <span>Architectural Telemetry & Verified Benchmarks</span>
             </h2>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 font-mono">
               {Object.entries(project.metrics).map(([key, val], idx) => (
-                <div key={idx} className="bg-white p-4 rounded-xl sm:rounded-2xl border border-[#E8E5DF] shadow-2xs">
-                  <span className="text-[10px] text-[#7A7E89] uppercase tracking-wider block mb-1">
+                <div key={idx} className="bg-white dark:bg-[#14161E] p-4 rounded-xl sm:rounded-2xl border border-[#E8E5DF] dark:border-[#232733] shadow-2xs">
+                  <span className="text-[10px] text-[#7A7E89] dark:text-[#8E95A5] uppercase tracking-wider block mb-1">
                     {key.replace(/([A-Z])/g, ' $1').trim()}
                   </span>
-                  <span className="text-sm sm:text-base font-bold text-[#121316] text-emerald-600 truncate block">
+                  <span className="text-sm sm:text-base font-bold text-emerald-600 dark:text-emerald-400 truncate block">
                     {val}
                   </span>
                 </div>
@@ -259,40 +259,40 @@ export default function ProjectDetail() {
         {/* ----------------- 3. PROBLEM & ARCHITECTURAL SOLUTION ----------------- */}
         <section className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* The Operational Challenge */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-[#E8E5DF] shadow-xs space-y-3">
-            <div className="flex items-center gap-2 text-rose-700 font-mono text-xs font-bold uppercase tracking-wider">
+          <div className="bg-white dark:bg-[#14161E] p-6 sm:p-8 rounded-2xl sm:rounded-3xl border border-[#E8E5DF] dark:border-[#232733] shadow-xs space-y-3">
+            <div className="flex items-center gap-2 text-rose-700 dark:text-rose-400 font-mono text-xs font-bold uppercase tracking-wider">
               <ShieldCheck className="w-4 h-4" />
               <span>The Operational Challenge</span>
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-[#121316]">
+            <h3 className="text-lg sm:text-xl font-bold text-[#121316] dark:text-[#F5F5F7]">
               Why Standard Solutions Failed
             </h3>
-            <p className="text-xs sm:text-sm text-[#4A4E57] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
               {narrative.challenge}
             </p>
           </div>
 
           {/* Jay's Architectural Breakthrough */}
-          <div className="bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-[#C27803]/40 shadow-xs space-y-3 relative overflow-hidden">
-            <div className="flex items-center gap-2 text-[#C27803] font-mono text-xs font-bold uppercase tracking-wider">
+          <div className="bg-white dark:bg-[#14161E] p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-[#C27803]/40 dark:border-[#C27803]/60 shadow-xs space-y-3 relative overflow-hidden">
+            <div className="flex items-center gap-2 text-[#C27803] dark:text-[#E8C37D] font-mono text-xs font-bold uppercase tracking-wider">
               <Zap className="w-4 h-4" />
               <span>Jay's Architectural Solution</span>
             </div>
-            <h3 className="text-lg sm:text-xl font-bold text-[#121316]">
+            <h3 className="text-lg sm:text-xl font-bold text-[#121316] dark:text-[#F5F5F7]">
               Engineered for Zero Failure
             </h3>
-            <p className="text-xs sm:text-sm text-[#4A4E57] leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
               {narrative.solution}
             </p>
           </div>
         </section>
 
         {/* ----------------- 4. COMPREHENSIVE TECHNICAL HIGHLIGHTS ----------------- */}
-        <section className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#E8E5DF] shadow-xs mb-8 sm:mb-12">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] block mb-2">
+        <section className="bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#E8E5DF] dark:border-[#232733] shadow-xs mb-8 sm:mb-12">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D] block mb-2">
             Engineering Precision
           </span>
-          <h2 className="text-xl sm:text-3xl font-extrabold text-[#121316] tracking-tight mb-6">
+          <h2 className="text-xl sm:text-3xl font-extrabold text-[#121316] dark:text-[#F5F5F7] tracking-tight mb-6">
             Key Technical Innovations & Implementation Details
           </h2>
 
@@ -305,13 +305,13 @@ export default function ProjectDetail() {
               return (
                 <div 
                   key={idx}
-                  className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#FBF9F5] border border-[#E8E5DF] hover:border-[#C27803]/40 transition"
+                  className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#222530] hover:border-[#C27803]/40 dark:hover:border-[#C27803]/60 transition"
                 >
-                  <div className="flex items-center gap-2 text-[#121316] font-bold text-xs sm:text-sm mb-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
+                  <div className="flex items-center gap-2 text-[#121316] dark:text-[#F5F5F7] font-bold text-xs sm:text-sm mb-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
                     <span>{title}</span>
                   </div>
-                  <p className="text-xs text-[#555963] leading-relaxed pl-6">
+                  <p className="text-xs text-[#555963] dark:text-[#9CA3AF] leading-relaxed pl-6">
                     {desc.trim()}
                   </p>
                 </div>
@@ -320,22 +320,22 @@ export default function ProjectDetail() {
           </div>
 
           {/* Business & System Impact Quote */}
-          <div className="mt-6 pt-6 border-t border-[#E8E5DF] bg-[#F2EDE4]/40 p-4 sm:p-5 rounded-xl border border-[#E8E5DF]">
-            <span className="text-[10px] font-mono font-bold uppercase text-[#C27803] block mb-1">
+          <div className="mt-6 pt-6 border-t border-[#E8E5DF] dark:border-[#222530] bg-[#F2EDE4]/40 dark:bg-[#101218]/80 p-4 sm:p-5 rounded-xl border border-[#E8E5DF] dark:border-[#222530]">
+            <span className="text-[10px] font-mono font-bold uppercase text-[#C27803] dark:text-[#E8C37D] block mb-1">
               Measurable Business & Engineering Impact
             </span>
-            <p className="text-xs sm:text-sm text-[#333740] font-medium leading-relaxed">
+            <p className="text-xs sm:text-sm text-[#333740] dark:text-[#D1D5DB] font-medium leading-relaxed">
               {narrative.impact}
             </p>
           </div>
         </section>
 
         {/* ----------------- 5. COMPLETE TECH STACK ARSENAL ----------------- */}
-        <section className="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#E8E5DF] shadow-xs mb-8 sm:mb-12">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] block mb-2">
+        <section className="bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl p-6 sm:p-10 border border-[#E8E5DF] dark:border-[#232733] shadow-xs mb-8 sm:mb-12">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D] block mb-2">
             Core Technologies
           </span>
-          <h2 className="text-xl sm:text-2xl font-extrabold text-[#121316] tracking-tight mb-4">
+          <h2 className="text-xl sm:text-2xl font-extrabold text-[#121316] dark:text-[#F5F5F7] tracking-tight mb-4">
             Technologies, Frameworks & Protocols
           </h2>
 
@@ -343,7 +343,7 @@ export default function ProjectDetail() {
             {project.tech.map((techItem, idx) => (
               <span
                 key={idx}
-                className="px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-[#FBF9F5] text-[#333740] border border-[#E8E5DF] hover:border-[#C27803]/50 transition"
+                className="px-3 py-1.5 rounded-xl text-xs font-mono font-medium bg-[#FBF9F5] dark:bg-[#101218] text-[#333740] dark:text-[#D1D5DB] border border-[#E8E5DF] dark:border-[#222530] hover:border-[#C27803]/50 transition"
               >
                 {techItem}
               </span>
@@ -356,14 +356,14 @@ export default function ProjectDetail() {
           {prevProject ? (
             <Link
               to={`/projects/${prevProject.id}`}
-              className="group p-4 sm:p-5 rounded-2xl bg-white border border-[#E8E5DF] hover:border-[#C27803]/50 transition flex items-center gap-3"
+              className="group p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] hover:border-[#C27803]/50 dark:hover:border-[#C27803]/70 transition flex items-center gap-3"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#F2EDE4] group-hover:bg-[#C27803] group-hover:text-white transition flex items-center justify-center shrink-0 text-[#121316]">
+              <div className="w-10 h-10 rounded-xl bg-[#F2EDE4] dark:bg-[#1C202B] group-hover:bg-[#C27803] group-hover:text-white transition flex items-center justify-center shrink-0 text-[#121316] dark:text-[#D1D5DB]">
                 <ArrowLeft className="w-4 h-4" />
               </div>
               <div className="truncate">
-                <span className="text-[10px] font-mono text-[#7A7E89] uppercase block">Previous Case Study</span>
-                <span className="text-xs sm:text-sm font-bold text-[#121316] group-hover:text-[#C27803] transition truncate block">
+                <span className="text-[10px] font-mono text-[#7A7E89] dark:text-[#8E95A5] uppercase block">Previous Case Study</span>
+                <span className="text-xs sm:text-sm font-bold text-[#121316] dark:text-[#F5F5F7] group-hover:text-[#C27803] dark:group-hover:text-[#E8C37D] transition truncate block">
                   {prevProject.title.split("—")[0].trim()}
                 </span>
               </div>
@@ -373,15 +373,15 @@ export default function ProjectDetail() {
           {nextProject ? (
             <Link
               to={`/projects/${nextProject.id}`}
-              className="group p-4 sm:p-5 rounded-2xl bg-white border border-[#E8E5DF] hover:border-[#C27803]/50 transition flex items-center justify-between sm:justify-end gap-3 text-right"
+              className="group p-4 sm:p-5 rounded-2xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] hover:border-[#C27803]/50 dark:hover:border-[#C27803]/70 transition flex items-center justify-between sm:justify-end gap-3 text-right"
             >
               <div className="truncate text-left sm:text-right">
-                <span className="text-[10px] font-mono text-[#7A7E89] uppercase block">Next Case Study</span>
-                <span className="text-xs sm:text-sm font-bold text-[#121316] group-hover:text-[#C27803] transition truncate block">
+                <span className="text-[10px] font-mono text-[#7A7E89] dark:text-[#8E95A5] uppercase block">Next Case Study</span>
+                <span className="text-xs sm:text-sm font-bold text-[#121316] dark:text-[#F5F5F7] group-hover:text-[#C27803] dark:group-hover:text-[#E8C37D] transition truncate block">
                   {nextProject.title.split("—")[0].trim()}
                 </span>
               </div>
-              <div className="w-10 h-10 rounded-xl bg-[#F2EDE4] group-hover:bg-[#C27803] group-hover:text-white transition flex items-center justify-center shrink-0 text-[#121316]">
+              <div className="w-10 h-10 rounded-xl bg-[#F2EDE4] dark:bg-[#1C202B] group-hover:bg-[#C27803] group-hover:text-white transition flex items-center justify-center shrink-0 text-[#121316] dark:text-[#D1D5DB]">
                 <ArrowRight className="w-4 h-4" />
               </div>
             </Link>
@@ -389,7 +389,7 @@ export default function ProjectDetail() {
         </nav>
 
         {/* ----------------- 7. INVITATION CTA ----------------- */}
-        <div className="bg-[#121316] text-white p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-[#2B2E36] text-center space-y-4">
+        <div className="bg-[#121316] dark:bg-[#14161E] text-white p-6 sm:p-10 rounded-2xl sm:rounded-3xl border border-[#2B2E36] dark:border-[#2A2E3B] text-center space-y-4">
           <span className="text-xs font-mono font-bold uppercase tracking-widest text-[#E8C37D]">
             Engineering Collaboration
           </span>

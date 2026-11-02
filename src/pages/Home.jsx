@@ -31,7 +31,7 @@ export default function Home() {
   };
 
   return (
-    <div className="py-6 sm:py-12 text-[#121316]">
+    <div className="py-6 sm:py-12 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       {/* ----------------- 1. HERO SECTION ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-2 sm:pt-4 pb-12 sm:pb-24">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-8 items-center">
@@ -43,39 +43,39 @@ export default function Home() {
               <div 
                 onMouseEnter={() => handleMascotSpeak("I am Lead Mobile & Full-Stack Architect at NB Developers / NB PropertyTech in Ahmedabad!")}
                 onMouseLeave={() => handleMascotSpeak(null)}
-                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white border border-[#E8E5DF] shadow-xs text-[11px] sm:text-xs font-mono text-[#121316] max-w-full"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] shadow-xs text-[11px] sm:text-xs font-mono text-[#121316] dark:text-[#F5F5F7] max-w-full"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-                <span className="font-semibold text-[#C27803] shrink-0">Current Role:</span>
+                <span className="font-semibold text-[#C27803] dark:text-[#E8C37D] shrink-0">Current Role:</span>
                 <span className="truncate">Lead Mobile & Full-Stack Architect @ NB Developers</span>
               </div>
 
               <button
                 onClick={() => setShowCertModal(true)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FEF3C7] hover:bg-[#FDE68A] text-[#92400E] border border-[#FCD34D] text-[11px] sm:text-xs font-semibold shadow-xs transition cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#FEF3C7] dark:bg-[#C27803]/20 hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 text-[11px] sm:text-xs font-semibold shadow-xs transition cursor-pointer"
                 title="View Certificate of Appreciation from NB Infra Projects Limited"
               >
-                <Award className="w-3.5 h-3.5 text-[#B45309]" />
+                <Award className="w-3.5 h-3.5 text-[#B45309] dark:text-[#FCD34D]" />
                 <span>🏆 Reward & Recognition Winner</span>
               </button>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#121316] leading-[1.15] sm:leading-[1.12]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#121316] dark:text-white leading-[1.15] sm:leading-[1.12]">
               Building{" "}
-              <span className="text-[#C27803] underline decoration-[#E8C37D]/60 decoration-wavy decoration-2">
+              <span className="text-[#C27803] dark:text-[#E8C37D] underline decoration-[#E8C37D]/60 dark:decoration-[#C27803]/60 decoration-wavy decoration-2">
                 Production
               </span>{" "}
               Web & Mobile Systems.
             </h1>
 
             {/* Intro Paragraph */}
-            <p className="text-sm sm:text-base lg:text-lg text-[#4A4E57] leading-relaxed max-w-2xl font-normal">
-              I’m <span className="font-semibold text-[#121316]">Soni Jaykumar</span>, an Award-Winning Lead Mobile & Full-Stack Architect specializing in{" "}
-              <strong className="text-[#121316] font-semibold">Flutter</strong>,{" "}
-              <strong className="text-[#121316] font-semibold">React</strong>,{" "}
-              <strong className="text-[#121316] font-semibold">Node.js / NestJS</strong>, and{" "}
-              <strong className="text-[#121316] font-semibold">Offline-First Architectures</strong>. 
+            <p className="text-sm sm:text-base lg:text-lg text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed max-w-2xl font-normal">
+              I’m <span className="font-semibold text-[#121316] dark:text-white">Soni Jaykumar</span>, an Award-Winning Lead Mobile & Full-Stack Architect specializing in{" "}
+              <strong className="text-[#121316] dark:text-white font-semibold">Flutter</strong>,{" "}
+              <strong className="text-[#121316] dark:text-white font-semibold">React</strong>,{" "}
+              <strong className="text-[#121316] dark:text-white font-semibold">Node.js / NestJS</strong>, and{" "}
+              <strong className="text-[#121316] dark:text-white font-semibold">Offline-First Architectures</strong>. 
               Currently architecting the enterprise PropTech ecosystem at NB Developers / NB PropertyTech (PropKart OS with Natural Language AI Search, PropKart Broker Portal, live nbpropertytech.com), with GitSphere desktop engine, 2 Google Play Store releases, and custom retail GST ERPs.
             </p>
 
@@ -85,7 +85,7 @@ export default function Home() {
                 to="/projects"
                 onMouseEnter={() => handleMascotSpeak(`View all ${projects.length} real-world projects with live links!`)}
                 onMouseLeave={() => handleMascotSpeak(null)}
-                className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2"
+                className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2"
               >
                 <span>Explore Projects</span>
                 <ArrowUpRight className="w-4 h-4" />
@@ -95,17 +95,17 @@ export default function Home() {
                 to="/resume"
                 onMouseEnter={() => handleMascotSpeak("Read my print-ready ATS resume.")}
                 onMouseLeave={() => handleMascotSpeak(null)}
-                className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-white border border-[#E8E5DF] text-[#121316] hover:bg-[#F2EDE4] hover:border-[#C27803]/40 active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2"
+                className="w-full sm:w-auto justify-center px-6 py-3.5 rounded-xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] hover:border-[#C27803]/40 active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2"
               >
-                <FileText className="w-4 h-4 text-[#C27803]" />
+                <FileText className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />
                 <span>View Resume</span>
               </Link>
 
               <button
                 onClick={() => setShowCertModal(true)}
-                className="w-full sm:w-auto justify-center px-5 py-3.5 rounded-xl bg-[#FEF3C7] text-[#92400E] border border-[#FCD34D] hover:bg-[#FDE68A] active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto justify-center px-5 py-3.5 rounded-xl bg-[#FEF3C7] dark:bg-[#C27803]/20 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 active:scale-98 transition-all duration-200 text-sm font-semibold shadow-xs flex items-center gap-2 cursor-pointer"
               >
-                <Award className="w-4 h-4 text-[#B45309]" />
+                <Award className="w-4 h-4 text-[#B45309] dark:text-[#FCD34D]" />
                 <span>View Award</span>
               </button>
 
@@ -140,17 +140,17 @@ export default function Home() {
                   <button
                     key={idx}
                     onClick={item.action}
-                    className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#FEF3C7] text-[#92400E] border border-[#FCD34D] text-[11px] sm:text-xs font-mono font-semibold cursor-pointer hover:bg-[#FDE68A] transition"
+                    className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#FEF3C7] dark:bg-[#C27803]/20 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 text-[11px] sm:text-xs font-mono font-semibold cursor-pointer hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 transition"
                   >
-                    <Award className="w-3.5 h-3.5 text-[#B45309] shrink-0" />
+                    <Award className="w-3.5 h-3.5 text-[#B45309] dark:text-[#FCD34D] shrink-0" />
                     <span className="truncate max-w-[240px] sm:max-w-none">{item.label}</span>
                   </button>
                 ) : (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#F2EDE4]/80 text-[#3A3D44] border border-[#E8E5DF] text-[11px] sm:text-xs font-mono"
+                    className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-[#F2EDE4]/80 dark:bg-[#1C202B] text-[#3A3D44] dark:text-[#D1D5DB] border border-[#E8E5DF] dark:border-[#2B303E] text-[11px] sm:text-xs font-mono"
                   >
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                     <span className="truncate max-w-[240px] sm:max-w-none">{item.label}</span>
                   </span>
                 )
@@ -363,17 +363,17 @@ export default function Home() {
               key={idx}
               onMouseEnter={() => handleMascotSpeak(stat.hover)}
               onMouseLeave={() => handleMascotSpeak(null)}
-              className="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-[#E8E5DF] shadow-xs hover:border-[#C27803]/50 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+              className="bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-[#E8E5DF] dark:border-[#232733] shadow-xs hover:border-[#C27803]/50 dark:hover:border-[#C27803]/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="text-2xl sm:text-4xl font-extrabold text-[#121316] font-mono mb-0.5 sm:mb-1 tracking-tight truncate">
+                <div className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white font-mono mb-0.5 sm:mb-1 tracking-tight truncate">
                   {stat.number}
                 </div>
-                <div className="text-xs sm:text-sm font-bold text-[#C27803] mb-0.5 sm:mb-1 leading-snug">
+                <div className="text-xs sm:text-sm font-bold text-[#C27803] dark:text-[#E8C37D] mb-0.5 sm:mb-1 leading-snug">
                   {stat.label}
                 </div>
               </div>
-              <p className="text-[10px] sm:text-xs text-[#656A76] leading-tight sm:leading-normal mt-1">
+              <p className="text-[10px] sm:text-xs text-[#656A76] dark:text-[#8E95A5] leading-tight sm:leading-normal mt-1">
                 {stat.sub}
               </p>
             </div>
@@ -472,16 +472,16 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-3 sm:gap-4">
           <div>
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
               Featured Engineering
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] tracking-tight mt-1">
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1">
               Production Work & Live Deployments
             </h2>
           </div>
           <Link
             to="/projects"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#121316] hover:text-[#C27803] transition w-fit"
+            className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#121316] dark:text-white hover:text-[#C27803] dark:hover:text-[#E8C37D] transition w-fit"
           >
             <span>View All {projects.length} Projects</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -501,23 +501,23 @@ export default function Home() {
 
       {/* ----------------- 5. CHRONOLOGICAL JOURNEY (2023 -> Present) ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
-        <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 border border-[#E8E5DF] shadow-xs">
+        <div className="bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 border border-[#E8E5DF] dark:border-[#232733] shadow-xs">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-12 gap-4">
             <div className="max-w-3xl">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
                 Growth & Milestones
               </span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] tracking-tight mt-1 mb-3 sm:mb-4">
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1 mb-3 sm:mb-4">
                 My Engineering Journey (2023 – Present)
               </h2>
-              <p className="text-xs sm:text-base text-[#4A4E57] leading-relaxed">
+              <p className="text-xs sm:text-base text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
                 From pioneering physical barcode engines and proprietary GST billing in 2023 to publishing Android apps on Google Play Store, winning hackathons, and architecting enterprise PropTech platforms with Natural Language AI Search at NB Developers.
               </p>
             </div>
 
             <Link
               to="/projects"
-              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs shrink-0 w-fit"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs shrink-0 w-fit"
             >
               <span>Explore Interactive Roadmap</span>
               <ArrowUpRight className="w-4 h-4" />
@@ -530,28 +530,28 @@ export default function Home() {
                 key={idx}
                 onMouseEnter={() => handleMascotSpeak(item.summary)}
                 onMouseLeave={() => handleMascotSpeak(null)}
-                className="group p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#FBF9F5] border border-[#E8E5DF] hover:border-[#C27803]/50 transition-all duration-200"
+                className="group p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#222530] hover:border-[#C27803]/50 dark:hover:border-[#C27803]/60 transition-all duration-200"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 mb-2">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:items-center gap-1 sm:gap-3">
-                    <span className="font-mono text-[11px] sm:text-xs font-bold text-[#C27803] px-2.5 py-0.5 sm:py-1 rounded-md bg-[#F2EDE4] border border-[#E8E5DF] w-fit">
+                    <span className="font-mono text-[11px] sm:text-xs font-bold text-[#C27803] dark:text-[#E8C37D] px-2.5 py-0.5 sm:py-1 rounded-md bg-[#F2EDE4] dark:bg-[#1C202B] border border-[#E8E5DF] dark:border-[#2B303E] w-fit">
                       {item.date}
                     </span>
-                    <h3 className="text-sm sm:text-base font-bold text-[#121316] group-hover:text-[#C27803] transition-colors leading-snug">
+                    <h3 className="text-sm sm:text-base font-bold text-[#121316] dark:text-[#F5F5F7] group-hover:text-[#C27803] dark:group-hover:text-[#E8C37D] transition-colors leading-snug">
                       {item.title}
                     </h3>
                   </div>
-                  <span className="text-[11px] sm:text-xs font-mono text-[#7A7E89] self-start sm:self-auto shrink-0">
+                  <span className="text-[11px] sm:text-xs font-mono text-[#7A7E89] dark:text-[#8E95A5] self-start sm:self-auto shrink-0">
                     {item.badge}
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-[#4A4E57] leading-relaxed mb-3">
+                <p className="text-xs sm:text-sm text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed mb-3">
                   {item.summary}
                 </p>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-[#656A76]">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-1.5 sm:gap-2 text-[11px] sm:text-xs text-[#656A76] dark:text-[#8E95A5]">
                   {item.details.map((detail, dIdx) => (
                     <li key={dIdx} className="flex items-start gap-2">
-                      <span className="text-[#C27803] font-bold shrink-0">•</span>
+                      <span className="text-[#C27803] dark:text-[#E8C37D] font-bold shrink-0">•</span>
                       <span className="leading-snug">{detail}</span>
                     </li>
                   ))}
@@ -565,13 +565,13 @@ export default function Home() {
       {/* ----------------- 6. CORE ARCHITECTURAL CAPABILITIES ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
             Technical Competence
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] tracking-tight mt-1 mb-2 sm:mb-3">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1 mb-2 sm:mb-3">
             Core Engineering Strengths
           </h2>
-          <p className="text-xs sm:text-sm text-[#4A4E57]">
+          <p className="text-xs sm:text-sm text-[#4A4E57] dark:text-[#A1A7B5]">
             Architectural patterns and technologies I leverage to build dependable digital products.
           </p>
         </div>
@@ -579,47 +579,47 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
           {[
             {
-              icon: <Database className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803]" />,
+              icon: <Database className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803] dark:text-[#E8C37D]" />,
               title: "Offline-First Architectures",
               desc: "Engineering local-first client databases with Isar in Flutter, ensuring high responsiveness and zero data loss without internet connectivity."
             },
             {
-              icon: <Layers className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803]" />,
+              icon: <Layers className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803] dark:text-[#E8C37D]" />,
               title: "Realtime Synchronization",
               desc: "Building bi-directional data pipelines connecting mobile/web clients with Supabase PostgreSQL and Node.js REST / WebSocket services."
             },
             {
-              icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803]" />,
+              icon: <Smartphone className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803] dark:text-[#E8C37D]" />,
               title: "Production Mobile Apps",
               desc: "Crafting performant cross-platform Flutter and Android applications, handling device storage, and shipping successfully to Google Play Store."
             },
             {
-              icon: <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803]" />,
+              icon: <ShieldCheck className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803] dark:text-[#E8C37D]" />,
               title: "Enterprise PropTech & CRMs",
               desc: "Designing comprehensive business workflows: telecaller modules, lead staging, automated WhatsApp communication, and analytics dashboards."
             },
             {
-              icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803]" />,
+              icon: <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803] dark:text-[#E8C37D]" />,
               title: "Custom Calculation Engines",
               desc: "Programming proprietary math logic, such as automated GST billing for retail jewellers and Haversine spherical geofencing algorithms."
             },
             {
-              icon: <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803]" />,
+              icon: <Building2 className="w-5 h-5 sm:w-6 sm:h-6 text-[#C27803] dark:text-[#E8C37D]" />,
               title: "Full-Stack Deployment",
               desc: "Managing full application lifecycles from database modeling and API routes to custom domain configurations and production Vercel hosting."
             }
           ].map((feature, idx) => (
             <div
               key={idx}
-              className="bg-white p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-[#E8E5DF] shadow-xs hover:border-[#C27803]/50 hover:shadow-md transition-all duration-300"
+              className="bg-white dark:bg-[#14161E] p-5 sm:p-7 rounded-2xl sm:rounded-3xl border border-[#E8E5DF] dark:border-[#232733] shadow-xs hover:border-[#C27803]/50 dark:hover:border-[#C27803]/60 hover:shadow-md transition-all duration-300"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#F2EDE4] flex items-center justify-center mb-4 sm:mb-5">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#F2EDE4] dark:bg-[#1C202B] flex items-center justify-center mb-4 sm:mb-5">
                 {feature.icon}
               </div>
-              <h3 className="text-base sm:text-lg font-bold text-[#121316] mb-1.5 sm:mb-2">
+              <h3 className="text-base sm:text-lg font-bold text-[#121316] dark:text-[#F5F5F7] mb-1.5 sm:mb-2">
                 {feature.title}
               </h3>
-              <p className="text-xs sm:text-sm text-[#4A4E57] leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
                 {feature.desc}
               </p>
             </div>

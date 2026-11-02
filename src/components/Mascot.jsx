@@ -44,7 +44,7 @@ export default function Mascot() {
     return (
       <button
         onClick={() => setIsMinimized(false)}
-        className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-40 bg-[#121316] hover:bg-[#C27803] text-white w-12 h-12 rounded-full shadow-xl transition-all duration-300 flex items-center justify-center print:hidden cursor-pointer group border border-[#2B2E36] active:scale-95"
+        className="fixed bottom-20 right-4 sm:bottom-5 sm:right-5 z-40 bg-[#121316] dark:bg-[#1E222D] hover:bg-[#C27803] dark:hover:bg-[#C27803] text-white w-12 h-12 rounded-full shadow-xl transition-all duration-300 flex items-center justify-center print:hidden cursor-pointer group border border-[#2B2E36] dark:border-[#323645] active:scale-95"
         title="Open Portfolio Guide"
         aria-label="Open Portfolio Guide"
       >
@@ -57,18 +57,18 @@ export default function Mascot() {
   }
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-40 flex flex-col items-end max-w-[calc(100vw-32px)] sm:max-w-xs font-sans print:hidden">
+    <div className="fixed bottom-20 right-4 sm:bottom-5 sm:right-5 z-40 flex flex-col items-end max-w-[calc(100vw-32px)] sm:max-w-xs font-sans print:hidden">
       {/* Speech Bubble */}
-      <div className="relative mb-2.5 bg-white/95 backdrop-blur-md border border-[#E8E5DF] text-[#121316] p-3.5 sm:p-4 rounded-2xl shadow-xl transition-all duration-300 origin-bottom-right">
+      <div className="relative mb-2.5 bg-white/95 dark:bg-[#14161E]/95 backdrop-blur-md border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-[#F5F5F7] p-3.5 sm:p-4 rounded-2xl shadow-xl transition-all duration-300 origin-bottom-right">
         {/* Header bar of bubble */}
-        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-[#F2EDE4]">
-          <span className="text-[11px] font-mono font-bold text-[#C27803] uppercase tracking-wider flex items-center gap-1">
+        <div className="flex items-center justify-between pb-1.5 mb-1.5 border-b border-[#F2EDE4] dark:border-[#222530]">
+          <span className="text-[11px] font-mono font-bold text-[#C27803] dark:text-[#E8C37D] uppercase tracking-wider flex items-center gap-1">
             <Sparkles className="w-3 h-3" />
             Portfolio Guide
           </span>
           <button
             onClick={() => setIsMinimized(true)}
-            className="text-[#7A7E89] hover:text-[#121316] text-xs p-1 rounded-md hover:bg-[#F2EDE4] transition cursor-pointer"
+            className="text-[#7A7E89] dark:text-[#8E95A5] hover:text-[#121316] dark:hover:text-white text-xs p-1 rounded-md hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] transition cursor-pointer"
             title="Minimize Guide"
             aria-label="Minimize Guide"
           >
@@ -77,18 +77,18 @@ export default function Mascot() {
         </div>
 
         {/* Message Content */}
-        <p className="text-xs text-[#333740] font-medium leading-relaxed">
+        <p className="text-xs text-[#333740] dark:text-[#D1D5DB] font-medium leading-relaxed">
           {displayMessage}
         </p>
 
         {/* Bubble arrow pointing down */}
-        <div className="absolute -bottom-1.5 right-6 w-3 h-3 bg-white border-r border-b border-[#E8E5DF] rotate-45"></div>
+        <div className="absolute -bottom-1.5 right-6 w-3 h-3 bg-white dark:bg-[#14161E] border-r border-b border-[#E8E5DF] dark:border-[#262933] rotate-45"></div>
       </div>
 
       {/* Guide Trigger Button */}
       <button 
         onClick={() => setIsMinimized(true)}
-        className={`flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#121316] text-white text-xs font-mono font-medium shadow-md hover:bg-[#C27803] transition-all cursor-pointer border border-[#2B2E36] ${
+        className={`flex items-center gap-2 px-3.5 py-2 rounded-full bg-[#121316] dark:bg-[#1E222D] text-white text-xs font-mono font-medium shadow-md hover:bg-[#C27803] dark:hover:bg-[#C27803] transition-all cursor-pointer border border-[#2B2E36] dark:border-[#323645] ${
           isPulsing ? "ring-2 ring-[#C27803] scale-105" : ""
         }`}
         title="Click to minimize"

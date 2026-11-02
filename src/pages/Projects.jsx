@@ -38,35 +38,37 @@ export default function Projects() {
   };
 
   return (
-    <div className="py-8 sm:py-16 text-[#121316]">
+    <div className="py-8 sm:py-16 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       {/* ----------------- 1. PAGE HEADER ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
         <div className="max-w-3xl">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
             Engineering Portfolio & Roadmap
           </span>
-          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#121316] tracking-tight mt-1 mb-3 sm:mb-4">
+          <h1 className="text-3xl sm:text-5xl font-extrabold text-[#121316] dark:text-[#F5F5F7] tracking-tight mt-1 mb-3 sm:mb-4">
             Production Systems & Engineering Journey
           </h1>
-          <p className="text-sm sm:text-lg text-[#4A4E57] leading-relaxed">
+          <p className="text-sm sm:text-lg text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
             Every project here represents real-world software deployed in production — from enterprise PropTech operating systems and sovereign P2P cryptographic networks to Google Play Store releases and retail GST ERPs.
           </p>
         </div>
 
         {/* View Mode Switcher: Timeline Roadmap vs Category Grid */}
-        <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2 p-1.5 bg-white border border-[#E8E5DF] rounded-2xl shadow-xs w-full sm:w-fit">
+        <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2 p-1.5 bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] rounded-2xl shadow-xs w-full sm:w-fit">
           <button
             onClick={() => setViewMode("roadmap")}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
               viewMode === "roadmap"
-                ? "bg-[#121316] text-white shadow-xs"
-                : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
+                ? "bg-[#121316] text-white dark:bg-[#C27803] dark:text-white shadow-xs"
+                : "text-[#4A4E57] dark:text-[#A1A7B5] hover:bg-[#F2EDE4] dark:hover:bg-[#1C202B] hover:text-[#121316] dark:hover:text-white"
             }`}
           >
-            <Milestone className="w-4 h-4 text-[#C27803]" />
+            <Milestone className="w-4 h-4 text-[#C27803] dark:text-inherit" />
             <span>Timeline Roadmap (2023 – Present)</span>
             <span className={`text-[10px] font-mono px-2 py-0.5 rounded-md ${
-              viewMode === "roadmap" ? "bg-[#333740] text-[#E8C37D]" : "bg-[#F2EDE4] text-[#7A7E89]"
+              viewMode === "roadmap" 
+                ? "bg-[#333740] text-[#E8C37D] dark:bg-black/30 dark:text-white" 
+                : "bg-[#F2EDE4] dark:bg-[#1C202B] text-[#7A7E89] dark:text-[#A1A7B5]"
             }`}>
               Recommended
             </span>
@@ -76,14 +78,16 @@ export default function Projects() {
             onClick={() => setViewMode("grid")}
             className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
               viewMode === "grid"
-                ? "bg-[#121316] text-white shadow-xs"
-                : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
+                ? "bg-[#121316] text-white dark:bg-[#C27803] dark:text-white shadow-xs"
+                : "text-[#4A4E57] dark:text-[#A1A7B5] hover:bg-[#F2EDE4] dark:hover:bg-[#1C202B] hover:text-[#121316] dark:hover:text-white"
             }`}
           >
-            <LayoutGrid className="w-4 h-4 text-[#C27803]" />
+            <LayoutGrid className="w-4 h-4 text-[#C27803] dark:text-inherit" />
             <span>Category Grid</span>
             <span className={`text-[10px] font-mono px-2 py-0.5 rounded-md ${
-              viewMode === "grid" ? "bg-[#333740] text-[#E8C37D]" : "bg-[#F2EDE4] text-[#7A7E89]"
+              viewMode === "grid" 
+                ? "bg-[#333740] text-[#E8C37D] dark:bg-black/30 dark:text-white" 
+                : "bg-[#F2EDE4] dark:bg-[#1C202B] text-[#7A7E89] dark:text-[#A1A7B5]"
             }`}>
               {projects.length} Projects
             </span>
@@ -100,21 +104,23 @@ export default function Projects() {
         <>
           {/* Category Filter Tabs */}
           <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
-            <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 sm:gap-2 p-1.5 bg-white border border-[#E8E5DF] rounded-2xl shadow-xs w-full sm:w-fit -mx-1 px-1.5 sm:mx-0">
+            <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 sm:gap-2 p-1.5 bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] rounded-2xl shadow-xs w-full sm:w-fit -mx-1 px-1.5 sm:mx-0">
               {filterTabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveFilter(tab.id)}
                   className={`shrink-0 flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap ${
                     activeFilter === tab.id
-                      ? "bg-[#121316] text-white shadow-xs"
-                      : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
+                      ? "bg-[#121316] text-white dark:bg-[#C27803] dark:text-white shadow-xs"
+                      : "text-[#4A4E57] dark:text-[#A1A7B5] hover:bg-[#F2EDE4] dark:hover:bg-[#1C202B] hover:text-[#121316] dark:hover:text-white"
                   }`}
                 >
                   {tab.icon}
                   <span>{tab.label}</span>
                   <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-md ${
-                    activeFilter === tab.id ? "bg-[#333740] text-[#E8C37D]" : "bg-[#F2EDE4] text-[#7A7E89]"
+                    activeFilter === tab.id 
+                      ? "bg-[#333740] text-[#E8C37D] dark:bg-black/30 dark:text-white" 
+                      : "bg-[#F2EDE4] dark:bg-[#1C202B] text-[#7A7E89] dark:text-[#8E95A5]"
                   }`}>
                     {tab.count}
                   </span>
@@ -139,15 +145,15 @@ export default function Projects() {
       )}
 
       {/* ----------------- 3. CLIENT DIGITIZATION DEMOS SECTION ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 border-t border-[#E8E5DF]">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 border-t border-[#E8E5DF] dark:border-[#22252F]">
         <div className="max-w-2xl mb-8">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
             Retail Digitization Demos
           </span>
-          <h2 className="text-2xl sm:text-3xl font-bold text-[#121316] mt-1 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-bold text-[#121316] dark:text-[#F5F5F7] mt-1 mb-2">
             Local Business Transformation Solutions
           </h2>
-          <p className="text-xs sm:text-sm text-[#4A4E57] leading-relaxed">
+          <p className="text-xs sm:text-sm text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
             In addition to major production systems, I have helped 5+ traditional retail business owners build online storefronts, catalog ordering, and WhatsApp booking tools.
           </p>
         </div>
@@ -178,28 +184,28 @@ export default function Projects() {
           ].map((demo, idx) => (
             <div
               key={idx}
-              className="bg-white p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#E8E5DF] shadow-xs hover:border-[#C27803]/40 transition flex flex-col justify-between"
+              className="bg-white dark:bg-[#14161E] p-5 sm:p-6 rounded-2xl sm:rounded-3xl border border-[#E8E5DF] dark:border-[#232733] shadow-xs hover:border-[#C27803]/40 dark:hover:border-[#C27803]/60 transition flex flex-col justify-between"
             >
               <div>
                 <div className="flex justify-between items-center mb-3">
-                  <span className="text-[10px] font-mono uppercase font-bold text-[#C27803] px-2 py-0.5 rounded bg-[#F2EDE4]">
+                  <span className="text-[10px] font-mono uppercase font-bold text-[#C27803] dark:text-[#E8C37D] px-2 py-0.5 rounded bg-[#F2EDE4] dark:bg-[#1C202B]">
                     {demo.badge}
                   </span>
-                  <Store className="w-4 h-4 text-[#7A7E89]" />
+                  <Store className="w-4 h-4 text-[#7A7E89] dark:text-[#8E95A5]" />
                 </div>
-                <h3 className="text-base sm:text-lg font-bold text-[#121316] mb-1">
+                <h3 className="text-base sm:text-lg font-bold text-[#121316] dark:text-[#F5F5F7] mb-1">
                   {demo.title}
                 </h3>
-                <p className="text-xs font-mono text-[#7A7E89] mb-2 sm:mb-3">
+                <p className="text-xs font-mono text-[#7A7E89] dark:text-[#8E95A5] mb-2 sm:mb-3">
                   {demo.category}
                 </p>
-                <p className="text-xs text-[#4A4E57] leading-relaxed mb-5 sm:mb-6">
+                <p className="text-xs text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed mb-5 sm:mb-6">
                   {demo.desc}
                 </p>
               </div>
               <Link
                 to={demo.link}
-                className="inline-flex items-center gap-2 text-xs font-semibold text-[#121316] hover:text-[#C27803] transition pt-2 border-t border-[#F2EDE4]"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#121316] dark:text-[#F5F5F7] hover:text-[#C27803] dark:hover:text-[#E8C37D] transition pt-2 border-t border-[#F2EDE4] dark:border-[#22252F]"
               >
                 <span>View Interactive Demo</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

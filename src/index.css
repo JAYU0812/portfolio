@@ -1,8 +1,18 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 html {
@@ -19,6 +29,12 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
   width: 100%;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+html.dark body {
+  background-color: #0A0B0E;
+  color: #F5F5F7;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -35,6 +51,11 @@ body {
 /* Subtle architectural dot grid pattern for depth without AI blur blobs */
 .architectural-grid {
   background-image: radial-gradient(#D5D1C8 0.75px, transparent 0.75px);
+  background-size: 24px 24px;
+}
+
+html.dark .architectural-grid {
+  background-image: radial-gradient(#252834 0.75px, transparent 0.75px);
   background-size: 24px 24px;
 }
 

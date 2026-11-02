@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ThemeProvider } from "./context/ThemeContext";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -15,25 +16,27 @@ import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
-    <BrowserRouter>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Layout><Home /></Layout>} />
-        <Route path="/about" element={<Layout><About /></Layout>} />
-        <Route path="/projects" element={<Layout><Projects /></Layout>} />
-        <Route path="/projects/:id" element={<Layout><ProjectDetail /></Layout>} />
-        <Route path="/resume" element={<Layout><Resume /></Layout>} />
-        <Route path="/contact" element={<Layout><Contact /></Layout>} />
-        
-        {/* Client Demo Pages */}
-        <Route path="/medical-demo" element={<MedicalStore />} />
-        <Route path="/kirana-demo" element={<KiranaStore />} />
-        <Route path="/salon-demo" element={<Salon />} />
+    <ThemeProvider>
+      <BrowserRouter>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Layout><Home /></Layout>} />
+          <Route path="/about" element={<Layout><About /></Layout>} />
+          <Route path="/projects" element={<Layout><Projects /></Layout>} />
+          <Route path="/projects/:id" element={<Layout><ProjectDetail /></Layout>} />
+          <Route path="/resume" element={<Layout><Resume /></Layout>} />
+          <Route path="/contact" element={<Layout><Contact /></Layout>} />
+          
+          {/* Client Demo Pages */}
+          <Route path="/medical-demo" element={<MedicalStore />} />
+          <Route path="/kirana-demo" element={<KiranaStore />} />
+          <Route path="/salon-demo" element={<Salon />} />
 
-        {/* 404 Catch-All */}
-        <Route path="*" element={<Layout><NotFound /></Layout>} />
-      </Routes>
-    </BrowserRouter>
+          {/* 404 Catch-All */}
+          <Route path="*" element={<Layout><NotFound /></Layout>} />
+        </Routes>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
