@@ -35,6 +35,7 @@ export default function Contact() {
   
   // Google One Tap / Identity States
   const [googleUser, setGoogleUser] = useState(null); // { name, email, picture }
+  const [isGoogleSdkReady, setIsGoogleSdkReady] = useState(false);
   const googleBtnContainerRef = useRef(null);
 
   const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID || "";
@@ -148,8 +149,9 @@ export default function Contact() {
               size: "large",
               text: "continue_with",
               shape: "pill",
-              width: 260
+              width: 240
             });
+            setIsGoogleSdkReady(true);
           }
         } catch (e) {
           console.warn("Google One Tap error:", e);
@@ -360,26 +362,28 @@ export default function Contact() {
                   <span>Account Linked ({googleUser.email})</span>
                 </div>
               ) : (
-                <div className="flex flex-wrap items-center gap-2">
-                  <div ref={googleBtnContainerRef} className="empty:hidden"></div>
-                  <button
-                    type="button"
-                    onClick={handleGoogleButtonClick}
-                    disabled={submittingChannel === "google"}
-                    className="flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-[#121316] dark:bg-[#1E222D] dark:border dark:border-[#2E3342] hover:bg-[#2B2E36] dark:hover:bg-[#282D3C] text-white text-xs font-bold transition shadow-xs cursor-pointer active:scale-98 disabled:opacity-50"
-                  >
-                    {submittingChannel === "google" ? (
-                      <>
-                        <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
-                        <span>Sending Auto-Reply...</span>
-                      </>
-                    ) : (
-                      <>
-                        <GoogleIcon className="w-4 h-4" />
-                        <span>Connect with Google</span>
-                      </>
-                    )}
-                  </button>
+                <div className="flex items-center">
+                  <div ref={googleBtnContainerRef} className="min-h-[40px] empty:hidden"></div>
+                  {!isGoogleSdkReady && (
+                    <button
+                      type="button"
+                      onClick={handleGoogleButtonClick}
+                      disabled={submittingChannel === "google"}
+                      className="flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-[#121316] dark:bg-[#1E222D] dark:border dark:border-[#2E3342] hover:bg-[#2B2E36] dark:hover:bg-[#282D3C] text-white text-xs font-bold transition shadow-xs cursor-pointer active:scale-98 disabled:opacity-50"
+                    >
+                      {submittingChannel === "google" ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin text-emerald-400" />
+                          <span>Sending Auto-Reply...</span>
+                        </>
+                      ) : (
+                        <>
+                          <GoogleIcon className="w-4 h-4" />
+                          <span>Continue with Google</span>
+                        </>
+                      )}
+                    </button>
+                  )}
                 </div>
               )}
             </div>
