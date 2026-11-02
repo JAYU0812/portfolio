@@ -499,19 +499,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ----------------- 5. CHRONOLOGICAL JOURNEY (Feb 2025 -> Present) ----------------- */}
+      {/* ----------------- 5. CHRONOLOGICAL JOURNEY (2023 -> Present) ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <div className="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 border border-[#E8E5DF] shadow-xs">
-          <div className="max-w-3xl mb-8 sm:mb-12">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
-              Growth & Milestones
-            </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] tracking-tight mt-1 mb-3 sm:mb-4">
-              My Engineering Journey (2025 – Present)
-            </h2>
-            <p className="text-xs sm:text-base text-[#4A4E57] leading-relaxed">
-              From building my very first software platform in February 2025 to publishing Android apps on Google Play Store, completing internships in Flutter & React, and now architecting PropKart at NB Developers.
-            </p>
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-12 gap-4">
+            <div className="max-w-3xl">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
+                Growth & Milestones
+              </span>
+              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] tracking-tight mt-1 mb-3 sm:mb-4">
+                My Engineering Journey (2023 – Present)
+              </h2>
+              <p className="text-xs sm:text-base text-[#4A4E57] leading-relaxed">
+                From pioneering physical barcode engines and proprietary GST billing in 2023 to publishing Android apps on Google Play Store, winning hackathons, and architecting enterprise PropTech platforms with Natural Language AI Search at NB Developers.
+              </p>
+            </div>
+
+            <Link
+              to="/projects"
+              className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs shrink-0 w-fit"
+            >
+              <span>Explore Interactive Roadmap</span>
+              <ArrowUpRight className="w-4 h-4" />
+            </Link>
           </div>
 
           <div className="space-y-4 sm:space-y-6">

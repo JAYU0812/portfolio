@@ -169,15 +169,28 @@ export const timelineEvents = [
   },
   {
     date: "February 2025",
-    title: "Soni Samaj Community Directory — First Software Project",
+    title: "Soni Samaj Community Directory — First Community Web Platform",
     category: "Milestone",
     type: "first-project",
-    badge: "The Genesis",
-    summary: "Jay's very first production project, laying the foundation for full-stack engineering.",
+    badge: "Web Genesis",
+    summary: "Built multi-tier community directory laying the foundation for full-stack engineering.",
     details: [
-      "Built community member directory with family linkages and location-based discovery.",
+      "Built community member directory with family linkages and location-based discovery across Gujarat.",
       "Designed relational MySQL database schemas and PHP search filtering queries.",
       "Ignited the passion for crafting software that solves real-world human workflow problems."
+    ]
+  },
+  {
+    date: "2023 – 2024",
+    title: "Retail ERP Digitization & Proprietary GST Billing Engines",
+    category: "Commercial Retail Transformation",
+    type: "achievement",
+    badge: "The Foundation",
+    summary: "Digitized 5+ offline businesses, architecting the complete Chandrakala Jewellers ERP with custom multi-factor GST engine and physical thermal barcode printing.",
+    details: [
+      "Engineered proprietary GST billing calculation engine computing metal purity, hallmark fees, making wastage, and CGST/SGST.",
+      "Built Flutter desktop physical barcode printing software for 22 staggered jewellery tags with central tail strips & HUID tracking.",
+      "Digitized pharmacies, grocery kirana stores, and salons from manual paper ledgers to digital operations."
     ]
   }
 ];

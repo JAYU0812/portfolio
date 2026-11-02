@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { resumeData } from "../data/resumeData";
-import { Printer, ArrowLeft, Mail, Phone, MapPin, Globe } from "lucide-react";
+import { Printer, ArrowLeft, Mail, Phone, MapPin, Globe, Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/Icons";
 
 export default function Resume() {
@@ -20,13 +20,21 @@ export default function Resume() {
           <span>Back to Portfolio</span>
         </Link>
 
-        <div className="flex items-center justify-between sm:justify-end gap-3">
-          <span className="text-[11px] sm:text-xs font-mono text-[#7A7E89]">
+        <div className="flex items-center justify-between sm:justify-end gap-2.5">
+          <span className="text-[11px] sm:text-xs font-mono text-[#7A7E89] hidden sm:inline">
             ATS-Optimized Format
           </span>
+          <a
+            href="/Jaykumar_Hasmukh_Soni_Resume.pdf"
+            download="Jaykumar_Hasmukh_Soni_Resume.pdf"
+            className="inline-flex items-center justify-center gap-1.5 px-3.5 sm:px-4 py-2.5 rounded-xl bg-white border border-[#E8E5DF] text-[#121316] hover:bg-[#F2EDE4] hover:border-[#C27803]/40 transition text-xs font-semibold shadow-xs"
+          >
+            <Download className="w-4 h-4 text-[#C27803]" />
+            <span>Download PDF</span>
+          </a>
           <button
             onClick={handlePrint}
-            className="inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] transition text-xs font-semibold shadow-xs cursor-pointer shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-4 sm:px-6 py-2.5 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] transition text-xs font-semibold shadow-xs cursor-pointer shrink-0"
           >
             <Printer className="w-4 h-4" />
             <span>Print / PDF</span>

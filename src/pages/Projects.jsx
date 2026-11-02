@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
+import TimelineRoadmap from "../components/TimelineRoadmap";
 import { Link } from "react-router-dom";
 import { 
   Layers, 
@@ -10,10 +11,13 @@ import {
   Cpu, 
   ArrowUpRight,
   Store,
-  Terminal
+  Terminal,
+  Milestone,
+  LayoutGrid
 } from "lucide-react";
 
 export default function Projects() {
+  const [viewMode, setViewMode] = useState("roadmap"); // 'roadmap' | 'grid'
   const [activeFilter, setActiveFilter] = useState("all");
 
   const filterTabs = [
@@ -39,56 +43,102 @@ export default function Projects() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
         <div className="max-w-3xl">
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
-            Engineering Portfolio
+            Engineering Portfolio & Roadmap
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-[#121316] tracking-tight mt-1 mb-3 sm:mb-4">
-            Production Software & Live Applications
+            Production Systems & Engineering Journey
           </h1>
           <p className="text-sm sm:text-lg text-[#4A4E57] leading-relaxed">
-            Every project listed here is a deployed, real-world application engineered to solve operational challenges — featuring enterprise PropTech platforms, Google Play Store releases, proprietary GST billing software, and geofenced attendance algorithms.
+            Every project here represents real-world software deployed in production — from enterprise PropTech operating systems and sovereign P2P cryptographic networks to Google Play Store releases and retail GST ERPs.
           </p>
         </div>
-      </section>
 
-      {/* ----------------- 2. FILTER TABS (SWIPEABLE ON MOBILE) ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
-        <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 sm:gap-2 p-1.5 bg-white border border-[#E8E5DF] rounded-2xl shadow-xs w-full sm:w-fit -mx-1 px-1.5 sm:mx-0">
-          {filterTabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveFilter(tab.id)}
-              className={`shrink-0 flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap ${
-                activeFilter === tab.id
-                  ? "bg-[#121316] text-white shadow-xs"
-                  : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
-              }`}
-            >
-              {tab.icon}
-              <span>{tab.label}</span>
-              <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-md ${
-                activeFilter === tab.id ? "bg-[#333740] text-[#E8C37D]" : "bg-[#F2EDE4] text-[#7A7E89]"
-              }`}>
-                {tab.count}
-              </span>
-            </button>
-          ))}
+        {/* View Mode Switcher: Timeline Roadmap vs Category Grid */}
+        <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2 p-1.5 bg-white border border-[#E8E5DF] rounded-2xl shadow-xs w-full sm:w-fit">
+          <button
+            onClick={() => setViewMode("roadmap")}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
+              viewMode === "roadmap"
+                ? "bg-[#121316] text-white shadow-xs"
+                : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
+            }`}
+          >
+            <Milestone className="w-4 h-4 text-[#C27803]" />
+            <span>Timeline Roadmap (2023 – Present)</span>
+            <span className={`text-[10px] font-mono px-2 py-0.5 rounded-md ${
+              viewMode === "roadmap" ? "bg-[#333740] text-[#E8C37D]" : "bg-[#F2EDE4] text-[#7A7E89]"
+            }`}>
+              Recommended
+            </span>
+          </button>
+
+          <button
+            onClick={() => setViewMode("grid")}
+            className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
+              viewMode === "grid"
+                ? "bg-[#121316] text-white shadow-xs"
+                : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
+            }`}
+          >
+            <LayoutGrid className="w-4 h-4 text-[#C27803]" />
+            <span>Category Grid</span>
+            <span className={`text-[10px] font-mono px-2 py-0.5 rounded-md ${
+              viewMode === "grid" ? "bg-[#333740] text-[#E8C37D]" : "bg-[#F2EDE4] text-[#7A7E89]"
+            }`}>
+              {projects.length} Projects
+            </span>
+          </button>
         </div>
       </section>
 
-      {/* ----------------- 3. PROJECTS GRID ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
-          {filteredProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onHoverSpeak={handleMascotSpeak}
-            />
-          ))}
-        </div>
-      </section>
+      {/* ----------------- 2. MAIN CONTENT (ROADMAP OR GRID) ----------------- */}
+      {viewMode === "roadmap" ? (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20">
+          <TimelineRoadmap onHoverSpeak={handleMascotSpeak} />
+        </section>
+      ) : (
+        <>
+          {/* Category Filter Tabs */}
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-10">
+            <div className="flex overflow-x-auto no-scrollbar scroll-smooth gap-1.5 sm:gap-2 p-1.5 bg-white border border-[#E8E5DF] rounded-2xl shadow-xs w-full sm:w-fit -mx-1 px-1.5 sm:mx-0">
+              {filterTabs.map((tab) => (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveFilter(tab.id)}
+                  className={`shrink-0 flex items-center gap-2 px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer whitespace-nowrap ${
+                    activeFilter === tab.id
+                      ? "bg-[#121316] text-white shadow-xs"
+                      : "text-[#4A4E57] hover:bg-[#F2EDE4] hover:text-[#121316]"
+                  }`}
+                >
+                  {tab.icon}
+                  <span>{tab.label}</span>
+                  <span className={`text-[10px] font-mono px-1.5 py-0.5 rounded-md ${
+                    activeFilter === tab.id ? "bg-[#333740] text-[#E8C37D]" : "bg-[#F2EDE4] text-[#7A7E89]"
+                  }`}>
+                    {tab.count}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </section>
 
-      {/* ----------------- 4. CLIENT DIGITIZATION DEMOS SECTION ----------------- */}
+          {/* Projects Grid */}
+          <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-8">
+              {filteredProjects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  onHoverSpeak={handleMascotSpeak}
+                />
+              ))}
+            </div>
+          </section>
+        </>
+      )}
+
+      {/* ----------------- 3. CLIENT DIGITIZATION DEMOS SECTION ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 border-t border-[#E8E5DF]">
         <div className="max-w-2xl mb-8">
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803]">
