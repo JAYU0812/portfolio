@@ -117,14 +117,9 @@ export default function Resume() {
         <div className="print-page-1">
           {/* HEADER (Candidate Identity & Contact Channels) */}
           <div className="resume-header print:block border-b-2 border-[#121316] dark:border-[#2E3342] print:border-[#121316] pb-3 sm:pb-4 mb-4 sm:mb-5 print:pb-2 print:mb-3">
-            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold font-mono tracking-tight text-[#121316] dark:text-white print:text-black uppercase print:text-[18pt] print:leading-tight">
-                {resumeData.personal.name}
-              </h1>
-              <span className="text-[10px] font-mono font-bold text-[#C27803] print:text-[#92400E] uppercase tracking-wider hidden print:inline">
-                A4 Executive Resume · Page 1 of 2
-              </span>
-            </div>
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-extrabold font-mono tracking-tight text-[#121316] dark:text-white print:text-black uppercase print:text-[18pt] print:leading-tight mb-0.5">
+              {resumeData.personal.name}
+            </h1>
 
             <p className="text-xs sm:text-sm font-semibold text-[#C27803] dark:text-[#E8C37D] print:text-[#92400E] mb-2 print:mb-1.5 print:text-[10pt] font-mono">
               {resumeData.personal.title}
@@ -271,20 +266,9 @@ export default function Resume() {
         </div>
 
         {/* =========================================================================
-            PAGE 2 OF 2: FLAGSHIP PROJECTS, EDUCATION, AWARDS & LEADERSHIP
+            PAGE 2: FLAGSHIP PROJECTS, EDUCATION, AWARDS & LEADERSHIP
            ========================================================================= */}
         <div className="print-page-2">
-          
-          {/* Subtle Page 2 Header for Print */}
-          <div className="hidden print:flex items-center justify-between border-b border-[#E8E5DF] pb-1 mb-2">
-            <span className="font-mono text-[8pt] font-bold uppercase text-[#121316]">
-              {resumeData.personal.name} — Technical Resume
-            </span>
-            <span className="font-mono text-[7.5pt] font-semibold text-[#92400E]">
-              Page 2 of 2
-            </span>
-          </div>
-
           {/* 4. KEY PROJECTS */}
           <section className="mb-4 print:mb-2">
             <div className="flex items-center justify-between border-b border-[#121316] dark:border-[#2E3342] print:border-[#333] pb-0.5 mb-2 print:mb-1.5">
