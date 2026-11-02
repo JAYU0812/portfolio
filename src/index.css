@@ -70,9 +70,90 @@ html.dark .architectural-grid {
   background-size: 24px 24px;
 }
 
-/* Print styles */
+/* =========================================================================
+   A4 ATS PRINT ENGINE (Strict 2-Page Optimization)
+   ========================================================================= */
 @media print {
-  .print-hidden {
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+
+  /* Reset all canvas & body defaults for print */
+  html, body {
+    background-color: #FFFFFF !important;
+    background-image: none !important;
+    color: #000000 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-size: 8.5pt !important;
+    line-height: 1.28 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    overflow: visible !important;
+  }
+
+  #root {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background: transparent !important;
+  }
+
+  /* Suppress screen navigation, sidebars, floating widgets, and background blobs */
+  header,
+  footer,
+  nav,
+  .print-hidden,
+  [aria-label="Mobile Bottom Navigation"],
+  [aria-label="Toggle menu"] {
     display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Hard Page Break between Page 1 and Page 2 */
+  .print-page-break {
+    display: block !important;
+    break-before: page !important;
+    page-break-before: always !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  /* Avoid orphaned lines or awkward splits across items */
+  .print-avoid-break,
+  .break-inside-avoid {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* Enforce clean monochrome/accent contrast without heavy dark fills */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+
+  /* Ensure resume sheet takes exact 100% printable width without outer margins */
+  article {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
   }
 }

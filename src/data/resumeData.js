@@ -92,6 +92,13 @@ export const resumeData = {
       location: "Science City, Ahmedabad",
       description: "PropTech Enterprise Operating System (PropKart v2.1.3+13, Target SDK 36)",
       technologies: ["Flutter", "Dart", "Target SDK 36", "NestJS 10", "BLoC", "Riverpod", "Isar NoSQL", "PostgreSQL", "Node.js", "Next.js 15", "Docker", "Meta & Housing.com Webhooks", "TOTP 2FA"],
+      coreBullets: [
+        "Awarded Certificate of Appreciation (Reward and Recognition) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional quarterly engineering leadership and zero-downtime architecture.",
+        "Architected and maintained production PropKart CRM & OS (v2.1.3+13, Target SDK 36, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 checks), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
+        "Engineered Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with debounced intent extraction, multi-tenant isolation, safe query telemetry, and persistent builder schemas across Migrations 84–93.",
+        "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues (Queue A RERA Verified vs Queue B RERA Assistance), dynamic RBAC, tamper-evident audit logging, and Hostinger SSL SMTP.",
+        "Launched official marketing portal (nbpropertytech.com) using Next.js 15, Docker, and GitHub Actions automated VPS CI/CD with Traefik SSL; engineered 95-file Mobile Foundation (20,000+ LOC) and NB-HRMS real-time GPS field trip tracking with geofence exit detection."
+      ],
       bullets: [
         "Honored with Certificate of Appreciation (Reward and Recognition) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional engineering performance, valuable quarterly contributions, and dedication to excellence.",
         "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.3+13, Target SDK 36, Package: com.nbpropertytech.propkart, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 passed), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
@@ -114,6 +121,10 @@ export const resumeData = {
       location: "Remote / Ahmedabad",
       description: "Healthcare Clinical Management Dashboard",
       technologies: ["React", "Node.js", "JavaScript", "Tailwind CSS", "Props", "useState", "Vercel"],
+      coreBullets: [
+        "Engineered complete frontend architecture for the Hospital Management Dashboard on Vercel with responsive clinical scheduling, Doctor Cards, and real-time bed occupancy stats.",
+        "Implemented appointment scheduling, modification, and cancellation workflows with responsive form input validation and patient listings."
+      ],
       bullets: [
         "Engineered the complete frontend architecture for the Hospital Management Dashboard (live: hospital-dashboard-woad-gamma.vercel.app).",
         "Developed modular UI components including dynamic Doctor Profile Cards, searchable Patient Listings, and Department Filters.",
@@ -128,6 +139,10 @@ export const resumeData = {
       location: "Ahmedabad, India",
       description: "Mobile Architecture & Cross-Platform Engineering",
       technologies: ["Flutter", "Dart", "State Management", "BLoC", "Riverpod", "Android Studio"],
+      coreBullets: [
+        "Completed intensive 3-month engineering training focused on cross-platform mobile application architecture with Flutter & Dart.",
+        "Implemented reactive state management patterns (BLoC, Riverpod) and repository design patterns directly leveraged in Google Play Store releases."
+      ],
       bullets: [
         "Completed intensive 3-month engineering training focused on cross-platform mobile application architecture with Flutter & Dart.",
         "Implemented reactive state management patterns (BLoC, Riverpod) and repository design patterns for clean code separation.",
@@ -141,10 +156,83 @@ export const resumeData = {
       location: "Ahmedabad, Gujarat",
       description: "Digital Transformation & Business Software Solutions",
       technologies: ["React", "Flutter Desktop", "PHP", "MySQL", "Tailwind CSS", "GST Billing Engine", "Barcode Label Printing"],
+      coreBullets: [
+        "Digitized 5+ offline businesses including jewellery retail showrooms, medical pharmacies, and retail stores.",
+        "Architected complete Chandrakala Jewellers ERP ecosystem: live commercial platform (chandrakalajewellers.in), proprietary GST billing engine, and Flutter physical label barcode printing software (22-slot staggered jewellery tags with central strips & HUID tracking)."
+      ],
       bullets: [
         "Digitized 5+ offline businesses including jewellery retail showrooms, medical pharmacies, grocery kirana stores, and beauty salons.",
         "Architected the complete Chandrakala Jewellers ERP ecosystem: live commercial platform (chandrakalajewellers.in), proprietary GST billing engine, and Flutter physical label barcode printing software (22-slot staggered jewellery tags with central strips & HUID tracking).",
         "Managed end-to-end software lifecycles: requirement discovery, UI design, backend development, database provisioning, domain deployment, and maintenance."
+      ]
+    }
+  ],
+
+  flagshipProjects: [
+    {
+      name: "PropKart — Enterprise Property CRM & OS (v2.1.3+13)",
+      url: "https://propkart.nbpropertytech.com",
+      displayUrl: "propkart.nbpropertytech.com",
+      badge: "Production Live v2.1.3+13",
+      technologies: "Flutter, Dart, Target SDK 36, Natural Language AI Search, BLoC, NestJS, PostgreSQL (M1–93), Isar DB, TOTP 2FA",
+      bullets: [
+        "Production PropTech OS with 2ms–8ms reads via embedded Isar NoSQL, Target SDK 36, and 100/100 security audit score (37/37 checks passed).",
+        "Engineered Natural Language AI Search Engine across AppShell & PostgreSQL backend with multi-tenant isolation, safe query telemetry, and automated Round-Robin lead allocation."
+      ]
+    },
+    {
+      name: "PropKart Broker Portal — Enterprise Broker Governance Suite",
+      url: "https://github.com/JAYU0812/brokerportal",
+      displayUrl: "github.com/JAYU0812/brokerportal",
+      badge: "Production v1.0.0",
+      technologies: "Flutter 3.x, NestJS 10, TypeScript, PostgreSQL 16, Docker, Dynamic RBAC, Hostinger SSL SMTP",
+      bullets: [
+        "Enterprise broker governance and approval suite with two-tier queues (Queue A RERA Verified vs Queue B RERA Assistance with WhatsApp auto-drafting).",
+        "Zero-hardcoding architecture with dynamic platform controls, tamper-evident audit logs, and automated cryptographic SMTP activation."
+      ]
+    },
+    {
+      name: "NB PropertyTech — Official Marketing & Broker Onboarding Portal",
+      url: "https://nbpropertytech.com",
+      displayUrl: "nbpropertytech.com",
+      badge: "Production Live",
+      technologies: "Next.js 15, TypeScript 5, Tailwind CSS, Docker, Traefik SSL, GitHub Actions CI/CD to VPS",
+      bullets: [
+        "Official marketing and onboarding platform delivering sub-second page loads with Next.js 15 App Router architecture.",
+        "Automated GitHub Actions CI/CD workflow building isolated Docker containers and deploying directly to VPS with Traefik ACME SSL reverse proxy."
+      ]
+    },
+    {
+      name: "GitSphere — Visual Git Control Center & Repository Intelligence",
+      url: "https://github.com/JAYU0812",
+      displayUrl: "Windows Desktop Release (v1.0.0)",
+      badge: "Desktop App v1.0.0",
+      technologies: "Flutter Desktop, Dart, Riverpod, SQLite (FFI), Native Process Runner, Inno Setup 6 (12.07 MB)",
+      bullets: [
+        "Visual Git control desktop engine replacing CLI friction with a 4-stage visual pipeline (Working Tree → Staging → Branch → Remote).",
+        "Engineered multi-account GitHub credential switcher in SQLite and automated README parser executing 1-click shell actions."
+      ]
+    },
+    {
+      name: "DevSync — Sovereign Cryptographic P2P & Relay Suite",
+      url: "https://github.com/jay0812soni-developer/devsync",
+      displayUrl: "github.com/jay0812soni-developer/devsync",
+      badge: "Sovereign P2P Suite",
+      technologies: "Flutter, Dart, Riverpod, AES-256-GCM, Ed25519/X25519, Shelf HTTP, UDP Multicast, Vercel SSE Relay",
+      bullets: [
+        "Sovereign account-per-device encrypted file transfer with on-device Ed25519 signatures, X25519 key exchange, and AES-256-GCM encryption.",
+        "Hybrid networking architecture featuring direct LAN discovery via embedded Shelf HTTP and zero-retention Vercel Serverless SSE relay fallback."
+      ]
+    },
+    {
+      name: "Chandrakala Jewellers — Commercial Platform & ERP Suite",
+      url: "https://chandrakalajewellers.in",
+      displayUrl: "chandrakalajewellers.in",
+      badge: "Live Commercial Platform",
+      technologies: "React, Flutter Desktop, Supabase PostgreSQL & RLS, Custom GST Engine, Thermal Barcode Printing",
+      bullets: [
+        "Commercial storefront on custom production domain with click-to-inquire automated ordering and comprehensive Supabase RLS policies.",
+        "Engineered proprietary GST billing CRM computing metal purity & taxes, paired with Flutter physical 22-slot barcode jewelry tag printer (HUID tracking)."
       ]
     }
   ],
@@ -359,6 +447,13 @@ export const resumeData = {
     "Flutter Mobile Development Internship (3 Months) — Comprehensive Mobile Engineering",
     "React & Node Development Internship — Tech-Craft (Clinical Dashboard Architecture)",
     "C++ Object-Oriented Programming Certification — Grade A"
+  ],
+
+  coreAchievements: [
+    "Certificate of Appreciation — Reward & Recognition Award (NB Infra Projects Limited, Since 1946) signed by Founder & Chairman Rahul D. Prajapati for exemplary engineering performance and leadership.",
+    "2x Published Applications on Google Play Store (Parichay Sammelan QR Matchmaking & KITAAB Jeweller Ledger).",
+    "5th Rank Hackathon Award — Smart Geofenced QR Haversine Spherical Attendance System.",
+    "Pioneered production Offline-First architecture yielding 2ms–8ms local Isar NoSQL reads and 100/100 Security Audit score."
   ],
 
   achievements: [
