@@ -65,6 +65,42 @@ In October 2026, he was awarded the Certificate of Appreciation (Reward & Recogn
    - Parichay Sammelan (QR Venue Matchmaking): https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan
    - KITAAB (Jeweller Ledger App): https://play.google.com/store/apps/details?id=com.jeweller.ledger
 
+## Developer Questions & Answers Knowledge Hub
+Main Hub: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions
+Author: Soni Jaykumar Hasmukh (Jay Soni)
+
+### Published Architectural Articles & Solutions (First Batch: 15 Guides)
+1. How to Build an Offline-First Flutter Application Using Isar:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/flutter/how-to-build-offline-first-flutter-app
+2. Isar vs SQLite: Which Database Should Flutter Developers Choose:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/database/isar-vs-sqlite
+3. How Does Supabase Realtime Work With PostgreSQL:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/supabase/how-supabase-realtime-works
+4. How to Synchronize Flutter Data With Supabase Realtime:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/flutter/sync-flutter-supabase-realtime
+5. How to Implement Conflict Resolution in Offline-First Applications:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/software-architecture/how-to-implement-conflict-resolution
+6. How to Implement Delta Synchronization in Flutter:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/database/how-to-implement-delta-synchronization
+7. How to Build a Scalable CRM Using Flutter and Node.js:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/crm-development/how-to-build-scalable-crm-flutter-nodejs
+8. How to Implement Row Level Security in Supabase:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/supabase/how-to-implement-supabase-row-level-security
+9. BLoC vs Cubit: Which State Management Approach Is Better:
+   https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/flutter/bloc-vs-cubit-flutter-state-management
+10. How to Implement a Lead Allocation Engine in a CRM:
+    https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/crm-development/how-to-implement-lead-allocation-engine-crm
+11. How to Optimize a Large Flutter Application:
+    https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/flutter/how-to-optimize-large-flutter-application
+12. How to Implement Refresh Token Rotation in Node.js:
+    https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/nodejs/how-to-implement-refresh-token-rotation-nodejs
+13. How to Structure a Large Flutter Project Using Clean Architecture:
+    https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/flutter/how-to-structure-flutter-clean-architecture
+14. How to Optimize PostgreSQL Queries for Large Applications:
+    https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/database/how-to-optimize-postgresql-queries-large-apps
+15. How to Build a Real-Time Property Management CRM:
+    https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/developer-questions/crm-development/how-to-build-realtime-property-management-crm
+
 ## Professional Channels & Verification
 - Portfolio: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/
 - GitHub: https://github.com/JAYU0812

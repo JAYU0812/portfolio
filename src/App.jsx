@@ -8,6 +8,9 @@ import ProjectDetail from "./pages/ProjectDetail";
 import Resume from "./pages/Resume";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import DeveloperQuestions from "./pages/DeveloperQuestions";
+import QuestionCategory from "./pages/QuestionCategory";
+import QuestionDetail from "./pages/QuestionDetail";
 import MedicalStore from "./pages/demo/MedicalStore";
 import KiranaStore from "./pages/demo/KiranaStore";
 import Salon from "./pages/demo/Salon";
@@ -27,6 +30,11 @@ function App() {
           <Route path="/resume" element={<Layout><Resume /></Layout>} />
           <Route path="/contact" element={<Layout><Contact /></Layout>} />
           
+          {/* Developer Questions & Answers Knowledge Hub */}
+          <Route path="/developer-questions" element={<Layout><DeveloperQuestions /></Layout>} />
+          <Route path="/developer-questions/:categorySlug" element={<Layout><QuestionCategory /></Layout>} />
+          <Route path="/developer-questions/:categorySlug/:questionSlug" element={<Layout><QuestionDetail /></Layout>} />
+
           {/* Client Demo Pages */}
           <Route path="/medical-demo" element={<MedicalStore />} />
           <Route path="/kirana-demo" element={<KiranaStore />} />

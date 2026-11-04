@@ -45,6 +45,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/developer-questions" className="hover:text-[#C27803] dark:hover:text-[#E8C37D] transition font-medium">
+                  Developer Q&A Hub
+                </Link>
+              </li>
+              <li>
                 <Link to="/about" className="hover:text-[#C27803] dark:hover:text-[#E8C37D] transition">
                   About & Background
                 </Link>

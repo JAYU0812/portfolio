@@ -10,6 +10,7 @@ export default function Header() {
   const navLinks = [
     { name: "Home", path: "/" },
     { name: "Projects", path: "/projects" },
+    { name: "Dev Q&A", path: "/developer-questions" },
     { name: "About", path: "/about" },
     { name: "Resume", path: "/resume" },
     { name: "Contact", path: "/contact" }
@@ -42,7 +43,9 @@ export default function Header() {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-1 p-1 bg-[#F2EDE4]/70 dark:bg-[#14161E]/80 border border-[#E8E5DF] dark:border-[#22252F] rounded-full text-sm font-medium">
           {navLinks.map((link) => {
-            const isActive = location.pathname === link.path;
+            const isActive = link.path === "/" 
+              ? location.pathname === "/" 
+              : location.pathname.startsWith(link.path);
             return (
               <Link
                 key={link.path}
@@ -96,7 +99,9 @@ export default function Header() {
           />
           <div className="md:hidden bg-[#FBF9F5] dark:bg-[#0E1015] border-b border-[#E8E5DF] dark:border-[#22252F] py-4 px-4 sm:px-6 flex flex-col gap-1.5 shadow-2xl relative z-50 animate-in fade-in slide-in-from-top-2 duration-200">
             {navLinks.map((link) => {
-              const isActive = location.pathname === link.path;
+              const isActive = link.path === "/" 
+                ? location.pathname === "/" 
+                : location.pathname.startsWith(link.path);
               return (
                 <Link
                   key={link.path}
