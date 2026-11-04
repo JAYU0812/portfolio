@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { resumeData } from "../data/resumeData";
+import SEO from "../components/SEO";
 import { 
   Printer, 
   ArrowLeft, 
@@ -27,6 +28,12 @@ export default function Resume() {
 
   return (
     <div className="py-6 sm:py-8 px-3 sm:px-6 print:p-0 print:m-0 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
+      <SEO 
+        title="Resume — Soni Jaykumar Hasmukh | Lead Mobile & Full-Stack Architect"
+        description="Curriculum Vitae of Soni Jaykumar Hasmukh (Jay Soni): Lead Mobile & Full-Stack Architect at NB Developers, Ahmedabad. Technical skills, production achievements, published apps, and R&R Award."
+        keywords="Jay Soni Resume, Soni Jaykumar CV, Software Engineer Resume Ahmedabad, Flutter Architect Resume, Full Stack Developer CV India"
+        canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/resume"
+      />
       
       {/* ----------------- ACTION & CONTROL BAR (Hidden in Print) ----------------- */}
       <div className="max-w-4xl mx-auto mb-6 sm:mb-8 space-y-4 print:hidden">

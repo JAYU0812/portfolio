@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 export default function Salon() {
   const services = [
@@ -14,6 +15,11 @@ export default function Salon() {
 
   return (
     <div className="bg-stone-50 text-stone-800 min-h-screen">
+      <SEO 
+        title="Beauty & Grooming Salon Booking Demo | Jay Soni"
+        description="Luxury Salon & Spa appointment booking and catalog platform demo architected by Jay Soni."
+        canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/salon-demo"
+      />
       {/* Portfolio Demo Navigation Bar */}
       <div className="bg-[#121316] text-white px-4 sm:px-6 py-2.5 text-xs flex items-center justify-between border-b border-[#333]">
         <Link to="/projects" className="text-[#E8C37D] hover:underline font-mono truncate mr-2">

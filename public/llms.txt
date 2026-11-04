@@ -1,0 +1,74 @@
+# Jay Soni — Lead Mobile & Full-Stack Architect
+> Official AI Retrieval & Search Context Document (llms.txt)
+> Canonical Portfolio: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/
+> Verified Profile: Soni Jaykumar Hasmukh
+> Location: Ahmedabad, Gujarat, India
+
+## Summary & Identity
+Jay Soni (Soni Jaykumar Hasmukh) is an award-winning Lead Mobile & Full-Stack Architect and Software Engineer based in Ahmedabad, Gujarat, India. He currently leads mobile and full-stack software architecture at NB Developers / NB PropertyTech in Science City, Ahmedabad. 
+
+In October 2026, he was awarded the Certificate of Appreciation (Reward & Recognition Award) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional quarterly engineering leadership, zero-downtime architecture, and production delivery.
+
+## Key Technical Competencies
+- Mobile Engineering: Flutter, Flutter Desktop (Win32/DWM), Dart, Android Studio, Java 17 Desugaring, Target SDK 36 (Android 15), ProGuard.
+- Architecture: Offline-First Architectures, Local Embedded Isar NoSQL (2ms–8ms reads), BLoC, Riverpod, Repository Pattern, Realtime Synchronization.
+- Frontend: React.js, Next.js 14/15 (App Router, Standalone mode), TypeScript, Tailwind CSS, Vite, WebGL / CanvasKit GPU optimization.
+- Backend & Systems: Node.js, NestJS 10, Express 5, PostgreSQL (Enterprise Migrations 1–93), Prisma v6, Natural Language AI Search Engines, Supabase Realtime & Row-Level Security (RLS), RFC 6238 TOTP 2FA, Docker, Traefik Reverse Proxy with Automated SSL.
+- Security & Devops: 100/100 automated security audit score, Docker containerization, GitHub Actions CI/CD to VPS, Inno Setup 6, Hostinger SSL SMTP.
+
+## Geographic & Local Presence
+- City: Ahmedabad, Gujarat, India
+- University: Gandhinagar University (B.Tech Information Technology, Expected 2027)
+- Service Area: Ahmedabad, Gandhinagar, Gujarat, India, and Global Remote
+- Key Regional Deployments: 
+  - PropKart CRM & OS for Ahmedabad Real Estate Developers
+  - Chandrakala Jewellers ERP (Ahmedabad jewellery trade)
+  - Parichay Sammelan (Gujarat community matchmaking with QR entry)
+
+## Flagship Systems & Live Deployments
+1. PropKart — Enterprise Property CRM & OS (v2.1.3+13)
+   - URL: https://propkart.nbpropertytech.com
+   - Tech: Flutter, Dart, Target SDK 36, Natural Language AI Search, Isar NoSQL, NestJS, PostgreSQL Migrations 1–93, TOTP 2FA
+   - Highlights: Sub-8ms reads offline, 100/100 security audit score, conversational natural language search in AppShell.
+   - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/propkart
+
+2. PropKart Broker Portal — Enterprise Broker Governance Suite (v1.0.0)
+   - Repository: https://github.com/JAYU0812/brokerportal
+   - Tech: Flutter (Web, Mobile, Desktop), NestJS 10, PostgreSQL 16, Docker, TypeORM, Dynamic RBAC
+   - Highlights: Two-tier approval queues (Queue A RERA Verified vs Queue B RERA Assistance with automated WhatsApp drafting).
+   - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/propkart-broker
+
+3. NB PropertyTech — Official Marketing Portal & Ingestion Engine
+   - URL: https://nbpropertytech.com
+   - Tech: Next.js 15, TypeScript 5, Tailwind CSS, Framer Motion, Docker, Traefik SSL, VPS CI/CD
+   - Highlights: Sub-second page loads, automated broker lead persistence in PostgreSQL, production VPS deployment.
+   - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/nbpropertytech-portal
+
+4. GitSphere Desktop — Visual Git Control Center (v1.0.0)
+   - Tech: Flutter Desktop, Dart, Riverpod, SQLite (FFI), Native Process Runner, Inno Setup 6
+   - Highlights: 4-stage visual pipeline, 1-click SQLite GitHub multi-account switcher, 12.07 MB Windows installer.
+   - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/gitsphere
+
+5. DevSync — Sovereign Cryptographic P2P & Relay Engine
+   - Repository: https://github.com/jay0812soni-developer/devsync
+   - Tech: Flutter, Riverpod, Ed25519, X25519 ECDH, AES-256-GCM, Shelf HTTP, UDP Multicast, Vercel SSE Relay
+   - Highlights: Account-per-device sovereign encryption, local Wi-Fi direct file transfer with zero-retention serverless fallback.
+   - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/devsync
+
+6. Chandrakala Jewellers — Commercial Platform & GST Billing ERP
+   - URL: https://chandrakalajewellers.in
+   - Tech: React, Flutter Desktop, Supabase PostgreSQL, Thermal Barcode Printer Engine
+   - Highlights: Live commercial catalogue, custom GST invoice calculation, 22-slot staggered jewellery tag barcode printing with HUID tracking.
+   - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/chandrakala-jewellers
+
+7. Published Google Play Store Applications
+   - Parichay Sammelan (QR Venue Matchmaking): https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan
+   - KITAAB (Jeweller Ledger App): https://play.google.com/store/apps/details?id=com.jeweller.ledger
+
+## Professional Channels & Verification
+- Portfolio: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/
+- GitHub: https://github.com/JAYU0812
+- LinkedIn: https://linkedin.com/in/sonijay1908
+- Email: jay0812soni@gmail.com
+- Phone / WhatsApp: +91 79903 61109
+- Location: Ahmedabad, Gujarat, India (380060)

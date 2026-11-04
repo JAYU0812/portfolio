@@ -4,6 +4,7 @@ import { projects } from "../data/projects";
 import { timelineEvents } from "../data/timeline";
 import ProjectCard from "../components/ProjectCard";
 import ArchitectureConsole from "../components/ArchitectureConsole";
+import SEO from "../components/SEO";
 import { 
   ArrowUpRight, 
   Smartphone, 
@@ -32,6 +33,12 @@ export default function Home() {
 
   return (
     <div className="py-6 sm:py-12 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
+      <SEO 
+        title="Jay Soni — Engineer in Ahmedabad | Lead Mobile & Full-Stack Architect"
+        description="Official portfolio of Jay Soni (Soni Jaykumar Hasmukh), award-winning Lead Mobile & Full-Stack Architect in Ahmedabad, Gujarat. Specialist in Flutter (SDK 36), React, Node.js, offline-first systems, and enterprise PropTech."
+        keywords="Engineer in Ahmedabad, Software Engineer Ahmedabad, Full Stack Developer Ahmedabad, Flutter Developer Ahmedabad, Jay Soni, Soni Jaykumar, NB Developers, PropKart CRM, Web Developer Ahmedabad, Mobile App Developer Gujarat, Best Software Engineer Ahmedabad"
+        canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"
+      />
       {/* ----------------- 1. HERO SECTION ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-2 sm:pt-4 pb-12 sm:pb-24 overflow-hidden">
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full min-w-0">

@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 export default function MedicalStore() {
   return (
     <div className="bg-gray-50 text-gray-800 min-h-screen">
+      <SEO 
+        title="Pharmacy & Medical Store Demo | Jay Soni"
+        description="Healthcare pharmacy retail portal with prescription upload and instant ordering demo architected by Jay Soni."
+        canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/medical-demo"
+      />
       {/* Portfolio Demo Navigation Bar */}
       <div className="bg-[#121316] text-white px-4 sm:px-6 py-2.5 text-xs flex items-center justify-between border-b border-[#333]">
         <Link to="/projects" className="text-[#E8C37D] hover:underline font-mono truncate mr-2">

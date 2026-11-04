@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { timelineEvents } from "../data/timeline";
+import SEO from "../components/SEO";
 import { 
   Smartphone, 
   CheckCircle2, 
@@ -41,6 +42,12 @@ export default function About() {
 
   return (
     <div className="py-8 sm:py-16 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
+      <SEO 
+        title="About Jay Soni — Software Engineer & Architect in Ahmedabad"
+        description="Learn about Soni Jaykumar Hasmukh (Jay Soni), Lead Mobile & Full-Stack Architect at NB Developers in Ahmedabad, Gujarat. Background, technical journey, awards, and engineering philosophy."
+        keywords="About Jay Soni, Soni Jaykumar, Engineer in Ahmedabad, Software Architect Ahmedabad, NB Developers Ahmedabad, Flutter Engineer Gujarat, Full Stack Developer Bio, Gandhinagar University IT"
+        canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/about"
+      />
       {/* ----------------- 1. HERO BIO ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-12 sm:mb-16">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">

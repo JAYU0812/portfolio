@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import SEO from "../components/SEO";
 import { 
   Mail, 
   MessageCircle, 
@@ -302,6 +303,12 @@ export default function Contact() {
 
   return (
     <div className="py-8 sm:py-16 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
+      <SEO 
+        title="Contact Jay Soni — Software Engineer & Architect Ahmedabad"
+        description="Get in touch with Soni Jaykumar Hasmukh (Jay Soni). Available for enterprise architecture consulting, full-stack web and mobile engineering, or engineering leadership roles in Ahmedabad, Gujarat."
+        keywords="Contact Jay Soni, Hire Full Stack Developer Ahmedabad, Hire Flutter Developer Gujarat, Software Consultant Ahmedabad, Jay Soni Phone, Jay Soni Email, WhatsApp Jay Soni"
+        canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/contact"
+      />
       <section className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Header */}

@@ -1,0 +1,39 @@
+# robots.txt for Jay Soni Portfolio (portfolio-iota-nine-7b2v5ah7u8.vercel.app)
+# Comprehensive crawler directives for Search Engines and AI Retrieval Engines
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Google Search & Gemini Grounding
+User-agent: Googlebot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Bing & Copilot
+User-agent: Bingbot
+Allow: /
+
+# OpenAI Search (ChatGPT Search & AI Citations)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI Search
+User-agent: PerplexityBot
+Allow: /
+
+# Anthropic Claude Search & Grounding
+User-agent: ClaudeBot
+Allow: /
+
+# Apple Search & Siri
+User-agent: Applebot
+Allow: /
+
+# Sitemap Index Reference
+Sitemap: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/sitemap.xml

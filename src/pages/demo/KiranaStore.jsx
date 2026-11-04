@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "../../components/SEO";
 
 export default function KiranaStore() {
   const products = [
@@ -14,6 +15,11 @@ export default function KiranaStore() {
 
   return (
     <div className="bg-gray-50 text-gray-800 min-h-screen">
+      <SEO 
+        title="Kirana Store Live Client Demo | Jay Soni"
+        description="Digitized Grocery Platform and Retail ERP demo architected by Jay Soni for local retail storefronts."
+        canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/kirana-demo"
+      />
       {/* Portfolio Demo Navigation Bar */}
       <div className="bg-[#121316] text-white px-4 sm:px-6 py-2.5 text-xs flex items-center justify-between border-b border-[#333]">
         <Link to="/projects" className="text-[#E8C37D] hover:underline font-mono truncate mr-2">

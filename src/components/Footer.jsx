@@ -59,6 +59,16 @@ export default function Footer() {
                   Get in Touch
                 </Link>
               </li>
+              <li>
+                <a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="hover:text-[#C27803] dark:hover:text-[#E8C37D] transition font-mono text-[11px]">
+                  XML Sitemap
+                </a>
+              </li>
+              <li>
+                <a href="/llms.txt" target="_blank" rel="noopener noreferrer" className="hover:text-[#C27803] dark:hover:text-[#E8C37D] transition font-mono text-[11px]">
+                  AI Context (llms.txt)
+                </a>
+              </li>
             </ul>
           </div>
 

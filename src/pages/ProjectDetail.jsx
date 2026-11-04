@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { projects } from "../data/projects";
+import SEO from "../components/SEO";
 import { 
   ArrowLeft, 
   ExternalLink, 
@@ -118,8 +119,66 @@ export default function ProjectDetail() {
 
   const narrative = getArchitectureNarrative();
 
+  const projectSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": project.filterCategory === "mobile" ? "MobileApplication" : "SoftwareApplication",
+        "@id": `https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/${project.id}/#software`,
+        "name": project.title,
+        "description": project.tagline || project.summary,
+        "applicationCategory": project.filterCategory === "mobile" ? "BusinessApplication" : "DeveloperApplication",
+        "operatingSystem": project.filterCategory === "mobile" ? "Android, iOS" : "Web, Cross-platform",
+        "author": {
+          "@type": "Person",
+          "name": "Soni Jaykumar Hasmukh",
+          "url": "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"
+        },
+        ...(project.liveUrl ? { "url": project.liveUrl } : {}),
+        "keywords": project.tech?.join(", ")
+      },
+      {
+        "@type": "WebPage",
+        "@id": `https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/${project.id}/#webpage`,
+        "url": `https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/${project.id}`,
+        "name": `${project.title} — Technical Architecture & Case Study | Jay Soni`,
+        "description": project.tagline || project.summary,
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Projects",
+              "item": "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": project.title,
+              "item": `https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/${project.id}`
+            }
+          ]
+        }
+      }
+    ]
+  };
+
   return (
     <div className="py-6 sm:py-12 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
+      <SEO 
+        title={`${project.title.split("—")[0].trim()} — Case Study & Architecture`}
+        description={`${project.title}: ${project.tagline || project.summary}. Tech stack: ${project.tech?.slice(0, 5).join(", ")}. Architected by Jay Soni, Ahmedabad.`}
+        keywords={`${project.title}, ${project.tech?.join(", ")}, Jay Soni, Soni Jaykumar, Engineer in Ahmedabad, Software Case Study`}
+        canonical={`https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/${project.id}`}
+        structuredData={projectSchema}
+      />
       <article className="max-w-5xl mx-auto px-4 sm:px-6">
         
         {/* Navigation Breadcrumbs & Back */}

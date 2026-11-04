@@ -2,6 +2,7 @@ import { useState } from "react";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import TimelineRoadmap from "../components/TimelineRoadmap";
+import SEO from "../components/SEO";
 import { Link } from "react-router-dom";
 import { 
   Layers, 
@@ -39,6 +40,12 @@ export default function Projects() {
 
   return (
     <div className="py-8 sm:py-16 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
+      <SEO 
+        title="Engineering Portfolio & Production Projects | Jay Soni"
+        description="Explore 20 production systems, commercial CRMs, Google Play Store applications, offline-first mobile apps, and developer tools engineered by Jay Soni in Ahmedabad."
+        keywords="Jay Soni Projects, PropKart CRM, Parichay Sammelan App, Jeweller Ledger, GitSphere Desktop, Flutter Projects Ahmedabad, React Production Apps, Software Architecture Portfolio"
+        canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects"
+      />
       {/* ----------------- 1. PAGE HEADER ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
         <div className="max-w-3xl">
