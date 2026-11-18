@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { timelineEvents } from "../data/timeline";
+import { getCredentialById } from "../data/credentials";
+import CredentialsGallery, { CredentialModal } from "../components/CredentialsGallery";
 import SEO from "../components/SEO";
 import { 
   Smartphone, 
@@ -9,10 +12,14 @@ import {
   GraduationCap,
   Sparkles,
   Zap,
-  Building2
+  Building2,
+  Eye,
+  FileCheck2
 } from "lucide-react";
 
 export default function About() {
+  const [activeTimelineCredential, setActiveTimelineCredential] = useState(null);
+
   const handleMascotSpeak = (text) => {
     window.dispatchEvent(new CustomEvent("mascot-speak", { detail: { text } }));
   };
@@ -43,9 +50,9 @@ export default function About() {
   return (
     <div className="py-8 sm:py-16 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       <SEO 
-        title="About Jay Soni — Software Engineer & Architect in Ahmedabad"
-        description="Learn about Soni Jaykumar Hasmukh (Jay Soni), Lead Mobile & Full-Stack Architect at NB Developers in Ahmedabad, Gujarat. Background, technical journey, awards, and engineering philosophy."
-        keywords="About Jay Soni, Soni Jaykumar, Engineer in Ahmedabad, Software Architect Ahmedabad, NB Developers Ahmedabad, Flutter Engineer Gujarat, Full Stack Developer Bio, Gandhinagar University IT"
+        title="About Jay Soni — Software Engineer, Certifications & Credentials | Ahmedabad"
+        description="Learn about Soni Jaykumar Hasmukh (Jay Soni), Lead Mobile & Full-Stack Architect at NB Developers in Ahmedabad. Verified NB Infra R&R Award, Tech-Craft ReactJS Certification (TC06260039) & Internship Offer Letter, and AIITA C++ Certification (Grade A)."
+        keywords="About Jay Soni, Soni Jaykumar, Engineer in Ahmedabad, Software Architect Ahmedabad, NB Infra Award, Tech-Craft ReactJS Certificate TC06260039, AIITA C++ Certificate GJ/037/734, Gandhinagar University IT"
         canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/about"
       />
       {/* ----------------- 1. HERO BIO ----------------- */}
@@ -202,6 +209,16 @@ export default function About() {
         </div>
       </section>
 
+      {/* ----------------- 2.5 VERIFIED CREDENTIALS, CERTIFICATES & OFFER LETTERS ----------------- */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 border-t border-[#E8E5DF] dark:border-[#22252F]" id="credentials">
+        <CredentialsGallery
+          excludeAward={false}
+          showFilters={true}
+          heading="Verified Awards, Certificates & Offer Letters"
+          subheading="Complete authenticated archive of awards, technical certifications, and internship appointment letters with verification IDs."
+        />
+      </section>
+
       {/* ----------------- 3. CAREER EVOLUTION TIMELINE ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 border-t border-[#E8E5DF] dark:border-[#22252F]">
         <div className="max-w-2xl mb-8 sm:mb-12">
@@ -246,10 +263,38 @@ export default function About() {
                   </li>
                 ))}
               </ul>
+
+              {event.credentialIds && event.credentialIds.length > 0 && (
+                <div className="flex flex-wrap items-center gap-2 mt-4 pt-3 border-t border-[#E8E5DF] dark:border-[#22252F]">
+                  {event.credentialIds.map((cId) => {
+                    const cred = getCredentialById(cId);
+                    if (!cred) return null;
+                    return (
+                      <button
+                        key={cId}
+                        onClick={() => setActiveTimelineCredential(cred)}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-[#FBF9F5] dark:bg-[#101218] hover:bg-[#121316] hover:text-white dark:hover:bg-[#C27803] border border-[#E8E5DF] dark:border-[#262933] text-xs font-semibold text-[#121316] dark:text-[#E8C37D] transition cursor-pointer"
+                      >
+                        {cred.type === "offer-letter" ? (
+                          <FileCheck2 className="w-3.5 h-3.5" />
+                        ) : (
+                          <Eye className="w-3.5 h-3.5" />
+                        )}
+                        <span>Inspect {cred.type === "offer-letter" ? "Offer Letter" : "Certificate"}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
             </div>
           ))}
         </div>
       </section>
+
+      <CredentialModal
+        credential={activeTimelineCredential}
+        onClose={() => setActiveTimelineCredential(null)}
+      />
     </div>
   );
 }

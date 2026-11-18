@@ -10,6 +10,7 @@ export const timelineEvents = [
     category: "Professional Honor & Award",
     type: "work",
     badge: "Company-Wide Award",
+    credentialIds: ["nb-infra-award"],
     summary: "Awarded Certificate of Appreciation by NB Infra Projects Limited (Since 1946) for exceptional engineering performance and valuable quarterly contributions.",
     details: [
       "Formally recognized by Founder & Chairman Rahul D. Prajapati for outstanding performance, technical leadership, and unwavering commitment across NB PropertyTech softwares.",
@@ -43,6 +44,21 @@ export const timelineEvents = [
       "Built hybrid networking: direct LAN transfers via embedded Shelf HTTP server + UDP discovery, with Vercel Serverless SSE relay fallback.",
       "Implemented zero-retention serverless message queueing with Upstash Redis, pruning payloads immediately upon delivery acknowledgment.",
       "Designed developer-first UX with syntax-highlighted code sharing, one-tap copy, dark mode, and local categorized file organization."
+    ]
+  },
+  {
+    date: "July 2026 (01 – 15 July)",
+    title: "React JS Intern & Comprehensive Frontend Certification — Tech-Craft",
+    category: "Verified Internship & Certification",
+    type: "internship",
+    badge: "Cert No: TC06260039",
+    credentialIds: ["tech-craft-reactjs-cert", "tech-craft-offer-letter"],
+    summary: "Completed intensive hands-on Frontend Development with React.js internship at Tech-Craft (IIM Road, Ahmedabad), certified by Founder Vruddhi Shah.",
+    details: [
+      "Appointed as React JS Intern (Official Offer Letter issued by Founder Vruddhi Shah, Tech-Craft, Polytechnic, Opp. AMA, Ahmedabad).",
+      "Mastered production frontend architecture across HTML5, CSS3, Bootstrap, JavaScript (ES6+), and React.js with hands-on component delivery.",
+      "Engineered and deployed an interactive Hospital Management Dashboard (live: hospital-dashboard-woad-gamma.vercel.app) with dynamic doctor cards, patient scheduling, and analytics.",
+      "Awarded Official Completion Certificate (No. TC06260039) on 15 July 2026 for ReactJS, Comprehensive Front-end Development."
     ]
   },
   {
@@ -86,20 +102,6 @@ export const timelineEvents = [
       "Engineered multi-account GitHub credential switching in SQLite, eliminating terminal re-authentication collisions.",
       "Implemented 4-stage visual pipeline, remote collaborator commit tracking, and semantic README 1-click script execution.",
       "Packaged production Windows installer with Inno Setup 6 (12.07 MB) and portable standalone ZIP with SHA-256 validation."
-    ]
-  },
-  {
-    date: "Late 2025",
-    title: "React & Node Developer Internship — Tech-Craft",
-    category: "Internship",
-    type: "internship",
-    badge: "Healthcare Platform",
-    summary: "Built and deployed an interactive Hospital Management Dashboard.",
-    details: [
-      "Engineered modular React components, custom hooks, and dynamic data filtering.",
-      "Built doctor directory cards, patient record listings, and appointment scheduling flows.",
-      "Created visual analytics statistics cards for clinical performance monitoring.",
-      "Live deployment on Vercel: https://hospital-dashboard-woad-gamma.vercel.app/"
     ]
   },
   {
@@ -191,6 +193,21 @@ export const timelineEvents = [
       "Engineered proprietary GST billing calculation engine computing metal purity, hallmark fees, making wastage, and CGST/SGST.",
       "Built Flutter desktop physical barcode printing software for 22 staggered jewellery tags with central tail strips & HUID tracking.",
       "Digitized pharmacies, grocery kirana stores, and salons from manual paper ledgers to digital operations."
+    ]
+  },
+  {
+    date: "April – May 2023",
+    title: "Certificate in C++ Programming Course (Grade A) — AIITA",
+    category: "National Programming Certification",
+    type: "achievement",
+    badge: "ISO 9001:2008 · Grade A",
+    credentialIds: ["aiita-cpp-cert"],
+    summary: "Awarded Certificate of Excellence (Grade A) under the All India Information Technology Abhiyan (AIITA) National Computer Literacy Programme.",
+    details: [
+      "Completed 2-month intensive C++ training (01 Apr 2023 – 31 May 2023) at Jadav Computer, Khedbrahma, Dist. Sabarkantha, Gujarat.",
+      "Earned Grade A (70% – 80%) under Govt. of Gujarat & N.C.T. New Delhi registered ISO 9001:2008 national programme (Issued 14 June 2023).",
+      "Verified Student Code: GJ/037/734 | Verification Code: 9NYQD3BRA2 (www.aiita.in).",
+      "Built core foundations in Object-Oriented Programming (OOP), pointers, memory management, and algorithmic problem solving."
     ]
   }
 ];

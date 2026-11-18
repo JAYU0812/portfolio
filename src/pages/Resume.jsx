@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { resumeData } from "../data/resumeData";
+import { CREDENTIALS } from "../data/credentials";
+import { CredentialModal } from "../components/CredentialsGallery";
 import SEO from "../components/SEO";
 import { 
   Printer, 
@@ -12,12 +14,15 @@ import {
   Download, 
   Check, 
   FileText,
-  Sparkles
+  Sparkles,
+  ShieldCheck,
+  Eye
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/Icons";
 
 export default function Resume() {
   const [viewMode, setViewMode] = useState("ats"); // "ats" (strict 2-page standard) or "full" (complete archive)
+  const [selectedCredential, setSelectedCredential] = useState(null);
 
   const handlePrint = () => {
     window.print();
@@ -369,7 +374,7 @@ export default function Resume() {
               {(viewMode === "ats" && resumeData.coreAchievements ? resumeData.coreAchievements : resumeData.achievements).slice(0, 5).map((ach, idx) => (
                 <li key={idx}>{ach}</li>
               ))}
-              {resumeData.certifications.slice(0, 3).map((cert, idx) => (
+              {resumeData.certifications.slice(1).map((cert, idx) => (
                 <li key={`cert-${idx}`}>{cert}</li>
               ))}
             </ul>
@@ -400,6 +405,62 @@ export default function Resume() {
         </div>
 
       </article>
+
+      {/* ----------------- DIGITAL-ONLY VERIFIED DOCUMENTS ARCHIVE (Hidden in Print) ----------------- */}
+      <section className="max-w-4xl mx-auto mt-6 sm:mt-8 print:hidden">
+        <div className="p-5 sm:p-6 rounded-2xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] shadow-xs">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4 pb-3 border-b border-[#E8E5DF] dark:border-[#232733]">
+            <div>
+              <div className="inline-flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
+                <ShieldCheck className="w-3.5 h-3.5" />
+                <span>Recruiter Verification Vault</span>
+              </div>
+              <h2 className="text-sm sm:text-base font-extrabold text-[#121316] dark:text-white mt-0.5">
+                Inspect Official Certificates & Offer Letters
+              </h2>
+            </div>
+            <span className="text-[11px] font-mono text-[#7A7E89] dark:text-[#8E95A5]">
+              {CREDENTIALS.length} Verified Originals (Hidden in A4 Print)
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {CREDENTIALS.map((cred) => (
+              <button
+                key={cred.id}
+                onClick={() => setSelectedCredential(cred)}
+                className="group text-left p-3 rounded-xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#262933] hover:border-[#C27803]/60 transition flex flex-col justify-between gap-2 cursor-pointer"
+              >
+                <div className="h-24 w-full rounded-lg bg-[#F2EDE4] dark:bg-[#0B0C10] p-1.5 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={cred.image}
+                    alt={cred.imageAlt}
+                    loading="lazy"
+                    className="max-h-full max-w-full object-contain rounded group-hover:scale-105 transition-transform duration-200"
+                  />
+                </div>
+                <div>
+                  <span className="text-[9px] font-mono font-bold uppercase text-[#C27803] dark:text-[#E8C37D] block">
+                    {cred.typeLabel}
+                  </span>
+                  <span className="text-xs font-bold text-[#121316] dark:text-white leading-snug line-clamp-2 mt-0.5 block">
+                    {cred.shortTitle}
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-[10px] font-mono text-[#7A7E89] dark:text-[#8E95A5] mt-1 group-hover:text-[#C27803] dark:group-hover:text-[#E8C37D]">
+                    <Eye className="w-3 h-3" />
+                    Inspect ({cred.credentialId})
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <CredentialModal
+        credential={selectedCredential}
+        onClose={() => setSelectedCredential(null)}
+      />
     </div>
   );
 }

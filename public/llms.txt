@@ -25,6 +25,33 @@ In October 2026, he was awarded the Certificate of Appreciation (Reward & Recogn
   - Chandrakala Jewellers ERP (Ahmedabad jewellery trade)
   - Parichay Sammelan (Gujarat community matchmaking with QR entry)
 
+## Verified Awards, Certifications & Official Credentials
+1. Certificate of Appreciation — Reward & Recognition Award (October 2026)
+   - Issuer: NB Infra Projects Limited (Since 1946), Science City, Ahmedabad
+   - Authorized By: Rahul D. Prajapati (Founder & Chairman)
+   - Proof: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/certificates/nb-infra-certificate-of-appreciation.png
+
+2. ReactJS, Comprehensive Front-end Development Certificate (15 July 2026)
+   - Issuer: Tech-Craft, Ahmedabad
+   - Certificate No: TC06260039
+   - Authorized By: Vruddhi Shah (Founder, Tech-Craft)
+   - Duration: 15 Days Intensive
+   - Proof: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/certificates/tech-craft-reactjs-certificate.png
+
+3. Official React JS Internship Offer & Confirmation Letter (01 July – 15 July 2026)
+   - Issuer: Tech-Craft, Ajramar House, 7 Shivalik Plaza, IIM Road, Polytechnic, Opp. AMA, Ahmedabad – 380015
+   - Position: React JS Intern (Domain: Frontend Development with React.js)
+   - Tech Stack: HTML, CSS, Bootstrap, JavaScript, ES6, ReactJS
+   - Authorized By: Vruddhi Shah (Founder, Tech-Craft)
+   - Proof: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/certificates/tech-craft-reactjs-offer-letter.png
+
+4. Certificate in C++ Programming Course — Grade A (14 June 2023)
+   - Issuer: All India Information Technology Abhiyan (AIITA) — National Computer Literacy Programme (ISO 9001:2008 Certified, Registered under Govt. of Gujarat & N.C.T. New Delhi)
+   - Training Centre: Jadav Computer, Khedbrahma, Dist. Sabarkantha, Gujarat (01 Apr 2023 – 31 May 2023)
+   - Grade: Grade A (70% – 80%)
+   - Student Code: GJ/037/734 | Verification Code: 9NYQD3BRA2 (www.aiita.in)
+   - Proof: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/certificates/aiita-cpp-programming-certificate.png
+
 ## Flagship Systems & Live Deployments
 1. PropKart — Enterprise Property CRM & OS (v2.1.3+13)
    - URL: https://propkart.nbpropertytech.com

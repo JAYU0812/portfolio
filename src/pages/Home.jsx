@@ -4,6 +4,7 @@ import { projects } from "../data/projects";
 import { timelineEvents } from "../data/timeline";
 import ProjectCard from "../components/ProjectCard";
 import ArchitectureConsole from "../components/ArchitectureConsole";
+import CredentialsGallery from "../components/CredentialsGallery";
 import SEO from "../components/SEO";
 import { 
   ArrowUpRight, 
@@ -35,8 +36,8 @@ export default function Home() {
     <div className="py-6 sm:py-12 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       <SEO 
         title="Jay Soni — Engineer in Ahmedabad | Lead Mobile & Full-Stack Architect"
-        description="Official portfolio of Jay Soni (Soni Jaykumar Hasmukh), award-winning Lead Mobile & Full-Stack Architect in Ahmedabad, Gujarat. Specialist in Flutter (SDK 36), React, Node.js, offline-first systems, and enterprise PropTech."
-        keywords="Engineer in Ahmedabad, Software Engineer Ahmedabad, Full Stack Developer Ahmedabad, Flutter Developer Ahmedabad, Jay Soni, Soni Jaykumar, NB Developers, PropKart CRM, Web Developer Ahmedabad, Mobile App Developer Gujarat, Best Software Engineer Ahmedabad"
+        description="Official portfolio of Jay Soni (Soni Jaykumar Hasmukh), award-winning Lead Mobile & Full-Stack Architect in Ahmedabad, Gujarat. NB Infra R&R Award Winner, Tech-Craft ReactJS Certified, AIITA C++ Certified. Specialist in Flutter (SDK 36), React, Node.js, offline-first systems, and PropTech."
+        keywords="Engineer in Ahmedabad, Software Engineer Ahmedabad, Full Stack Developer Ahmedabad, Flutter Developer Ahmedabad, Jay Soni, Soni Jaykumar, NB Developers, PropKart CRM, Tech-Craft ReactJS Certified, AIITA C++ Certified, Web Developer Ahmedabad, Mobile App Developer Gujarat, Best Software Engineer Ahmedabad"
         canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"
       />
       {/* ----------------- 1. HERO SECTION ----------------- */}
@@ -468,6 +469,16 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* ----------------- 2.6 VERIFIED CERTIFICATIONS & OFFER LETTER ----------------- */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10" id="credentials">
+        <CredentialsGallery
+          excludeAward={true}
+          showFilters={false}
+          heading="Verified Certifications & Internship Credentials"
+          subheading="Authenticated technical certificates and official internship offer letter — click any document to inspect the high-resolution original."
+        />
       </section>
 
       {/* ----------------- 3. ARCHITECTURE & TELEMETRY CONSOLE ----------------- */}

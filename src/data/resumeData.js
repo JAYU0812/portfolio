@@ -116,20 +116,20 @@ export const resumeData = {
     },
     {
       company: "Tech-Craft",
-      role: "React & Node Developer Intern",
-      period: "Late 2025",
-      location: "Remote / Ahmedabad",
-      description: "Healthcare Clinical Management Dashboard",
-      technologies: ["React", "Node.js", "JavaScript", "Tailwind CSS", "Props", "useState", "Vercel"],
+      role: "React JS Intern",
+      period: "01 July 2026 – 15 July 2026",
+      location: "IIM Road, Polytechnic, Ahmedabad",
+      description: "Frontend Development with React.js (Cert No: TC06260039)",
+      technologies: ["React.js", "JavaScript (ES6+)", "HTML5", "CSS3", "Bootstrap", "Tailwind CSS", "Vercel"],
       coreBullets: [
-        "Engineered complete frontend architecture for the Hospital Management Dashboard on Vercel with responsive clinical scheduling, Doctor Cards, and real-time bed occupancy stats.",
-        "Implemented appointment scheduling, modification, and cancellation workflows with responsive form input validation and patient listings."
+        "Selected as React JS Intern at Tech-Craft, Ahmedabad (Offer Letter & Completion Certificate No. TC06260039 authorized by Founder Vruddhi Shah), focusing on HTML, CSS, Bootstrap, JavaScript ES6, and ReactJS.",
+        "Engineered complete frontend architecture for the Hospital Management Dashboard on Vercel with responsive clinical scheduling, Doctor Cards, appointment workflows, and real-time bed occupancy stats."
       ],
       bullets: [
+        "Appointed as React JS Intern at Tech-Craft, Ahmedabad (IIM Road, Opp. AMA; Offer Letter & Completion Certificate No. TC06260039 signed by Founder Vruddhi Shah).",
+        "Completed intensive hands-on training and production implementation across HTML5, CSS3, Bootstrap, JavaScript (ES6+), and ReactJS.",
         "Engineered the complete frontend architecture for the Hospital Management Dashboard (live: hospital-dashboard-woad-gamma.vercel.app).",
-        "Developed modular UI components including dynamic Doctor Profile Cards, searchable Patient Listings, and Department Filters.",
-        "Implemented appointment scheduling, modification, and cancellation workflows with responsive form input validation.",
-        "Created visual clinical statistics summary cards to visualize bed occupancy rates and daily patient volumes."
+        "Developed modular UI components including dynamic Doctor Profile Cards, searchable Patient Listings, Department Filters, and clinical bed-occupancy statistics."
       ]
     },
     {
@@ -443,10 +443,10 @@ export const resumeData = {
   ],
 
   certifications: [
-    "Certificate of Appreciation — Reward & Recognition Award (NB Infra Projects Limited, Since 1946) presented by Founder & Chairman Rahul D. Prajapati in recognition of exceptional quarterly performance, valuable contributions, and dedication to excellence",
-    "Flutter Mobile Development Internship (3 Months) — Comprehensive Mobile Engineering",
-    "React & Node Development Internship — Tech-Craft (Clinical Dashboard Architecture)",
-    "C++ Object-Oriented Programming Certification — Grade A"
+    "Certificate of Appreciation — Reward & Recognition Award (NB Infra Projects Limited, Since 1946) presented by Founder & Chairman Rahul D. Prajapati (Oct 2026)",
+    "ReactJS, Comprehensive Front-end Development Certificate & Official React JS Internship Offer Letter — Tech-Craft, Ahmedabad (Cert No: TC06260039, Signed by Founder Vruddhi Shah, July 2026)",
+    "Certificate in C++ Programming Course (Grade A, ISO 9001:2008) — All India Information Technology Abhiyan (AIITA), Govt. of Gujarat & N.C.T. Delhi National Programme (Student Code: GJ/037/734, Verification: 9NYQD3BRA2, June 2023)",
+    "Flutter Mobile Development Internship (3 Months) — Cross-Platform Mobile Architecture & BLoC State Management"
   ],
 
   coreAchievements: [
