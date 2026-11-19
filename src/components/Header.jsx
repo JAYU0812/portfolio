@@ -33,7 +33,7 @@ export default function Header() {
             <div className="text-sm sm:text-base font-bold tracking-tight text-[#121316] dark:text-[#F5F5F7] group-hover:text-[#C27803] dark:group-hover:text-[#E8C37D] transition-colors leading-tight">
               Soni Jaykumar
             </div>
-            <div className="text-[10px] sm:text-xs font-mono text-[#7A7E89] dark:text-[#8E95A5] flex items-center gap-1.5 leading-tight mt-0.5">
+            <div className="text-[10px] sm:text-xs font-mono text-[#4B5563] dark:text-[#8E95A5] flex items-center gap-1.5 leading-tight mt-0.5">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
               Full Stack Engineer
             </div>

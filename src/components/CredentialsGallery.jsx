@@ -77,6 +77,9 @@ export function CredentialModal({ credential, onClose }) {
           <img
             src={credential.image}
             alt={credential.imageAlt}
+            width="800"
+            height="600"
+            decoding="async"
             className="w-full max-h-[60vh] object-contain rounded-lg"
           />
         </div>
@@ -262,6 +265,9 @@ export default function CredentialsGallery({
                   src={cred.image}
                   alt={cred.imageAlt}
                   loading="lazy"
+                  decoding="async"
+                  width="400"
+                  height="280"
                   className="max-h-full max-w-full object-contain rounded-lg shadow-md border border-black/10 dark:border-white/10 group-hover:scale-105 transition-transform duration-300"
                 />
 

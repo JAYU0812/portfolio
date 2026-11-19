@@ -54,7 +54,7 @@ export default function Home() {
                 className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] shadow-xs text-[11px] sm:text-xs font-mono text-[#121316] dark:text-[#F5F5F7] max-w-full min-w-0"
               >
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-                <span className="font-semibold text-[#C27803] dark:text-[#E8C37D] shrink-0">Role:</span>
+                <span className="font-semibold text-[#92400E] dark:text-[#E8C37D] shrink-0">Role:</span>
                 <span className="truncate max-w-[190px] xs:max-w-none">Lead Architect @ NB Developers</span>
               </div>
 
@@ -456,6 +456,9 @@ export default function Home() {
                 <img 
                   src="/certificates/nb-infra-certificate-of-appreciation.png" 
                   alt="NB Infra Projects Certificate of Appreciation - Jay Soni"
+                  width="400"
+                  height="280"
+                  decoding="async"
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -709,6 +712,9 @@ export default function Home() {
               <img 
                 src="/certificates/nb-infra-certificate-of-appreciation.png" 
                 alt="Certificate of Appreciation - Jay Soni"
+                width="800"
+                height="600"
+                decoding="async"
                 className="w-full max-h-[60vh] object-contain"
               />
             </div>

@@ -30,9 +30,9 @@ export default function Footer() {
 
           {/* Col 2: Navigation */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] dark:text-[#F5F5F7] mb-3 sm:mb-4">
+            <p className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] dark:text-[#F5F5F7] mb-3 sm:mb-4">
               Navigation
-            </h4>
+            </p>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <Link to="/" className="hover:text-[#C27803] dark:hover:text-[#E8C37D] transition">
@@ -79,9 +79,9 @@ export default function Footer() {
 
           {/* Col 3: Connect & Live Links */}
           <div>
-            <h4 className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] dark:text-[#F5F5F7] mb-3 sm:mb-4">
+            <p className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] dark:text-[#F5F5F7] mb-3 sm:mb-4">
               Connect & Live
-            </h4>
+            </p>
             <ul className="space-y-2 text-xs sm:text-sm">
               <li>
                 <a

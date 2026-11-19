@@ -36,11 +36,11 @@ function renderHeader(currentPath) {
           </span>
         </div>
         <nav style="display: flex; flex-wrap: wrap; gap: 1.25rem; font-size: 0.875rem; font-weight: 600;">
-          <a href="/about" style="color: ${currentPath === "/about" ? "#C27803" : "#4B5563"}; text-decoration: none;">About</a>
-          <a href="/projects" style="color: ${currentPath.startsWith("/projects") ? "#C27803" : "#4B5563"}; text-decoration: none;">Projects</a>
-          <a href="/developer-questions" style="color: ${currentPath.startsWith("/developer-questions") ? "#C27803" : "#4B5563"}; text-decoration: none;">Developer Q&amp;A</a>
-          <a href="/resume" style="color: ${currentPath === "/resume" ? "#C27803" : "#4B5563"}; text-decoration: none;">Resume &amp; Credentials</a>
-          <a href="/contact" style="color: ${currentPath === "/contact" ? "#C27803" : "#4B5563"}; text-decoration: none;">Contact</a>
+          <a href="/about" style="color: ${currentPath === "/about" ? "#92400E" : "#4B5563"}; text-decoration: none;">About</a>
+          <a href="/projects" style="color: ${currentPath.startsWith("/projects") ? "#92400E" : "#4B5563"}; text-decoration: none;">Projects</a>
+          <a href="/developer-questions" style="color: ${currentPath.startsWith("/developer-questions") ? "#92400E" : "#4B5563"}; text-decoration: none;">Developer Q&amp;A</a>
+          <a href="/resume" style="color: ${currentPath === "/resume" ? "#92400E" : "#4B5563"}; text-decoration: none;">Resume &amp; Credentials</a>
+          <a href="/contact" style="color: ${currentPath === "/contact" ? "#92400E" : "#4B5563"}; text-decoration: none;">Contact</a>
         </nav>
       </div>
     </header>
