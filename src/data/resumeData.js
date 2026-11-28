@@ -384,7 +384,7 @@ export const resumeData = {
       badge: "Play Store Live (Modernized)",
       technologies: "Native Android (Kotlin + Jetpack Compose), Node.js (Express API), TiDB Cloud, Cloudinary, SQLite, Google Play Console",
       bullets: [
-        "Re-engineered with Kotlin & Jetpack Compose UI on Android and dedicated open-source Node.js Express API (github.com/JAYU0812/kitaabbackend) on TiDB Cloud.",
+        "Re-engineered with Kotlin & Jetpack Compose UI on Android and dedicated open-source Node.js Express API (github.com/jay0812soni-developer/kitaabbackend) on TiDB Cloud.",
         "Digitizes paper bahi-khata accounts for jewellery retailers across Gujarat with real-time balance calculations, customer ledger records, and PDF exports."
       ]
     },
@@ -445,7 +445,7 @@ export const resumeData = {
     },
     {
       name: "Soni Samaj Community Directory",
-      url: "https://sonisamaj.wuaze.com",
+      url: null,
       displayUrl: "First Production Project (Feb 2025)",
       badge: "Foundational Project",
       technologies: "PHP, MySQL, Relational Database, Search Indexing",

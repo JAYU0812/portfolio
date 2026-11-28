@@ -82,7 +82,7 @@ export const projects = [
       "Dynamic RBAC",
       "BLoC & Cubit"
     ],
-    githubUrl: "https://github.com/JAYU0812/brokerportal",
+    githubUrl: null,
     liveUrl: "https://broker.nbpropertytech.com",
     playStoreUrl: null,
     featured: true,
@@ -533,7 +533,7 @@ export const projects = [
     version: "v1.0.2 (Android 15 SDK 36) / Express API",
     tagline: "Native Android (Kotlin + Jetpack Compose) daily ledger management app targeting Android 15 (SDK 36) for jewellery retailers, published on Google Play Store with TiDB Cloud backend.",
     description:
-      "A specialized native financial ledger application engineered for retail jewellery merchants to digitize traditional manual paper bahi-khata. Re-architected as a high-performance Native Android application using Kotlin and Jetpack Compose targeting Android 15 (SDK 36), backed by a production Node.js Express API (open source at github.com/JAYU0812/kitaabbackend), TiDB Cloud distributed database, and offline-capable SQLite fallback. Published on Google Play Store (com.jeweller.ledger), providing retail jewellery businesses across Gujarat with zero-loss audit ledgers, automated daily balance aggregation, and instant PDF statement exports.",
+      "A specialized native financial ledger application engineered for retail jewellery merchants to digitize traditional manual paper bahi-khata. Re-architected as a high-performance Native Android application using Kotlin and Jetpack Compose targeting Android 15 (SDK 36), backed by a production Node.js Express API (open source at github.com/jay0812soni-developer/kitaabbackend), TiDB Cloud distributed database, and offline-capable SQLite fallback. Published on Google Play Store (com.jeweller.ledger), providing retail jewellery businesses across Gujarat with zero-loss audit ledgers, automated daily balance aggregation, and instant PDF statement exports.",
     tech: [
       "Kotlin",
       "Jetpack Compose",
@@ -547,13 +547,13 @@ export const projects = [
       "Google Play Console"
     ],
     liveUrl: "https://jeweller-ledger.wuaze.com",
-    githubUrl: "https://github.com/JAYU0812/kitaabbackend",
+    githubUrl: "https://github.com/jay0812soni-developer/kitaabbackend",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.jeweller.ledger&pcampaignid=web_share",
     packageName: "com.jeweller.ledger",
     featured: true,
     highlights: [
       "Modern Native Android & Jetpack Compose Architecture: Published live on Google Play Store (com.jeweller.ledger) targeting Android 15 (SDK 36) with intuitive non-technical merchant UX",
-      "Dedicated Node.js & TiDB Cloud Backend: Open-source Express API service (github.com/JAYU0812/kitaabbackend) backed by TiDB Cloud serverless database",
+      "Dedicated Node.js & TiDB Cloud Backend: Open-source Express API service (github.com/jay0812soni-developer/kitaabbackend) backed by TiDB Cloud serverless database",
       "Digital Bahi-Khata for Gujarat Jewellery Merchants: Eliminates arithmetic discrepancies and replaces physical ledger books across commercial jewelry stores",
       "Automated Financial Ledger Analytics: Instant customer balance totals, debit/credit aggregation, and one-tap printable PDF statement generation"
     ]
@@ -763,7 +763,7 @@ export const projects = [
       "Relational Database",
       "Search Engine"
     ],
-    liveUrl: "https://sonisamaj.wuaze.com",
+    liveUrl: null,
     playStoreUrl: null,
     featured: false,
     highlights: [

@@ -169,7 +169,7 @@
 
 ### 21. KITAAB — Native Android Jeweller Ledger App (Target SDK 36, Android 15) & Cloud Engine
 - Google Play: https://play.google.com/store/apps/details?id=com.jeweller.ledger
-- Backend Repo: https://github.com/JAYU0812/kitaabbackend
+- Backend Repo: https://github.com/jay0812soni-developer/kitaabbackend
 - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/kitaab-ledger
 - Stack: Native Android (Kotlin & Jetpack Compose, Target SDK 36), Node.js Express API, TiDB Cloud, Cloudinary, Encrypted Local Backup
 - Highlights: Published live on Google Play Store targeting Android 15 (SDK 36) for retail jewellery merchants to digitize traditional manual paper bahi-khata, track credit transactions, udhar balances, and automated daily interest with cloud synchronization.

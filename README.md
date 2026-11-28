@@ -118,7 +118,7 @@ I am **Soni Jaykumar**, a Lead Mobile & Full-Stack Software Engineer based in Ah
 * **Tech Stack**: React.js, Node.js, Tailwind CSS, Component State Architecture
 * **Highlights**: Clinical operations platform with Doctor directory cards, patient record filtering, appointment scheduling, and real-time bed occupancy analytics.
 
-### 11. [Soni Samaj Community Directory](https://sonisamaj.wuaze.com)
+### 11. Soni Samaj Community Directory *(site currently offline)*
 * **Milestone**: Foundational 1st Project (February 2025)
 * **Tech Stack**: PHP, MySQL, Relational Database Modeling, Multi-Parameter Search Engine
 * **Highlights**: Digital community directory establishing multi-attribute family hierarchies and location-based discovery across Gujarat.
