@@ -34,9 +34,9 @@ export default function Resume() {
   return (
     <div className="py-6 sm:py-8 px-3 sm:px-6 print:p-0 print:m-0 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       <SEO 
-        title="Resume — Soni Jaykumar Hasmukh | Lead Mobile & Full-Stack Architect"
-        description="Curriculum Vitae of Soni Jaykumar Hasmukh (Jay Soni): Lead Mobile & Full-Stack Architect at NB Developers, Ahmedabad. Technical skills, production achievements, published apps, and R&R Award."
-        keywords="Jay Soni Resume, Soni Jaykumar CV, Software Engineer Resume Ahmedabad, Flutter Architect Resume, Full Stack Developer CV India"
+        title="Resume — Soni Jaykumar Hasmukh | Top Software Engineer in Gujarat | Lead Mobile & Full-Stack Architect"
+        description="Official Curriculum Vitae of Soni Jaykumar Hasmukh (Jay Soni): Top Software Engineer in Gujarat and Lead Mobile & Full-Stack Architect at NB Developers, Science City, Ahmedabad. Technical skills, production achievements, 22 systems, published apps, and R&R Award."
+        keywords="Top Software Engineer in Gujarat, Jay Soni Resume, Soni Jaykumar CV, Software Engineer Resume Ahmedabad, Lead Mobile Architect Gujarat, Flutter Architect Resume, Full Stack Developer CV India"
         canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/resume"
       />
       
@@ -80,7 +80,7 @@ export default function Resume() {
             <div>
               <span className="text-xs font-bold text-[#121316] dark:text-white flex items-center gap-1.5">
                 <FileText className="w-3.5 h-3.5 text-[#C27803]" />
-                {viewMode === "ats" ? "A4 ATS Standard (Strict 2 Pages)" : "Extended Career Dossier (All 20 Projects)"}
+                {viewMode === "ats" ? "A4 ATS Standard (Strict 2 Pages)" : "Extended Career Dossier (All 22 Systems)"}
               </span>
               <p className="text-[11px] text-[#656A76] dark:text-[#8E95A5] mt-0.5">
                 {viewMode === "ats" 

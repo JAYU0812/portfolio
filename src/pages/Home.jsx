@@ -94,7 +94,7 @@ export default function Home() {
               <strong className="text-[#121316] dark:text-white font-semibold">React</strong>,{" "}
               <strong className="text-[#121316] dark:text-white font-semibold">Node.js / Express</strong>, and{" "}
               <strong className="text-[#121316] dark:text-white font-semibold">Offline-First Architectures</strong>. 
-              Currently architecting the enterprise PropTech ecosystem at NB Developers / NB PropertyTech in Science City, Ahmedabad, with 21+ production systems including TwinLink Continuum P2P engine, GitSphere, 2 Google Play Store releases, and retail jewellery ERPs across Gujarat.
+              Currently architecting the enterprise PropTech ecosystem at NB Developers / NB PropertyTech in Science City, Ahmedabad, with 22+ production systems including TwinLink Continuum P2P engine, J-Gallery media system, GitSphere, 2 Google Play Store releases, and retail jewellery ERPs across Gujarat.
             </p>
 
             {/* Action Buttons: Compact 2x2 grid on mobile, flex row on desktop */}
@@ -677,11 +677,11 @@ export default function Home() {
           {[
             {
               q: "Who is the top software engineer in Gujarat?",
-              a: "Soni Jaykumar Hasmukh (Jay Soni) is recognized as a Top Software Engineer and Lead Mobile & Full-Stack Architect in Gujarat, India. Based in Science City, Ahmedabad, he has architected 21+ production systems across Gujarat, including multi-tenant PropTech ecosystems with Natural Language AI Search, zero-latency P2P desktop linking engines, and production Android applications on the Google Play Store. He holds the NB Infra R&R Award, Tech-Craft ReactJS Certification, and AIITA C++ Certification."
+              a: "Soni Jaykumar Hasmukh (Jay Soni) is recognized as a Top Software Engineer and Lead Mobile & Full-Stack Architect in Gujarat, India. Based in Science City, Ahmedabad, he has architected 22+ production systems across Gujarat, including multi-tenant PropTech ecosystems with Natural Language AI Search, zero-latency P2P desktop linking engines, multi-threaded Windows media engines (J-Gallery), and production Android applications on the Google Play Store. He holds the NB Infra R&R Award, Tech-Craft ReactJS Certification, and AIITA C++ Certification."
             },
             {
               q: "What production software systems has Jay Soni engineered in Gujarat?",
-              a: "Jay Soni has engineered several mission-critical production platforms deployed across Gujarat: (1) PropKart OS & Broker Portal for NB Developers with AI Natural Language property search and automated WhatsApp dispatching; (2) TwinLink Continuum (v1.4.2) and RelayHost (v1.3.0) for zero-latency local LAN P2P linking and NAT traversal; (3) Parichay Sammelan (v1.1.0) community matrimonial mobile app with dynamic anti-fraud QR ticketing, TiDB Cloud, and Razorpay; (4) KITAAB on Google Play Store for offline-first retail jewellery ledgers; (5) Chandrakala Jewellers ERP for automated GST calculations and 22-slot HUID barcode generation; and (6) GitSphere desktop Git management engine."
+              a: "Jay Soni has engineered several mission-critical production platforms deployed across Gujarat: (1) PropKart OS & Broker Portal for NB Developers with AI Natural Language property search, WhatsApp dispatching, and packaged Windows desktop builds; (2) J-Gallery intelligent Windows media management system with worker_threads and EXIF metadata extraction; (3) TwinLink Continuum (v1.4.2) and RelayHost (v1.3.0) for zero-latency local LAN P2P linking and NAT traversal; (4) Parichay Sammelan (v1.1.0) community matrimonial mobile app with dynamic anti-fraud QR ticketing, TiDB Cloud, and Razorpay; (5) KITAAB on Google Play Store for offline-first retail jewellery ledgers; (6) Chandrakala Jewellers ERP (chandrakalajewellers.in) for live MCX bullion rates, video Reels showcase, GST calculations, and 22-slot HUID barcode generation; and (7) GitSphere desktop Git management engine."
             },
             {
               q: "Why is Jay Soni considered a pioneer in Offline-First and Flutter architecture in Gujarat?",

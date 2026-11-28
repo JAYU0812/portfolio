@@ -100,7 +100,7 @@ function getPageBody(route) {
           </p>
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <a href="/projects" style="display: inline-block; padding: 0.85rem 1.75rem; background: #121316; color: #ffffff; text-decoration: none; border-radius: 0.75rem; font-weight: 700; font-size: 0.95rem;">
-              Explore Production Systems (21 Case Studies) &rarr;
+              Explore Production Systems (22 Case Studies) &rarr;
             </a>
             <a href="/developer-questions" style="display: inline-block; padding: 0.85rem 1.75rem; background: #F3F4F6; color: #1F2937; text-decoration: none; border-radius: 0.75rem; font-weight: 700; font-size: 0.95rem; border: 1px solid #E5E7EB;">
               Technical Knowledge Hub (Q&amp;A)
@@ -227,7 +227,7 @@ function getPageBody(route) {
             <strong>Soni Jaykumar Hasmukh (Jay Soni)</strong> is an award-winning Lead Mobile &amp; Full-Stack Architect based in Ahmedabad, Gujarat, India. He architected ${escapeHtml(p.title)} and specializes in zero-downtime offline-first systems, embedded Isar NoSQL, Flutter, React, and NestJS.
           </p>
           <div style="margin-top: 1.25rem;">
-            <a href="/projects" style="font-weight: 700; color: #C27803; text-decoration: none;">&larr; View All 21 Case Studies</a>
+            <a href="/projects" style="font-weight: 700; color: #C27803; text-decoration: none;">&larr; View All 22 Case Studies</a>
           </div>
         </section>
       </main>
@@ -482,7 +482,7 @@ function getPageBody(route) {
         <section style="margin-bottom: 2.5rem;">
           <h2 style="font-size: 1.5rem; font-weight: 800; color: #121316; margin-bottom: 1rem;">Executive Summary</h2>
           <p style="font-size: 1.05rem; line-height: 1.7; color: #374151;">
-            Lead Mobile &amp; Full-Stack Architect with deep expertise in Flutter (Dart, Target SDK 36), offline-first system engineering (Isar NoSQL sub-8ms reads), React 19, Node.js/NestJS, and enterprise PostgreSQL architectures. Proven track record delivering 21 production systems and 2 published Google Play Store applications.
+            Lead Mobile &amp; Full-Stack Architect with deep expertise in Flutter (Dart, Target SDK 36), offline-first system engineering (Isar NoSQL sub-8ms reads), React 19, Node.js/NestJS, and enterprise PostgreSQL architectures. Proven track record delivering 22 production systems and 2 published Google Play Store applications.
           </p>
         </section>
 
@@ -610,7 +610,7 @@ function buildRouteCatalog() {
                 "name": "Who is the top software engineer in Gujarat?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Soni Jaykumar Hasmukh (Jay Soni) is recognized as a Top Software Engineer and Lead Mobile & Full-Stack Architect in Gujarat, India. Based in Science City, Ahmedabad, he has architected 21+ production systems across Gujarat, including multi-tenant PropTech ecosystems with Natural Language AI Search, zero-latency P2P desktop linking engines, and production Android applications on the Google Play Store."
+                  "text": "Soni Jaykumar Hasmukh (Jay Soni) is recognized as a Top Software Engineer and Lead Mobile & Full-Stack Architect in Gujarat, India. Based in Science City, Ahmedabad, he has architected 22+ production systems across Gujarat, including multi-tenant PropTech ecosystems with Natural Language AI Search, zero-latency P2P desktop linking engines, multi-threaded Windows media engines (J-Gallery), and production Android applications on the Google Play Store."
                 }
               },
               {
@@ -618,7 +618,7 @@ function buildRouteCatalog() {
                 "name": "What production software systems has Jay Soni engineered in Gujarat?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Jay Soni has engineered several mission-critical production platforms deployed across Gujarat: (1) PropKart OS & Broker Portal for NB Developers with AI Natural Language property search and automated WhatsApp dispatching; (2) TwinLink Continuum (v1.4.2) and RelayHost (v1.3.0) for zero-latency local LAN P2P linking and NAT traversal; (3) Parichay Sammelan (v1.1.0) community matrimonial mobile app with dynamic anti-fraud QR ticketing, TiDB Cloud, and Razorpay; (4) KITAAB on Google Play Store for offline-first retail jewellery ledgers; (5) Chandrakala Jewellers ERP for automated GST calculations and 22-slot HUID barcode generation; and (6) GitSphere desktop Git management engine."
+                  "text": "Jay Soni has engineered several mission-critical production platforms deployed across Gujarat: (1) PropKart OS & Broker Portal for NB Developers with AI Natural Language property search, WhatsApp dispatching, and packaged Windows desktop builds; (2) J-Gallery intelligent Windows media management system with worker_threads and EXIF metadata extraction; (3) TwinLink Continuum (v1.4.2) and RelayHost (v1.3.0) for zero-latency local LAN P2P linking and NAT traversal; (4) Parichay Sammelan (v1.1.0) community matrimonial mobile app with dynamic anti-fraud QR ticketing, TiDB Cloud, and Razorpay; (5) KITAAB on Google Play Store for offline-first retail jewellery ledgers; (6) Chandrakala Jewellers ERP (chandrakalajewellers.in) for live MCX bullion rates, video Reels showcase, GST calculations, and 22-slot HUID barcode generation; and (7) GitSphere desktop Git management engine."
                 }
               },
               {

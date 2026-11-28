@@ -6,21 +6,21 @@
 export const resumeData = {
   personal: {
     name: "SONI JAYKUMAR HASMUKH",
-    title: "Top Software Engineer in Gujarat | Lead Mobile & Full Stack Architect | Flutter, Kotlin, React & Enterprise Systems Specialist",
-    email: "jay0812soni@gmail.com",
+    title: "Top Software Engineer in Gujarat | Lead Mobile & Full Stack Architect | Flutter, Kotlin, React, Electron & Enterprise Systems Specialist",
+    email: "sonijaykumar0812@gmail.com",
     phone: "+91 79903 61109",
-    location: "Ahmedabad, Gujarat, India",
+    location: "Science City, Ahmedabad, Gujarat, India",
     github: "https://github.com/JAYU0812",
     linkedin: "https://linkedin.com/in/sonijay1908",
     portfolio: "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"
   },
 
   summary:
-    "Recognized as a Top Software Engineer in Gujarat and Award-Winning Lead Mobile & Full Stack Architect (Certificate of Appreciation from NB Infra Projects Limited, Since 1946). Specialist in Flutter, Kotlin & Jetpack Compose, React, Node.js/NestJS, and PostgreSQL. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), unified mobile design systems and app shells, 2 Google Play Store publications (Target SDK 36 ready), Natural Language AI search engines, cryptographic P2P engines, and end-to-end enterprise CRM suites with multi-channel webhook ingestion (Meta & Housing.com) and proprietary GST billing engines. Currently leading mobile and full-stack architecture at NB Developers / NB PropertyTech in Science City, Ahmedabad, Gujarat.",
+    "Recognized as a Top Software Engineer in Gujarat and Award-Winning Lead Mobile & Full Stack Architect (Certificate of Appreciation from NB Infra Projects Limited, Since 1946). Specialist in Flutter, Kotlin & Jetpack Compose, React, Electron, Node.js/NestJS, and PostgreSQL. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), unified mobile design systems and app shells, multi-threaded Windows desktop systems (Node.js worker_threads in J-Gallery, TwinLink Continuum zero-latency P2P sockets), 2 Google Play Store publications (Target SDK 36 ready), Natural Language AI search engines, and commercial jewellery retail ERP ecosystems with real-time MCX bullion feeds and proprietary GST billing engines. Currently leading mobile and full-stack architecture at NB Developers / NB PropertyTech in Science City, Ahmedabad, Gujarat.",
 
   skills: {
     mobile: [
-      "Flutter & Flutter Desktop",
+      "Flutter Multiplatform (Android, iOS, Web, Windows Desktop)",
       "Dart",
       "Native Android (Kotlin & Jetpack Compose)",
       "Mobile Design Systems & App Shells",
@@ -33,10 +33,11 @@ export const resumeData = {
       "AI Search in AppShell"
     ],
     frontend: [
-      "React.js",
-      "Next.js 14 & 15",
-      "JavaScript (ES6+)",
+      "React 19 & 18",
+      "Next.js 14 & 15 (App Router)",
+      "Electron Desktop Architecture",
       "TypeScript",
+      "JavaScript (ES6+)",
       "Tailwind CSS",
       "HTML5 / CSS3",
       "Vite",
@@ -46,9 +47,10 @@ export const resumeData = {
     backend: [
       "Node.js & Express.js",
       "NestJS 10 (TypeScript)",
+      "Node.js worker_threads (Multi-Threaded Systems)",
       "TiDB Cloud (Serverless Distributed SQL)",
       "RESTful APIs",
-      "PostgreSQL (Migrations 1–93)",
+      "PostgreSQL (Migrations 1–93 + Broker M1.26–1.27)",
       "Natural Language AI Search Engines",
       "Supabase Realtime & RLS",
       "RFC 6238 TOTP 2FA",
@@ -61,7 +63,8 @@ export const resumeData = {
     ],
     database: [
       "Isar NoSQL (Embedded Local DB)",
-      "PostgreSQL (Enterprise Migrations 1–93)",
+      "PostgreSQL (Enterprise Migrations 1–93 + Broker v1.26–v1.27)",
+      "TiDB Cloud (Distributed SQL)",
       "Supabase",
       "SQLite (FFI)",
       "MySQL",
@@ -72,6 +75,10 @@ export const resumeData = {
       "Git & GitHub",
       "Docker & Traefik SSL",
       "GitHub Actions CI/CD to VPS",
+      "C# / .NET (P2P Sockets & Relay)",
+      "EXIF Hardware Metadata Extraction",
+      "MCX Bullion Rate WebSocket/API",
+      "Service Worker PWA Offline Caching",
       "Client-side Vector PDF (jsPDF)",
       "BroadcastChannel Cross-Tab Sync",
       "WebGL / CanvasKit Optimization",
@@ -98,7 +105,7 @@ export const resumeData = {
         "Awarded Certificate of Appreciation (Reward and Recognition) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional quarterly engineering leadership and zero-downtime architecture.",
         "Architected and maintained production PropKart CRM & OS (v2.1.3+13, Target SDK 36, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 checks), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
         "Engineered Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with debounced intent extraction, multi-tenant isolation, safe query telemetry, and persistent builder schemas across Migrations 84–93.",
-        "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues (Queue A RERA Verified vs Queue B RERA Assistance), dynamic RBAC, tamper-evident audit logging, and Hostinger SSL SMTP.",
+        "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues, packaged PropKartBrokerPortal.exe standalone Windows desktop client, and engineered PostgreSQL Migrations v1.26–v1.27 for locality sanitization across Ahmedabad & Gandhinagar.",
         "Launched official marketing portal (nbpropertytech.com) using Next.js 15, Docker, and GitHub Actions automated VPS CI/CD with Traefik SSL; engineered 95-file Mobile Foundation (20,000+ LOC) and NB-HRMS real-time GPS field trip tracking with geofence exit detection."
       ],
       bullets: [
@@ -106,6 +113,7 @@ export const resumeData = {
         "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.3+13, Target SDK 36, Package: com.nbpropertytech.propkart, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 passed), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
         "Engineered Natural Language AI Search Engine in PropKart OS and backend with debounced intent extraction, PostgreSQL multi-tenant isolation, safe query telemetry, and persistent builder schemas spanning Migrations 84 to 93.",
         "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues (Queue A RERA Verified vs Queue B RERA Assistance), dynamic RBAC, tamper-evident audit logging, and Hostinger SSL SMTP.",
+        "Packaged PropKartBrokerPortal.exe standalone Windows desktop application with SQLite3 FFI and multi-window management; engineered PostgreSQL Migrations v1.26 & v1.27 sanitizing broker locality broadcasts to authoritative Ahmedabad & Gandhinagar micro-markets (Science City, Ambli, Bodakdev, Bopal, Sindhu Bhavan Road, GIFT City).",
         "Launched official production marketing and broker onboarding platform (live: nbpropertytech.com) using Next.js 15, TypeScript 5, Docker, and GitHub Actions automated VPS CI/CD with Traefik SSL.",
         "Architected 95-file Mobile Foundation & Design System (Steps 3.0–3.7 migration, 20,000+ LOC) with native app shells, responsive bottom navigation, contextual telecaller outcome disposition sheets, and WebGL CanvasKit GPU shader stabilization.",
         "Engineered Site Visit Historical Tracking Engine (PostgreSQL Migrations 38 & 39) establishing immutable site visit audit logs, telecaller shift-gate availability, and automated Round-Robin lead allocation.",
@@ -157,14 +165,16 @@ export const resumeData = {
       period: "2023 – Present",
       location: "Ahmedabad, Gujarat",
       description: "Digital Transformation & Business Software Solutions",
-      technologies: ["React", "Flutter Desktop", "PHP", "MySQL", "Tailwind CSS", "GST Billing Engine", "Barcode Label Printing"],
+      technologies: ["PHP & MySQL", "Flutter Web & Desktop", "React", "Node.js", "PostgreSQL", "MCX Bullion Feeds", "PWA Service Worker", "GST Billing Engine", "Thermal Barcode Printing"],
       coreBullets: [
-        "Digitized 5+ offline businesses including jewellery retail showrooms, medical pharmacies, and retail stores.",
-        "Architected complete Chandrakala Jewellers ERP ecosystem: live commercial platform (chandrakalajewellers.in), proprietary GST billing engine, and Flutter physical label barcode printing software (22-slot staggered jewellery tags with central strips & HUID tracking)."
+        "Digitized 5+ offline businesses including jewellery retail showrooms, medical pharmacies, and retail stores across Gujarat.",
+        "Architected complete Chandrakala Jewellers ERP ecosystem: live commercial platform (chandrakalajewellers.in) featuring real-time MCX bullion rates, video Reels showcase, Razorpay webhooks, and PWA service worker offline caching.",
+        "Built specialized Flutter physical label barcode printing software (22-slot staggered jewellery tags with central strips & HUID tracking) and proprietary automated GST billing engine."
       ],
       bullets: [
-        "Digitized 5+ offline businesses including jewellery retail showrooms, medical pharmacies, grocery kirana stores, and beauty salons.",
-        "Architected the complete Chandrakala Jewellers ERP ecosystem: live commercial platform (chandrakalajewellers.in), proprietary GST billing engine, and Flutter physical label barcode printing software (22-slot staggered jewellery tags with central strips & HUID tracking).",
+        "Digitized 5+ offline businesses including jewellery retail showrooms, medical pharmacies, grocery kirana stores, and beauty salons across Gujarat.",
+        "Architected the complete Chandrakala Jewellers ERP ecosystem: live commercial platform (chandrakalajewellers.in) featuring real-time MCX gold/silver price streaming, Instagram-style video Reels showcase, Razorpay payment webhooks, PWA service worker offline caching, proprietary GST billing engine, and Flutter physical barcode tag printer (22-slot staggered jewellery tags with central strips & HUID tracking).",
+        "Architected active migration path for Chandrakala Jewellers transitioning customer storefront to Flutter Web, administrative portal to Flutter Desktop/Web, serverless backend to Node.js TypeScript APIs, and database to PostgreSQL.",
         "Managed end-to-end software lifecycles: requirement discovery, UI design, backend development, database provisioning, domain deployment, and maintenance."
       ]
     }
@@ -189,8 +199,8 @@ export const resumeData = {
       badge: "Production v1.0.0",
       technologies: "Flutter 3.x, NestJS 10, TypeScript, PostgreSQL 16, Docker, Dynamic RBAC, Hostinger SSL SMTP",
       bullets: [
-        "Enterprise broker governance and approval suite with two-tier queues (Queue A RERA Verified vs Queue B RERA Assistance with WhatsApp auto-drafting).",
-        "Zero-hardcoding architecture with dynamic platform controls, tamper-evident audit logs, and automated cryptographic SMTP activation."
+        "Enterprise broker governance suite with two-tier queues (Queue A RERA Verified vs Queue B RERA Assistance with WhatsApp auto-drafting) and packaged PropKartBrokerPortal.exe Windows desktop build.",
+        "Engineered PostgreSQL Migrations v1.26–v1.27 for master locality sanitization across Ahmedabad & Gandhinagar with tamper-evident audit logs."
       ]
     },
     {
@@ -205,36 +215,36 @@ export const resumeData = {
       ]
     },
     {
-      name: "GitSphere — Visual Git Control Center & Repository Intelligence",
-      url: "https://github.com/JAYU0812",
+      name: "J-Gallery — Intelligent High-Performance Windows Media Management System",
+      url: "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/j-gallery",
       displayUrl: "Windows Desktop Release (v1.0.0)",
       badge: "Desktop App v1.0.0",
-      technologies: "Flutter Desktop, Dart, Riverpod, SQLite (FFI), Native Process Runner, Inno Setup 6 (12.07 MB)",
+      technologies: "Electron, React, TypeScript, Vite, Tailwind CSS, Node.js worker_threads, GPU Rasterization, EXIF Hardware Metadata",
       bullets: [
-        "Visual Git control desktop engine replacing CLI friction with a 4-stage visual pipeline (Working Tree → Staging → Branch → Remote).",
-        "Engineered multi-account GitHub credential switcher in SQLite and automated README parser executing 1-click shell actions."
+        "Multi-threaded whole-machine media crawler offloading metadata decoding to background worker_threads with GPU rasterization, keeping UI running at 60 FPS.",
+        "Persistent checkpoint indexing cache delivering sub-50ms cold launch, deep EXIF hardware optical extraction (focal length, aperture, shutter speed, ISO), and offline reverse geocoding."
       ]
     },
     {
-      name: "DevSync — Sovereign Cryptographic P2P & Relay Suite",
-      url: "https://github.com/jay0812soni-developer/devsync",
-      displayUrl: "github.com/jay0812soni-developer/devsync",
-      badge: "Sovereign P2P Suite",
-      technologies: "Flutter, Dart, Riverpod, AES-256-GCM, Ed25519/X25519, Shelf HTTP, UDP Multicast, Vercel SSE Relay",
+      name: "TwinLink Continuum — Ultra-Fast Windows PC Linking & Relay Suite",
+      url: "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/twinlink",
+      displayUrl: "Windows Desktop Release (v1.4.2 Continuum)",
+      badge: "Desktop System v1.4.2",
+      technologies: "C# / .NET, Win32 API, P2P Sockets, Local Discovery, Dedicated RelayHost Tunneling",
       bullets: [
-        "Sovereign account-per-device encrypted file transfer with on-device Ed25519 signatures, X25519 key exchange, and AES-256-GCM encryption.",
-        "Hybrid networking architecture featuring direct LAN discovery via embedded Shelf HTTP and zero-retention Vercel Serverless SSE relay fallback."
+        "High-performance dual-component Windows desktop system software: TwinLink Continuum (v1.4.2 client) and TwinLink.RelayHost (v1.3.0 internet relay service).",
+        "Enables zero-latency local LAN linking for two Windows PCs for instant clipboard synchronization, high-speed file streaming, and seamless NAT traversal."
       ]
     },
     {
-      name: "Chandrakala Jewellers — Commercial Platform & ERP Suite",
+      name: "Chandrakala Jewellers — Production E-Commerce & Retail ERP Suite",
       url: "https://chandrakalajewellers.in",
       displayUrl: "chandrakalajewellers.in",
       badge: "Live Commercial Platform",
-      technologies: "React, Flutter Desktop, Supabase PostgreSQL & RLS, Custom GST Engine, Thermal Barcode Printing",
+      technologies: "PHP & MySQL, React, Flutter Web & Desktop, Realtime MCX Bullion Rates, Razorpay Webhooks, PWA Service Worker, Custom GST Engine",
       bullets: [
-        "Commercial storefront on custom production domain with click-to-inquire automated ordering and comprehensive Supabase RLS policies.",
-        "Engineered proprietary GST billing CRM computing metal purity & taxes, paired with Flutter physical 22-slot barcode jewelry tag printer (HUID tracking)."
+        "Production storefront with real-time MCX gold/silver price feeds, Instagram-style video Reels showcase, Razorpay payment webhooks, and PWA service worker offline caching.",
+        "Engineered proprietary GST billing CRM computing metal purity & taxes, paired with Flutter physical 22-slot barcode jewelry tag printer (HUID tracking), and active Flutter Web migration."
       ]
     }
   ],
@@ -321,16 +331,27 @@ export const resumeData = {
       ]
     },
     {
-      name: "Chandrakala Jewellers — Commercial Platform & ERP Suite",
+      name: "Chandrakala Jewellers — Production E-Commerce & Retail ERP Suite",
       url: "https://chandrakalajewellers.in",
       displayUrl: "chandrakalajewellers.in",
       badge: "Live Commercial Platform",
-      technologies: "React, Flutter Desktop, Tailwind CSS, Supabase PostgreSQL & RLS, Custom GST Engine, Thermal Barcode Printing",
+      technologies: "PHP & MySQL, React, Flutter Web & Desktop, Tailwind CSS, Realtime MCX Bullion Rates, Razorpay Webhooks, PWA Service Worker, Custom GST Engine, Thermal Barcode Printing",
       bullets: [
-        "Commercial storefront on custom production domain showcasing handcrafted jewellery with click-to-inquire automated ordering.",
-        "Engineered proprietary GST billing CRM computing metal purity, hallmark charges, making expenses, and tax invoices.",
-        "Configured comprehensive Supabase Row-Level Security (RLS) policies for collections, wishlists, and product comparison matrices.",
-        "Built specialized Flutter desktop application for printing physical barcode jewellery tags (22 staggered slots with central tail strips) with HUID tracking."
+        "Production commercial storefront on custom domain chandrakalajewellers.in featuring real-time MCX gold/silver price feeds, Instagram-style video Reels showcase, Razorpay payment webhooks, and PWA service worker offline caching.",
+        "Engineered proprietary GST billing CRM computing metal purity, hallmark charges, making expenses, and multi-tier tax invoices.",
+        "Built specialized Flutter desktop application for printing physical barcode jewellery tags (22 staggered slots with central tail strips) with HUID tracking.",
+        "Architected modern migration path transitioning customer storefront to Flutter Web with Node.js serverless APIs and PostgreSQL."
+      ]
+    },
+    {
+      name: "J-Gallery — Intelligent High-Performance Windows Media Management System",
+      url: "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/j-gallery",
+      displayUrl: "Windows Desktop Release (v1.0.0)",
+      badge: "Desktop App v1.0.0",
+      technologies: "Electron, React, TypeScript, Vite, Tailwind CSS, Node.js worker_threads, GPU Rasterization, EXIF Hardware Metadata",
+      bullets: [
+        "Multi-threaded whole-machine media crawler offloading metadata decoding to background worker_threads with GPU rasterization, keeping UI and Electron main process running at 60 FPS without frame drops.",
+        "Persistent checkpoint indexing cache delivering sub-50ms cold launch without forced re-scans, deep EXIF hardware optical extraction (focal length, aperture f-stop, shutter speed, ISO), and offline reverse geocoding."
       ]
     },
     {
@@ -464,7 +485,8 @@ export const resumeData = {
 
   coreAchievements: [
     "Certificate of Appreciation — Reward & Recognition Award (NB Infra Projects Limited, Since 1946) signed by Founder & Chairman Rahul D. Prajapati for exemplary engineering performance and leadership.",
-    "2x Published Applications on Google Play Store (Parichay Sammelan QR Matchmaking & KITAAB Jeweller Ledger).",
+    "22 Production Software Systems cataloged spanning Mobile, Full-Stack Web, and High-Performance Windows Desktop architectures.",
+    "2x Published Applications on Google Play Store (Parichay Sammelan v1.1.0 QR Matchmaking & KITAAB Jeweller Ledger).",
     "5th Rank Hackathon Award — Smart Geofenced QR Haversine Spherical Attendance System.",
     "Pioneered production Offline-First architecture yielding 2ms–8ms local Isar NoSQL reads and 100/100 Security Audit score."
   ],
@@ -473,16 +495,18 @@ export const resumeData = {
     "Awarded Reward & Recognition Certificate of Appreciation from NB Infra Projects Limited (Signed by Founder & Chairman Rahul D. Prajapati).",
     "Lead Architect of PropKart Property CRM on propkart.nbpropertytech.com (v2.1.3+13, Target SDK 36, 100/100 Security Audit Score).",
     "Architected Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with Migrations 84–93.",
-    "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) with Flutter, NestJS 10, PostgreSQL 16, and two-tier approval governance.",
+    "Architected PropKart Broker Portal with two-tier approval governance, packaged PropKartBrokerPortal.exe standalone Windows desktop client, and PostgreSQL Migrations v1.26–v1.27.",
     "Launched official production marketing portal nbpropertytech.com with Next.js 15, Docker, and GitHub Actions CI/CD to VPS.",
     "Architected 95-file Mobile Foundation & Design System (20,000+ LOC) with native app shells, reactive BLoC state, and WebGL CanvasKit stabilization.",
+    "Architected J-Gallery: intelligent Windows media management system using Electron, React, TypeScript, and multi-threaded Node.js worker_threads with GPU rasterization and <50ms startup checkpoint cache.",
+    "Architected TwinLink Continuum (v1.4.2) and RelayHost (v1.3.0) for zero-latency local LAN Windows PC linking and NAT traversal.",
     "Engineered Site Visit Historical Tracking Engine with PostgreSQL Migrations 38 & 39 and automated Round-Robin lead allocation.",
     "Pioneered Offline-First local database sync architecture using embedded Isar NoSQL (2–8ms reads) and PostgreSQL cloud sync.",
     "Architected DevSync sovereign cryptographic P2P suite with Ed25519/X25519 encryption and zero-retention Vercel SSE relay.",
     "Architected GitSphere (v1.0.0), a Windows desktop visual Git control center with SQLite multi-account switching and 4-stage visual pipeline.",
-    "Successfully developed and published 2 applications to the Google Play Store (Parichay Sammelan & KITAAB).",
+    "Successfully developed and published 2 applications to the Google Play Store (Parichay Sammelan v1.1.0 & KITAAB on TiDB Cloud).",
     "Won 5th Rank in Hackathon for Geofenced QR Haversine Attendance System.",
-    "Engineered complete Chandrakala Jewellers ERP: live commercial domain, custom GST billing CRM, Supabase RLS, and Flutter barcode tag printer."
+    "Engineered complete Chandrakala Jewellers ERP: live commercial domain (chandrakalajewellers.in), real-time MCX bullion rates, video Reels showcase, custom GST billing CRM, Supabase RLS, and Flutter barcode tag printer."
   ],
 
   leadership: [

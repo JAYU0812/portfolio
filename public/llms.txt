@@ -4,7 +4,7 @@
 ## Core Pages
 - [Jay Soni Portfolio Homepage](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/): Executive portfolio of Soni Jaykumar Hasmukh, Top Software Engineer in Gujarat and Lead Mobile & Full-Stack Architect in Ahmedabad.
 - [About Jay Soni](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/about): Background, leadership experience, verified certifications, and technical vision.
-- [Production Projects Showcase](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects): Directory of 21 production systems and architecture deep dives.
+- [Production Projects Showcase](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects): Directory of 22 production systems and architecture deep dives.
 - [Verified Resume & Credentials](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/resume): Official CV, work history at NB Developers, and verified educational credentials.
 - [Contact Jay Soni](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/contact): Direct contact channels, email, WhatsApp, and 1-tap Google connection.
 - [Full LLM Knowledge File](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/llms-full.txt): Complete technical dossier for large language model grounding.
@@ -15,14 +15,15 @@
 - [Tech-Craft React JS Internship Offer Letter](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/certificates/tech-craft-reactjs-offer-letter.png): Official internship confirmation from Tech-Craft Ahmedabad.
 - [AIITA C++ Programming Grade A Certificate](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/certificates/aiita-cpp-programming-certificate.png): National Computer Literacy Programme Certificate GJ/037/734 (Grade A).
 
-## Production Systems & Architectural Case Studies (21 Systems)
+## Production Systems & Architectural Case Studies (22 Systems)
+- [J-Gallery Windows Media Management System](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/j-gallery): High-performance Windows media management system using Electron, React, TypeScript, and multi-threaded worker_threads for non-blocking whole-machine indexing, GPU rasterization, <50ms startup checkpoint cache, and deep EXIF hardware metadata decoding.
 - [TwinLink Continuum & RelayHost](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/twinlink): High-performance Windows P2P PC linking and Internet relay platform (v1.4.2 Continuum / v1.3.0 RelayHost) for zero-latency local LAN clipboard synchronization and NAT traversal.
 - [PropKart — Enterprise Real Estate CRM & OS](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/propkart): Apple-inspired operating system with 2ms Isar NoSQL reads, Natural Language AI Search, SDK 36, and 100/100 security score.
-- [PropKart Broker Portal](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/propkart-broker): Enterprise broker onboarding suite with two-tier RERA approval workflows.
+- [PropKart Broker Portal](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/propkart-broker): Enterprise broker onboarding suite with two-tier RERA approval workflows, standalone PropKartBrokerPortal.exe Windows desktop build, and PostgreSQL Migrations v1.26–v1.27.
 - [NB PropertyTech Marketing Portal](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/nbpropertytech-portal): High-speed Next.js 15 portal with automated lead ingestion and VPS deployment.
 - [GitSphere Desktop](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/gitsphere): Visual Git control center with 4-stage visual pipeline and multi-account switcher.
 - [DevSync P2P Engine](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/devsync): Cryptographic peer-to-peer file transfer engine with Ed25519 identity.
-- [Chandrakala Jewellers ERP](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/chandrakala-jewellers): Commercial jewellery retail platform with thermal barcode printer engine and GST billing.
+- [Chandrakala Jewellers Production Platform & ERP](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/chandrakala-jewellers): Live commercial jewellery platform (chandrakalajewellers.in) featuring real-time MCX bullion rates, video Reels showcase, Razorpay payment webhooks, PWA offline caching, custom GST billing CRM, and physical barcode tag printer.
 - [NB Legacy Tower](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/nb-legacy-tower): 3D architectural floorplan visualizer and unit reservation engine.
 - [TechDrive Cloud Storage](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/techdrive): Chunked multipart S3 cloud storage engine with pause/resume support.
 - [AgriTrade Hub](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/agritrade-hub): Real-time APMC mandi crop bidding system with instant WebSocket ticks.

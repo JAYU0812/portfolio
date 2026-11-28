@@ -87,7 +87,9 @@ export const projects = [
       "Two-Tier Approval Queues: Queue A (Fast-track RERA verified brokers) vs Queue B (RERA assistance with auto-drafted WhatsApp integration)",
       "Automated Activation Dispatch: One-click approval sending official credentials via Hostinger SSL SMTP with cryptographic auto-fill activation links",
       "Zero Hardcoding Architecture: Dynamic platform settings and RBAC stored in PostgreSQL allowing admins to update support hotlines, prefill templates, and RERA prefixes without redeploying",
-      "Tamper-Evident Audit Trail: Structured audit logs recording actor, role, action, target entity, IP address, and JSON payloads with instant search and one-click JSON exporter"
+      "Tamper-Evident Audit Trail: Structured audit logs recording actor, role, action, target entity, IP address, and JSON payloads with instant search and one-click JSON exporter",
+      "Standalone Windows Desktop Build: Packaged PropKartBrokerPortal.exe with SQLite3 FFI, URL launcher plugins, and multi-window management for Windows enterprise desks",
+      "Locality Sanitization & WhatsApp Routing: Engineered PostgreSQL Migrations v1.26 & v1.27 sanitizing broker locality broadcasts to authoritative Ahmedabad & Gandhinagar micro-markets (Science City, Ambli, Bodakdev, Bopal, Sindhu Bhavan Road, GIFT City)"
     ]
   },
   {
@@ -394,35 +396,78 @@ export const projects = [
   },
   {
     id: "chandrakala-jewellers",
-    title: "Chandrakala Jewellers — Commercial Platform & ERP Suite",
+    title: "Chandrakala Jewellers — Production E-Commerce & Retail ERP Suite",
     category: "Luxury E-Commerce & Retail ERP",
     filterCategory: "crm",
-    date: "Late 2025",
+    date: "Late 2025 – Present",
     status: "Live Commercial Platform",
     badge: "Live: chandrakalajewellers.in",
-    tagline: "Commercial storefront + Proprietary GST Billing Engine + Physical Barcode Tag Printer desktop app.",
+    tagline: "Live commercial storefront with real-time MCX bullion rates, video Reels showcase, Razorpay webhooks, and proprietary GST ERP.",
     description:
-      "A complete proprietary retail ecosystem for Chandrakala Jewellers. Comprises three integrated systems: (1) A high-performance commercial showroom on a live custom domain, (2) An internal GST billing and tax invoicing engine computing metal purity, hallmark charges, making expenses, and multi-tier tax invoices, and (3) A specialized Flutter desktop application for printing physical barcode jewellery tags (139.7 x 190.5mm, 22-slot staggered layout with central strip tags) with HUID tracking.",
+      "A complete proprietary retail and e-commerce ecosystem for Chandrakala Jewellers (Civil Road, Khedbrahma), deployed in production at chandrakalajewellers.in. Comprises: (1) A production storefront featuring live MCX gold and silver bullion pricing, dynamic product catalogs, Instagram-style video Reels showcase (reels.php), Razorpay payment webhooks, PWA offline service worker caching, and automated IndexNow search engine ingestion; (2) An internal GST billing and tax invoicing engine computing metal purity, hallmark charges, making expenses, and multi-tier tax invoices; (3) A specialized Flutter desktop application for printing physical barcode jewellery tags (139.7 x 190.5mm, 22-slot staggered layout with central strip tags) with HUID tracking; and (4) An architectural migration actively underway transitioning the frontend to Flutter Web with Node.js serverless APIs and PostgreSQL.",
     tech: [
+      "PHP & MySQL",
       "React",
-      "Flutter Desktop",
+      "Flutter Web & Desktop",
       "Tailwind CSS",
-      "Supabase PostgreSQL",
+      "Realtime MCX Bullion Rates",
+      "Razorpay Webhooks",
+      "PWA Service Worker",
       "GST Billing Engine",
       "Thermal Barcode Printing",
       "HUID Tracking",
-      "WhatsApp Automation"
+      "Supabase PostgreSQL"
     ],
     liveUrl: "https://chandrakalajewellers.in",
     playStoreUrl: null,
     featured: true,
     highlights: [
-      "Live commercial domain deployment on custom domain: chandrakalajewellers.in",
-      "Robust Database Security: Configured comprehensive Row-Level Security (RLS) policies on Supabase PostgreSQL for collections, category mappings, wishlists, and product comparison matrices",
-      "Proprietary GST billing software with automated metal purity, hallmark fees, making charges, and CGST/SGST invoices",
-      "Dedicated Flutter physical label printing software for printing 22 staggered barcode jewellery tags with central tail strips",
-      "Full Hallmark Unique Identification (HUID) and gross/net weight verification system",
-      "Click-to-inquire automated WhatsApp customer order routing"
+      "Live Commercial Domain: Production retail storefront operating on custom domain chandrakalajewellers.in",
+      "Real-Time MCX Bullion Feeds: Live dynamic pricing for 24K/22K gold and fine silver reflecting current commodities market trends",
+      "Modern Video Reels Showcase: Instagram-style interactive jewellery video feed (reels.php) driving user engagement and catalog discovery",
+      "Payment & Webhook Automation: Razorpay payment gateway integration with real-time server webhook verification for orders",
+      "PWA Offline Caching: Custom service worker (sw.js) caching core assets and product catalogs for low-connectivity shoppers",
+      "Proprietary GST Billing Software: Automated metal purity, hallmark fees, making charges, and CGST/SGST multi-tier invoicing",
+      "Physical Barcode Tag Printer: Dedicated Flutter software printing 22 staggered barcode jewellery tags with central tail strips and HUID verification",
+      "Architectural Evolution: Modernization path to Flutter Web customer client, Flutter admin portal, Node.js serverless APIs, and PostgreSQL"
+    ]
+  },
+  {
+    id: "j-gallery",
+    title: "J-Gallery — Intelligent High-Performance Windows Media Management System",
+    category: "Desktop Systems & High-Performance Media Architecture",
+    filterCategory: "tools",
+    date: "November 2026",
+    status: "Windows Desktop Release v1.0.0",
+    badge: "Desktop App: J-Gallery",
+    version: "v1.0.0",
+    tagline: "Whole-machine non-blocking media indexing with Node.js worker_threads, GPU rasterization, <50ms startup checkpoint cache, and deep EXIF hardware metadata extraction.",
+    description:
+      "An intelligent, high-performance media management desktop application for Windows built with Electron, React, TypeScript, Vite, and Tailwind CSS. Built to solve scattered photo and video storage across Windows drives while keeping 100% of data private and on-device. Features multi-threaded non-blocking crawling offloaded to dedicated background worker_threads with GPU rasterization and zero-copy compositing, persistent checkpoint indexing cache achieving sub-50ms cold launch without forced re-scans, deep EXIF hardware metadata extraction (optics, shutter speed, aperture f-stop, ISO, lens model, and offline reverse geocoding to city/state), and Privacy Shield folder exclusion preventing directory prefix collisions.",
+    tech: [
+      "Electron",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js worker_threads",
+      "GPU Rasterization",
+      "EXIF Hardware Metadata",
+      "Offline Geocoding",
+      "Win32 Filesystem",
+      "JSON Checkpoint Cache"
+    ],
+    liveUrl: null,
+    githubUrl: null,
+    playStoreUrl: null,
+    featured: true,
+    highlights: [
+      "Multi-Threaded Non-Blocking Crawler: File crawling and metadata decoding completely offloaded to dedicated worker_threads, keeping UI and Electron main process running at 60 FPS without frame drops",
+      "GPU Rasterization & Zero-Copy: Enabled hardware acceleration (--enable-gpu-rasterization --enable-zero-copy) with batched ingestion (25–30 items/batch) to eliminate IPC flooding",
+      "Persistent Checkpoint Indexing (<50ms Launch): Atomically saves indexed library to disk; future scans perform incremental mtimeMs and size checks against cache, skipping untouched files",
+      "Deep EXIF Hardware Extraction: Decodes camera make, lens model, focal length, aperture (f-stop), exposure time, ISO, and normalizes timestamps into Indian Standard Time (IST) with time-of-day categorization",
+      "Offline Reverse Geocoding: Translates embedded GPS latitude and longitude into human-readable city, state, and country using an offline geographic database without external API reliance",
+      "Privacy Shield Folder Exclusion: Instant hiding and purging of excluded directories with robust path normalization preventing drive letter and nested folder prefix collisions"
     ]
   },
   {
