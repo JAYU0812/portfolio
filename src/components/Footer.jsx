@@ -140,12 +140,12 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://nblegacy.nbdeveloper.co.in/"
+                  href="https://nblegacy.nbsince1946.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#C27803] dark:hover:text-[#E8C37D] inline-flex items-center gap-1 transition"
                 >
-                  <span>NB Legacy Tower (nblegacy.nbdeveloper.co.in)</span>
+                  <span>NB Legacy Tower (nblegacy.nbsince1946.com)</span>
                   <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
                 </a>
               </li>

@@ -276,10 +276,10 @@ export const projects = [
     filterCategory: "web",
     date: "June 2026 – Present",
     status: "Production Live",
-    badge: "Live: nblegacy.nbdeveloper.co.in",
+    badge: "Live: nblegacy.nbsince1946.com",
     tagline: "High-conversion luxury commercial presentation portal with dynamic unit configuration and sub-2s Google Sheets webhook routing.",
     description:
-      "A specialized digital campaign and high-ticket investor ingestion platform engineered for NB Infra Projects' flagship commercial development, Legacy Tower, deployed live at nblegacy.nbdeveloper.co.in. Features cinematic floor plan visualizers, dynamic unit configuration (Commercial Offices, Showrooms, Luxury Residences), Firestore database synchronization, Firebase Analytics visitor tracking, and an automated Google Sheets webhook engine notifying telecallers in under 2 seconds.",
+      "A specialized digital campaign and high-ticket investor ingestion platform engineered for NB Infra Projects' flagship commercial development, Legacy Tower, deployed live at nblegacy.nbsince1946.com. Features cinematic floor plan visualizers, dynamic unit configuration (Commercial Offices, Showrooms, Luxury Residences), Firestore database synchronization, Firebase Analytics visitor tracking, and an automated Google Sheets webhook engine notifying telecallers in under 2 seconds.",
     tech: [
       "Flutter Web",
       "Dart",
@@ -289,11 +289,11 @@ export const projects = [
       "GoRouter",
       "Luxury Design Tokens"
     ],
-    liveUrl: "https://nblegacy.nbdeveloper.co.in/",
+    liveUrl: "https://nblegacy.nbsince1946.com/",
     playStoreUrl: null,
     featured: true,
     highlights: [
-      "Live Commercial Deployment: Live in production at nblegacy.nbdeveloper.co.in",
+      "Live Commercial Deployment: Live in production at nblegacy.nbsince1946.com",
       "Sub-2s Telecaller Ingestion: Automated webhook pipeline posting high-intent investor inquiries synchronously into Google Sheets for instant sales follow-up",
       "Dynamic Unit Configurator: Interactive investment tier and floor selector computing indicative layouts and specifications",
       "Real-time Investor Analytics: Firebase Analytics tracking visitor engagement across brochure downloads, floor plans, and walk-throughs",

@@ -266,7 +266,7 @@ function buildVisitorAutoReplyHtml({ name, subject, message, channel, timestamp 
                       </p>
                     </td>
                     <td align="right" style="vertical-align: middle; padding-left: 12px;">
-                      <a href="https://nblegacy.nbdeveloper.co.in/" target="_blank" style="display: inline-block; padding: 8px 14px; font-size: 11px; font-weight: 700; color: #FFFFFF; background-color: #121316; text-decoration: none; border-radius: 8px;">
+                      <a href="https://nblegacy.nbsince1946.com/" target="_blank" style="display: inline-block; padding: 8px 14px; font-size: 11px; font-weight: 700; color: #FFFFFF; background-color: #121316; text-decoration: none; border-radius: 8px;">
                         View &rarr;
                       </a>
                     </td>

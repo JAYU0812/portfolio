@@ -7,7 +7,7 @@
 [![PropKart CRM](https://img.shields.io/badge/PropKart_CRM-propkart.nbpropertytech.com-159B73?style=for-the-badge&logo=googlechrome&logoColor=white)](https://propkart.nbpropertytech.com)
 [![NB-HRMS ERP](https://img.shields.io/badge/NB--HRMS-crm.nbdeveloper.co.in-10B981?style=for-the-badge&logo=googlechrome&logoColor=white)](https://crm.nbdeveloper.co.in)
 [![TechDrive](https://img.shields.io/badge/TechDrive-techdrive.nbpropertytech.com-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white)](https://techdrive.nbpropertytech.com/)
-[![NB Legacy Tower](https://img.shields.io/badge/NB_Legacy_Tower-nblegacy.nbdeveloper.co.in-D97706?style=for-the-badge&logo=googlechrome&logoColor=white)](https://nblegacy.nbdeveloper.co.in/)
+[![NB Legacy Tower](https://img.shields.io/badge/NB_Legacy_Tower-nblegacy.nbsince1946.com-D97706?style=for-the-badge&logo=googlechrome&logoColor=white)](https://nblegacy.nbsince1946.com/)
 [![Google Play](https://img.shields.io/badge/Google_Play_Store-2_Apps_Published-0F766E?style=for-the-badge&logo=googleplay&logoColor=white)](https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan)
 [![WhatsApp](https://img.shields.io/badge/Direct_Chat-+91_79903_61109-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/917990361109)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-sonijay1908-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/sonijay1908)
@@ -22,7 +22,7 @@
 I am **Soni Jaykumar**, a Lead Mobile & Full-Stack Software Engineer based in Ahmedabad, India, specializing in **Flutter**, **React**, **Node.js**, **Supabase / PostgreSQL**, and **high-performance Offline-First architectures**.
 
 * **Live Personal Portfolio**: [https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/](https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/)
-* Currently serving as **Lead Mobile & Full-Stack Architect** at **NB Developers (NB Property Tech)**, engineering enterprise platforms including **PropKart Real-Estate CRM & OS (v2.1.1, evolved from NB Listings)**, **NB-HRMS & ERP (live on crm.nbdeveloper.co.in)**, **TechDrive Cloud (live on techdrive.nbpropertytech.com)**, and **NB Legacy Tower (live on nblegacy.nbdeveloper.co.in)**.
+* Currently serving as **Lead Mobile & Full-Stack Architect** at **NB Developers (NB Property Tech)**, engineering enterprise platforms including **PropKart Real-Estate CRM & OS (v2.1.3+13, evolved from NB Listings)**, **NB-HRMS & ERP (live on crm.nbdeveloper.co.in)**, **TechDrive Cloud (live on techdrive.nbpropertytech.com)**, and **NB Legacy Tower (live on nblegacy.nbsince1946.com)**.
 
 ---
 
@@ -69,12 +69,12 @@ I am **Soni Jaykumar**, a Lead Mobile & Full-Stack Software Engineer based in Ah
   - Interactive storage distribution analytics (FL Chart) categorizing Documents, Blueprints, Media, and Archives.
   - Departmental access control with multi-tier permissions (Viewer / Editor / Admin) and 2-stage recycle recovery bin.
 
-### 4. [NB Legacy Tower — Luxury Infrastructure Discovery Portal](https://nblegacy.nbdeveloper.co.in/)
+### 4. [NB Legacy Tower — Luxury Infrastructure Discovery Portal](https://nblegacy.nbsince1946.com/)
 * **Platform**: Commercial Campaign Portal & High-Conversion Investor Discovery
-* **Live Production URL**: [https://nblegacy.nbdeveloper.co.in/](https://nblegacy.nbdeveloper.co.in/)
+* **Live Production URL**: [https://nblegacy.nbsince1946.com/](https://nblegacy.nbsince1946.com/)
 * **Tech Stack**: Flutter Web, Cloud Firestore, Firebase Analytics, Google Sheets Webhook Engine, GoRouter
 * **Highlights**:
-  - Live luxury campaign portal at `nblegacy.nbdeveloper.co.in` engineered for NB Developers' flagship infrastructure.
+  - Live luxury campaign portal at `nblegacy.nbsince1946.com` engineered for NB Developers' flagship infrastructure.
   - Interactive luxury unit configurator with sub-2s Google Sheets webhook routing directly into telecaller CRM queues.
   - Integrated Firebase Analytics tracking investor brochure downloads and walkthrough engagement.
 

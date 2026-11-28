@@ -401,12 +401,12 @@ export const resumeData = {
     },
     {
       name: "NB Legacy Tower — Luxury Infrastructure Campaign Portal",
-      url: "https://nblegacy.nbdeveloper.co.in/",
-      displayUrl: "nblegacy.nbdeveloper.co.in",
+      url: "https://nblegacy.nbsince1946.com/",
+      displayUrl: "nblegacy.nbsince1946.com",
       badge: "Production Live",
       technologies: "Flutter Web, Cloud Firestore, Firebase Analytics, Google Sheets Webhook, GoRouter",
       bullets: [
-        "Commercial campaign platform deployed live at nblegacy.nbdeveloper.co.in for NB Infra Projects' flagship development.",
+        "Commercial campaign platform deployed live at nblegacy.nbsince1946.com for NB Infra Projects' flagship development.",
         "Dynamic unit selector and sub-2-second Google Sheets webhook routing delivering instant high-ticket investor inquiries to sales telecallers."
       ]
     },

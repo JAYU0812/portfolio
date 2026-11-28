@@ -74,7 +74,7 @@ export const timelineEvents = [
       "Engineered Site Visit Historical Tracking Engine (PostgreSQL Migrations 38 & 39) with outcome synchronization and automated Round-Robin lead allocation.",
       "Launched the public PropKart Listing directory (live: listing.nbpropertytech.com) and PropKart Connect dynamic intake engine (live: propconnect.nbpropertytech.com).",
       "Architected NB-HRMS / ERP (live: crm.nbdeveloper.co.in) with Next.js 14, Hasura GraphQL, Prisma v6, PostgreSQL, AES-256 field encryption, and Whisper AI.",
-      "Built TechDrive enterprise cloud document management (live: techdrive.nbpropertytech.com) and NB Legacy Tower campaign portal (live: nblegacy.nbdeveloper.co.in)."
+      "Built TechDrive enterprise cloud document management (live: techdrive.nbpropertytech.com) and NB Legacy Tower campaign portal (live: nblegacy.nbsince1946.com)."
     ]
   },
   {
