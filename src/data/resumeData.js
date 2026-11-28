@@ -6,7 +6,7 @@
 export const resumeData = {
   personal: {
     name: "SONI JAYKUMAR HASMUKH",
-    title: "Lead Mobile & Full Stack Architect | Flutter, React & Enterprise Systems Specialist",
+    title: "Top Software Engineer in Gujarat | Lead Mobile & Full Stack Architect | Flutter, Kotlin, React & Enterprise Systems Specialist",
     email: "jay0812soni@gmail.com",
     phone: "+91 79903 61109",
     location: "Ahmedabad, Gujarat, India",
@@ -16,16 +16,17 @@ export const resumeData = {
   },
 
   summary:
-    "Award-winning Lead Mobile & Full Stack Architect (Certificate of Appreciation from NB Infra Projects Limited, Since 1946) specializing in Flutter, React, Node.js/NestJS, and PostgreSQL. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), unified mobile design systems and app shells, Google Play Store publications (Target SDK 36 ready), Natural Language AI search engines, cryptographic P2P engines, and end-to-end enterprise CRM suites with multi-channel webhook ingestion (Meta & Housing.com) and proprietary GST billing engines. Currently leading mobile and full-stack architecture at NB Developers / NB PropertyTech.",
+    "Recognized as a Top Software Engineer in Gujarat and Award-Winning Lead Mobile & Full Stack Architect (Certificate of Appreciation from NB Infra Projects Limited, Since 1946). Specialist in Flutter, Kotlin & Jetpack Compose, React, Node.js/NestJS, and PostgreSQL. Deep expertise in high-performance Offline-First architectures (Isar NoSQL yielding 2–8ms reads), unified mobile design systems and app shells, 2 Google Play Store publications (Target SDK 36 ready), Natural Language AI search engines, cryptographic P2P engines, and end-to-end enterprise CRM suites with multi-channel webhook ingestion (Meta & Housing.com) and proprietary GST billing engines. Currently leading mobile and full-stack architecture at NB Developers / NB PropertyTech in Science City, Ahmedabad, Gujarat.",
 
   skills: {
     mobile: [
       "Flutter & Flutter Desktop",
       "Dart",
+      "Native Android (Kotlin & Jetpack Compose)",
       "Mobile Design Systems & App Shells",
       "Android Target SDK 36 (Android 15)",
       "Java 17 Desugaring & ProGuard",
-      "Isar NoSQL (Offline-First)",
+      "Isar NoSQL (Offline-First 2–8ms)",
       "BLoC & Riverpod State Management",
       "Android Studio & Play Console Publishing",
       "Win32 / DWM Desktop Integration",
@@ -45,6 +46,7 @@ export const resumeData = {
     backend: [
       "Node.js & Express.js",
       "NestJS 10 (TypeScript)",
+      "TiDB Cloud (Serverless Distributed SQL)",
       "RESTful APIs",
       "PostgreSQL (Migrations 1–93)",
       "Natural Language AI Search Engines",
@@ -332,25 +334,36 @@ export const resumeData = {
       ]
     },
     {
-      name: "Parichay Sammelan — Web & Android App",
-      url: "https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan&pcampaignid=web_share",
-      displayUrl: "Google Play Store (com.hssolutiontech.ParichaySammelan)",
-      badge: "Play Store Released",
-      technologies: "React, Android, PHP, MySQL, QR Scanner, Razorpay, Google Play Console",
+      name: "TwinLink Continuum — Ultra-Fast Windows PC Linking & Relay Suite",
+      url: "https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/twinlink",
+      displayUrl: "Windows Desktop Release (v1.4.2 Continuum)",
+      badge: "Desktop System v1.4.2",
+      technologies: "C# / .NET, Win32 API, P2P Sockets, Local Discovery, Dedicated RelayHost Tunneling",
       bullets: [
-        "Published community matchmaking and registration application on the Google Play Store and web.",
-        "Integrated secure payment gateway workflows and an automated QR-code verification system for physical venue check-ins."
+        "High-performance dual-component Windows desktop system software: TwinLink Continuum (v1.4.2 client) and TwinLink.RelayHost (v1.3.0 internet relay service).",
+        "Enables zero-latency local LAN linking for two Windows PCs for instant clipboard synchronization, high-speed file streaming, and seamless NAT traversal."
       ]
     },
     {
-      name: "KITAAB — Jeweller Ledger System",
+      name: "Parichay Sammelan v1.1.0 — Native Android & Cloud Event Platform",
+      url: "https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan&pcampaignid=web_share",
+      displayUrl: "Google Play Store (com.hssolutiontech.ParichaySammelan)",
+      badge: "Play Store Live v1.1.0",
+      technologies: "Native Android (Kotlin + Jetpack Compose), Node.js (Express API), TiDB Cloud (Distributed SQL), Cloudinary, QR Verification, Google Play Console",
+      bullets: [
+        "Modernized to Native Android Kotlin & Jetpack Compose (v1.1.0 production release on Google Play Store).",
+        "Architected dedicated Node.js Express REST API backed by TiDB Cloud serverless database with dynamic QR code check-in engine for major Gujarat community events."
+      ]
+    },
+    {
+      name: "KITAAB — Native Android Jeweller Ledger App & Cloud Engine",
       url: "https://play.google.com/store/apps/details?id=com.jeweller.ledger&pcampaignid=web_share",
       displayUrl: "Google Play Store (com.jeweller.ledger)",
-      badge: "Play Store Released",
-      technologies: "Android, PHP, MySQL, Ledger Accounting, Google Play Console",
+      badge: "Play Store Live (Modernized)",
+      technologies: "Native Android (Kotlin + Jetpack Compose), Node.js (Express API), TiDB Cloud, Cloudinary, SQLite, Google Play Console",
       bullets: [
-        "Specialized mobile ledger app published on Google Play Store to digitize paper bahi-khata for jewellery merchants.",
-        "Features intuitive credit/debit tracking, automated daily balance computation, and customer balance export."
+        "Re-engineered with Kotlin & Jetpack Compose UI on Android and dedicated open-source Node.js Express API (github.com/JAYU0812/kitaabbackend) on TiDB Cloud.",
+        "Digitizes paper bahi-khata accounts for jewellery retailers across Gujarat with real-time balance calculations, customer ledger records, and PDF exports."
       ]
     },
     {

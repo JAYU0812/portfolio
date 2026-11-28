@@ -360,6 +360,39 @@ export const projects = [
     ]
   },
   {
+    id: "twinlink",
+    title: "TwinLink Continuum — Ultra-Fast Windows PC Linking & Relay Suite",
+    category: "System Software & Network Engineering",
+    filterCategory: "tools",
+    date: "November 2026",
+    status: "v1.4.2 Continuum / v1.3.0 RelayHost",
+    badge: "Dual-Engine Windows System",
+    version: "v1.4.2 (Client) / v1.3.0 (RelayHost)",
+    tagline: "High-speed peer-to-peer Windows PC network linking suite with sub-millisecond LAN discovery and dedicated Internet relay tunneling.",
+    description:
+      "A high-performance dual-component Windows desktop system software suite engineered by Jay Soni. Comprises: (1) TwinLink Continuum (TwinLink.exe v1.4.2), a native Windows desktop client designed to link two Windows PCs on the local network at zero latency for instant clipboard synchronization, bidirectional file streaming, and workflow continuity, and (2) TwinLink.RelayHost (TwinLink.RelayHost.exe v1.3.0), an internet relay tunneling service enabling seamless peer-to-peer traversal across NAT and firewalls when devices operate on disparate networks.",
+    tech: [
+      "C# / .NET",
+      "Win32 API",
+      "P2P Sockets",
+      "Local Discovery",
+      "Network Relaying",
+      "NAT Traversal",
+      "Zero-Config LAN",
+      "Windows Desktop"
+    ],
+    liveUrl: null,
+    githubUrl: null,
+    playStoreUrl: null,
+    featured: true,
+    highlights: [
+      "Dual-Component Architecture: Ships with TwinLink.exe v1.4.2 Continuum client and TwinLink.RelayHost.exe v1.3.0 dedicated internet relay",
+      "Zero-Config Local LAN Linking: Automatic socket-level device discovery linking two Windows PCs across local networks with sub-millisecond round-trip times",
+      "Dedicated Internet Relay Host: Seamless NAT traversal ensuring persistent encrypted data relay between peers across different WAN networks",
+      "Hardware-Accelerated Stream: Optimized memory buffer management for zero-lag clipboard broadcasting and high-throughput payload streaming"
+    ]
+  },
+  {
     id: "chandrakala-jewellers",
     title: "Chandrakala Jewellers — Commercial Platform & ERP Suite",
     category: "Luxury E-Commerce & Retail ERP",
@@ -394,22 +427,25 @@ export const projects = [
   },
   {
     id: "parichay-sammelan",
-    title: "Parichay Sammelan — Web & Play Store App",
+    title: "Parichay Sammelan v1.1.0 — Native Android & Cloud Event Platform",
     category: "Community Platform & Mobile App",
     filterCategory: "mobile",
-    date: "June 2025",
-    status: "Play Store & Web",
-    badge: "Google Play Store Released",
-    tagline: "Community matchmaking platform and event registration app published on Google Play Store.",
+    date: "June 2025 – Present",
+    status: "Play Store Live v1.1.0",
+    badge: "Google Play Store Released v1.1.0",
+    version: "v1.1.0",
+    tagline: "Modernized Native Android (Kotlin + Jetpack Compose) matchmaking & QR event ticketing app on Google Play Store with Node.js & TiDB Cloud backend.",
     description:
-      "A community matchmaking and event registration platform compiled into a native Android application published on the Google Play Store. Features verified user profiles, Razorpay digital payment checkout for event ticketing, and an anti-fraud QR code generator and verification scanner for venue entry.",
+      "A flagship regional community matchmaking and verified event registration platform re-architected to version 1.1.0. Modernized from legacy web roots into a cutting-edge Native Android application engineered in Kotlin and Jetpack Compose, backed by an authoritative Node.js Express REST API, TiDB Cloud serverless distributed SQL database, and Cloudinary media optimization. Published live on Google Play Store (com.hssolutiontech.ParichaySammelan), serving major community matchmaking conventions across Gujarat with anti-fraud dynamic QR code ticketing, offline check-in gate verification, and multi-tier delegate approval pipelines.",
     tech: [
-      "React",
-      "Android",
-      "PHP",
-      "MySQL",
+      "Kotlin",
+      "Jetpack Compose",
+      "Android Studio",
+      "Node.js (Express API)",
+      "TiDB Cloud (Distributed SQL)",
+      "Cloudinary",
       "Razorpay",
-      "QR Verification",
+      "QR Verification Engine",
       "Google Play Console"
     ],
     liveUrl: "https://parichay-sammelan.wuaze.com",
@@ -417,40 +453,45 @@ export const projects = [
     packageName: "com.hssolutiontech.ParichaySammelan",
     featured: true,
     highlights: [
-      "Published and maintained live on the Google Play Store (com.hssolutiontech.ParichaySammelan)",
-      "High-speed QR code ticketing and on-ground scanner for instant event check-in",
-      "Integrated secure payment gateway workflows for delegate registration fees",
-      "Multi-parameter filtering by education, native town, and family genealogy"
+      "Modernized v1.1.0 Native Android App: Built in Kotlin with declarative Jetpack Compose UI and published live on Google Play Store (com.hssolutiontech.ParichaySammelan)",
+      "Scalable Cloud Backend: Authoritative Node.js Express API architecture backed by TiDB Cloud serverless distributed SQL and Cloudinary profile photo processing",
+      "High-Speed QR Venue Check-In: Anti-fraud dynamic QR code ticketing system with on-ground scanner for instant delegate verification at Gujarat event gates",
+      "Statewide Regional Adoption: Successfully deployed across Gujarat community conferences managing verified matrimonial profiles, native town linkages, and family genealogies"
     ]
   },
   {
     id: "kitaab",
-    title: "KITAAB — Jeweller Ledger App",
+    title: "KITAAB — Native Android Jeweller Ledger App & Cloud Engine",
     category: "Fintech & Mobile App",
     filterCategory: "mobile",
-    date: "August 2025",
-    status: "Play Store Released",
-    badge: "Google Play Store Released",
-    tagline: "Smart daily ledger management app for jewellery retailers, published on Google Play Store.",
+    date: "August 2025 – Present",
+    status: "Play Store Live (Modernized)",
+    badge: "Google Play Store Live",
+    version: "v1.2.0 (Kotlin + Node.js API)",
+    tagline: "Native Android (Kotlin + Jetpack Compose) daily ledger management app for jewellery retailers, published on Google Play Store with TiDB Cloud backend.",
     description:
-      "A specialized financial ledger application tailored for traditional jewellery retailers to replace manual paper bahi-khata. Published on the Google Play Store in August 2025. Designed with an ultra-intuitive, non-technical touch UI to record credit/debit transactions, customer balances, and daily sales ledgers with cloud and offline backup.",
+      "A specialized native financial ledger application engineered for retail jewellery merchants to digitize traditional manual paper bahi-khata. Re-architected as a high-performance Native Android application using Kotlin and Jetpack Compose, backed by a production Node.js Express API (open source at github.com/JAYU0812/kitaabbackend), TiDB Cloud distributed database, and offline-capable SQLite fallback. Published on Google Play Store (com.jeweller.ledger), providing retail jewellery businesses across Gujarat with zero-loss audit ledgers, automated daily balance aggregation, and instant PDF statement exports.",
     tech: [
-      "Android",
-      "PHP",
-      "MySQL",
-      "JavaScript",
+      "Kotlin",
+      "Jetpack Compose",
+      "Android Studio",
+      "Node.js (Express API)",
+      "TiDB Cloud (Distributed SQL)",
+      "Cloudinary",
+      "Offline SQLite",
       "Ledger Accounting",
       "Google Play Console"
     ],
     liveUrl: "https://jeweller-ledger.wuaze.com",
+    githubUrl: "https://github.com/JAYU0812/kitaabbackend",
     playStoreUrl: "https://play.google.com/store/apps/details?id=com.jeweller.ledger&pcampaignid=web_share",
     packageName: "com.jeweller.ledger",
     featured: true,
     highlights: [
-      "Published and live on the Google Play Store (com.jeweller.ledger)",
-      "Simplifies complex retail debit/credit accounting for traditional non-tech merchants",
-      "Automated daily balance aggregation and transaction ledger PDF export",
-      "Adopted by local retail jewellers to eliminate paper register discrepancies"
+      "Modern Native Android & Jetpack Compose Architecture: Published live on Google Play Store (com.jeweller.ledger) with intuitive non-technical merchant UX",
+      "Dedicated Node.js & TiDB Cloud Backend: Open-source Express API service (github.com/JAYU0812/kitaabbackend) backed by TiDB Cloud serverless database",
+      "Digital Bahi-Khata for Gujarat Jewellery Merchants: Eliminates arithmetic discrepancies and replaces physical ledger books across commercial jewelry stores",
+      "Automated Financial Ledger Analytics: Instant customer balance totals, debit/credit aggregation, and one-tap printable PDF statement generation"
     ]
   },
   {

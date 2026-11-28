@@ -87,20 +87,20 @@ function getPageBody(route) {
       <main style="max-width: 1200px; margin: 0 auto; padding: 3rem 1.5rem;">
         <section style="margin-bottom: 3.5rem;">
           <div style="display: inline-block; padding: 0.35rem 0.85rem; background: #FEF3C7; color: #92400E; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1.25rem;">
-            📍 Lead Architect &amp; Software Engineer in Ahmedabad, India
+            📍 Top Software Engineer in Gujarat &bull; Science City, Ahmedabad
           </div>
           <h1 style="font-size: 2.75rem; font-weight: 800; color: #121316; line-height: 1.15; margin-bottom: 1rem; letter-spacing: -0.03em;">
-            Soni Jaykumar Hasmukh
+            Soni Jaykumar Hasmukh &mdash; Top Software Engineer in Gujarat
           </h1>
           <p style="font-size: 1.25rem; font-weight: 600; color: #C27803; margin-bottom: 1.25rem;">
             Lead Mobile &amp; Full-Stack Architect &bull; NB Developers / NB PropertyTech
           </p>
           <p style="font-size: 1.05rem; color: #4B5563; line-height: 1.7; max-width: 820px; margin-bottom: 1.75rem;">
-            Award-winning Software Engineer based in Ahmedabad, Gujarat. Specialist in Flutter (Target SDK 36), Offline-First Architecture with embedded Isar NoSQL (2–8ms query latency), React, Node.js/NestJS, and Enterprise PropTech. Recipient of the Certificate of Appreciation from NB Infra Projects Limited (October 2026).
+            Recognized as a Top Software Engineer in Gujarat and Lead Mobile &amp; Full-Stack Architect based in Science City, Ahmedabad. Specialist in Flutter (Target SDK 36), Native Android (Kotlin &amp; Jetpack Compose), Offline-First Architecture with embedded Isar NoSQL (2–8ms query latency), React, Node.js/NestJS, TiDB Cloud, and Enterprise PropTech. Recipient of the Certificate of Appreciation from NB Infra Projects Limited (October 2026).
           </p>
           <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
             <a href="/projects" style="display: inline-block; padding: 0.85rem 1.75rem; background: #121316; color: #ffffff; text-decoration: none; border-radius: 0.75rem; font-weight: 700; font-size: 0.95rem;">
-              Explore Production Systems (20 Case Studies) &rarr;
+              Explore Production Systems (21 Case Studies) &rarr;
             </a>
             <a href="/developer-questions" style="display: inline-block; padding: 0.85rem 1.75rem; background: #F3F4F6; color: #1F2937; text-decoration: none; border-radius: 0.75rem; font-weight: 700; font-size: 0.95rem; border: 1px solid #E5E7EB;">
               Technical Knowledge Hub (Q&amp;A)
@@ -227,7 +227,7 @@ function getPageBody(route) {
             <strong>Soni Jaykumar Hasmukh (Jay Soni)</strong> is an award-winning Lead Mobile &amp; Full-Stack Architect based in Ahmedabad, Gujarat, India. He architected ${escapeHtml(p.title)} and specializes in zero-downtime offline-first systems, embedded Isar NoSQL, Flutter, React, and NestJS.
           </p>
           <div style="margin-top: 1.25rem;">
-            <a href="/projects" style="font-weight: 700; color: #C27803; text-decoration: none;">&larr; View All 20 Case Studies</a>
+            <a href="/projects" style="font-weight: 700; color: #C27803; text-decoration: none;">&larr; View All 21 Case Studies</a>
           </div>
         </section>
       </main>
@@ -482,7 +482,7 @@ function getPageBody(route) {
         <section style="margin-bottom: 2.5rem;">
           <h2 style="font-size: 1.5rem; font-weight: 800; color: #121316; margin-bottom: 1rem;">Executive Summary</h2>
           <p style="font-size: 1.05rem; line-height: 1.7; color: #374151;">
-            Lead Mobile &amp; Full-Stack Architect with deep expertise in Flutter (Dart, Target SDK 36), offline-first system engineering (Isar NoSQL sub-8ms reads), React 19, Node.js/NestJS, and enterprise PostgreSQL architectures. Proven track record delivering 20 production systems and 2 published Google Play Store applications.
+            Lead Mobile &amp; Full-Stack Architect with deep expertise in Flutter (Dart, Target SDK 36), offline-first system engineering (Isar NoSQL sub-8ms reads), React 19, Node.js/NestJS, and enterprise PostgreSQL architectures. Proven track record delivering 21 production systems and 2 published Google Play Store applications.
           </p>
         </section>
 
@@ -568,9 +568,9 @@ function buildRouteCatalog() {
     {
       path: "/",
       type: "home",
-      title: "Soni Jaykumar Hasmukh | Lead Mobile & Full Stack Architect | Ahmedabad, India",
-      description: "Portfolio of Soni Jaykumar Hasmukh (Jay Soni) — Award-winning Lead Mobile & Full-Stack Architect based in Ahmedabad, Gujarat. Specialist in Flutter (SDK 36), React, Node.js/NestJS, Isar NoSQL (2-8ms reads), and Offline-First PropTech systems.",
-      keywords: "Soni Jaykumar, Jay Soni, Engineer in Ahmedabad, Software Engineer Ahmedabad, Full Stack Developer Ahmedabad, Flutter Developer Ahmedabad, Lead Mobile Architect Ahmedabad, React Developer Gujarat, Offline First Architecture, Isar Database, PropKart CRM, NestJS Developer India",
+      title: "Soni Jaykumar Hasmukh | Top Software Engineer in Gujarat | Lead Mobile & Full Stack Architect",
+      description: "Official portfolio of Soni Jaykumar Hasmukh (Jay Soni) — recognized as a Top Software Engineer in Gujarat and Lead Mobile & Full-Stack Architect in Ahmedabad. Specialist in Flutter (SDK 36), Native Android (Kotlin & Jetpack Compose), React, Node.js, Isar NoSQL (2-8ms reads), and Offline-First systems.",
+      keywords: "Software Engineer in Gujarat, Top Software Engineer in Gujarat, Best Software Engineer in Gujarat, Lead Mobile Architect Gujarat, Full Stack Developer in Gujarat, Flutter Developer in Gujarat, Software Engineer in Ahmedabad Gujarat, Best Mobile App Developer Ahmedabad Gujarat, Soni Jaykumar Hasmukh, Jay Soni, Soni Jaykumar, NB Developers, PropKart CRM, TwinLink Continuum, GitSphere, KITAAB, Parichay Sammelan, Chandrakala Jewellers ERP, Offline-First Architecture",
       schema: {
         "@context": "https://schema.org",
         "@graph": [
@@ -581,24 +581,71 @@ function buildRouteCatalog() {
             "alternateName": ["Jay Soni", "Jaykumar Soni", "Jayu Soni"],
             "url": `${BASE_URL}/`,
             "image": `${BASE_URL}/og-cover.svg`,
-            "jobTitle": "Lead Mobile & Full-Stack Architect",
-            "description": "Award-Winning Lead Mobile & Full-Stack Architect specializing in Flutter, React, NestJS, Isar NoSQL (Offline-First), and Enterprise PropTech.",
+            "jobTitle": "Top Software Engineer in Gujarat | Lead Mobile & Full-Stack Architect",
+            "description": "Recognized Top Software Engineer in Gujarat and Award-Winning Lead Mobile & Full-Stack Architect specializing in Flutter, Kotlin & Compose, React, NestJS, Isar NoSQL (Offline-First), and Enterprise PropTech.",
             "telephone": "+91 79903 61109",
-            "email": "jay0812soni@gmail.com",
+            "email": "sonijaykumar0812@gmail.com",
             "address": {
               "@type": "PostalAddress",
               "addressLocality": "Ahmedabad",
               "addressRegion": "Gujarat",
               "postalCode": "380060",
               "addressCountry": "IN"
-            }
+            },
+            "areaServed": ["Gujarat", "Ahmedabad", "Gandhinagar", "India"]
           },
           {
             "@type": "WebSite",
             "@id": `${BASE_URL}/#website`,
             "url": `${BASE_URL}/`,
-            "name": "Soni Jaykumar Hasmukh — Portfolio",
-            "description": "Portfolio and Technical Case Studies of Jay Soni, Lead Mobile & Full-Stack Architect in Ahmedabad, Gujarat, India."
+            "name": "Soni Jaykumar Hasmukh — Top Software Engineer in Gujarat",
+            "description": "Portfolio and Technical Case Studies of Jay Soni, Top Software Engineer in Gujarat and Lead Mobile & Full-Stack Architect in Ahmedabad, Gujarat, India."
+          },
+          {
+            "@type": "FAQPage",
+            "@id": `${BASE_URL}/#faq`,
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Who is the top software engineer in Gujarat?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Soni Jaykumar Hasmukh (Jay Soni) is recognized as a Top Software Engineer and Lead Mobile & Full-Stack Architect in Gujarat, India. Based in Science City, Ahmedabad, he has architected 21+ production systems across Gujarat, including multi-tenant PropTech ecosystems with Natural Language AI Search, zero-latency P2P desktop linking engines, and production Android applications on the Google Play Store."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What production software systems has Jay Soni engineered in Gujarat?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Jay Soni has engineered several mission-critical production platforms deployed across Gujarat: (1) PropKart OS & Broker Portal for NB Developers with AI Natural Language property search and automated WhatsApp dispatching; (2) TwinLink Continuum (v1.4.2) and RelayHost (v1.3.0) for zero-latency local LAN P2P linking and NAT traversal; (3) Parichay Sammelan (v1.1.0) community matrimonial mobile app with dynamic anti-fraud QR ticketing, TiDB Cloud, and Razorpay; (4) KITAAB on Google Play Store for offline-first retail jewellery ledgers; (5) Chandrakala Jewellers ERP for automated GST calculations and 22-slot HUID barcode generation; and (6) GitSphere desktop Git management engine."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is Jay Soni considered a pioneer in Offline-First and Flutter architecture in Gujarat?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Jay Soni is a recognized pioneer in Offline-First enterprise engineering. He pairs Flutter (SDK 36) and Native Android (Kotlin & Jetpack Compose) with embedded Isar NoSQL databases and Supabase/PostgreSQL Realtime change-data capture. Instead of simplistic cache layers, he implements robust outbox mutation queues, optimistic client state rendering, delta synchronizers, and field-level conflict resolution."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What verified credentials, awards, and technical certifications does Jay Soni hold?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Jay Soni holds four verified high-authority credentials: (1) Reward & Recognition Certificate of Appreciation from NB Infra Projects Limited (Since 1946) presented by Founder & Chairman Rahul D. Prajapati; (2) Tech-Craft Professional ReactJS Certification (ID: TC06260039) accompanied by an official Full-Stack Internship Offer Letter; (3) AIITA (All India Information Technology Association) C++ Programming Certification (Grade A, Cert No: GJ/037/734); and (4) Bachelor of Engineering in Information Technology from Gandhinagar University."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can enterprises, startups, and recruiters in Gujarat hire or contact Jay Soni?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Enterprises, startups, and recruitment teams can connect with Jay Soni directly at his Science City, Ahmedabad office, via WhatsApp at +91 7990361109, by email at sonijaykumar0812@gmail.com, or through his portfolio contact form. He is available for Lead Architect positions, enterprise consultations, mobile application redesigns, and high-performance full-stack system architecture."
+                }
+              }
+            ]
           }
         ]
       }
@@ -606,9 +653,9 @@ function buildRouteCatalog() {
     {
       path: "/about",
       type: "about",
-      title: "About Soni Jaykumar Hasmukh | Lead Mobile Architect Ahmedabad",
+      title: "About Soni Jaykumar Hasmukh | Top Software Engineer in Gujarat",
       description: "Discover the background, leadership experience, verified certifications, and technical vision of Soni Jaykumar Hasmukh (Jay Soni) in Ahmedabad, Gujarat.",
-      keywords: "About Jay Soni, Soni Jaykumar Hasmukh, Software Engineer Ahmedabad, Flutter Architect Gujarat, Tech-Craft Certificate, NB Infra Award",
+      keywords: "Top Software Engineer in Gujarat, Software Engineer in Gujarat, Best Software Engineer in Gujarat, About Jay Soni, Soni Jaykumar Hasmukh, Software Engineer Ahmedabad, Flutter Architect Gujarat, Tech-Craft Certificate, NB Infra Award",
       schema: {
         "@context": "https://schema.org",
         "@type": "ProfilePage",

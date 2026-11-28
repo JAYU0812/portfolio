@@ -27,32 +27,32 @@ export default function About() {
   const techSkills = [
     {
       category: "Mobile & Offline-First",
-      skills: ["Flutter", "Dart", "Isar Database", "BLoC & Riverpod", "Android Studio", "Play Store Deployment"]
+      skills: ["Flutter (SDK 36)", "Dart", "Kotlin & Jetpack Compose (Native Android)", "Isar Database", "BLoC & Riverpod", "Android Studio", "Google Play Store Releases"]
     },
     {
       category: "Frontend & Web",
-      skills: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5 / CSS3", "Vite", "Component Architecture"]
+      skills: ["React.js", "JavaScript (ES6+)", "Tailwind CSS", "HTML5 / CSS3", "Vite", "Component Architecture", "Single Page Applications"]
     },
     {
       category: "Backend & Systems",
-      skills: ["Node.js", "Express.js", "PHP", "RESTful APIs", "Realtime WebSockets", "Authentication"]
+      skills: ["Node.js", "Express.js", "PHP", "RESTful APIs", "Realtime WebSockets", "P2P LAN Sockets (TwinLink)", "Authentication & JWT"]
     },
     {
       category: "Databases & Cloud",
-      skills: ["Supabase", "PostgreSQL", "MySQL", "Relational Modeling", "Database Indexing", "Vercel"]
+      skills: ["Supabase", "PostgreSQL", "TiDB Cloud (Distributed SQL)", "MySQL", "Relational Modeling", "Database Indexing", "Cloudinary", "Vercel"]
     },
     {
       category: "Engineering Specialties",
-      skills: ["Offline-First Architecture", "Realtime Sync", "Haversine Geofencing", "GST Billing Engines", "Git & GitHub"]
+      skills: ["Offline-First Architecture", "Realtime Sync", "Haversine Geofencing", "GST Billing Engines", "Anti-Fraud Dynamic QR", "Git & GitHub"]
     }
   ];
 
   return (
     <div className="py-8 sm:py-16 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       <SEO 
-        title="About Jay Soni — Software Engineer, Certifications & Credentials | Ahmedabad"
-        description="Learn about Soni Jaykumar Hasmukh (Jay Soni), Lead Mobile & Full-Stack Architect at NB Developers in Ahmedabad. Verified NB Infra R&R Award, Tech-Craft ReactJS Certification (TC06260039) & Internship Offer Letter, and AIITA C++ Certification (Grade A)."
-        keywords="About Jay Soni, Soni Jaykumar, Engineer in Ahmedabad, Software Architect Ahmedabad, NB Infra Award, Tech-Craft ReactJS Certificate TC06260039, AIITA C++ Certificate GJ/037/734, Gandhinagar University IT"
+        title="About Jay Soni — Top Software Engineer in Gujarat | Lead Architect & Credentials"
+        description="Learn about Soni Jaykumar Hasmukh (Jay Soni), recognized as a Top Software Engineer in Gujarat and Lead Mobile & Full-Stack Architect at NB Developers in Science City, Ahmedabad. Verified NB Infra R&R Award, Tech-Craft ReactJS Certification (TC06260039), and AIITA C++ Certification."
+        keywords="Top Software Engineer in Gujarat, Software Engineer in Gujarat, Best Software Engineer in Gujarat, Lead Mobile Architect Gujarat, About Jay Soni, Soni Jaykumar Hasmukh, Soni Jaykumar, Engineer in Ahmedabad, Software Architect Ahmedabad, NB Infra Award, Tech-Craft ReactJS Certificate TC06260039, AIITA C++ Certificate GJ/037/734, Gandhinagar University IT"
         canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/about"
       />
       {/* ----------------- 1. HERO BIO ----------------- */}
@@ -60,17 +60,22 @@ export default function About() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
           <div className="lg:col-span-7 space-y-4 sm:space-y-6">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
-              About Soni Jaykumar
-            </span>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
+                Top Software Engineer in Gujarat
+              </span>
+              <span className="px-2 py-0.5 rounded-full bg-[#EBF5FF] dark:bg-[#1E293B] text-[11px] font-mono text-[#1E40AF] dark:text-[#93C5FD] border border-[#BFDBFE] dark:border-[#334155]">
+                📍 Ahmedabad, Gujarat
+              </span>
+            </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-[#121316] dark:text-white tracking-tight leading-tight">
-              Engineering Practical Software That Solves Real Workflow Problems.
+              Engineering Practical, High-Impact Software Across Gujarat & Beyond.
             </h1>
             <p className="text-sm sm:text-lg text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
-              I am an Award-Winning Lead Mobile & Full-Stack Architect currently building enterprise PropTech applications at <strong className="text-[#121316] dark:text-white font-semibold">NB Developers / NB PropertyTech</strong>. Recipient of the <strong className="text-[#121316] dark:text-white font-semibold">Reward & Recognition Certificate of Appreciation</strong> from NB Infra Projects Limited (Since 1946). My core expertise spans <strong className="text-[#121316] dark:text-white font-semibold">Flutter</strong>, <strong className="text-[#121316] dark:text-white font-semibold">React</strong>, <strong className="text-[#121316] dark:text-white font-semibold">Node.js / NestJS</strong>, and <strong className="text-[#121316] dark:text-white font-semibold">Offline-First Architectures</strong>.
+              I am <strong className="text-[#121316] dark:text-white font-semibold">Soni Jaykumar Hasmukh (Jay Soni)</strong>, recognized as a <strong className="text-[#121316] dark:text-white font-semibold">Top Software Engineer in Gujarat</strong> and an Award-Winning Lead Mobile & Full-Stack Architect. Currently leading enterprise software engineering at <strong className="text-[#121316] dark:text-white font-semibold">NB Developers / NB PropertyTech</strong> in Science City, Ahmedabad. Recipient of the prestigious <strong className="text-[#121316] dark:text-white font-semibold">Reward & Recognition Certificate of Appreciation</strong> from NB Infra Projects Limited (Since 1946). My core specialization spans <strong className="text-[#121316] dark:text-white font-semibold">Flutter (SDK 36)</strong>, <strong className="text-[#121316] dark:text-white font-semibold">Native Android (Kotlin & Jetpack Compose)</strong>, <strong className="text-[#121316] dark:text-white font-semibold">React</strong>, <strong className="text-[#121316] dark:text-white font-semibold">Node.js / Express</strong>, and <strong className="text-[#121316] dark:text-white font-semibold">Offline-First Resilient Architectures</strong>.
             </p>
             <p className="text-xs sm:text-base text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
-              My engineering philosophy is rooted in pragmatism: writing clean, modular, and resilient code that works flawlessly even without an internet connection. From architecting PropKart OS with Natural Language AI Search and launching PropKart Broker Portal to digitizing traditional businesses with custom GST ERPs and publishing apps on the Google Play Store, I take pride in delivering end-to-end software that drives genuine business value.
+              My engineering philosophy is rooted in pragmatism: writing clean, modular, and resilient code that works flawlessly even without an internet connection. From architecting PropKart OS with Natural Language AI Search and launching PropKart Broker Portal to building zero-latency P2P linking tools (TwinLink Continuum), digitizing traditional retail jewellers with custom GST ERPs, and publishing production apps on the Google Play Store, I take pride in delivering end-to-end software systems that drive genuine business impact.
             </p>
 
             <div className="grid grid-cols-2 sm:flex sm:flex-row gap-2.5 sm:gap-3 pt-2">

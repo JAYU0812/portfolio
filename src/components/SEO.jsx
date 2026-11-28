@@ -16,14 +16,14 @@ export default function SEO({
   const location = useLocation();
 
   const siteTitle = title 
-    ? `${title} | Soni Jaykumar — Lead Architect & Engineer Ahmedabad`
-    : "Soni Jaykumar Hasmukh | Lead Mobile & Full Stack Architect | Ahmedabad, India";
+    ? `${title} | Soni Jaykumar — Top Software Engineer in Gujarat`
+    : "Soni Jaykumar Hasmukh | Top Software Engineer in Gujarat | Lead Mobile & Full Stack Architect";
 
   const metaDescription = description || 
-    "Portfolio of Soni Jaykumar Hasmukh — Award-winning Lead Mobile & Full-Stack Architect based in Ahmedabad, Gujarat. Specialist in Flutter (SDK 36), React, Node.js/NestJS, Isar NoSQL (2-8ms reads), and Offline-First PropTech systems.";
+    "Portfolio of Soni Jaykumar Hasmukh (Jay Soni) — Recognized as a Top Software Engineer in Gujarat and Award-Winning Lead Mobile & Full-Stack Architect. Specialist in Flutter (Target SDK 36), Native Android (Kotlin/Compose), React, Node.js/NestJS, Isar NoSQL (2-8ms reads), and Enterprise PropTech systems in Ahmedabad, Gujarat.";
 
   const metaKeywords = keywords || 
-    "Soni Jaykumar, Jay Soni, Engineer in Ahmedabad, Software Engineer Ahmedabad, Full Stack Developer Ahmedabad, Flutter Developer Ahmedabad, Lead Mobile Architect Ahmedabad, React Developer Gujarat, Offline First Architecture, Isar Database, PropKart CRM, NestJS Developer India";
+    "Software Engineer in Gujarat, Top Software Engineer in Gujarat, Best Software Engineer in Gujarat, Lead Mobile Architect Gujarat, Software Engineer Ahmedabad, Top Software Developer Gujarat, Flutter Developer Gujarat, Best Mobile App Developer Ahmedabad Gujarat, Full Stack Developer in Gujarat, Soni Jaykumar, Jay Soni, Offline First Architecture, Isar Database, PropKart CRM, NestJS Developer Gujarat, Hire Software Engineer Gujarat";
 
   const canonicalUrl = canonical || `${BASE_URL}${location.pathname === "/" ? "" : location.pathname}`;
 
