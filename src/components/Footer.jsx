@@ -107,6 +107,17 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="https://broker.nbpropertytech.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C27803] dark:hover:text-[#E8C37D] inline-flex items-center gap-1 transition"
+                >
+                  <span>PropKart Broker Portal (broker.nbpropertytech.com)</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 opacity-60" />
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://crm.nbdeveloper.co.in"
                   target="_blank"
                   rel="noopener noreferrer"

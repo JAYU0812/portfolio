@@ -74,6 +74,7 @@
 - Highlights: Embedded Isar database delivering sub-8ms local queries offline. Natural Language AI Search Engine in AppShell. Automated background conflict resolution. 100/100 automated security audit score.
 
 ### 3. PropKart Broker Portal — Enterprise Broker Governance Suite (v1.0.0)
+- Live Production URL: https://broker.nbpropertytech.com
 - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/propkart-broker
 - Stack: Flutter Multiplatform (Web, Mobile, Windows), NestJS 10, PostgreSQL 16, TypeORM, Dynamic RBAC
 - Highlights: Two-tier approval queues separating RERA Verified brokers from Queue B assistance candidates with automated WhatsApp deep links, packaged PropKartBrokerPortal.exe standalone Windows desktop application, and PostgreSQL Migrations v1.26–v1.27 for locality sanitization.

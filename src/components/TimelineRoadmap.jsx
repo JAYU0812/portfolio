@@ -109,7 +109,7 @@ export default function TimelineRoadmap() {
       icon: <Globe className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />,
       summary: "Launched the Soni Samaj Community Directory in February 2025, designing normalized relational schemas for multi-tier family hierarchies and occupation indexing across Gujarat.",
       highlights: [
-        "Jay's foundational software project connecting hundreds of families.",
+        "My foundational software project connecting hundreds of families.",
         "Designed fast relational database search by city, native village, and profession."
       ],
       projectIds: ["soni-samaj"]

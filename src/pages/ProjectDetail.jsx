@@ -64,55 +64,55 @@ export default function ProjectDetail() {
     if (project.id === "propkart") {
       return {
         challenge: "Real estate field agents frequently operate in low-connectivity underground parking decks and remote construction sites where traditional cloud CRMs freeze, lose unsaved lead entries, and cause telecaller dispatch collisions. Furthermore, multi-tenant lead routing from Meta Lead Ads and Housing.com required sub-second delivery without database locking.",
-        solution: "Jay architected an enterprise Offline-First operating system anchored by an embedded Isar NoSQL local store delivering 2ms–8ms read times. To eliminate data loss, an asynchronous outbox mutation queue guarantees atomic persistence with strict Server-Wins conflict resolution. On top of this, Jay engineered a debounced Natural Language AI Search Engine in the AppShell, allowing agents to type conversational queries that translate safely to PostgreSQL without exposing raw queries or tenant boundaries.",
+        solution: "I architected an enterprise Offline-First operating system anchored by an embedded Isar NoSQL local store delivering 2ms–8ms read times. To eliminate data loss, an asynchronous outbox mutation queue guarantees atomic persistence with strict Server-Wins conflict resolution. On top of this, I engineered a debounced Natural Language AI Search Engine in the AppShell, allowing agents to type conversational queries that translate safely to PostgreSQL without exposing raw queries or tenant boundaries.",
         impact: "Zero-latency UI response (0ms perceived wait), 100/100 automated security audit score (37/37 checks passed), Google Play Target SDK 36 readiness, and sub-second multi-channel lead ingestion with 24-hour cryptographic deduplication."
       };
     }
     if (project.id === "propkart-broker") {
       return {
         challenge: "Onboarding independent real estate brokers involved chaotic manual document handoffs, unverified RERA claims, lack of role isolation, and security vulnerabilities during initial credential distribution.",
-        solution: "Jay engineered a cross-platform broker operations platform using Flutter and NestJS 10 with isolated PostgreSQL 16 containers. He architected two distinct governance queues: Queue A for automated fast-track verification of RERA-licensed brokers, and Queue B for brokers needing licensing assistance (with direct auto-drafted WhatsApp handoffs). System settings and RBAC are 100% dynamic in PostgreSQL, paired with automated Hostinger SSL SMTP dispatch of cryptographic single-use activation tokens.",
+        solution: "I engineered a cross-platform broker operations platform using Flutter and NestJS 10 with isolated PostgreSQL 16 containers. I architected two distinct governance queues: Queue A for automated fast-track verification of RERA-licensed brokers, and Queue B for brokers needing licensing assistance (with direct auto-drafted WhatsApp handoffs). System settings and RBAC are 100% dynamic in PostgreSQL, paired with automated Hostinger SSL SMTP dispatch of cryptographic single-use activation tokens.",
         impact: "Eliminated manual credential leakages, delivered tamper-evident audit logging with one-click JSON payload inspection, and created a single-command Docker deployment pipeline with zero hardcoded platform credentials."
       };
     }
     if (project.id === "devsync") {
       return {
         challenge: "Transferring sensitive code repositories and files across local networks typically requires third-party cloud intermediaries, creating security exposure, credential leaks, and high latency over the public internet.",
-        solution: "Jay pioneered a sovereign cryptographic peer-to-peer suite using an account-per-device paradigm. Each device signs payload manifests on-device with Ed25519 and negotiates mutual session keys via X25519 ECDH for AES-256-GCM encryption. Networking operates on a hybrid topology: high-speed local discovery via UDP multicast + embedded Shelf HTTP servers, with an automated fallback to a zero-retention Vercel Serverless SSE relay backed by Upstash Redis.",
+        solution: "I pioneered a sovereign cryptographic peer-to-peer suite using an account-per-device paradigm. Each device signs payload manifests on-device with Ed25519 and negotiates mutual session keys via X25519 ECDH for AES-256-GCM encryption. Networking operates on a hybrid topology: high-speed local discovery via UDP multicast + embedded Shelf HTTP servers, with an automated fallback to a zero-retention Vercel Serverless SSE relay backed by Upstash Redis.",
         impact: "Completely sovereign, end-to-end encrypted file and snippet exchange with perceived zero latency on LAN and immediate ephemeral message pruning upon receipt."
       };
     }
     if (project.id === "chandrakala-jewellers") {
       return {
         challenge: "Traditional jewellery showrooms struggle with complex multi-factor GST taxation (metal purity karats, making wastage, hallmark charges, CGST/SGST) and physical inventory management without dedicated ERPs.",
-        solution: "Jay engineered a dual-engine retail ecosystem: a high-contrast luxury commercial e-commerce storefront live on chandrakalajewellers.in backed by Supabase PostgreSQL with rigorous Row-Level Security (RLS) policies, plus a specialized Flutter desktop application tailored for thermal barcode jewellery tag printing (22 staggered slots with central tail strips and HUID compliance).",
+        solution: "I engineered a dual-engine retail ecosystem: a high-contrast luxury commercial e-commerce storefront live on chandrakalajewellers.in backed by Supabase PostgreSQL with rigorous Row-Level Security (RLS) policies, plus a specialized Flutter desktop application tailored for thermal barcode jewellery tag printing (22 staggered slots with central tail strips and HUID compliance).",
         impact: "Automated end-to-end sales billing with zero calculation error, eliminated stock tracking discrepancies, and established a direct click-to-inquire online customer catalog."
       };
     }
     if (project.id === "gitsphere") {
       return {
         challenge: "Developers juggling personal, corporate, and freelance projects frequently suffer from git identity collisions, accidental push mistakes, and terminal CLI fatigue when inspecting remote collaborator changes.",
-        solution: "Jay built GitSphere, a native Windows visual Git control center utilizing Flutter Desktop, Riverpod, and native Win32/DWM process runners. GitSphere introduces a 4-stage visual pipeline (Working Tree → Staging → Commit Branch → Cloud) and manages isolated multi-profile credentials inside local SQLite (sqflite_common_ffi), enabling 1-click Git identity switching.",
+        solution: "I built GitSphere, a native Windows visual Git control center utilizing Flutter Desktop, Riverpod, and native Win32/DWM process runners. GitSphere introduces a 4-stage visual pipeline (Working Tree → Staging → Commit Branch → Cloud) and manages isolated multi-profile credentials inside local SQLite (sqflite_common_ffi), enabling 1-click Git identity switching.",
         impact: "Packaged into a compact 12 MB production Inno Setup Windows installer, eliminating terminal authentication collisions and making remote collaborator commit histories instantly visual."
       };
     }
     if (project.id === "nbpropertytech-portal") {
       return {
         challenge: "NB PropertyTech needed a high-performance marketing portal to showcase its enterprise CRM/ERP capabilities to institutional real estate developers, handle real-time broker inquiries, and deploy reliably across cloud VPS infrastructure.",
-        solution: "Jay built the portal with Next.js 15 (App Router, Standalone mode), TypeScript 5, Tailwind CSS, and Framer Motion. He containerized the application with Docker, configured Traefik reverse proxy for automated ACME SSL, and built a GitHub Actions CI/CD workflow that compiles, tests, and deploys directly to the production VPS.",
+        solution: "I built the portal with Next.js 15 (App Router, Standalone mode), TypeScript 5, Tailwind CSS, and Framer Motion. I containerized the application with Docker, configured Traefik reverse proxy for automated ACME SSL, and built a GitHub Actions CI/CD workflow that compiles, tests, and deploys directly to the production VPS.",
         impact: "Delivered sub-second page loads on nbpropertytech.com, automated broker inquiry persistence in PostgreSQL, and zero-downtime containerized deployments."
       };
     }
     if (project.id === "nb-hrms") {
       return {
         challenge: "Managing enterprise construction workforces requires strict identity document encryption, real-time field worker GPS location auditing outside company geofences, and high-volume lead reassignment across sales tiers.",
-        solution: "Jay expanded the NB-HRMS suite into an integrated HRMS + CRM + ERP ecosystem. He engineered real-time GPS field trip tracking in Flutter that detects when an employee exits a designated work geofence (30m buffer, 12-hour session cache, 120s expiring live map pins), integrated double encryption (TRANSPORT_SECRET) with AES-256 field encryption for identity records, and implemented sensitive data masking with bulk lead transfers.",
+        solution: "I expanded the NB-HRMS suite into an integrated HRMS + CRM + ERP ecosystem. I engineered real-time GPS field trip tracking in Flutter that detects when an employee exits a designated work geofence (30m buffer, 12-hour session cache, 120s expiring live map pins), integrated double encryption (TRANSPORT_SECRET) with AES-256 field encryption for identity records, and implemented sensitive data masking with bulk lead transfers.",
         impact: "Comprehensive regulatory compliance for identity records, automated field auditing without battery drain, and unified mobile access via nb_crm_flutter."
       };
     }
     return {
       challenge: "Solving operational inefficiencies through high-performance software engineering, eliminating manual data entry bottlenecks, and building clean, resilient user interfaces.",
-      solution: "Jay designed and deployed this system from requirement gathering to production launch, selecting modern architecture patterns, type-safe data pipelines, and optimized storage layers.",
+      solution: "I designed and deployed this system from requirement gathering to production launch, selecting modern architecture patterns, type-safe data pipelines, and optimized storage layers.",
       impact: "Production-tested reliability, intuitive responsive user experiences, and measurable business efficiency gains."
     };
   };
@@ -331,11 +331,11 @@ export default function ProjectDetail() {
             </p>
           </div>
 
-          {/* Jay's Architectural Breakthrough */}
+          {/* Architectural Breakthrough */}
           <div className="bg-white dark:bg-[#14161E] p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-2 border-[#C27803]/40 dark:border-[#C27803]/60 shadow-xs space-y-3 relative overflow-hidden">
             <div className="flex items-center gap-2 text-[#C27803] dark:text-[#E8C37D] font-mono text-xs font-bold uppercase tracking-wider">
               <Zap className="w-4 h-4" />
-              <span>Jay's Architectural Solution</span>
+              <span>My Architectural Solution</span>
             </div>
             <h3 className="text-lg sm:text-xl font-bold text-[#121316] dark:text-[#F5F5F7]">
               Engineered for Zero Failure

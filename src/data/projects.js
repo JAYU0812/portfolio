@@ -61,7 +61,7 @@ export const projects = [
     filterCategory: "crm",
     date: "October 2026 – Present",
     status: "Production v1.0.0",
-    badge: "github.com/JAYU0812/brokerportal",
+    badge: "broker.nbpropertytech.com",
     version: "v1.0.0",
     tagline: "Cross-platform broker onboarding engine with dual-tier RERA approval governance, dynamic RBAC, and Hostinger SSL SMTP mailer.",
     description:
@@ -80,7 +80,7 @@ export const projects = [
       "BLoC & Cubit"
     ],
     githubUrl: "https://github.com/JAYU0812/brokerportal",
-    liveUrl: null,
+    liveUrl: "https://broker.nbpropertytech.com",
     playStoreUrl: null,
     featured: true,
     highlights: [
@@ -372,7 +372,7 @@ export const projects = [
     version: "v1.4.2 (Client) / v1.3.0 (RelayHost)",
     tagline: "High-speed peer-to-peer Windows PC network linking suite with sub-millisecond LAN discovery and dedicated Internet relay tunneling.",
     description:
-      "A high-performance dual-component Windows desktop system software suite engineered by Jay Soni. Comprises: (1) TwinLink Continuum (TwinLink.exe v1.4.2), a native Windows desktop client designed to link two Windows PCs on the local network at zero latency for instant clipboard synchronization, bidirectional file streaming, and workflow continuity, and (2) TwinLink.RelayHost (TwinLink.RelayHost.exe v1.3.0), an internet relay tunneling service enabling seamless peer-to-peer traversal across NAT and firewalls when devices operate on disparate networks.",
+      "A high-performance dual-component Windows desktop system software suite I engineered. Comprises: (1) TwinLink Continuum (TwinLink.exe v1.4.2), a native Windows desktop client designed to link two Windows PCs on the local network at zero latency for instant clipboard synchronization, bidirectional file streaming, and workflow continuity, and (2) TwinLink.RelayHost (TwinLink.RelayHost.exe v1.3.0), an internet relay tunneling service enabling seamless peer-to-peer traversal across NAT and firewalls when devices operate on disparate networks.",
     tech: [
       "C# / .NET",
       "Win32 API",
@@ -732,7 +732,7 @@ export const projects = [
     badge: "First Production Project",
     tagline: "Comprehensive community networking directory connecting members and families.",
     description:
-      "The foundational first project that launched Jay's software engineering journey in February 2025. Built to connect members of the community across Gujarat, featuring family tree linkages, occupation and location-based profile indexing, and fast relational database search.",
+      "The foundational first project that launched my software engineering journey in February 2025. Built to connect members of the community across Gujarat, featuring family tree linkages, occupation and location-based profile indexing, and fast relational database search.",
     tech: [
       "PHP",
       "MySQL",
@@ -744,7 +744,7 @@ export const projects = [
     playStoreUrl: null,
     featured: false,
     highlights: [
-      "Jay's foundational software project, launched in February 2025",
+      "My foundational software project, launched in February 2025",
       "Designed normalized relational database schema for family hierarchies",
       "Fast multi-parameter search by city, native village, and occupation",
       "Mobile-friendly directory layout adopted by community families"

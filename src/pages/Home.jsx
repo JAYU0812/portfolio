@@ -133,7 +133,7 @@ export default function Home() {
               {[
                 { label: "Reward & Recognition (NB Infra)", action: () => setShowCertModal(true) },
                 { label: "PropKart OS (AI Search + SDK 36)", link: "https://propkart.nbpropertytech.com" },
-                { label: "PropKart Broker Portal (v1.0.0)", link: "https://github.com/JAYU0812/brokerportal" },
+                { label: "Live: broker.nbpropertytech.com", link: "https://broker.nbpropertytech.com" },
                 { label: "Live: nbpropertytech.com", link: "https://nbpropertytech.com" },
                 { label: "Live: listing.nbpropertytech.com", link: "https://listing.nbpropertytech.com" },
                 { label: "DevSync (P2P Crypto Engine)", link: "/projects" },
@@ -237,12 +237,12 @@ export default function Home() {
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[10px] text-[#7A8291] pt-2 border-t border-[#2E333D] gap-1 sm:gap-0">
                     <span>Flutter + NestJS + Postgres 16</span>
                     <a 
-                      href="https://github.com/JAYU0812/brokerportal" 
+                      href="https://broker.nbpropertytech.com" 
                       target="_blank" 
                       rel="noreferrer"
                       className="text-[#E8C37D] hover:underline"
                     >
-                      brokerportal ↗
+                      broker.nbpropertytech.com ↗
                     </a>
                   </div>
                 </div>

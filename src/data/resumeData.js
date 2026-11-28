@@ -105,14 +105,14 @@ export const resumeData = {
         "Awarded Certificate of Appreciation (Reward and Recognition) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional quarterly engineering leadership and zero-downtime architecture.",
         "Architected and maintained production PropKart CRM & OS (v2.1.3+13, Target SDK 36, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 checks), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
         "Engineered Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with debounced intent extraction, multi-tenant isolation, safe query telemetry, and persistent builder schemas across Migrations 84–93.",
-        "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues, packaged PropKartBrokerPortal.exe standalone Windows desktop client, and engineered PostgreSQL Migrations v1.26–v1.27 for locality sanitization across Ahmedabad & Gandhinagar.",
+        "Architected PropKart Broker Portal (live: broker.nbpropertytech.com) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues, packaged PropKartBrokerPortal.exe standalone Windows desktop client, and engineered PostgreSQL Migrations v1.26–v1.27 for locality sanitization across Ahmedabad & Gandhinagar.",
         "Launched official marketing portal (nbpropertytech.com) using Next.js 15, Docker, and GitHub Actions automated VPS CI/CD with Traefik SSL; engineered 95-file Mobile Foundation (20,000+ LOC) and NB-HRMS real-time GPS field trip tracking with geofence exit detection."
       ],
       bullets: [
         "Honored with Certificate of Appreciation (Reward and Recognition) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional engineering performance, valuable quarterly contributions, and dedication to excellence.",
         "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.3+13, Target SDK 36, Package: com.nbpropertytech.propkart, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 passed), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
         "Engineered Natural Language AI Search Engine in PropKart OS and backend with debounced intent extraction, PostgreSQL multi-tenant isolation, safe query telemetry, and persistent builder schemas spanning Migrations 84 to 93.",
-        "Architected PropKart Broker Portal (github.com/JAYU0812/brokerportal) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues (Queue A RERA Verified vs Queue B RERA Assistance), dynamic RBAC, tamper-evident audit logging, and Hostinger SSL SMTP.",
+        "Architected PropKart Broker Portal (live: broker.nbpropertytech.com) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues (Queue A RERA Verified vs Queue B RERA Assistance), dynamic RBAC, tamper-evident audit logging, and Hostinger SSL SMTP.",
         "Packaged PropKartBrokerPortal.exe standalone Windows desktop application with SQLite3 FFI and multi-window management; engineered PostgreSQL Migrations v1.26 & v1.27 sanitizing broker locality broadcasts to authoritative Ahmedabad & Gandhinagar micro-markets (Science City, Ambli, Bodakdev, Bopal, Sindhu Bhavan Road, GIFT City).",
         "Launched official production marketing and broker onboarding platform (live: nbpropertytech.com) using Next.js 15, TypeScript 5, Docker, and GitHub Actions automated VPS CI/CD with Traefik SSL.",
         "Architected 95-file Mobile Foundation & Design System (Steps 3.0–3.7 migration, 20,000+ LOC) with native app shells, responsive bottom navigation, contextual telecaller outcome disposition sheets, and WebGL CanvasKit GPU shader stabilization.",
@@ -194,9 +194,9 @@ export const resumeData = {
     },
     {
       name: "PropKart Broker Portal — Enterprise Broker Governance Suite",
-      url: "https://github.com/JAYU0812/brokerportal",
-      displayUrl: "github.com/JAYU0812/brokerportal",
-      badge: "Production v1.0.0",
+      url: "https://broker.nbpropertytech.com",
+      displayUrl: "broker.nbpropertytech.com",
+      badge: "Production Live",
       technologies: "Flutter 3.x, NestJS 10, TypeScript, PostgreSQL 16, Docker, Dynamic RBAC, Hostinger SSL SMTP",
       bullets: [
         "Enterprise broker governance suite with two-tier queues (Queue A RERA Verified vs Queue B RERA Assistance with WhatsApp auto-drafting) and packaged PropKartBrokerPortal.exe Windows desktop build.",
@@ -264,9 +264,9 @@ export const resumeData = {
     },
     {
       name: "PropKart Broker Portal — Enterprise Broker Governance Suite",
-      url: "https://github.com/JAYU0812/brokerportal",
-      displayUrl: "github.com/JAYU0812/brokerportal",
-      badge: "Production v1.0.0",
+      url: "https://broker.nbpropertytech.com",
+      displayUrl: "broker.nbpropertytech.com",
+      badge: "Production Live",
       technologies: "Flutter 3.x, Dart, NestJS 10, TypeScript, PostgreSQL 16, Docker, TypeORM, Hostinger SSL SMTP, Dynamic RBAC, BLoC",
       bullets: [
         "Cross-platform broker operations and dual-tier approval governance suite (Queue A RERA Verified vs Queue B RERA Assistance with direct WhatsApp auto-drafting).",
@@ -449,7 +449,7 @@ export const resumeData = {
       badge: "Foundational Project",
       technologies: "PHP, MySQL, Relational Database, Search Indexing",
       bullets: [
-        "Jay's foundational software project, launched in February 2025 connecting community families across Gujarat.",
+        "My foundational software project, launched in February 2025 connecting community families across Gujarat.",
         "Features relational database structure for family hierarchies and multi-attribute search by city, native village, and profession."
       ]
     }

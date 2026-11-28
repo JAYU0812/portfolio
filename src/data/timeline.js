@@ -1,6 +1,6 @@
 /**
  * Chronological Career & Project Timeline
- * Showcasing Jay's rapid progression from early 2025 to leading production software today.
+ * Showcasing my rapid progression from early 2025 to leading production software today.
  */
 
 export const timelineEvents = [

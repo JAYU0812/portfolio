@@ -454,7 +454,7 @@ export default function QuestionDetail() {
                     to="/about"
                     className="hover:text-[#C27803] dark:hover:text-[#E8C37D] font-mono"
                   >
-                    About Jay
+                    About Me
                   </Link>
                 </div>
               </div>
@@ -464,7 +464,7 @@ export default function QuestionDetail() {
               to="/contact"
               className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-[#121316] dark:bg-[#C27803] text-white text-xs font-semibold hover:bg-[#C27803] transition shadow-xs text-center shrink-0"
             >
-              Consult With Jay
+              Consult With Me
             </Link>
           </div>
         </section>
