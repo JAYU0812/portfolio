@@ -10,7 +10,7 @@ import {
   ArrowUpRight, 
   Award, 
   GraduationCap,
-  Sparkles,
+  Compass,
   Zap,
   Building2,
   Eye,
@@ -19,10 +19,6 @@ import {
 
 export default function About() {
   const [activeTimelineCredential, setActiveTimelineCredential] = useState(null);
-
-  const handleMascotSpeak = (text) => {
-    window.dispatchEvent(new CustomEvent("mascot-speak", { detail: { text } }));
-  };
 
   const techSkills = [
     {
@@ -64,8 +60,9 @@ export default function About() {
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
                 Top Software Engineer in Gujarat
               </span>
-              <span className="px-2 py-0.5 rounded-full bg-[#EBF5FF] dark:bg-[#1E293B] text-[11px] font-mono text-[#1E40AF] dark:text-[#93C5FD] border border-[#BFDBFE] dark:border-[#334155]">
-                📍 Ahmedabad, Gujarat
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-[#EBF5FF] dark:bg-[#1E293B] text-[11px] font-mono text-[#1E40AF] dark:text-[#93C5FD] border border-[#BFDBFE] dark:border-[#334155]">
+                <MapPin className="w-3 h-3 text-[#1E40AF] dark:text-[#93C5FD] shrink-0" />
+                <span>Ahmedabad, Gujarat</span>
               </span>
             </div>
             <h1 className="text-3xl sm:text-5xl font-extrabold text-[#121316] dark:text-white tracking-tight leading-tight">
@@ -99,19 +96,19 @@ export default function About() {
           <div className="lg:col-span-5">
             <div className="bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl p-5 sm:p-8 border border-[#E8E5DF] dark:border-[#232733] shadow-sm space-y-5 sm:space-y-6">
               <h3 className="text-base font-bold text-[#121316] dark:text-[#F5F5F7] pb-3 border-b border-[#F2EDE4] dark:border-[#222530] flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />
+                <Compass className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />
                 <span>Executive Summary</span>
               </h3>
 
               <div className="space-y-3.5 text-xs">
                 {/* Reward & Recognition Award Highlight */}
-                <div className="flex items-start gap-3 bg-[#FEF3C7]/50 dark:bg-[#C27803]/20 p-2.5 rounded-xl border border-[#FCD34D] dark:border-[#C27803]/40">
-                  <div className="w-8 h-8 rounded-lg bg-[#FEF3C7] dark:bg-[#C27803]/30 flex items-center justify-center shrink-0 text-[#B45309] dark:text-[#FCD34D]">
+                <div className="flex items-start gap-3 bg-[#FBF9F5] dark:bg-[#101218] p-3 rounded-xl border border-[#E8E5DF] dark:border-[#222530]">
+                  <div className="w-8 h-8 rounded-lg bg-[#F2EDE4] dark:bg-[#1C202B] flex items-center justify-center shrink-0 text-[#C27803] dark:text-[#E8C37D]">
                     <Award className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-[#92400E] dark:text-[#FCD34D]">Reward & Recognition Award</h4>
-                    <p className="text-[#78350F] dark:text-[#FDE68A] text-[11px] leading-tight">
+                    <h4 className="font-bold text-[#121316] dark:text-white">Reward & Recognition Award</h4>
+                    <p className="text-[#555963] dark:text-[#9CA3AF] text-[11px] leading-tight">
                       Certificate of Appreciation from NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati.
                     </p>
                   </div>
@@ -176,8 +173,8 @@ export default function About() {
       {/* ----------------- 2. TECHNICAL COMPETENCY MATRIX ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-12 border-t border-[#E8E5DF] dark:border-[#22252F]">
         <div className="max-w-2xl mb-8 sm:mb-12">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
-            Skills Matrix
+          <span className="text-xs font-mono font-medium text-[#C27803] dark:text-[#E8C37D]">
+            Skills matrix
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1 mb-2 sm:mb-3">
             Tools & Technical Specializations
@@ -201,9 +198,7 @@ export default function About() {
                 {category.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
-                    onMouseEnter={() => handleMascotSpeak(`I actively write and deploy systems using ${skill}.`)}
-                    onMouseLeave={() => handleMascotSpeak(null)}
-                    className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#262933] text-xs font-mono text-[#333740] dark:text-[#D1D5DB] hover:border-[#C27803]/50 transition cursor-help"
+                    className="px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#262933] text-xs font-mono text-[#333740] dark:text-[#D1D5DB] hover:border-[#C27803]/50 transition"
                   >
                     {skill}
                   </span>
@@ -227,7 +222,7 @@ export default function About() {
       {/* ----------------- 3. CAREER EVOLUTION TIMELINE ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16 border-t border-[#E8E5DF] dark:border-[#22252F]">
         <div className="max-w-2xl mb-8 sm:mb-12">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
+          <span className="text-xs font-mono font-medium text-[#C27803] dark:text-[#E8C37D]">
             Chronology
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1 mb-2 sm:mb-3">

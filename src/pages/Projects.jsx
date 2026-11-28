@@ -34,10 +34,6 @@ export default function Projects() {
     ? projects 
     : projects.filter(p => p.filterCategory === activeFilter);
 
-  const handleMascotSpeak = (text) => {
-    window.dispatchEvent(new CustomEvent("mascot-speak", { detail: { text } }));
-  };
-
   return (
     <div className="py-8 sm:py-16 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       <SEO 
@@ -49,8 +45,8 @@ export default function Projects() {
       {/* ----------------- 1. PAGE HEADER ----------------- */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-8 sm:mb-12">
         <div className="max-w-3xl">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
-            Engineering Portfolio & Roadmap
+          <span className="text-xs font-mono font-medium text-[#C27803] dark:text-[#E8C37D]">
+            Engineering portfolio & roadmap
           </span>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-[#121316] dark:text-[#F5F5F7] tracking-tight mt-1 mb-3 sm:mb-4">
             Production Systems & Engineering Journey
@@ -105,7 +101,7 @@ export default function Projects() {
       {/* ----------------- 2. MAIN CONTENT (ROADMAP OR GRID) ----------------- */}
       {viewMode === "roadmap" ? (
         <section className="max-w-7xl mx-auto px-4 sm:px-6 mb-16 sm:mb-20">
-          <TimelineRoadmap onHoverSpeak={handleMascotSpeak} />
+          <TimelineRoadmap />
         </section>
       ) : (
         <>
@@ -143,7 +139,6 @@ export default function Projects() {
                 <ProjectCard
                   key={project.id}
                   project={project}
-                  onHoverSpeak={handleMascotSpeak}
                 />
               ))}
             </div>

@@ -12,7 +12,7 @@ import {
   ArrowRight,
   MessageCircle,
   Award,
-  Sparkles,
+  Code2,
   Calendar,
   Zap
 } from "lucide-react";
@@ -54,9 +54,9 @@ export default function ProjectDetail() {
     if (badge.includes("Play Store")) return <Smartphone className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />;
     if (badge.includes("Hackathon")) return <Award className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />;
     if (badge.includes("Live") || badge.includes("Production")) {
-      return <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />;
+      return <span className="w-2 h-2 rounded-full bg-emerald-500" />;
     }
-    return <Sparkles className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />;
+    return <Code2 className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />;
   };
 
   // Curated deep-dive context based on project type

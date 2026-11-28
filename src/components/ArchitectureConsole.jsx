@@ -25,14 +25,14 @@ export default function ArchitectureConsole() {
   ];
 
   return (
-    <div className="bg-[#121316] dark:bg-[#101218] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-4 sm:p-8 lg:p-10 border border-[#2B2E36] dark:border-[#222530] shadow-xl relative overflow-hidden w-full transition-colors duration-200">
+    <div className="bg-[#121316] dark:bg-[#101218] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-[#2B2E36] dark:border-[#222530] shadow-xl relative overflow-hidden w-full transition-colors duration-200">
       {/* Console Top Bar */}
       <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 sm:pb-6 border-b border-[#2B2E36] mb-6 sm:mb-8">
         <div>
           <div className="flex items-center gap-2 mb-1">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-            <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-widest text-[#E8C37D]">
-              System Telemetry & Architecture Console
+            <span className="text-[11px] sm:text-xs font-mono font-medium text-[#E8C37D]">
+              System telemetry & architecture console
             </span>
           </div>
           <h3 className="text-lg sm:text-2xl font-bold tracking-tight text-white">
@@ -46,7 +46,7 @@ export default function ArchitectureConsole() {
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-3 sm:px-3.5 py-2 rounded-lg transition cursor-pointer shrink-0 whitespace-nowrap active:scale-95 ${
+              className={`flex items-center gap-2 h-9 px-3.5 rounded-lg transition cursor-pointer shrink-0 whitespace-nowrap active:scale-95 ${
                 activeTab === tab.id
                   ? "bg-[#C27803] text-white font-bold shadow-xs"
                   : "text-[#A4ACB9] hover:text-white hover:bg-[#252932]"
@@ -65,22 +65,22 @@ export default function ArchitectureConsole() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-4">
             <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
               <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Isar Read Latency</div>
-              <div className="text-lg sm:text-2xl font-mono font-extrabold text-[#E8C37D] truncate">2ms – 8ms</div>
+              <div className="text-lg sm:text-2xl font-mono font-bold tabular-nums text-[#E8C37D] truncate">2ms – 8ms</div>
               <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Perceived zero-wait memory hydration</p>
             </div>
             <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
               <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Batch Write Speed</div>
-              <div className="text-lg sm:text-2xl font-mono font-extrabold text-emerald-400 truncate">10ms – 25ms</div>
+              <div className="text-lg sm:text-2xl font-mono font-bold tabular-nums text-emerald-400 truncate">10ms – 25ms</div>
               <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">100+ entities/transaction batch</p>
             </div>
             <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
               <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Lead Ad Ingestion</div>
-              <div className="text-lg sm:text-2xl font-mono font-extrabold text-[#E8C37D] truncate">&lt; 1 Second</div>
+              <div className="text-lg sm:text-2xl font-mono font-bold tabular-nums text-[#E8C37D] truncate">&lt; 1 Second</div>
               <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Meta Graph API webhook push</p>
             </div>
             <div className="bg-[#1C1F26] p-3 sm:p-4 rounded-xl sm:rounded-2xl border border-[#2E333D]">
               <div className="text-[9px] sm:text-[10px] font-mono text-[#8A909E] uppercase mb-0.5 sm:mb-1">Socket Batching</div>
-              <div className="text-lg sm:text-2xl font-mono font-extrabold text-sky-400 truncate">100ms Debounce</div>
+              <div className="text-lg sm:text-2xl font-mono font-bold tabular-nums text-sky-400 truncate">100ms Debounce</div>
               <p className="text-[10px] sm:text-[11px] text-[#A4ACB9] mt-0.5 sm:mt-1 leading-snug">Phoenix channel batch grouping</p>
             </div>
           </div>

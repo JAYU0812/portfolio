@@ -14,7 +14,6 @@ import {
   Download, 
   Check, 
   FileText,
-  Sparkles,
   ShieldCheck,
   Eye
 } from "lucide-react";
@@ -76,7 +75,7 @@ export default function Resume() {
         {/* Format Selector & Print Optimization Banner */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-3 sm:p-4 rounded-2xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#232733] shadow-xs">
           <div className="flex items-center gap-2.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0" />
             <div>
               <span className="text-xs font-bold text-[#121316] dark:text-white flex items-center gap-1.5">
                 <FileText className="w-3.5 h-3.5 text-[#C27803]" />
@@ -133,7 +132,7 @@ export default function Resume() {
               {resumeData.personal.name}
             </h1>
 
-            <p className="text-xs sm:text-sm font-semibold text-[#C27803] dark:text-[#E8C37D] print:text-[#92400E] mb-2 print:mb-1.5 print:text-[10pt] font-mono">
+            <p className="text-xs sm:text-sm font-semibold text-[#C27803] dark:text-[#E8C37D] print:text-black mb-2 print:mb-1.5 print:text-[10pt] font-mono">
               {resumeData.personal.title}
             </p>
 
@@ -251,7 +250,7 @@ export default function Resume() {
                       </span>
                     </div>
 
-                    <p className="text-[11px] sm:text-xs print:text-[7.8pt] font-mono text-[#C27803] dark:text-[#E8C37D] print:text-[#92400E] font-semibold mb-1 print:mb-0.5">
+                    <p className="text-[11px] sm:text-xs print:text-[7.8pt] font-mono text-[#C27803] dark:text-[#E8C37D] print:text-black font-semibold mb-1 print:mb-0.5">
                       {exp.description}
                     </p>
 
@@ -272,7 +271,7 @@ export default function Resume() {
            ========================================================================= */}
         <div className="my-8 py-3 border-t-2 border-dashed border-[#E8E5DF] dark:border-[#2B303E] print:border-none print:m-0 print:p-0 print-page-break flex items-center justify-center">
           <span className="text-[10px] font-mono uppercase tracking-widest text-[#7A7E89] dark:text-[#8E95A5] bg-[#FBF9F5] dark:bg-[#14161E] px-3 py-1 rounded-full border border-[#E8E5DF] dark:border-[#2B303E] print:hidden shadow-xs flex items-center gap-1.5">
-            <Sparkles className="w-3 h-3 text-[#C27803]" />
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C27803]" />
             Page 2 (A4 Page Break)
           </span>
         </div>
@@ -300,7 +299,7 @@ export default function Resume() {
                       <h3 className="text-xs sm:text-sm print:text-[8.3pt] font-bold text-[#121316] dark:text-white print:text-black">
                         {proj.name}
                       </h3>
-                      <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-[#F2EDE4] dark:bg-[#1C202B] text-[#78350F] dark:text-[#FCD34D] border border-[#E8E5DF] dark:border-[#2B303E] print:bg-[#F2EDE4] print:text-[#78350F] print:py-0 print:px-1">
+                      <span className="text-[9px] font-mono px-1.5 py-0.2 rounded bg-[#F2EDE4] dark:bg-[#1C202B] text-[#121316] dark:text-[#E8C37D] border border-[#E8E5DF] dark:border-[#2B303E] print:bg-[#F2EDE4] print:text-black print:py-0 print:px-1">
                         {proj.badge}
                       </span>
                     </div>
@@ -309,7 +308,7 @@ export default function Resume() {
                         href={proj.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-[11px] sm:text-xs print:text-[7.5pt] font-mono text-[#C27803] dark:text-[#E8C37D] print:text-[#92400E] hover:underline break-all"
+                        className="text-[11px] sm:text-xs print:text-[7.5pt] font-mono text-[#C27803] dark:text-[#E8C37D] print:text-black hover:underline break-all"
                       >
                         {proj.displayUrl}
                       </a>
@@ -357,7 +356,7 @@ export default function Resume() {
                   <p className="text-[11px] print:text-[7.2pt] text-[#4A4E57] dark:text-[#A1A7B5] print:text-[#555] leading-snug">
                     {edu.institution}
                   </p>
-                  <p className="text-[10px] print:text-[7.2pt] font-mono text-[#C27803] dark:text-[#E8C37D] print:text-[#92400E] font-semibold mt-0.5">
+                  <p className="text-[10px] print:text-[7.2pt] font-mono text-[#C27803] dark:text-[#E8C37D] print:text-black font-semibold mt-0.5">
                     {edu.period}
                   </p>
                 </div>

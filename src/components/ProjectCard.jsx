@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { ExternalLink, Smartphone, Award, Sparkles, ArrowRight, Activity } from "lucide-react";
+import { ExternalLink, Smartphone, Award, Code2, ArrowRight, Activity } from "lucide-react";
 import { GithubIcon } from "./Icons";
 
-export default function ProjectCard({ project, onHoverSpeak }) {
+export default function ProjectCard({ project }) {
   const getBadgeIcon = (badge = "") => {
     if (badge.includes("Play Store")) {
       return <Smartphone className="w-3.5 h-3.5 text-[#C27803]" />;
@@ -11,15 +11,15 @@ export default function ProjectCard({ project, onHoverSpeak }) {
       return <Award className="w-3.5 h-3.5 text-[#C27803]" />;
     }
     if (badge.includes("Live") || badge.includes("Production")) {
-      return <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />;
+      return <span className="w-2 h-2 rounded-full bg-emerald-500" />;
     }
-    return <Sparkles className="w-3.5 h-3.5 text-[#C27803]" />;
+    return <Code2 className="w-3.5 h-3.5 text-[#C27803]" />;
   };
 
   // Derive a punchy metric or flagship highlight for the compact card
   const getKeyHighlight = () => {
-    if (project.metrics?.readLatency) return `⚡ ${project.metrics.readLatency} Read Latency`;
-    if (project.metrics?.securityScore) return `🛡️ 100/100 Security Audit`;
+    if (project.metrics?.readLatency) return `${project.metrics.readLatency} Read Latency`;
+    if (project.metrics?.securityScore) return `100/100 Security Audit`;
     if (project.highlights && project.highlights.length > 0) {
       const first = project.highlights[0];
       return first.length > 60 ? `${first.slice(0, 57)}...` : first;
@@ -29,14 +29,12 @@ export default function ProjectCard({ project, onHoverSpeak }) {
 
   return (
     <div
-      onMouseEnter={() => onHoverSpeak && onHoverSpeak(`${project.title}: ${project.tagline}`)}
-      onMouseLeave={() => onHoverSpeak && onHoverSpeak(null)}
-      className="group bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl border border-[#E8E5DF] dark:border-[#232733] p-5 sm:p-6 shadow-xs hover:shadow-lg hover:border-[#C27803]/50 dark:hover:border-[#C27803]/60 transition-all duration-300 flex flex-col justify-between h-auto min-h-[420px] sm:h-[420px] relative overflow-hidden"
+      className="group bg-white dark:bg-[#14161E] rounded-2xl border border-[#E8E5DF] dark:border-[#232733] p-6 shadow-xs hover:shadow-lg hover:border-[#C27803]/50 dark:hover:border-[#C27803]/60 transition-all duration-300 flex flex-col justify-between h-full relative overflow-hidden"
     >
       {/* Top Header: Badge & Date */}
       <div>
         <div className="flex items-center justify-between gap-2 mb-3">
-          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-mono font-semibold bg-[#F2EDE4] dark:bg-[#1C202B] text-[#121316] dark:text-[#E8C37D] border border-[#E8E5DF] dark:border-[#2B303E] truncate max-w-[200px]">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-[#F2EDE4] dark:bg-[#1C202B] text-[#121316] dark:text-[#E8C37D] border border-[#E8E5DF] dark:border-[#2B303E] truncate max-w-[200px]">
             {getBadgeIcon(project.badge)}
             <span className="truncate">{project.badge}</span>
           </span>
@@ -45,36 +43,36 @@ export default function ProjectCard({ project, onHoverSpeak }) {
           </span>
         </div>
 
-        {/* Project Title (Fixed Height Clamped) */}
+        {/* Project Title */}
         <Link 
           to={`/projects/${project.id}`} 
           className="block group/link"
         >
-          <h3 className="text-base sm:text-lg font-bold text-[#121316] dark:text-[#F5F5F7] tracking-tight group-hover/link:text-[#C27803] dark:group-hover/link:text-[#E8C37D] transition-colors leading-snug line-clamp-2 h-[48px] mb-1">
+          <h3 className="text-base sm:text-lg font-bold text-[#121316] dark:text-[#F5F5F7] tracking-tight group-hover/link:text-[#C27803] dark:group-hover/link:text-[#E8C37D] transition-colors leading-snug line-clamp-2 mb-2">
             {project.title}
           </h3>
         </Link>
 
         {/* Category & Version */}
-        <p className="text-[11px] font-mono text-[#C27803] dark:text-[#E8C37D] font-medium truncate mb-2.5">
+        <p className="text-[11px] font-mono text-[#C27803] dark:text-[#E8C37D] font-medium truncate mb-2">
           {project.category} {project.version ? `• ${project.version}` : ""}
         </p>
 
-        {/* Tagline / Brief Description (Clamped to exactly 3 lines) */}
-        <p className="text-xs text-[#555963] dark:text-[#9CA3AF] leading-relaxed line-clamp-3 h-[54px] mb-3">
+        {/* Tagline / Brief Description */}
+        <p className="text-xs text-[#555963] dark:text-[#9CA3AF] leading-relaxed line-clamp-3 mb-4">
           {project.tagline || project.description}
         </p>
       </div>
 
-      {/* Middle Section: Key Impact Metric & Tech Pills */}
-      <div>
-        {/* Key Feature Highlight Pill */}
-        <div className="mb-3 px-2.5 py-1.5 rounded-lg bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#232733] text-[11px] font-mono text-[#121316] dark:text-[#F5F5F7] truncate flex items-center gap-1.5">
-          <Activity className="w-3 h-3 text-[#C27803] dark:text-[#E8C37D] shrink-0" />
+      {/* Middle Section: Key Impact Metric & Tech Stack */}
+      <div className="my-auto pt-2">
+        {/* Key Feature Highlight */}
+        <div className="mb-3 px-3 py-2 rounded-lg bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#232733] text-[11px] font-mono text-[#121316] dark:text-[#F5F5F7] truncate flex items-center gap-2">
+          <Activity className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D] shrink-0" />
           <span className="truncate text-[#333740] dark:text-[#D1D5DB] font-medium">{getKeyHighlight()}</span>
         </div>
 
-        {/* Tech Stack Pills (Limited to top 3 + counter) */}
+        {/* Tech Stack Pills */}
         <div className="flex flex-wrap items-center gap-1.5 mb-4">
           {project.tech.slice(0, 3).map((techItem, idx) => (
             <span
@@ -93,7 +91,7 @@ export default function ProjectCard({ project, onHoverSpeak }) {
       </div>
 
       {/* Action Footer: Primary Case Study Button + Quick External Links */}
-      <div className="pt-3 border-t border-[#F2EDE4] dark:border-[#222530] flex items-center justify-between gap-2">
+      <div className="pt-4 border-t border-[#F2EDE4] dark:border-[#222530] flex items-center justify-between gap-2 mt-auto">
         <Link
           to={`/projects/${project.id}`}
           className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#1E222D] dark:border dark:border-[#2E3342] dark:hover:bg-[#C27803] dark:hover:border-[#C27803] active:scale-98 transition text-xs font-semibold shadow-xs"

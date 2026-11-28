@@ -3,7 +3,7 @@ import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 import { 
   Award, 
-  Sparkles, 
+  Globe, 
   ShieldCheck, 
   Smartphone, 
   Zap, 
@@ -13,7 +13,7 @@ import {
   CheckCircle2
 } from "lucide-react";
 
-export default function TimelineRoadmap({ onHoverSpeak }) {
+export default function TimelineRoadmap() {
   const [activeEra, setActiveEra] = useState("all");
 
   const roadmapMilestones = [
@@ -23,8 +23,8 @@ export default function TimelineRoadmap({ onHoverSpeak }) {
       period: "October 2026",
       title: "Apex Industry Recognition & Platform Ecosystem Expansion",
       badge: "Company-Wide Award Winner",
-      badgeColor: "bg-[#FEF3C7] text-[#92400E] border-[#FCD34D] dark:bg-[#C27803]/20 dark:text-[#FCD34D] dark:border-[#C27803]/40",
-      icon: <Award className="w-4 h-4 text-[#B45309] dark:text-[#FCD34D]" />,
+      badgeColor: "bg-[#F2EDE4] text-[#121316] border-[#E8E5DF] dark:bg-[#1C202B] dark:text-[#E8C37D] dark:border-[#2B303E]",
+      icon: <Award className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />,
       summary: "Awarded Certificate of Appreciation by NB Infra Projects Limited (Since 1946) for exceptional engineering leadership, delivering the Natural Language AI Search Engine in PropKart OS and launching the standalone PropKart Broker Portal.",
       highlights: [
         "Formally recognized by Founder & Chairman Rahul D. Prajapati for outstanding architectural contributions.",
@@ -106,7 +106,7 @@ export default function TimelineRoadmap({ onHoverSpeak }) {
       title: "The First Production Web Platform",
       badge: "First Production Software",
       badgeColor: "bg-[#F8F6F2] text-[#4A4E57] border-[#E8E5DF] dark:bg-[#1C202B] dark:text-[#D1D5DB] dark:border-[#2B303E]",
-      icon: <Sparkles className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />,
+      icon: <Globe className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />,
       summary: "Launched the Soni Samaj Community Directory in February 2025, designing normalized relational schemas for multi-tier family hierarchies and occupation indexing across Gujarat.",
       highlights: [
         "Jay's foundational software project connecting hundreds of families.",
@@ -120,8 +120,8 @@ export default function TimelineRoadmap({ onHoverSpeak }) {
       period: "2023 – 2024",
       title: "The Genesis: Real-World Business Digitization & Retail ERPs",
       badge: "Retail Digitization Era",
-      badgeColor: "bg-[#FFFBEB] text-[#B45309] border-[#FDE68A] dark:bg-[#B45309]/20 dark:text-[#FDE68A] dark:border-[#D97706]/40",
-      icon: <Zap className="w-4 h-4 text-[#D97706] dark:text-[#FBBF24]" />,
+      badgeColor: "bg-[#F2EDE4] text-[#121316] border-[#E8E5DF] dark:bg-[#1C202B] dark:text-[#E8C37D] dark:border-[#2B303E]",
+      icon: <Zap className="w-4 h-4 text-[#C27803] dark:text-[#E8C37D]" />,
       summary: "Digitized 5+ offline brick-and-mortar retail businesses, architecting the complete Chandrakala Jewellers ERP ecosystem with custom multi-factor GST calculation and physical thermal barcode label printing.",
       highlights: [
         "Engineered proprietary GST billing calculation engine computing metal purity, hallmark fees, making wastage, and CGST/SGST.",
@@ -224,7 +224,6 @@ export default function TimelineRoadmap({ onHoverSpeak }) {
                       <ProjectCard 
                         key={proj.id} 
                         project={proj} 
-                        onHoverSpeak={onHoverSpeak} 
                       />
                     ))}
                   </div>

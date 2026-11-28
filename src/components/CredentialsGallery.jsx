@@ -178,7 +178,7 @@ export default function CredentialsGallery({
       return {
         icon: <Trophy className="w-3.5 h-3.5" />,
         className:
-          "bg-amber-500/15 text-[#92400E] dark:text-[#E8C37D] border-[#C27803]/40"
+          "bg-white dark:bg-[#1C202B] text-[#121316] dark:text-[#E8C37D] border-[#E8E5DF] dark:border-[#2B303E]"
       };
     }
     if (type === "offer-letter") {

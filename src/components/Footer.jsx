@@ -30,7 +30,7 @@ export default function Footer() {
 
           {/* Col 2: Navigation */}
           <div>
-            <p className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] dark:text-[#F5F5F7] mb-3 sm:mb-4">
+            <p className="text-xs font-mono font-semibold text-[#121316] dark:text-[#F5F5F7] mb-3 sm:mb-4">
               Navigation
             </p>
             <ul className="space-y-2 text-xs sm:text-sm">
@@ -79,7 +79,7 @@ export default function Footer() {
 
           {/* Col 3: Connect & Live Links */}
           <div>
-            <p className="text-xs font-mono uppercase tracking-wider font-bold text-[#121316] dark:text-[#F5F5F7] mb-3 sm:mb-4">
+            <p className="text-xs font-mono font-semibold text-[#121316] dark:text-[#F5F5F7] mb-3 sm:mb-4">
               Connect & Live
             </p>
             <ul className="space-y-2 text-xs sm:text-sm">
@@ -190,9 +190,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-6 sm:pt-8 border-t border-[#E8E5DF] dark:border-[#22252F] flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4 text-xs text-[#7A7E89] dark:text-[#8E95A5] text-center sm:text-left">
           <p>© {new Date().getFullYear()} Soni Jaykumar Hasmukh. All rights reserved.</p>
-          <p className="font-mono text-center sm:text-right">
-            Crafted with React, Tailwind CSS & Vite • Zero AI Template Bloat
-          </p>
+          <div className="flex items-center gap-2 font-mono text-[11px] text-[#7A7E89] dark:text-[#8E95A5]">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+            <span>AHM // 23.0225° N, 72.5714° E // BUILD 26.11-PROD</span>
+          </div>
         </div>
       </div>
     </footer>

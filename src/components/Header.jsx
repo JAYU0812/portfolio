@@ -18,15 +18,15 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-[#FBF9F5]/90 dark:bg-[#0A0B0E]/90 backdrop-blur-md border-b border-[#E8E5DF] dark:border-[#22252F] print:hidden transition-colors duration-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         
         {/* Brand Name & Role Indicator */}
         <Link 
           to="/" 
           onClick={() => setIsOpen(false)}
-          className="group flex items-center gap-2.5 sm:gap-3 transition"
+          className="group flex items-center gap-3 transition"
         >
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#121316] text-[#FBF9F5] dark:bg-[#1C202B] dark:text-[#E8C37D] dark:border dark:border-[#2E3342] flex items-center justify-center font-mono font-bold text-xs sm:text-sm tracking-tight shadow-sm group-hover:bg-[#C27803] dark:group-hover:bg-[#C27803] dark:group-hover:text-white transition-colors duration-300 shrink-0">
+          <div className="w-10 h-10 rounded-xl bg-[#121316] text-[#FBF9F5] dark:bg-[#1C202B] dark:text-[#E8C37D] dark:border dark:border-[#2E3342] flex items-center justify-center font-mono font-bold text-xs sm:text-sm tracking-tight shadow-sm group-hover:bg-[#C27803] dark:group-hover:bg-[#C27803] dark:group-hover:text-white transition-colors duration-300 shrink-0">
             SJ
           </div>
           <div>
@@ -34,14 +34,14 @@ export default function Header() {
               Soni Jaykumar
             </div>
             <div className="text-[10px] sm:text-xs font-mono text-[#4B5563] dark:text-[#8E95A5] flex items-center gap-1.5 leading-tight mt-0.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
               Full Stack Engineer
             </div>
           </div>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 p-1 bg-[#F2EDE4]/70 dark:bg-[#14161E]/80 border border-[#E8E5DF] dark:border-[#22252F] rounded-full text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-1 p-1 bg-[#F2EDE4]/70 dark:bg-[#14161E]/80 border border-[#E8E5DF] dark:border-[#22252F] rounded-xl text-xs font-mono">
           {navLinks.map((link) => {
             const isActive = link.path === "/" 
               ? location.pathname === "/" 
@@ -50,9 +50,9 @@ export default function Header() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`px-4 py-1.5 rounded-full transition-all duration-200 ${
+                className={`px-3.5 py-1.5 rounded-lg transition-all duration-200 ${
                   isActive
-                    ? "bg-[#121316] text-[#FBF9F5] dark:bg-[#C27803] dark:text-white shadow-xs font-semibold"
+                    ? "bg-[#121316] text-[#FBF9F5] dark:bg-[#1C202B] dark:text-[#E8C37D] dark:border dark:border-[#2E3342] shadow-xs font-semibold"
                     : "text-[#4A4E57] dark:text-[#A1A7B5] hover:text-[#121316] dark:hover:text-white hover:bg-white/60 dark:hover:bg-[#1E222D]"
                 }`}
               >
@@ -63,7 +63,7 @@ export default function Header() {
         </nav>
 
         {/* Right Action Buttons on Desktop */}
-        <div className="hidden lg:flex items-center gap-2.5">
+        <div className="hidden lg:flex items-center gap-3">
           <ThemeToggle />
           <a
             href="https://wa.me/917990361109"
@@ -82,7 +82,7 @@ export default function Header() {
           
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center rounded-xl border border-[#E8E5DF] dark:border-[#262933] bg-white dark:bg-[#14161E] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] active:scale-95 transition cursor-pointer"
+            className="md:hidden w-10 h-10 flex items-center justify-center rounded-xl border border-[#E8E5DF] dark:border-[#262933] bg-white dark:bg-[#14161E] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] active:scale-95 transition cursor-pointer"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -95,7 +95,7 @@ export default function Header() {
         <>
           <div 
             onClick={() => setIsOpen(false)}
-            className="md:hidden fixed inset-0 top-[61px] bg-black/40 dark:bg-black/60 backdrop-blur-xs z-40 animate-in fade-in duration-200"
+            className="md:hidden fixed inset-0 top-16 bg-black/40 dark:bg-black/60 backdrop-blur-xs z-40 animate-in fade-in duration-200"
           />
           <div className="md:hidden bg-[#FBF9F5] dark:bg-[#0E1015] border-b border-[#E8E5DF] dark:border-[#22252F] py-4 px-4 sm:px-6 flex flex-col gap-1.5 shadow-2xl relative z-50 animate-in fade-in slide-in-from-top-2 duration-200">
             {navLinks.map((link) => {

@@ -2,7 +2,6 @@ import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 import { 
   Search, 
-  Sparkles, 
   ArrowUpRight, 
   Clock, 
   Layers, 
@@ -144,7 +143,7 @@ export default function DeveloperQuestions() {
         {/* ----------------- 1. HERO SECTION ----------------- */}
         <section className="max-w-3xl mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F2EDE4] dark:bg-[#1C202B] border border-[#E8E5DF] dark:border-[#262933] text-[#C27803] dark:text-[#E8C37D] font-mono text-xs font-bold uppercase tracking-wider mb-4">
-            <Sparkles className="w-3.5 h-3.5" />
+            <HelpCircle className="w-3.5 h-3.5" />
             <span>Technical Knowledge Hub</span>
           </div>
           

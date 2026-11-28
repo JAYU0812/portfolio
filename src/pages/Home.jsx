@@ -32,12 +32,8 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState(0);
   const featuredProjects = projects.filter((p) => p.featured);
 
-  const handleMascotSpeak = (text) => {
-    window.dispatchEvent(new CustomEvent("mascot-speak", { detail: { text } }));
-  };
-
   return (
-    <div className="py-6 sm:py-12 text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
+    <div className="text-[#121316] dark:text-[#F5F5F7] transition-colors duration-200">
       <SEO 
         title="Jay Soni — Top Software Engineer in Gujarat | Lead Mobile & Full-Stack Architect"
         description="Official portfolio of Soni Jaykumar Hasmukh (Jay Soni) — recognized as a Top Software Engineer in Gujarat and Lead Mobile & Full-Stack Architect in Ahmedabad. Specialist in Flutter (SDK 36), Native Android (Kotlin & Jetpack Compose), React, Node.js, offline-first systems, and enterprise PropTech. Winner of NB Infra R&R Award."
@@ -45,7 +41,7 @@ export default function Home() {
         canonical="https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/"
       />
       {/* ----------------- 1. HERO SECTION ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-2 sm:pt-4 pb-12 sm:pb-24 overflow-hidden">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 pb-12 sm:pb-16 overflow-hidden">
         <div className="grid lg:grid-cols-12 gap-6 lg:gap-8 items-center w-full min-w-0">
           
           {/* Left Hero Column */}
@@ -53,34 +49,32 @@ export default function Home() {
             {/* Status & Award Badges */}
             <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">
               <div 
-                onMouseEnter={() => handleMascotSpeak("Top Software Engineer in Gujarat & Lead Architect at NB Developers in Science City, Ahmedabad!")}
-                onMouseLeave={() => handleMascotSpeak(null)}
-                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] shadow-xs text-[11px] sm:text-xs font-mono text-[#121316] dark:text-[#F5F5F7] max-w-full min-w-0"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-md bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] shadow-2xs text-[11px] sm:text-xs font-mono text-[#121316] dark:text-[#F5F5F7] max-w-full min-w-0"
               >
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0"></span>
-                <span className="font-semibold text-[#92400E] dark:text-[#E8C37D] shrink-0">Top Engineer:</span>
+                <span className="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+                <span className="font-semibold text-[#121316] dark:text-[#E8C37D] shrink-0">Top Engineer:</span>
                 <span className="truncate max-w-[210px] xs:max-w-none">Gujarat • Lead Architect @ NB Developers</span>
               </div>
 
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#EBF5FF] dark:bg-[#1E293B] border border-[#BFDBFE] dark:border-[#334155] text-[11px] sm:text-xs font-mono text-[#1E40AF] dark:text-[#93C5FD]">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#EBF5FF] dark:bg-[#1E293B] border border-[#BFDBFE] dark:border-[#334155] text-[11px] sm:text-xs font-mono text-[#1E40AF] dark:text-[#93C5FD]">
                 <MapPin className="w-3 h-3 text-[#1E40AF] dark:text-[#93C5FD] shrink-0" />
                 <span>Ahmedabad, Gujarat</span>
               </div>
 
               <button
                 onClick={() => setShowCertModal(true)}
-                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#FEF3C7] dark:bg-[#C27803]/20 hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 text-[11px] sm:text-xs font-semibold shadow-xs transition cursor-pointer shrink-0"
+                className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-md bg-white dark:bg-[#14161E] hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] text-[#121316] dark:text-[#F5F5F7] border border-[#E8E5DF] dark:border-[#262933] text-[11px] sm:text-xs font-mono font-medium shadow-2xs transition cursor-pointer shrink-0"
                 title="View Certificate of Appreciation from NB Infra Projects Limited"
               >
-                <Award className="w-3.5 h-3.5 text-[#B45309] dark:text-[#FCD34D] shrink-0" />
-                <span>🏆 R&R Winner</span>
+                <Award className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D] shrink-0" />
+                <span>R&R Winner</span>
               </button>
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-[#121316] dark:text-white leading-[1.18] sm:leading-[1.12]">
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#121316] dark:text-white leading-[1.18] sm:leading-[1.12]">
               Top Software Engineer in Gujarat{" "}
-              <span className="text-[#C27803] dark:text-[#E8C37D] underline decoration-[#E8C37D]/60 dark:decoration-[#C27803]/60 decoration-wavy decoration-2">
+              <span className="text-[#C27803] dark:text-[#E8C37D]">
                 Engineering Production
               </span>{" "}
               Web & Mobile Systems.
@@ -101,8 +95,6 @@ export default function Home() {
             <div className="grid grid-cols-2 sm:flex sm:flex-row gap-2 sm:gap-3 pt-1 sm:pt-2 w-full sm:w-auto">
               <Link
                 to="/projects"
-                onMouseEnter={() => handleMascotSpeak(`View all ${projects.length} real-world projects with live links!`)}
-                onMouseLeave={() => handleMascotSpeak(null)}
                 className="flex items-center justify-center gap-1.5 px-3 sm:px-5 py-2.5 sm:py-3.5 rounded-xl bg-[#121316] text-white hover:bg-[#C27803] dark:bg-[#C27803] dark:hover:bg-[#E58B0B] active:scale-95 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs text-center"
               >
                 <span>Explore Projects</span>
@@ -111,8 +103,6 @@ export default function Home() {
 
               <Link
                 to="/resume"
-                onMouseEnter={() => handleMascotSpeak("Read my print-ready ATS resume.")}
-                onMouseLeave={() => handleMascotSpeak(null)}
                 className="flex items-center justify-center gap-1.5 px-3 sm:px-5 py-2.5 sm:py-3.5 rounded-xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] hover:border-[#C27803]/40 active:scale-95 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs text-center"
               >
                 <FileText className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D] shrink-0" />
@@ -121,9 +111,9 @@ export default function Home() {
 
               <button
                 onClick={() => setShowCertModal(true)}
-                className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-xl bg-[#FEF3C7] dark:bg-[#C27803]/20 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 active:scale-95 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs cursor-pointer text-center"
+                className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-xl bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-white hover:bg-[#F2EDE4] dark:hover:bg-[#1E222D] hover:border-[#C27803]/40 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-2xs cursor-pointer text-center"
               >
-                <Award className="w-3.5 h-3.5 text-[#B45309] dark:text-[#FCD34D] shrink-0" />
+                <Award className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D] shrink-0" />
                 <span>View Award</span>
               </button>
 
@@ -131,8 +121,6 @@ export default function Home() {
                 href="https://wa.me/917990361109"
                 target="_blank"
                 rel="noopener noreferrer"
-                onMouseEnter={() => handleMascotSpeak("Message me directly on WhatsApp.")}
-                onMouseLeave={() => handleMascotSpeak(null)}
                 className="flex items-center justify-center gap-1.5 px-3 sm:px-4 py-2.5 sm:py-3.5 rounded-xl bg-[#0F766E] text-white hover:bg-[#0D655E] active:scale-95 transition-all duration-200 text-xs sm:text-sm font-semibold shadow-xs text-center"
               >
                 <MessageCircle className="w-3.5 h-3.5 shrink-0" />
@@ -143,7 +131,7 @@ export default function Home() {
             {/* Key Accomplishments Chips */}
             <div className="pt-2 sm:pt-4 flex flex-wrap gap-1.5 sm:gap-2">
               {[
-                { label: "🏆 Reward & Recognition (NB Infra)", action: () => setShowCertModal(true) },
+                { label: "Reward & Recognition (NB Infra)", action: () => setShowCertModal(true) },
                 { label: "PropKart OS (AI Search + SDK 36)", link: "https://propkart.nbpropertytech.com" },
                 { label: "PropKart Broker Portal (v1.0.0)", link: "https://github.com/JAYU0812/brokerportal" },
                 { label: "Live: nbpropertytech.com", link: "https://nbpropertytech.com" },
@@ -158,9 +146,9 @@ export default function Home() {
                   <button
                     key={idx}
                     onClick={item.action}
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:py-1.5 rounded-lg bg-[#FEF3C7] dark:bg-[#C27803]/20 text-[#92400E] dark:text-[#FCD34D] border border-[#FCD34D] dark:border-[#C27803]/40 text-[10px] sm:text-xs font-mono font-semibold cursor-pointer hover:bg-[#FDE68A] dark:hover:bg-[#C27803]/30 transition max-w-full"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:py-1.5 rounded-lg bg-white dark:bg-[#14161E] text-[#121316] dark:text-[#F5F5F7] border border-[#E8E5DF] dark:border-[#262933] text-[10px] sm:text-xs font-mono font-medium cursor-pointer hover:border-[#C27803]/40 transition max-w-full"
                   >
-                    <Award className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#B45309] dark:text-[#FCD34D] shrink-0" />
+                    <Award className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#C27803] dark:text-[#E8C37D] shrink-0" />
                     <span className="truncate max-w-[170px] xs:max-w-[240px] sm:max-w-none">{item.label}</span>
                   </button>
                 ) : (
@@ -349,7 +337,7 @@ export default function Home() {
       </section>
 
       {/* ----------------- 2. STATS & METRICS ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
           {[
             {
@@ -379,12 +367,10 @@ export default function Home() {
           ].map((stat, idx) => (
             <div
               key={idx}
-              onMouseEnter={() => handleMascotSpeak(stat.hover)}
-              onMouseLeave={() => handleMascotSpeak(null)}
               className="bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl p-4 sm:p-7 border border-[#E8E5DF] dark:border-[#232733] shadow-xs hover:border-[#C27803]/50 dark:hover:border-[#C27803]/60 hover:shadow-md transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                <div className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white font-mono mb-0.5 sm:mb-1 tracking-tight truncate">
+                <div className="text-2xl sm:text-4xl font-bold text-[#121316] dark:text-white font-mono tabular-nums mb-0.5 sm:mb-1 tracking-tight truncate">
                   {stat.number}
                 </div>
                 <div className="text-xs sm:text-sm font-bold text-[#C27803] dark:text-[#E8C37D] mb-0.5 sm:mb-1 leading-snug">
@@ -400,7 +386,7 @@ export default function Home() {
       </section>
 
       {/* ----------------- 2.5 AWARD & RECOGNITION SPOTLIGHT ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8" id="recognition">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16" id="recognition">
         <div className="bg-gradient-to-br from-[#121316] via-[#1A1D24] to-[#121316] text-[#FBF9F5] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-10 border-2 border-[#C27803]/40 shadow-2xl relative overflow-hidden">
           {/* Subtle background glow */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-[#C27803]/10 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20"></div>
@@ -409,7 +395,7 @@ export default function Home() {
             {/* Left Content */}
             <div className="lg:col-span-8 space-y-4 sm:space-y-5">
               <div className="flex flex-wrap items-center gap-2.5">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#C27803]/20 text-[#E8C37D] border border-[#C27803]/50 text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 dark:bg-[#1C202B] text-[#E8C37D] border border-white/20 dark:border-[#2B303E] text-[11px] sm:text-xs font-mono font-medium">
                   <Trophy className="w-3.5 h-3.5 text-[#E8C37D]" />
                   Reward & Recognition Award
                 </span>
@@ -418,7 +404,7 @@ export default function Home() {
                 </span>
               </div>
 
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
                 Certificate of Appreciation for Exceptional Performance & Leadership
               </h2>
 
@@ -485,7 +471,7 @@ export default function Home() {
       </section>
 
       {/* ----------------- 2.6 VERIFIED CERTIFICATIONS & OFFER LETTER ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-10" id="credentials">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16" id="credentials">
         <CredentialsGallery
           excludeAward={true}
           showFilters={false}
@@ -495,18 +481,18 @@ export default function Home() {
       </section>
 
       {/* ----------------- 3. ARCHITECTURE & TELEMETRY CONSOLE ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <ArchitectureConsole />
       </section>
 
       {/* ----------------- 4. FEATURED PROJECTS ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-3 sm:gap-4">
           <div>
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
-              Featured Engineering
+            <span className="text-xs font-mono font-medium text-[#C27803] dark:text-[#E8C37D]">
+              Featured engineering
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1">
+            <h2 className="text-2xl sm:text-4xl font-bold text-[#121316] dark:text-white tracking-tight mt-1">
               Production Work & Live Deployments
             </h2>
           </div>
@@ -524,21 +510,20 @@ export default function Home() {
             <ProjectCard
               key={project.id}
               project={project}
-              onHoverSpeak={handleMascotSpeak}
             />
           ))}
         </div>
       </section>
 
       {/* ----------------- 5. CHRONOLOGICAL JOURNEY (2023 -> Present) ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="bg-white dark:bg-[#14161E] rounded-2xl sm:rounded-3xl p-5 sm:p-8 lg:p-12 border border-[#E8E5DF] dark:border-[#232733] shadow-xs">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-8 sm:mb-12 gap-4">
             <div className="max-w-3xl">
-              <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
-                Growth & Milestones
+              <span className="text-xs font-mono font-medium text-[#C27803] dark:text-[#E8C37D]">
+                Engineering milestones
               </span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1 mb-3 sm:mb-4">
+              <h2 className="text-2xl sm:text-4xl font-bold text-[#121316] dark:text-white tracking-tight mt-1 mb-3 sm:mb-4">
                 My Engineering Journey (2023 – Present)
               </h2>
               <p className="text-xs sm:text-base text-[#4A4E57] dark:text-[#A1A7B5] leading-relaxed">
@@ -559,8 +544,6 @@ export default function Home() {
             {timelineEvents.map((item, idx) => (
               <div
                 key={idx}
-                onMouseEnter={() => handleMascotSpeak(item.summary)}
-                onMouseLeave={() => handleMascotSpeak(null)}
                 className="group p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#FBF9F5] dark:bg-[#101218] border border-[#E8E5DF] dark:border-[#222530] hover:border-[#C27803]/50 dark:hover:border-[#C27803]/60 transition-all duration-200"
               >
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-2 mb-2">
@@ -594,12 +577,12 @@ export default function Home() {
       </section>
 
       {/* ----------------- 6. CORE ARCHITECTURAL CAPABILITIES ----------------- */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D]">
-            Technical Competence
+          <span className="text-xs font-mono font-medium text-[#C27803] dark:text-[#E8C37D]">
+            Core capabilities
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1 mb-2 sm:mb-3">
+          <h2 className="text-2xl sm:text-4xl font-bold text-[#121316] dark:text-white tracking-tight mt-1 mb-2 sm:mb-3">
             Core Engineering Strengths
           </h2>
           <p className="text-xs sm:text-sm text-[#4A4E57] dark:text-[#A1A7B5]">
@@ -659,13 +642,13 @@ export default function Home() {
       </section>
 
       {/* ----------------- 6.5. AEO & GEO FAQ SECTION (GUJARAT AUTHORITY) ----------------- */}
-      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
         <div className="text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FEF3C7] dark:bg-[#C27803]/20 border border-[#FCD34D] dark:border-[#C27803]/40 text-[#92400E] dark:text-[#FCD34D] text-xs font-mono font-semibold mb-3">
-            <HelpCircle className="w-3.5 h-3.5" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white dark:bg-[#14161E] border border-[#E8E5DF] dark:border-[#262933] text-[#121316] dark:text-[#E8C37D] text-xs font-mono font-medium mb-3">
+            <HelpCircle className="w-3.5 h-3.5 text-[#C27803] dark:text-[#E8C37D]" />
             <span>Regional Authority & FAQ</span>
           </div>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#121316] dark:text-white tracking-tight">
+          <h2 className="text-2xl sm:text-4xl font-bold text-[#121316] dark:text-white tracking-tight">
             Frequently Asked Questions About Jay Soni — Top Software Engineer in Gujarat
           </h2>
           <p className="text-xs sm:text-base text-[#4A4E57] dark:text-[#A1A7B5] mt-2">
@@ -708,8 +691,8 @@ export default function Home() {
                   aria-expanded={isOpen}
                 >
                   <span className="font-bold text-sm sm:text-base text-[#121316] dark:text-[#F5F5F7] flex items-center gap-2.5">
-                    <span className="w-6 h-6 rounded-lg bg-[#F2EDE4] dark:bg-[#1F232F] text-[#C27803] dark:text-[#E8C37D] font-mono text-xs flex items-center justify-center shrink-0">
-                      0{index + 1}
+                    <span className="font-mono text-xs text-[#C27803] dark:text-[#E8C37D] shrink-0">
+                      [{String(index + 1).padStart(2, "0")}]
                     </span>
                     {faq.q}
                   </span>
@@ -727,13 +710,13 @@ export default function Home() {
       </section>
 
       {/* ----------------- 7. CALL TO ACTION ----------------- */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-16 text-center">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16 text-center">
         <div className="bg-[#121316] text-white rounded-2xl sm:rounded-3xl p-6 sm:p-10 lg:p-14 shadow-xl border border-[#2B2E36] relative overflow-hidden">
           <div className="relative z-10 max-w-xl mx-auto space-y-4 sm:space-y-5">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#E8C37D]">
-              Open for Opportunities
+            <span className="text-xs font-mono font-medium text-[#E8C37D]">
+              Availability
             </span>
-            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight leading-snug">
+            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight leading-snug">
               Let’s Build High-Impact Software Together
             </h2>
             <p className="text-xs sm:text-base text-[#A4ACB9] leading-relaxed">

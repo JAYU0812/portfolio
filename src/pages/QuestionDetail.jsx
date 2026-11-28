@@ -5,7 +5,6 @@ import {
   Clock, 
   Calendar, 
   ArrowUpRight, 
-  Sparkles, 
   Copy, 
   Check, 
   Share2, 
@@ -227,9 +226,9 @@ export default function QuestionDetail() {
 
         {/* ----------------- 2. QUICK DIRECT ANSWER (EXECUTIVE SUMMARY) ----------------- */}
         <section className="p-5 sm:p-6 rounded-2xl bg-amber-500/5 dark:bg-[#E8C37D]/5 border-l-4 border-[#C27803] dark:border-[#E8C37D] mb-8 shadow-xs">
-          <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#C27803] dark:text-[#E8C37D] mb-2">
-            <Sparkles className="w-4 h-4" />
-            <span>Direct Technical Answer (TL;DR)</span>
+          <div className="flex items-center gap-2 text-xs font-mono font-medium text-[#C27803] dark:text-[#E8C37D] mb-2">
+            <Terminal className="w-4 h-4" />
+            <span>Technical summary</span>
           </div>
           <p className="text-sm sm:text-base text-[#121316] dark:text-[#F5F5F7] leading-relaxed font-medium">
             {question.shortAnswer}

@@ -1,11 +1,10 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import Mascot from "./Mascot";
 import MobileBottomNav from "./MobileBottomNav";
 
 export default function Layout({ children }) {
   return (
-    <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden bg-[#FBF9F5] dark:bg-[#0A0B0E] text-[#121316] dark:text-[#F5F5F7] selection:bg-[#E8C37D]/35 selection:text-[#78350F] dark:selection:bg-[#C27803]/40 dark:selection:text-[#FCD34D] relative transition-colors duration-250">
+    <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden bg-[#FBF9F5] dark:bg-[#0A0B0E] text-[#121316] dark:text-[#F5F5F7] selection:bg-[#121316] selection:text-white dark:selection:bg-[#E8C37D] dark:selection:text-[#121316] relative transition-colors duration-250">
       {/* Architectural subtle background grid & ambient accents securely clipped */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none -z-10 print:hidden">
         <div className="absolute inset-0 architectural-grid opacity-60" />
@@ -17,7 +16,6 @@ export default function Layout({ children }) {
       <main className="flex-grow w-full max-w-full min-w-0 pb-20 sm:pb-0 print:p-0 print:m-0 print:pb-0 overflow-x-hidden">
         {children}
       </main>
-      <Mascot />
       <Footer />
       <MobileBottomNav />
     </div>

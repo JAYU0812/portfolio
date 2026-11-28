@@ -13,7 +13,6 @@ import {
   CheckCircle2,
   AlertCircle,
   X,
-  Sparkles,
   UserCheck,
   ShieldCheck
 } from "lucide-react";
@@ -314,7 +313,7 @@ export default function Contact() {
         {/* Header */}
         <div className="max-w-2xl mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#F2EDE4] dark:bg-[#1C202B] border border-[#E8E5DF] dark:border-[#262933] text-[#C27803] dark:text-[#E8C37D] font-mono text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
+            <Mail className="w-3.5 h-3.5" />
             <span>Direct Inbound Gateway</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold text-[#121316] dark:text-white tracking-tight mt-1 mb-3 sm:mb-4">
@@ -656,7 +655,7 @@ export default function Contact() {
                 </div>
 
                 <p className="text-[11px] font-mono text-[#7A7E89] dark:text-[#8E95A5] text-center pt-2">
-                  🔒 Zero spam. Powered by Nodemailer SMTP and delivered directly to jay0812soni@gmail.com.
+                  Zero spam. Powered by Nodemailer SMTP and delivered directly to jay0812soni@gmail.com.
                 </p>
               </form>
             </div>
