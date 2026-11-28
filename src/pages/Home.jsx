@@ -196,7 +196,7 @@ export default function Home() {
                     <span className="text-[10px] text-emerald-400 font-mono">AI SEARCH</span>
                   </div>
                   <p className="text-[#A4ACB9] text-[11px] leading-relaxed mb-2">
-                    Natural Language AI Search in AppShell + Offline Isar DB (2ms) + Target SDK 36 + PostgreSQL Migrations 1–93 + 100/100 Security Audit.
+                    Natural Language AI Search in AppShell + Offline Isar DB (2ms) + Target SDK 36 + 123 PostgreSQL Migrations + 100/100 Security Audit.
                   </p>
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between text-[10px] text-[#7A8291] pt-2 border-t border-[#2E333D] gap-1 sm:gap-0">
                     <span>PropTech Operating System</span>
@@ -421,7 +421,7 @@ export default function Home() {
                 <div className="bg-[#1C1F26] p-3 rounded-xl border border-[#2E333D]">
                   <span className="text-[#8A909E] block text-[10px] uppercase">Scope of Impact</span>
                   <span className="font-bold text-white">PropKart OS & Broker Portal</span>
-                  <span className="text-[11px] text-emerald-400 block">AI Search & Database Scalability (M1-93)</span>
+                  <span className="text-[11px] text-emerald-400 block">AI Search & Database Scalability (123 Migrations)</span>
                 </div>
               </div>
 

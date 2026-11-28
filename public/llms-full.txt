@@ -19,7 +19,7 @@
   - Native Android (Kotlin & Jetpack Compose, Material 3, ViewModel, Coroutines)
   - Offline-First Architecture & Local Embedded Databases (Isar NoSQL, SQLite FFI, 2ms-8ms query execution)
   - Full-Stack Web: React 19, Next.js 15 (App Router), TypeScript, Tailwind CSS
-  - Backend & Distributed Systems: Node.js, Express, NestJS 10, TiDB Cloud (Distributed SQL), PostgreSQL (Enterprise Migrations 1-93), Prisma, Supabase Realtime & RLS
+  - Backend & Distributed Systems: Node.js, Express, NestJS 10, TiDB Cloud (Distributed SQL), PostgreSQL (123 Additive Migrations, Dynamic App Config), Prisma, Supabase Realtime & RLS
   - High-Performance Networking: P2P LAN sockets, NAT traversal relay tunneling (TwinLink Continuum v1.4.2 / RelayHost v1.3.0)
   - Security & DevOps: RFC 6238 TOTP 2FA, 100/100 automated security audit score, Docker, Traefik Reverse Proxy, Inno Setup 6, GitHub Actions CI/CD to VPS
 
@@ -70,8 +70,8 @@
 ### 2. PropKart — Enterprise Real Estate CRM & OS (v2.1.3+13)
 - URL: https://propkart.nbpropertytech.com
 - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/propkart
-- Stack: Flutter (Target SDK 36), Dart, Isar NoSQL, NestJS 10, PostgreSQL Migrations 1-93, Prisma v6, Supabase Realtime, TOTP 2FA
-- Highlights: Embedded Isar database delivering sub-8ms local queries offline. Natural Language AI Search Engine in AppShell. Automated background conflict resolution. 100/100 automated security audit score.
+- Stack: Flutter (Target SDK 36), Dart, Isar NoSQL, NestJS 10, PostgreSQL (123 Additive Migrations), Dynamic App Config, Prisma v6, Supabase Realtime, TOTP 2FA
+- Highlights: Embedded Isar database delivering sub-8ms local queries offline. Natural Language AI Search Engine in AppShell. Automated background conflict resolution. 123 additive database migrations, dynamic support configuration, two-stage soft-delete recycle recovery, and 100/100 automated security audit score.
 
 ### 3. PropKart Broker Portal — Enterprise Broker Governance Suite (v1.0.0)
 - Live Production URL: https://broker.nbpropertytech.com
@@ -98,8 +98,8 @@
 ### 7. Chandrakala Jewellers — Production E-Commerce & Retail ERP Suite
 - URL: https://chandrakalajewellers.in
 - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/chandrakala-jewellers
-- Stack: PHP & MySQL, React, Flutter Web & Desktop, Supabase PostgreSQL, Realtime MCX Bullion Rates, Razorpay Webhooks, PWA Service Worker, Thermal Barcode Printer Engine
-- Highlights: Production commercial storefront at chandrakalajewellers.in featuring dynamic gold/silver bullion rates reflecting live commodities market trends, Instagram-style video Reels showcase, Razorpay payment webhooks, PWA offline service worker caching, proprietary automated GST billing software, physical 22-slot barcode jewelry tag printer (HUID tracking), and active Flutter Web migration.
+- Stack: Next.js 15 App Router, PHP & MySQL, React, Flutter Web & Desktop, Supabase PostgreSQL, Realtime MCX Bullion Rates, Regional SEO Engines, Automated IndexNow, Razorpay Webhooks, PWA Service Worker, Thermal Barcode Printer Engine
+- Highlights: Production commercial storefront at chandrakalajewellers.in modernized with Next.js 15 alongside PHP endpoints, live MCX gold and silver bullion price feeds (mcx.php) with manual rate override controls (manual_rate.php), automated real-time IndexNow search engine push (indexnow.php), dedicated regional SEO portals for Gujarat and Sabarkantha, Instagram-style video Reels showcase (reels.php), Razorpay payment webhooks, PWA offline service worker caching, proprietary automated GST billing software, physical 22-slot barcode jewelry tag printer (HUID tracking), and active Flutter Web migration.
 
 ### 8. NB Legacy Tower — Luxury High-Rise Experience
 - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/nb-legacy-tower
@@ -161,23 +161,23 @@
 - Stack: React, Web Crypto API, PBKDF2, Argon2id, AES-GCM
 - Highlights: Client-side secret encryption where master keys never touch backend servers.
 
-### 20. Parichay Sammelan (v1.1.0) — Community Matchmaking & QR Venue Platform
+### 20. Parichay Sammelan (v1.0.5) — Native Android (Target SDK 36, Android 15) & Cloud Event Platform
 - Google Play: https://play.google.com/store/apps/details?id=com.hssolutiontech.ParichaySammelan
 - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/parichay-sammelan
-- Stack: Native Android (Kotlin & Jetpack Compose), Node.js Express API, TiDB Cloud (Distributed SQL), Cloudinary, Razorpay
-- Highlights: Published on Google Play Store with thousands of active Gujarat community registrations, dynamic anti-fraud QR ticketing, and secure online payment processing.
+- Stack: Native Android (Kotlin & Jetpack Compose, Target SDK 36), Node.js Express API, TiDB Cloud (Distributed SQL), Cloudinary, Razorpay
+- Highlights: Published live on Google Play Store targeting Android 15 (SDK 36) with thousands of active Gujarat community registrations, dynamic anti-fraud QR ticketing, and secure online payment processing.
 
-### 21. KITAAB — Jeweller Ledger & Khata Application
+### 21. KITAAB — Native Android Jeweller Ledger App (Target SDK 36, Android 15) & Cloud Engine
 - Google Play: https://play.google.com/store/apps/details?id=com.jeweller.ledger
 - Backend Repo: https://github.com/JAYU0812/kitaabbackend
 - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/kitaab-ledger
-- Stack: Native Android (Kotlin & Jetpack Compose), Node.js Express API, TiDB Cloud, Cloudinary, Encrypted Local Backup
-- Highlights: Published on Google Play Store for retail jewellery merchants to track credit transactions, udhar balances, and automated interest calculation with cloud synchronization.
+- Stack: Native Android (Kotlin & Jetpack Compose, Target SDK 36), Node.js Express API, TiDB Cloud, Cloudinary, Encrypted Local Backup
+- Highlights: Published live on Google Play Store targeting Android 15 (SDK 36) for retail jewellery merchants to digitize traditional manual paper bahi-khata, track credit transactions, udhar balances, and automated daily interest with cloud synchronization.
 
 ### 22. J-Gallery — Intelligent High-Performance Windows Media Management System (v1.0.0)
 - Case Study: https://portfolio-iota-nine-7b2v5ah7u8.vercel.app/projects/j-gallery
-- Stack: Electron, React, TypeScript, Vite, Tailwind CSS, Node.js worker_threads, GPU Rasterization, EXIF Hardware Metadata
-- Highlights: Whole-machine non-blocking media indexing with background worker_threads keeping UI at 60 FPS, persistent checkpoint indexing cache achieving sub-50ms cold launch, deep EXIF hardware optical extraction (focal length, aperture f-stop, shutter speed, ISO), and offline reverse geocoding to city/state.
+- Stack: Electron, React, TypeScript, Vite, Tailwind CSS, Node.js worker_threads, FFmpeg Video Thumbnail Pipeline, On-Disk Thumbnail Cache, GPU Rasterization, EXIF Hardware Metadata
+- Highlights: Whole-machine non-blocking media indexing with background worker_threads keeping UI at 60 FPS, high-speed FFmpeg video thumbnail pipeline with persistent disk caching and dual-engine fallback, checkpoint indexing cache comparing mtimeMs and file sizes to skip untouched media (<50ms cold launch), deep EXIF hardware optical extraction (focal length, aperture f-stop, shutter speed, ISO), and offline reverse geocoding to city/state.
 
 ---
 

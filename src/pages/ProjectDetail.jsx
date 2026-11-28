@@ -64,15 +64,15 @@ export default function ProjectDetail() {
     if (project.id === "propkart") {
       return {
         challenge: "Real estate field agents frequently operate in low-connectivity underground parking decks and remote construction sites where traditional cloud CRMs freeze, lose unsaved lead entries, and cause telecaller dispatch collisions. Furthermore, multi-tenant lead routing from Meta Lead Ads and Housing.com required sub-second delivery without database locking.",
-        solution: "I architected an enterprise Offline-First operating system anchored by an embedded Isar NoSQL local store delivering 2ms–8ms read times. To eliminate data loss, an asynchronous outbox mutation queue guarantees atomic persistence with strict Server-Wins conflict resolution. On top of this, I engineered a debounced Natural Language AI Search Engine in the AppShell, allowing agents to type conversational queries that translate safely to PostgreSQL without exposing raw queries or tenant boundaries.",
-        impact: "Zero-latency UI response (0ms perceived wait), 100/100 automated security audit score (37/37 checks passed), Google Play Target SDK 36 readiness, and sub-second multi-channel lead ingestion with 24-hour cryptographic deduplication."
+        solution: "I architected an enterprise Offline-First operating system anchored by an embedded Isar NoSQL local store delivering 2ms–8ms read times. To eliminate data loss, an asynchronous outbox mutation queue guarantees atomic persistence with strict Server-Wins conflict resolution. On top of this, I engineered a debounced Natural Language AI Search Engine in the AppShell, allowing agents to type conversational queries that translate safely to PostgreSQL without exposing raw queries or tenant boundaries. I scaled the backend across 123 additive PostgreSQL migrations, incorporating dynamic app_config system settings, dynamic support configurations, and a two-stage soft-delete recycle bin recovery engine.",
+        impact: "Zero-latency UI response (0ms perceived wait), 100/100 automated security audit score (37/37 checks passed), Google Play Target SDK 36 readiness, dynamic zero-redeploy system configuration, and sub-second multi-channel lead ingestion with 24-hour cryptographic deduplication."
       };
     }
     if (project.id === "propkart-broker") {
       return {
-        challenge: "Onboarding independent real estate brokers involved chaotic manual document handoffs, unverified RERA claims, lack of role isolation, and security vulnerabilities during initial credential distribution.",
-        solution: "I engineered a cross-platform broker operations platform using Flutter and NestJS 10 with isolated PostgreSQL 16 containers. I architected two distinct governance queues: Queue A for automated fast-track verification of RERA-licensed brokers, and Queue B for brokers needing licensing assistance (with direct auto-drafted WhatsApp handoffs). System settings and RBAC are 100% dynamic in PostgreSQL, paired with automated Hostinger SSL SMTP dispatch of cryptographic single-use activation tokens.",
-        impact: "Eliminated manual credential leakages, delivered tamper-evident audit logging with one-click JSON payload inspection, and created a single-command Docker deployment pipeline with zero hardcoded platform credentials."
+        challenge: "Onboarding independent real estate brokers involved chaotic manual document handoffs, unverified RERA claims, lack of role isolation, complex multi-field requirement matchmaking, and security vulnerabilities during initial credential distribution.",
+        solution: "I engineered a cross-platform broker operations platform using Flutter and NestJS 10 with isolated PostgreSQL 16 containers, live at broker.nbpropertytech.com. I architected two distinct governance queues: Queue A for automated fast-track verification of RERA-licensed brokers, and Queue B for brokers needing licensing assistance (with direct auto-drafted WhatsApp handoffs). I overhauled the property and requirement query builder for instant multi-field criteria matchmaking, resolved GoRouter error boundary mutual exclusion on share/discard actions, and integrated dynamic system settings and RBAC in PostgreSQL with automated Hostinger SSL SMTP dispatch.",
+        impact: "Eliminated manual credential leakages, delivered tamper-evident audit logging with one-click JSON payload inspection, enabled instant property-requirement matchmaking, and created a single-command Docker deployment pipeline with zero hardcoded platform credentials."
       };
     }
     if (project.id === "devsync") {
@@ -84,9 +84,9 @@ export default function ProjectDetail() {
     }
     if (project.id === "chandrakala-jewellers") {
       return {
-        challenge: "Traditional jewellery showrooms struggle with complex multi-factor GST taxation (metal purity karats, making wastage, hallmark charges, CGST/SGST) and physical inventory management without dedicated ERPs.",
-        solution: "I engineered a dual-engine retail ecosystem: a high-contrast luxury commercial e-commerce storefront live on chandrakalajewellers.in backed by Supabase PostgreSQL with rigorous Row-Level Security (RLS) policies, plus a specialized Flutter desktop application tailored for thermal barcode jewellery tag printing (22 staggered slots with central tail strips and HUID compliance).",
-        impact: "Automated end-to-end sales billing with zero calculation error, eliminated stock tracking discrepancies, and established a direct click-to-inquire online customer catalog."
+        challenge: "Traditional jewellery showrooms struggle with complex multi-factor GST taxation (metal purity karats, making wastage, hallmark charges, CGST/SGST), volatile commodities price changes, and physical inventory management without dedicated ERPs.",
+        solution: "I engineered a multi-tier retail ecosystem: a high-contrast luxury commercial e-commerce storefront live on chandrakalajewellers.in modernized with Next.js 15 App Router alongside PHP endpoints, live MCX gold and silver bullion price feeds (mcx.php) with manual rate override controls (manual_rate.php), automated real-time IndexNow search engine push (indexnow.php), dedicated regional SEO portals for Gujarat and Sabarkantha, an Instagram-style interactive video Reels showcase (reels.php), and a specialized Flutter desktop application tailored for thermal barcode jewellery tag printing (22 staggered slots with central tail strips and HUID compliance).",
+        impact: "Automated end-to-end sales billing with zero calculation error, eliminated stock tracking discrepancies, established real-time commodity pricing, and drove regional search visibility across Gujarat."
       };
     }
     if (project.id === "gitsphere") {
@@ -99,15 +99,50 @@ export default function ProjectDetail() {
     if (project.id === "nbpropertytech-portal") {
       return {
         challenge: "NB PropertyTech needed a high-performance marketing portal to showcase its enterprise CRM/ERP capabilities to institutional real estate developers, handle real-time broker inquiries, and deploy reliably across cloud VPS infrastructure.",
-        solution: "I built the portal with Next.js 15 (App Router, Standalone mode), TypeScript 5, Tailwind CSS, and Framer Motion. I containerized the application with Docker, configured Traefik reverse proxy for automated ACME SSL, and built a GitHub Actions CI/CD workflow that compiles, tests, and deploys directly to the production VPS.",
+        solution: "I built the portal with Next.js 15 (App Router, Standalone mode), React 19, TypeScript 5, Tailwind CSS, and Framer Motion. I integrated a dedicated enterprise Downloads section serving official brochures, broker registration forms, and investor pitch decks. I containerized the application with Docker, configured Traefik reverse proxy for automated ACME SSL, and built a GitHub Actions CI/CD workflow that compiles, tests, and deploys directly to the production VPS.",
         impact: "Delivered sub-second page loads on nbpropertytech.com, automated broker inquiry persistence in PostgreSQL, and zero-downtime containerized deployments."
       };
     }
     if (project.id === "nb-hrms") {
       return {
-        challenge: "Managing enterprise construction workforces requires strict identity document encryption, real-time field worker GPS location auditing outside company geofences, and high-volume lead reassignment across sales tiers.",
-        solution: "I expanded the NB-HRMS suite into an integrated HRMS + CRM + ERP ecosystem. I engineered real-time GPS field trip tracking in Flutter that detects when an employee exits a designated work geofence (30m buffer, 12-hour session cache, 120s expiring live map pins), integrated double encryption (TRANSPORT_SECRET) with AES-256 field encryption for identity records, and implemented sensitive data masking with bulk lead transfers.",
-        impact: "Comprehensive regulatory compliance for identity records, automated field auditing without battery drain, and unified mobile access via nb_crm_flutter."
+        challenge: "Managing enterprise construction workforces requires strict identity document encryption, real-time field worker GPS location auditing outside company geofences, complex procurement management, and high-volume lead reassignment across sales tiers.",
+        solution: "I expanded the NB-HRMS suite into an integrated HRMS + CRM + ERP ecosystem. I engineered an automated Comparison Sheet (CS) print and PDF export engine with multi-vendor quotation processing, converting approved sheets into official Purchase Orders (PO). I built granular user navigation and interaction tracking across Flutter, Web, and Backend with date and module filters (filtering out noise heartbeats), added international country dialing code auto-detection in lead dialogs, implemented real-time GPS field trip tracking in Flutter (30m buffer, 120s expiring live map pins), and configured double encryption (TRANSPORT_SECRET) with AES-256 field encryption for identity records.",
+        impact: "Comprehensive regulatory compliance for identity records, streamlined multi-vendor high-ticket procurement workflows, automated field auditing without battery drain, and unified mobile access via nb_crm_flutter."
+      };
+    }
+    if (project.id === "twinlink") {
+      return {
+        challenge: "Linking two Windows machines across local LAN subnets or over the internet without complex VPN setups, network bandwidth bottlenecks, or data corruption during large file transfers.",
+        solution: "I engineered TwinLink Continuum (TwinLink.exe v1.4.2) and TwinLink.RelayHost (TwinLink.RelayHost.exe v1.3.0), a high-throughput peer linking and relay suite in C# / .NET. Features direct peer-to-peer discovery on local network subnets, automated NAT-traversal relay fallback via RelayHost, encrypted clipboard synchronization, and high-speed binary file stream pipelining with CRC integrity checks.",
+        impact: "Instant cross-PC file dragging, shared clipboard synchronization, and ultra-low latency remote workstation pairing across local networks and remote relays."
+      };
+    }
+    if (project.id === "j-gallery") {
+      return {
+        challenge: "Organizing massive local directories of high-resolution images, RAW photos, and 4K videos on Windows causes severe UI freezing in standard file explorers, heavy memory consumption, and slow thumbnail generation.",
+        solution: "I built J-Gallery with Electron, React, and Node.js worker_threads, offloading file system traversal and EXIF metadata decoding to background worker threads. I engineered an FFmpeg video thumbnail extraction pipeline with persistent on-disk thumbnail caching, GPU rasterization (--enable-gpu-rasterization --enable-zero-copy), and an atomic checkpoint index cache that skips untouched files via mtimeMs and file-size comparisons.",
+        impact: "Butter-smooth 60 FPS scrolling through 10,000+ media assets, sub-50ms cold application launch, instant offline reverse geocoding from GPS coordinates, and zero main-thread UI blocking."
+      };
+    }
+    if (project.id === "kitaab") {
+      return {
+        challenge: "Traditional jewellery retail merchants in Gujarat rely on physical paper bahi-khata books that suffer from arithmetic calculation errors, physical wear, risk of fire or theft, and zero remote visibility.",
+        solution: "I engineered KITAAB as a modern Native Android application using Kotlin and Jetpack Compose targeting Android 15 (SDK 36), backed by an authoritative Express API service, TiDB Cloud serverless distributed SQL database, and local SQLite offline fallback. It automates daily debit/credit aggregations, maintains tamper-evident transaction logs, and enables one-tap PDF ledger statement exports.",
+        impact: "Published live on Google Play Store (com.jeweller.ledger), replacing physical ledger books across commercial jewelry stores with zero arithmetic discrepancies and seamless offline resilience."
+      };
+    }
+    if (project.id === "parichay-sammelan") {
+      return {
+        challenge: "Large-scale community matrimonial conventions across Gujarat faced chaotic on-ground registration queues, counterfeit physical gate passes, and lack of verified family profile documentation.",
+        solution: "I re-architected Parichay Sammelan v1.0.5 into a modern Native Android application built with Kotlin and Jetpack Compose targeting Android 15 (SDK 36). Backed by an authoritative Node.js Express API and TiDB Cloud distributed SQL database with Cloudinary media processing, it features dynamic anti-fraud QR code tickets with an on-ground fast scanner for gate check-in, plus multi-tier delegate approval pipelines.",
+        impact: "Published live on Google Play Store (com.hssolutiontech.ParichaySammelan), managing thousands of verified community member profiles with sub-second gate check-in and zero counterfeit admissions."
+      };
+    }
+    if (project.id === "j-connect") {
+      return {
+        challenge: "Scattered developer workflows and inconsistent API standards across engineering teams cause integration bottlenecks, untracked database mutations, and documentation drift.",
+        solution: "I architected J-Connect as an enterprise developer ecosystem pairing a Flutter client application with a NestJS 10 TypeScript backend and migration-controlled PostgreSQL database. Governed by a 10-layer architectural standard (from 00_MASTER through 10_PROGRESS), it enforces strict API contracts (/api/v1/), centralized business logic, and automated schema evolution.",
+        impact: "Established single-source-of-truth governance, zero undocumented API endpoints, and clean modular isolation between client state and server persistence."
       };
     }
     return {

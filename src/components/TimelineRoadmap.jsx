@@ -28,7 +28,7 @@ export default function TimelineRoadmap() {
       summary: "Awarded Certificate of Appreciation by NB Infra Projects Limited (Since 1946) for exceptional engineering leadership, delivering the Natural Language AI Search Engine in PropKart OS and launching the standalone PropKart Broker Portal.",
       highlights: [
         "Formally recognized by Founder & Chairman Rahul D. Prajapati for outstanding architectural contributions.",
-        "Engineered Natural Language AI Search Engine in PropKart OS with tenant-isolated PostgreSQL intent extraction and safe query telemetry (Migrations 84–93).",
+        "Engineered Natural Language AI Search Engine in PropKart OS with tenant-isolated PostgreSQL intent extraction, safe query telemetry, and 123 additive migrations.",
         "Architected PropKart Broker Portal (Flutter + NestJS 10 + PostgreSQL 16) with dual-tier RERA governance queues and Hostinger SSL SMTP.",
         "Launched official production marketing platform nbpropertytech.com with Next.js 15, Docker, and GitHub Actions VPS CI/CD."
       ],

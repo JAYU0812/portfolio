@@ -12,10 +12,10 @@ export const projects = [
     date: "June 2026 – Present",
     status: "Production Live v2.1.3+13 (AI Search)",
     badge: "Live: propkart.nbpropertytech.com",
-    version: "v2.1.3+13 (Flutter) / v3.2.0 (API)",
-    tagline: "Apple-inspired operating system for real estate desks with 2ms Offline-First local latency, Natural Language AI Search Engine, SDK 36, and 100/100 security score.",
+    version: "v2.1.3+13 (Flutter) / v1.1.6 Build 8 (API)",
+    tagline: "Apple-inspired operating system for real estate desks with 2ms Offline-First local latency, Natural Language AI Search Engine, SDK 36, 123 PostgreSQL migrations, and 100/100 security score.",
     description:
-      "Architected as Lead Mobile & Full-Stack Architect at NB Property Tech / NB Developers. Evolved from the original NB Listings foundation into a comprehensive enterprise-scale real-estate operating system managing high-volume rental and re-sale portfolios across metropolitan hubs. Features a Natural Language AI Search Engine integrated directly into the AppShell and PostgreSQL backend (spanning Migrations 84–93, persistent builder indexes, and safe query telemetry), embedded Isar NoSQL local database (2–8ms read latency), bi-directional realtime synchronization with PostgreSQL, Target SDK 36 (Android 15), Google Play Store readiness (com.nbpropertytech.propkart), universal algorithmic CAPTCHA bot defense, RFC 6238 TOTP 2FA, and automated Round-Robin lead allocation.",
+      "Architected as Lead Mobile & Full-Stack Architect at NB Property Tech / NB Developers. Evolved from the original NB Listings foundation into a comprehensive enterprise-scale real-estate operating system managing high-volume rental and re-sale portfolios across metropolitan hubs. Features a Natural Language AI Search Engine integrated directly into the AppShell and PostgreSQL backend (spanning 123 additive migrations, persistent builder indexes, dynamic app_config system settings, and safe query telemetry), embedded Isar NoSQL local database (2–8ms read latency), bi-directional realtime synchronization with PostgreSQL, Target SDK 36 (Android 15), Google Play Store readiness (com.nbpropertytech.propkart), universal algorithmic CAPTCHA bot defense, RFC 6238 TOTP 2FA, dynamic support and two-stage recycle bin recovery, and automated Round-Robin lead allocation.",
     tech: [
       "Flutter",
       "Dart",
@@ -24,7 +24,8 @@ export const projects = [
       "Isar NoSQL (v3.1.0)",
       "BLoC & Riverpod",
       "Node.js & Express 5",
-      "PostgreSQL (Migrations 1–93)",
+      "PostgreSQL (123 Additive Migrations)",
+      "Dynamic App Config",
       "Supabase Realtime",
       "Meta & Housing.com Webhooks",
       "RFC 6238 TOTP 2FA",
@@ -43,6 +44,8 @@ export const projects = [
     },
     highlights: [
       "Natural Language AI Search Engine: Debounced in-app intent parser and server-side NLP query interpreter mapping natural language queries (e.g., 'available property in gota') into tenant-isolated PostgreSQL results with zero raw query leakage",
+      "Additive PostgreSQL Migrations (1 to 123): Scaled database schema to 123 migrations, introducing dynamic app_config system settings, separated client vs follow-up remarks, search document vectors, and live schema additive synchronization",
+      "Dynamic Support & Recycle Recovery: Backend-connected dynamic support configuration and two-stage soft-delete recycle bin with granular permission-gated restore pipelines",
       "Production Google Play Store Ready: Package ID com.nbpropertytech.propkart targeting SDK 36 with Java 17 desugaring, ProGuard obfuscation, and automated account deletion compliance",
       "Comprehensive Mobile Design System & App Shell: Architected 95-file mobile foundation (Steps 3.0–3.7 migration, 20,000+ LOC) with responsive bottom navigation, contextual outcome sheets, and full BLoC reactive state",
       "Enterprise PostgreSQL Migrations (84 to 93): Scaled database schema with persistent builder indexing, search document vectors, campaign lead manual sales reassignment, and foreign key integrity",
@@ -85,6 +88,8 @@ export const projects = [
     featured: true,
     highlights: [
       "Two-Tier Approval Queues: Queue A (Fast-track RERA verified brokers) vs Queue B (RERA assistance with auto-drafted WhatsApp integration)",
+      "Complex Multi-Criteria Matchmaking Engine: Comprehensive multi-field filtering overhaul for properties and requirements, resolving query builder mappings and instant criteria matchmaking",
+      "Fault-Tolerant Navigation & GoRouter Resilience: Error boundary architecture resolving errorBuilder mutual exclusion on share/discard actions with robust route recovery",
       "Automated Activation Dispatch: One-click approval sending official credentials via Hostinger SSL SMTP with cryptographic auto-fill activation links",
       "Zero Hardcoding Architecture: Dynamic platform settings and RBAC stored in PostgreSQL allowing admins to update support hotlines, prefill templates, and RERA prefixes without redeploying",
       "Tamper-Evident Audit Trail: Structured audit logs recording actor, role, action, target entity, IP address, and JSON payloads with instant search and one-click JSON exporter",
@@ -120,6 +125,7 @@ export const projects = [
     highlights: [
       "Live Production Platform: Deployed on official primary domain nbpropertytech.com with automated Let's Encrypt SSL via Traefik",
       "Next.js 15 Standalone Architecture: High-performance App Router with server-side rendering, Framer Motion animations, and zero hydration latency",
+      "Enterprise Downloads & Marketing Suite: Dedicated downloads portal serving official company brochures, broker registration forms, and investor pitch decks",
       "Automated VPS CI/CD Pipeline: GitHub Actions workflow building Docker containers and deploying directly to VPS with automated healthcheck verification",
       "Interactive Broker Onboarding Studio: Form intake pipeline with client-side validation, database persistence, and automated confirmation dispatch"
     ]
@@ -218,6 +224,9 @@ export const projects = [
     featured: true,
     highlights: [
       "Live Commercial Deployment: Accessible in production at crm.nbdeveloper.co.in for enterprise internal operations",
+      "Comparison Sheet (CS) & PO Procurement Pipeline: Automated multi-vendor quotation comparison generator printing official Comparison Sheets and drafting formal Purchase Orders",
+      "Full-Lifecycle Activity & Navigation Audit Log: Captures user movements, navigation routes, and interaction clicks across Flutter, Web, and Backend with advanced date & module filtering (excluding heartbeats)",
+      "Global Lead Dialing Standardization: Auto-detecting and editable international country dialing codes in lead editing dialogs for NRI investor pipelines",
       "Real-Time GPS Field Trip Tracking: Tracks employee movements outside work geofences with 30m detection buffer, 12-hour session caching, and 120s expiring live map pins",
       "Double Encryption Architecture: Configured TRANSPORT_SECRET double encryption layer and AES-256-CBC field encryption for sensitive identity records",
       "Data Masking & Bulk Lead Management: Secure identity data masking and high-volume lead transfer pipelines for organizational privacy",
@@ -406,11 +415,14 @@ export const projects = [
     description:
       "A complete proprietary retail and e-commerce ecosystem for Chandrakala Jewellers (Civil Road, Khedbrahma), deployed in production at chandrakalajewellers.in. Comprises: (1) A production storefront featuring live MCX gold and silver bullion pricing, dynamic product catalogs, Instagram-style video Reels showcase (reels.php), Razorpay payment webhooks, PWA offline service worker caching, and automated IndexNow search engine ingestion; (2) An internal GST billing and tax invoicing engine computing metal purity, hallmark charges, making expenses, and multi-tier tax invoices; (3) A specialized Flutter desktop application for printing physical barcode jewellery tags (139.7 x 190.5mm, 22-slot staggered layout with central strip tags) with HUID tracking; and (4) An architectural migration actively underway transitioning the frontend to Flutter Web with Node.js serverless APIs and PostgreSQL.",
     tech: [
+      "Next.js 15 Integration",
       "PHP & MySQL",
       "React",
       "Flutter Web & Desktop",
       "Tailwind CSS",
       "Realtime MCX Bullion Rates",
+      "Regional SEO Engines",
+      "Automated IndexNow",
       "Razorpay Webhooks",
       "PWA Service Worker",
       "GST Billing Engine",
@@ -423,7 +435,8 @@ export const projects = [
     featured: true,
     highlights: [
       "Live Commercial Domain: Production retail storefront operating on custom domain chandrakalajewellers.in",
-      "Real-Time MCX Bullion Feeds: Live dynamic pricing for 24K/22K gold and fine silver reflecting current commodities market trends",
+      "Next.js 15 & Regional SEO Authority: Modernized with Next.js 15 alongside PHP endpoints, deploying high-intent regional landing pages for Gujarat, Sabarkantha, and Khedbrahma with automated IndexNow search engine indexing",
+      "Real-Time MCX Bullion Feeds: Live dynamic pricing for 24K/22K gold and fine silver (mcx.php) with manual rate override controls (manual_rate.php)",
       "Modern Video Reels Showcase: Instagram-style interactive jewellery video feed (reels.php) driving user engagement and catalog discovery",
       "Payment & Webhook Automation: Razorpay payment gateway integration with real-time server webhook verification for orders",
       "PWA Offline Caching: Custom service worker (sw.js) caching core assets and product catalogs for low-connectivity shoppers",
@@ -451,6 +464,8 @@ export const projects = [
       "Vite",
       "Tailwind CSS",
       "Node.js worker_threads",
+      "FFmpeg Thumbnail Pipeline",
+      "Disk Thumbnail Cache",
       "GPU Rasterization",
       "EXIF Hardware Metadata",
       "Offline Geocoding",
@@ -463,8 +478,10 @@ export const projects = [
     featured: true,
     highlights: [
       "Multi-Threaded Non-Blocking Crawler: File crawling and metadata decoding completely offloaded to dedicated worker_threads, keeping UI and Electron main process running at 60 FPS without frame drops",
+      "FFmpeg Video Thumbnail Extraction Pipeline: High-speed video frame extraction offloaded to FFmpeg with persistent on-disk thumbnail caching and dual-engine fallback loader",
       "GPU Rasterization & Zero-Copy: Enabled hardware acceleration (--enable-gpu-rasterization --enable-zero-copy) with batched ingestion (25–30 items/batch) to eliminate IPC flooding",
       "Persistent Checkpoint Indexing (<50ms Launch): Atomically saves indexed library to disk; future scans perform incremental mtimeMs and size checks against cache, skipping untouched files",
+      "Incremental Scan Skipping & User Exclusion: Checkpoint index caching comparing mtimeMs and file sizes to skip untouched media, paired with custom directory exclusion rules",
       "Deep EXIF Hardware Extraction: Decodes camera make, lens model, focal length, aperture (f-stop), exposure time, ISO, and normalizes timestamps into Indian Standard Time (IST) with time-of-day categorization",
       "Offline Reverse Geocoding: Translates embedded GPS latitude and longitude into human-readable city, state, and country using an offline geographic database without external API reliance",
       "Privacy Shield Folder Exclusion: Instant hiding and purging of excluded directories with robust path normalization preventing drive letter and nested folder prefix collisions"
@@ -472,20 +489,21 @@ export const projects = [
   },
   {
     id: "parichay-sammelan",
-    title: "Parichay Sammelan v1.1.0 — Native Android & Cloud Event Platform",
+    title: "Parichay Sammelan — Native Android & Cloud Event Platform",
     category: "Community Platform & Mobile App",
     filterCategory: "mobile",
     date: "June 2025 – Present",
-    status: "Play Store Live v1.1.0",
-    badge: "Google Play Store Released v1.1.0",
-    version: "v1.1.0",
-    tagline: "Modernized Native Android (Kotlin + Jetpack Compose) matchmaking & QR event ticketing app on Google Play Store with Node.js & TiDB Cloud backend.",
+    status: "Play Store Live v1.0.5 (Android 15)",
+    badge: "Google Play Store Live (SDK 36)",
+    version: "v1.0.5 (Android 15 SDK 36) / Express API",
+    tagline: "Modernized Native Android (Kotlin + Jetpack Compose) matchmaking & QR event ticketing app targeting Android 15 (SDK 36) with Node.js & TiDB Cloud backend.",
     description:
-      "A flagship regional community matchmaking and verified event registration platform re-architected to version 1.1.0. Modernized from legacy web roots into a cutting-edge Native Android application engineered in Kotlin and Jetpack Compose, backed by an authoritative Node.js Express REST API, TiDB Cloud serverless distributed SQL database, and Cloudinary media optimization. Published live on Google Play Store (com.hssolutiontech.ParichaySammelan), serving major community matchmaking conventions across Gujarat with anti-fraud dynamic QR code ticketing, offline check-in gate verification, and multi-tier delegate approval pipelines.",
+      "A flagship regional community matchmaking and verified event registration platform re-architected to production version 1.0.5. Modernized from legacy web roots into a cutting-edge Native Android application engineered in Kotlin and Jetpack Compose targeting Android 15 (SDK 36), backed by an authoritative Node.js Express REST API, TiDB Cloud serverless distributed SQL database, and Cloudinary media optimization. Published live on Google Play Store (com.hssolutiontech.ParichaySammelan), serving major community matchmaking conventions across Gujarat with anti-fraud dynamic QR code ticketing, offline check-in gate verification, and multi-tier delegate approval pipelines.",
     tech: [
       "Kotlin",
       "Jetpack Compose",
       "Android Studio",
+      "Target SDK 36 (Android 15)",
       "Node.js (Express API)",
       "TiDB Cloud (Distributed SQL)",
       "Cloudinary",
@@ -498,7 +516,7 @@ export const projects = [
     packageName: "com.hssolutiontech.ParichaySammelan",
     featured: true,
     highlights: [
-      "Modernized v1.1.0 Native Android App: Built in Kotlin with declarative Jetpack Compose UI and published live on Google Play Store (com.hssolutiontech.ParichaySammelan)",
+      "Modernized Native Android App (SDK 36): Built in Kotlin with declarative Jetpack Compose UI targeting Android 15 and published live on Google Play Store (com.hssolutiontech.ParichaySammelan)",
       "Scalable Cloud Backend: Authoritative Node.js Express API architecture backed by TiDB Cloud serverless distributed SQL and Cloudinary profile photo processing",
       "High-Speed QR Venue Check-In: Anti-fraud dynamic QR code ticketing system with on-ground scanner for instant delegate verification at Gujarat event gates",
       "Statewide Regional Adoption: Successfully deployed across Gujarat community conferences managing verified matrimonial profiles, native town linkages, and family genealogies"
@@ -510,16 +528,17 @@ export const projects = [
     category: "Fintech & Mobile App",
     filterCategory: "mobile",
     date: "August 2025 – Present",
-    status: "Play Store Live (Modernized)",
-    badge: "Google Play Store Live",
-    version: "v1.2.0 (Kotlin + Node.js API)",
-    tagline: "Native Android (Kotlin + Jetpack Compose) daily ledger management app for jewellery retailers, published on Google Play Store with TiDB Cloud backend.",
+    status: "Play Store Live v1.0.2 (Android 15)",
+    badge: "Google Play Store Live (SDK 36)",
+    version: "v1.0.2 (Android 15 SDK 36) / Express API",
+    tagline: "Native Android (Kotlin + Jetpack Compose) daily ledger management app targeting Android 15 (SDK 36) for jewellery retailers, published on Google Play Store with TiDB Cloud backend.",
     description:
-      "A specialized native financial ledger application engineered for retail jewellery merchants to digitize traditional manual paper bahi-khata. Re-architected as a high-performance Native Android application using Kotlin and Jetpack Compose, backed by a production Node.js Express API (open source at github.com/JAYU0812/kitaabbackend), TiDB Cloud distributed database, and offline-capable SQLite fallback. Published on Google Play Store (com.jeweller.ledger), providing retail jewellery businesses across Gujarat with zero-loss audit ledgers, automated daily balance aggregation, and instant PDF statement exports.",
+      "A specialized native financial ledger application engineered for retail jewellery merchants to digitize traditional manual paper bahi-khata. Re-architected as a high-performance Native Android application using Kotlin and Jetpack Compose targeting Android 15 (SDK 36), backed by a production Node.js Express API (open source at github.com/JAYU0812/kitaabbackend), TiDB Cloud distributed database, and offline-capable SQLite fallback. Published on Google Play Store (com.jeweller.ledger), providing retail jewellery businesses across Gujarat with zero-loss audit ledgers, automated daily balance aggregation, and instant PDF statement exports.",
     tech: [
       "Kotlin",
       "Jetpack Compose",
       "Android Studio",
+      "Target SDK 36 (Android 15)",
       "Node.js (Express API)",
       "TiDB Cloud (Distributed SQL)",
       "Cloudinary",
@@ -533,7 +552,7 @@ export const projects = [
     packageName: "com.jeweller.ledger",
     featured: true,
     highlights: [
-      "Modern Native Android & Jetpack Compose Architecture: Published live on Google Play Store (com.jeweller.ledger) with intuitive non-technical merchant UX",
+      "Modern Native Android & Jetpack Compose Architecture: Published live on Google Play Store (com.jeweller.ledger) targeting Android 15 (SDK 36) with intuitive non-technical merchant UX",
       "Dedicated Node.js & TiDB Cloud Backend: Open-source Express API service (github.com/JAYU0812/kitaabbackend) backed by TiDB Cloud serverless database",
       "Digital Bahi-Khata for Gujarat Jewellery Merchants: Eliminates arithmetic discrepancies and replaces physical ledger books across commercial jewelry stores",
       "Automated Financial Ledger Analytics: Instant customer balance totals, debit/credit aggregation, and one-tap printable PDF statement generation"
@@ -573,28 +592,30 @@ export const projects = [
     title: "Hospital Management Dashboard",
     category: "Healthcare & Clinical CRM",
     filterCategory: "web",
-    date: "2025",
-    status: "Live on Vercel",
-    badge: "Tech-Craft Internship",
-    tagline: "Modular clinical management dashboard built with React and Node.js.",
+    date: "2025 – 2026",
+    status: "Production v1.0.0",
+    badge: "React 19 & Vite 8",
+    version: "v1.0.0",
+    tagline: "High-performance clinical management and bed scheduling dashboard modernized with React 19, Vite 8, and Oxlint.",
     description:
-      "Created during a competitive React & Node internship at Tech-Craft. Features comprehensive doctor profiles, dynamic patient management, clinical department filtering, appointment scheduling/cancellation, and real-time statistics visualizations.",
+      "Created during a competitive React & Node internship at Tech-Craft and modernized to React 19 and Vite 8 with Oxlint code quality verification. Features comprehensive doctor profiles, dynamic patient management, clinical department filtering, appointment scheduling/cancellation, and real-time statistics visualizations.",
     tech: [
-      "React",
-      "Node.js",
+      "React 19",
+      "Vite 8",
+      "Oxlint",
       "Tailwind CSS",
+      "Node.js",
       "State Management",
-      "Component Architecture",
       "Vercel"
     ],
     liveUrl: "https://hospital-dashboard-woad-gamma.vercel.app/",
     playStoreUrl: null,
     featured: false,
     highlights: [
-      "Built dynamic scheduling interface with instant patient search and filtering",
-      "Doctor directory cards categorized by medical department specialties",
-      "Real-time visual statistics cards for bed occupancy and daily patient counts",
-      "Deployed and maintained live on Vercel with high responsiveness"
+      "Modernized to React 19 & Vite 8: Sub-second hot module reloading with Oxlint static analysis and high-throughput bundling",
+      "Dynamic Clinical Scheduling: Instant patient search, bed occupancy tracking, and multi-specialty filtering",
+      "Doctor Directory Management: Specialty cards categorized by clinical department with real-time availability toggles",
+      "Deployed and Maintained Live on Vercel: Highly responsive clinical workflow console with zero hydration lag"
     ]
   },
   {
@@ -694,23 +715,24 @@ export const projects = [
   },
   {
     id: "j-connect",
-    title: "J-Connect — Developer Tooling & Collaboration Platform",
+    title: "J-Connect — Enterprise Developer Tooling & Collaboration Platform",
     category: "Developer Collaboration & Ecosystem",
     filterCategory: "tools",
     date: "October 2026",
-    status: "Active Architecture",
-    badge: "Developer Tooling",
+    status: "Active Architecture v1.0.0",
+    badge: "Enterprise Developer Tooling",
     version: "v1.0.0",
-    tagline: "Developer ecosystem platform engineered for high-performance team collaboration, APIs, and tooling.",
+    tagline: "Developer ecosystem platform engineered for high-performance team collaboration, NestJS 10 APIs, and 10-layer governance standard.",
     description:
-      "A high-performance developer collaboration ecosystem engineered with a clean modular architecture. Comprises a Flutter client application, a NestJS TypeScript backend, migration-controlled PostgreSQL database, and a strict rulebook for security, documentation, and API standards.",
+      "A high-performance developer collaboration ecosystem engineered with clean modular architecture. Comprises a Flutter client application, a NestJS 10 TypeScript backend, migration-controlled PostgreSQL database, and a strict 10-layer governance standard (from 00_MASTER through 10_PROGRESS) managing architecture, security, database evolution, and RESTful /api/v1/ endpoints.",
     tech: [
       "Flutter",
       "Dart",
       "NestJS 10",
       "TypeScript",
-      "PostgreSQL",
-      "RESTful APIs",
+      "PostgreSQL (Migration-Controlled)",
+      "RESTful APIs (/api/v1/)",
+      "10-Tier Modular Governance",
       "Clean Architecture"
     ],
     liveUrl: null,
@@ -719,6 +741,7 @@ export const projects = [
     highlights: [
       "Clean Modular Architecture: Strict layer separation between Flutter frontend, NestJS backend, and migration-controlled PostgreSQL schema",
       "Authoritative Backend Logic: Fully validated RESTful /api/v1/ endpoints with single-source-of-truth documentation governance",
+      "10-Layer Governance Framework: Comprehensive modular specification packs (00_MASTER through 10_PROGRESS) enforcing security, testing, and changelog rigor",
       "Migration-Controlled Persistence: Safe database schema evolution isolating development from live environments"
     ]
   },

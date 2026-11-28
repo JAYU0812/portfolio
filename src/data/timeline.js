@@ -27,7 +27,7 @@ export const timelineEvents = [
     summary: "Architected standalone PropKart Broker Portal, AI Search Engine, and official nbpropertytech.com platform.",
     details: [
       "Architected PropKart Broker Portal (Flutter Web/Mobile/Desktop + NestJS 10 + PostgreSQL 16) with dual-tier RERA approval queues, dynamic RBAC, and Hostinger SSL SMTP.",
-      "Engineered Natural Language AI Search Engine in PropKart OS AppShell with PostgreSQL intent extraction and safe query telemetry across Migrations 84–93.",
+      "Engineered Natural Language AI Search Engine in PropKart OS AppShell with PostgreSQL intent extraction, safe query telemetry, and dynamic app_config across 123 additive migrations.",
       "Launched official marketing platform nbpropertytech.com with Next.js 15, Docker containerization, and automated VPS CI/CD via GitHub Actions.",
       "Upgraded NB-HRMS ERP with live GPS field trip tracking, geofence exit detection, double encryption (TRANSPORT_SECRET), data masking, and bulk lead transfers."
     ]

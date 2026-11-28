@@ -20,7 +20,7 @@ export const CREDENTIALS = [
     image: "/certificates/nb-infra-certificate-of-appreciation.png",
     imageAlt: "NB Infra Projects Limited Certificate of Appreciation awarded to Soni Jaykumar Hasmukh by Rahul D. Prajapati",
     quote: "In recognition of your exceptional performance and valuable contributions throughout the quarter. Your dedication, commitment, and pursuit of excellence are truly appreciated.",
-    summary: "Company-wide Reward & Recognition honor awarded for engineering leadership across PropKart OS, Natural Language AI Search, PropKart Broker Portal, and zero-downtime PostgreSQL migrations (1–93).",
+    summary: "Company-wide Reward & Recognition honor awarded for engineering leadership across PropKart OS, Natural Language AI Search, PropKart Broker Portal, and zero-downtime PostgreSQL migrations (1 to 123 additive migrations).",
     skills: ["PropTech Architecture", "Flutter SDK 36", "NestJS", "PostgreSQL", "Engineering Leadership"],
     featured: true
   },

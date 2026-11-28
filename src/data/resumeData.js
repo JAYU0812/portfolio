@@ -50,8 +50,9 @@ export const resumeData = {
       "Node.js worker_threads (Multi-Threaded Systems)",
       "TiDB Cloud (Serverless Distributed SQL)",
       "RESTful APIs",
-      "PostgreSQL (Migrations 1–93 + Broker M1.26–1.27)",
+      "PostgreSQL (123 Additive Migrations + Broker M1.26–1.27)",
       "Natural Language AI Search Engines",
+      "Dynamic App Config & Support Engines",
       "Supabase Realtime & RLS",
       "RFC 6238 TOTP 2FA",
       "Algorithmic CAPTCHA Defense",
@@ -63,7 +64,7 @@ export const resumeData = {
     ],
     database: [
       "Isar NoSQL (Embedded Local DB)",
-      "PostgreSQL (Enterprise Migrations 1–93 + Broker v1.26–v1.27)",
+      "PostgreSQL (123 Additive Migrations + Broker v1.26–v1.27)",
       "TiDB Cloud (Distributed SQL)",
       "Supabase",
       "SQLite (FFI)",
@@ -103,15 +104,15 @@ export const resumeData = {
       technologies: ["Flutter", "Dart", "Target SDK 36", "NestJS 10", "BLoC", "Riverpod", "Isar NoSQL", "PostgreSQL", "Node.js", "Next.js 15", "Docker", "Meta & Housing.com Webhooks", "TOTP 2FA"],
       coreBullets: [
         "Awarded Certificate of Appreciation (Reward and Recognition) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional quarterly engineering leadership and zero-downtime architecture.",
-        "Architected and maintained production PropKart CRM & OS (v2.1.3+13, Target SDK 36, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 checks), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
-        "Engineered Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with debounced intent extraction, multi-tenant isolation, safe query telemetry, and persistent builder schemas across Migrations 84–93.",
-        "Architected PropKart Broker Portal (live: broker.nbpropertytech.com) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues, packaged PropKartBrokerPortal.exe standalone Windows desktop client, and engineered PostgreSQL Migrations v1.26–v1.27 for locality sanitization across Ahmedabad & Gandhinagar.",
+        "Architected and maintained production PropKart CRM & OS (v2.1.3+13, Target SDK 36, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 checks), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, dynamic support & recycle recovery, and 2ms–8ms read latency via embedded Isar NoSQL.",
+        "Engineered Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with debounced intent extraction, multi-tenant isolation, safe query telemetry, dynamic app_config system settings, and persistent builder schemas across 123 additive migrations.",
+        "Architected PropKart Broker Portal (live: broker.nbpropertytech.com) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues, query builder matchmaking overhaul, packaged PropKartBrokerPortal.exe standalone Windows desktop client, and engineered PostgreSQL Migrations v1.26–v1.27 for locality sanitization across Ahmedabad & Gandhinagar.",
         "Launched official marketing portal (nbpropertytech.com) using Next.js 15, Docker, and GitHub Actions automated VPS CI/CD with Traefik SSL; engineered 95-file Mobile Foundation (20,000+ LOC) and NB-HRMS real-time GPS field trip tracking with geofence exit detection."
       ],
       bullets: [
         "Honored with Certificate of Appreciation (Reward and Recognition) by NB Infra Projects Limited (Since 1946), signed by Founder & Chairman Rahul D. Prajapati, for exceptional engineering performance, valuable quarterly contributions, and dedication to excellence.",
         "Architected and maintained the production PropKart Real-Estate CRM & OS (v2.1.3+13, Target SDK 36, Package: com.nbpropertytech.propkart, live on propkart.nbpropertytech.com) with 100/100 security audit score (37/37 passed), RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and 2ms–8ms read latency via embedded Isar NoSQL.",
-        "Engineered Natural Language AI Search Engine in PropKart OS and backend with debounced intent extraction, PostgreSQL multi-tenant isolation, safe query telemetry, and persistent builder schemas spanning Migrations 84 to 93.",
+        "Engineered Natural Language AI Search Engine in PropKart OS and backend with debounced intent extraction, PostgreSQL multi-tenant isolation, safe query telemetry, dynamic app_config, and persistent builder schemas spanning 123 additive migrations.",
         "Architected PropKart Broker Portal (live: broker.nbpropertytech.com) using Flutter (Web, Mobile, Desktop), NestJS 10, and PostgreSQL 16 with two-tier governance queues (Queue A RERA Verified vs Queue B RERA Assistance), dynamic RBAC, tamper-evident audit logging, and Hostinger SSL SMTP.",
         "Packaged PropKartBrokerPortal.exe standalone Windows desktop application with SQLite3 FFI and multi-window management; engineered PostgreSQL Migrations v1.26 & v1.27 sanitizing broker locality broadcasts to authoritative Ahmedabad & Gandhinagar micro-markets (Science City, Ambli, Bodakdev, Bopal, Sindhu Bhavan Road, GIFT City).",
         "Launched official production marketing and broker onboarding platform (live: nbpropertytech.com) using Next.js 15, TypeScript 5, Docker, and GitHub Actions automated VPS CI/CD with Traefik SSL.",
@@ -186,10 +187,10 @@ export const resumeData = {
       url: "https://propkart.nbpropertytech.com",
       displayUrl: "propkart.nbpropertytech.com",
       badge: "Production Live v2.1.3+13",
-      technologies: "Flutter, Dart, Target SDK 36, Natural Language AI Search, BLoC, NestJS, PostgreSQL (M1–93), Isar DB, TOTP 2FA",
+      technologies: "Flutter, Dart, Target SDK 36, Natural Language AI Search, BLoC, NestJS, PostgreSQL (123 Additive Migrations), Isar DB, TOTP 2FA",
       bullets: [
         "Production PropTech OS with 2ms–8ms reads via embedded Isar NoSQL, Target SDK 36, and 100/100 security audit score (37/37 checks passed).",
-        "Engineered Natural Language AI Search Engine across AppShell & PostgreSQL backend with multi-tenant isolation, safe query telemetry, and automated Round-Robin lead allocation."
+        "Engineered Natural Language AI Search Engine across AppShell & PostgreSQL backend with multi-tenant isolation, safe query telemetry, dynamic app_config, and automated Round-Robin lead allocation."
       ]
     },
     {
@@ -255,9 +256,9 @@ export const resumeData = {
       url: "https://propkart.nbpropertytech.com",
       displayUrl: "propkart.nbpropertytech.com",
       badge: "Production Live v2.1.3+13",
-      technologies: "Flutter, Dart, Target SDK 36, Natural Language AI Search, BLoC, Node.js, PostgreSQL Migrations (1–93), Isar DB, Meta Webhooks, TOTP 2FA",
+      technologies: "Flutter, Dart, Target SDK 36, Natural Language AI Search, BLoC, Node.js, PostgreSQL (123 Additive Migrations), Isar DB, Meta Webhooks, TOTP 2FA",
       bullets: [
-        "Production-ready PropTech platform engineered with an Offline-First architecture (2–8ms reads), SDK 36, and 100/100 security score (37/37 checks).",
+        "Production-ready PropTech platform engineered with an Offline-First architecture (2–8ms reads), SDK 36, dynamic app_config, and 100/100 security score (37/37 checks).",
         "Engineered Natural Language AI Search Engine in AppShell and backend mapping conversational queries to tenant-isolated PostgreSQL results with zero raw query leakage.",
         "Features automated Round-Robin lead distribution, RFC 6238 TOTP 2FA, algorithmic CAPTCHA bot defense, and Housing.com & Meta Lead Ads webhooks with 24h deduplication."
       ]
@@ -494,19 +495,19 @@ export const resumeData = {
   achievements: [
     "Awarded Reward & Recognition Certificate of Appreciation from NB Infra Projects Limited (Signed by Founder & Chairman Rahul D. Prajapati).",
     "Lead Architect of PropKart Property CRM on propkart.nbpropertytech.com (v2.1.3+13, Target SDK 36, 100/100 Security Audit Score).",
-    "Architected Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with Migrations 84–93.",
-    "Architected PropKart Broker Portal with two-tier approval governance, packaged PropKartBrokerPortal.exe standalone Windows desktop client, and PostgreSQL Migrations v1.26–v1.27.",
-    "Launched official production marketing portal nbpropertytech.com with Next.js 15, Docker, and GitHub Actions CI/CD to VPS.",
+    "Architected Natural Language AI Search Engine across PropKart OS AppShell and PostgreSQL backend with 123 additive migrations and dynamic app_config.",
+    "Architected PropKart Broker Portal with two-tier approval governance, query builder criteria matchmaking overhaul, packaged PropKartBrokerPortal.exe standalone Windows desktop client, and PostgreSQL Migrations v1.26–v1.27.",
+    "Launched official production marketing portal nbpropertytech.com with Next.js 15, Docker, enterprise Downloads suite, and GitHub Actions CI/CD to VPS.",
     "Architected 95-file Mobile Foundation & Design System (20,000+ LOC) with native app shells, reactive BLoC state, and WebGL CanvasKit stabilization.",
-    "Architected J-Gallery: intelligent Windows media management system using Electron, React, TypeScript, and multi-threaded Node.js worker_threads with GPU rasterization and <50ms startup checkpoint cache.",
+    "Architected J-Gallery: intelligent Windows media management system using Electron, React, TypeScript, and multi-threaded Node.js worker_threads with FFmpeg video thumbnail pipeline, disk caching, GPU rasterization, and <50ms startup checkpoint cache.",
     "Architected TwinLink Continuum (v1.4.2) and RelayHost (v1.3.0) for zero-latency local LAN Windows PC linking and NAT traversal.",
     "Engineered Site Visit Historical Tracking Engine with PostgreSQL Migrations 38 & 39 and automated Round-Robin lead allocation.",
     "Pioneered Offline-First local database sync architecture using embedded Isar NoSQL (2–8ms reads) and PostgreSQL cloud sync.",
     "Architected DevSync sovereign cryptographic P2P suite with Ed25519/X25519 encryption and zero-retention Vercel SSE relay.",
     "Architected GitSphere (v1.0.0), a Windows desktop visual Git control center with SQLite multi-account switching and 4-stage visual pipeline.",
-    "Successfully developed and published 2 applications to the Google Play Store (Parichay Sammelan v1.1.0 & KITAAB on TiDB Cloud).",
+    "Successfully developed and published 2 applications to the Google Play Store (Parichay Sammelan v1.0.5 & KITAAB v1.0.2 on TiDB Cloud, targeting Android 15 SDK 36).",
     "Won 5th Rank in Hackathon for Geofenced QR Haversine Attendance System.",
-    "Engineered complete Chandrakala Jewellers ERP: live commercial domain (chandrakalajewellers.in), real-time MCX bullion rates, video Reels showcase, custom GST billing CRM, Supabase RLS, and Flutter barcode tag printer."
+    "Engineered complete Chandrakala Jewellers ERP: live commercial domain (chandrakalajewellers.in), Next.js 15 App Router integration, real-time MCX bullion rates with manual overrides, automated IndexNow push, video Reels showcase, custom GST billing CRM, and Flutter barcode tag printer."
   ],
 
   leadership: [
